@@ -1,0 +1,37 @@
+baseurl = "//shadowd.zecure.org"
+MetaDataFormat = "yaml"
+
+[indexes]
+  tag = "tags"
+  group = "groups"
+
+[[menu.main]]
+    name = "download"
+    pre = "<i class='fa fa-download'></i>"
+    url = "/download"
+    weight = -200
+[[menu.main]]
+    name = "about"
+    pre = "<i class='fa fa-heart'></i>"
+    weight = -110
+    identifier = "about"
+[[menu.main]]
+    name = "getting started"
+    pre = "<i class='fa fa-road'></i>"
+    weight = -100
+[[menu.main]]
+    name = "documentation"
+    pre = "<i class='fa fa-graduation-cap'></i>"
+    weight = -90
+[[menu.main]]
+    name = "tutorials"
+    pre = "<i class='fa fa-book'></i>"
+    weight = -80
+[[menu.main]]
+    name = "development"
+    pre = "<i class='fa fa-cog'></i>"
+    weight = -70
+[[menu.main]]
+    name = "community"
+    pre = "<i class='fa fa-group'></i>"
+    weight = -50
