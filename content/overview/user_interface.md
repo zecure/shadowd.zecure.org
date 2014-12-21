@@ -47,6 +47,7 @@ First add a new admin user:
 
     php app/console swd:register --admin <name> <email>
 
+If you do not wish to receive messages you can leave the email empty.
 Use this user to login into the web interface.
 Navigate to *Profile* and click the *Add* button at the bottom of the page.
 Use the form to add a new profile:
