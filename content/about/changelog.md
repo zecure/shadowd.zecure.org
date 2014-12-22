@@ -21,5 +21,6 @@ weight: 10
 
   * Added import and export for whitelist rules
   * Added switch for whitelist and blacklist in the profile
+  * Added command to e-mail report
 
 ## PHP Connector
