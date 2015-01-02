@@ -26,13 +26,13 @@ $(document).ready(function(){
                 'margin-left': '0px'
             });
             $('#sidebar').css({
-                'margin-left': '-200px'
+                'margin-left': '-205px'
             });
             $('#sidebar > ul').hide();
             $("#container").addClass("sidebar-closed");
         } else {
             $('#main-content').css({
-                'margin-left': '200px'
+                'margin-left': '205px'
             });
             $('#sidebar > ul').show();
             $('#sidebar').css({

@@ -85,7 +85,7 @@ input:focus, textarea:focus { outline: none; }
 }
 
 #sidebar {
-    width: 200px;
+    width: 205px;
     height: 100%;
     position: fixed;
     background: #ffffff;
