@@ -14,7 +14,7 @@ Make sure to use a compatible version, i.e. if you downloaded shadowd from Githu
 
     git clone https://github.com/zecure/shadowd_perl.git
 
-If you are using *cpan* to install the module you do not have to download it manually.
+If you are using CPAN to install the module you do not have to download it manually.
 
 ## Installation
 
