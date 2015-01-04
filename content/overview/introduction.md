@@ -65,8 +65,7 @@ If you want to [contribute](/development/contributing) why not develop a new [co
 
 ## Who should use Shadow Daemon?
 
-Shadow Daemon is for people who want to run their own dynamic website without having to
-worry about vulnerabilities.
+Shadow Daemon is for people who want to run their own dynamic website without constantly having to worry about attacks and vulnerabilities.
 
 Shadow Daemon is for people who want to know if and how their website is attacked to learn from it.
 

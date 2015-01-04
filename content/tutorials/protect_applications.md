@@ -46,7 +46,7 @@ Finally you have to click on *Profiles* and enable the *whitelist* for the desir
 
 <div class="note info">
 <h5>Test your rules!</h5>
-<p>It is possible that some rules have to be adjusted or added. To not scare away your visitors in such a case you should enable *observe* in the connector at the beginning of the deployment. This disables the protection and allows you to test the new rules.</p>
+<p>It is possible that some rules have to be adjusted or added. To not scare away your visitors in such a case you should enable <i>observe</i> in the connector at the beginning of the deployment. This disables the protection and allows you to test the new rules.</p>
 </div>
 
 If the rules are tested and working well you should also delete the training data of the profile to clean up the database.
