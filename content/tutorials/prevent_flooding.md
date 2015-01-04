@@ -10,7 +10,7 @@ weight: 20
 
 ## Introduction
 
-If you want to prevent flooding of the logs and mass scans you can use *fail2ban* to temporary ban attackers.
+If you want to prevent automated mass scans and flooding of the logs you can use fail2ban to temporarily ban attackers.
 
 ## Prerequisites
 
@@ -19,13 +19,12 @@ The rules should be well-tested and not result in false-positives, otherwise the
 
 ## Banning Flooders
 
-You have to enable the debugging mode of the connector to write the client ip into the web server log every time an attack is detected.
+You have to enable the debugging mode of the connector to write the client ip into the log file every time an attack is detected.
 fail2ban can collect this entries and ban clients that are too active in a short period of time.
 Be aware though that users can be forced to attack a site without their knowledge by embedding an iframe into another site.
-To avoid abuse the ban time should be very short, e.g., 60 seconds.
-This is less frustrating for incorrectly banned clients than waiting 60 minutes or longer to get access again and still makes flooding and mass scans by single clients effectively impossible.
+Thus the ban time should be very short, because this is less frustrating for incorrectly banned clients and still makes flooding and mass scans by single clients effectively impossible.
 
-First you have to create a fail2ban filter, e.g., */etc/fail2ban/filter.d/shadowd.conf*:
+To use fail2ban in combination with Shadow Daemon you have to create a new filter, e.g., */etc/fail2ban/filter.d/shadowd.conf*:
 
     [INCLUDES]
     before      = common.conf
@@ -40,9 +39,9 @@ Next you have to edit the fail2ban configuration to utilize the filter, e.g., ap
     enabled  = true
     filter   = shadowd
     action   = iptables-allports[name=shadowd, protocol=all]
-    logpath  = /var/log/lighttpd/error.log
+    logpath  = /var/log/shadowd.log
     maxretry = 3
     bantime  = 60
     findtime = 60
 
-Do not forget to change *logpath*.
+Do not forget to change *logpath* to the error log of your web server if you are using the PHP connector.
