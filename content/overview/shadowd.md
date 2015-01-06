@@ -77,7 +77,7 @@ The installer creates a configuration at */etc/shadowd/shadowd.ini* which has to
 The config is annotated and should be self-explanatory, but if you are stuck you can find more information in the [documentation](/documentation/shadowd#configuration).
 
 <div class="note warning">
-<h5>Verify the file permissions!</h5>
+<h1>Verify the file permissions!</h1>
 <p>The configuration file contains your database password, so make sure that it is only readable by the shadowd user.</p>
 </div>
 

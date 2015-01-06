@@ -32,7 +32,7 @@ Copy the configuration from *misc/examples/connectors.ini* to */etc/shadowd/conn
 The config is annotated and should be self-explanatory, but if you are stuck you can find more information in the [documentation](/documentation/php_connector#configuration).
 
 <div class="note warning">
-<h5>Ignore sensitive input!</h5>
+<h1>Ignore sensitive input!</h1>
 <p>You should use the <a href="/documentation/php_connector#ignore">ignore</a> function of the connector to disregard very sensitive input, e.g., passwords.</p>
 </div>
 

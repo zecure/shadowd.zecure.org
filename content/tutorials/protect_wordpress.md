@@ -48,7 +48,7 @@ Since Wordpress has a lot of rules it is a good idea to increase the row limit t
 Finally you have to click on *Profiles* and enable the *whitelist* for the desired profile.
 
 <div class="note info">
-<h5>Test your rules!</h5>
+<h1>Test your rules!</h1>
 <p>If you are using plugins or a different version of the blog it is possible that some rules have to be adjusted or added. To not scare away your visitors in such a case you should enable <i>observe</i> in the connector at the beginning of the deployment. This disables the protection and allows you to test the new rules.</p>
 </div>
 

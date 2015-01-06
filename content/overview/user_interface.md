@@ -59,7 +59,7 @@ Use the form to add a new profile:
  * Set the *blacklist threshold* to determine its sensivity.
 
 <div class="note info">
-<h5>What is a good blacklist threshold?</h5>
+<h1>What is a good blacklist threshold?</h1>
 <p>If the threshold of the blacklist is too low there will be lots of false-positives.
 If the threshold is too high it might miss some attacks.</p>
 <p>A good threshold lies between 15 and 25.

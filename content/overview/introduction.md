@@ -30,7 +30,7 @@ Interfaces and connectors can be replaced by other modules that speak the same p
 
 ### Attack Detection
 
-Shadow Daemon combines *white-* and *blacklisting* to deliver the best detection results.
+Shadow Daemon combines [white- and blacklisting](/documentation/architecture) to deliver the best detection results.
 The blacklist makes use of the sophisticated PHPIDS filters and searches for known attack patterns in the user input.
 The whitelist on the other hand searches for irregularities in the user input based on strict rules that define how the input should look like.
 Together they can detect almost any attack on a web application and still have a very low false-positive rate.
@@ -45,7 +45,7 @@ Keep in mind that this is optional, you do not have to use it.
 If you just want to protect your site, but otherwise do not care about attacks you can forget about the web interface once Shadow Daemon is installed and configured.
 
 <div class="note info">
-<h5>Try out the demo!</h5>
+<h1>Try out the demo!</h1>
 <p>Shadow Daemon monitors and protects the blog <a target="_blank" href="http://zecure.me/">zecure.me</a>.
 You can try out its web interface at <a target="_blank" href="https://demo.shadowd.zecure.org/">demo.shadowd.zecure.org</a>.</p>
 </div>
@@ -60,7 +60,7 @@ At the moment there are Shadow Daemon connectors for the following programming l
 * Perl
 * Python
 
-Additional connectors are planned and will be released at some time in the future.
+Additional connectors are planned and will be released at some point.
 If you want to [contribute](/development/contributing) why not develop a new [connector](/documentation/connectors)?
 
 ## Who should use Shadow Daemon?
