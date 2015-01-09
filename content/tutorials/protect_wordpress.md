@@ -33,11 +33,11 @@ At the bottom of the page there is a button with the caption *Import*.
 Click it as well.
 
 To enable the whitelist you have to import two sets.
-First import *src/common/common_server_headers.txt*.
+First import *common/cgi-headers_w.txt*.
 Do not forget to select the correct profile.
 The base parameter is not used and should be empty.
 
-Next import *src/wordpress/4.0/wordpress-4.0.txt*.
+Next import *wordpress/4.0/wordpress-4.0_w.txt*.
 Unlike the server headers this set requires a base, e.g., if the root directory of your blog is at */home/blog/htdocs/* this has to be the base for the set.
 
 Now all the necessary rules are imported, but they are not active yet.

@@ -33,7 +33,7 @@ The config is annotated and should be self-explanatory, but if you are stuck you
 
 <div class="note warning">
 <h1>Ignore sensitive input!</h1>
-<p>You should use the <a href="/documentation/php_connector#ignore">ignore</a> function of the connector to disregard very sensitive input, e.g., passwords.</p>
+<p>You should use the <a href="/documentation/connectors#ignore">ignore</a> function of the connector to disregard very sensitive input, e.g., passwords.</p>
 </div>
 
 ## What's next?
