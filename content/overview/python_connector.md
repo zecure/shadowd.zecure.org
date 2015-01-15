@@ -3,8 +3,8 @@ date: 2015-01-01
 menu:
   main:
     parent: getting started
-title: PHP Connector
-weight: 40
+title: Python Connector
+weight: 60
 ---
 
 ## Download
@@ -12,19 +12,26 @@ weight: 40
 Stable releases can be found at the [download page](/download).
 Make sure to use a compatible version, i.e. if you downloaded shadowd from Github you should also download the connector from Github.
 
-    git clone https://github.com/zecure/shadowd_php.git
+    git clone https://github.com/zecure/shadowd_python.git
+
+If you are using Pypi to install the package you do not have to download it manually.
 
 ## Installation
 
-PHP provides the setting [auto_prepend_file](http://php.net/manual/en/ini.core.php#ini.auto-prepend-file) to include additional files.
-This can be used to automatically load the connector on every request.
+You can install the package with easy_install or pip:
 
-To do this move the content of *src* to a directory of your choice, e.g., */usr/share/shadowd*.
-Afterwards edit your *php.ini* and set *auto_prepend_file* to */usr/share/shadowd/shadowd_php_connector.php*.
-The change will take effect after you restart your web server, but you should wait with that until the configuration of the module is completly done.
+    easy_install swd
+    pip install swd
 
-Apache servers can also use a *.htaccess* file to set *auto_prepend_file* for specific directories only.
-There is an example for this at *misc/examples/htaccess*.
+If you prefer to install the package manually you have to execute setup.py:
+
+    python setup.py install
+
+### CGI
+
+To protect CGI applications you simply have to load the module:
+
+    import swd.cgi_connector
 
 ## Configuration
 

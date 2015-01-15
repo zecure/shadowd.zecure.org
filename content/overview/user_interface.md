@@ -68,4 +68,4 @@ You should start with a low value and increase it over time if there are too man
 
 ## What's next?
 
-You have to install the connector ([PHP](/overview/php_connector), [Perl](/overview/perl_connector)) to connect the web application with shadowd.
+You have to install connectors ([PHP](/overview/php_connector), [Perl](/overview/perl_connector), [Python](/overview/python_connector)) to connect your web applications with shadowd.
