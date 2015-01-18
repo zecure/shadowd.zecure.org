@@ -3,8 +3,9 @@ date: 2015-01-01
 menu:
   main:
     parent: documentation
+    Identifier: DocumentationConnectors
 title: Connectors
-weight: 30
+weight: 40
 ---
 
 ## Description

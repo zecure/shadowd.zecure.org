@@ -18,12 +18,12 @@ If you are using Pypi to install the package you do not have to download it manu
 
 ## Installation
 
-You can install the package with easy_install or pip:
+You can install the package from Pypi with easy_install or pip:
 
-    easy_install swd
-    pip install swd
+    easy_install shadowd
+    pip install shadowd
 
-If you prefer to install the package manually you have to execute setup.py:
+Or by hand:
 
     python setup.py install
 
@@ -31,7 +31,7 @@ If you prefer to install the package manually you have to execute setup.py:
 
 To protect CGI applications you simply have to load the module:
 
-    import swd.cgi_connector
+    import shadowd.cgi_connector
 
 ## Configuration
 

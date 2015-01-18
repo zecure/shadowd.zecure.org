@@ -3,18 +3,19 @@ date: 2015-01-01
 menu:
   main:
     parent: getting started
+    Identifier: AboutShadowd
 title: Shadowd
 weight: 20
 ---
 
-## Installation (Package)
+## Installation
 
 TODO: Explain package manager
 
 
 If you are using a distribution package you can skip the next section and directly jump to [database](#database).
 
-## Installation (Source)
+## Manual Installation
 
 ### Dependencies
 
@@ -60,7 +61,7 @@ If cmake is successful it creates a makefile.
 Use it to compile and install the project:
 
     make
-    sudo make install
+    make install
 
 ## Database {#database}
 

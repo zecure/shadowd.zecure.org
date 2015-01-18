@@ -3,6 +3,7 @@ date: 2015-01-01
 menu:
   main:
     parent: documentation
+    Identifier: DocumentationArchitecture
 title: Architecture
 weight: 10
 ---
