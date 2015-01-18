@@ -21,9 +21,9 @@ Shadow Daemon is [free software](https://www.gnu.org/philosophy/free-sw.html). I
 
 Shadow Daemon separates tasks into three categories:
 
-* Analysis and storage of requests with *shadowd*
-* Management of shadowd with *user interfaces*
-* Communication between web applications and shadowd with *connectors*
+ * Analysis and storage of requests with *shadowd*
+ * Management of shadowd with *user interfaces*
+ * Communication between web applications and shadowd with *connectors*
 
 Interfaces and connectors can be replaced by other modules that speak the same protocol, so it is easy to extend the functionality of Shadow Daemon.
 
@@ -55,9 +55,9 @@ Command line and other interfaces are planned, but have a low priority.
 
 At the moment there are Shadow Daemon connectors for the following programming languages:
 
-* PHP
-* Perl
-* Python
+ * PHP
+ * Perl
+ * Python
 
 Additional connectors are planned and will be released at some point.
 If you want to [contribute](/development/contributing) why not develop a new [connector](/documentation/connectors)?

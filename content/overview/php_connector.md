@@ -10,7 +10,7 @@ weight: 40
 ## Download
 
 Stable releases can be found at the [download page](/download).
-Make sure to use a compatible version, i.e. if you downloaded shadowd from Github you should also download the connector from Github.
+Make sure to use a compatible version, i.e. if you downloaded shadowd from Github you should also download the connector from Github:
 
     git clone https://github.com/zecure/shadowd_php.git
 

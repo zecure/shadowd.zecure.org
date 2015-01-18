@@ -56,7 +56,7 @@ Several libraries are also required:
 ### Download
 
 Stable releases can be found at the [download page](/download).
-If you want the newest and freshest version you should use Github to download the source code.
+If you want the newest and freshest version you should use Github to download the source code:
 
     git clone https://github.com/zecure/shadowd.git
 

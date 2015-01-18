@@ -6,7 +6,6 @@
           {{ $currentNode := . }}
           {{ range .Site.Menus.main }}
               {{ if .HasChildren }}
-
             <li class="sub-menu{{if $currentNode.HasMenuCurrent "main" . }} active{{end}}">
             <a href="javascript:;" class="">
                 {{ .Pre }}
