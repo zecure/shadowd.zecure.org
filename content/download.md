@@ -4,7 +4,17 @@ title: Download
 ---
 
 Official projects of Shadow Daemon are hosted at *shadowd.zecure.org* and *github.com/zecure*.
-The *DIGESTS* and *DIGESTS.asc* files can be used to validate the integrity and authenticity of the downloaded files.
+The [DIGESTS](http://en.wikipedia.org/wiki/Cryptographic_hash_function) and [DIGESTS.asc](https://en.wikipedia.org/wiki/Digital_signature) files can be used to validate the integrity and authenticity of the downloaded archives:
+
+    # Get the public key (once)
+    gpg --recv-keys 0x08672A08415EAC5B
+    
+    # Test the authenticity of the hashes
+    gpg --verify *.DIGESTS.asc
+    
+    # Test the integrity of the hashes
+    sha512sum -c *.DIGESTS
+    whirlpooldeep -c *.DIGESTS
 
 # Current
 
