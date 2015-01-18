@@ -12,7 +12,7 @@ The [DIGESTS](http://en.wikipedia.org/wiki/Cryptographic_hash_function) and [DIG
     # Test the authenticity of the hashes
     gpg --verify *.DIGESTS.asc
     
-    # Test the integrity of the hashes
+    # Test the integrity of the archives
     sha512sum -c *.DIGESTS
     whirlpooldeep -c *.DIGESTS
 

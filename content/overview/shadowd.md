@@ -10,8 +10,23 @@ weight: 20
 
 ## Installation
 
-TODO: Explain package manager
+The easiest way to install the server is to use the packet manager of your distribution.
 
+### Debian / Ubuntu
+
+    apt-get install shadowd
+
+### Red Hat / CentOS
+
+    yum install shadowd
+
+### Gentoo
+
+    emerge -av net-firewall/shadowd
+
+### FreeBSD
+
+    pkg install shadowd
 
 If you are using a distribution package you can skip the next section and directly jump to [database](#database).
 

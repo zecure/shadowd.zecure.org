@@ -15,7 +15,6 @@ It is a modular system that separates web application, analysis and interface to
 
 Shadow Daemon is [free software](https://www.gnu.org/philosophy/free-sw.html). It is released under the license [GPLv2](/about/license), so its source code can be examined, modified and distributed by everyone.
 
-
 ## What does Shadow Daemon do?
 
 ### Modularity
@@ -69,7 +68,7 @@ Shadow Daemon is for people who want to run their own dynamic website without co
 
 Shadow Daemon is for people who want to know if and how their website is attacked to learn from it.
 
-Shadow Daemon is for people who do not want to place their trust in proprietary non-free software that does its analysis in secret.
+Shadow Daemon is for people who do not want to blindly place their trust in non-free software that does its work in secret.
 
 ## How do I install Shadow Daemon?
 
