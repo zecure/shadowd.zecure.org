@@ -20,7 +20,7 @@ Afterwards the execution of the original scripts continues with the defused inpu
 ## Configuration
 
 The default path of the configuration file is */etc/shadowd/connectors.ini*.
-The path can be overwritten with the environment variable *SHADOWD_CONNECTOR_VERSION*.
+The path can be overwritten with the environment variable *SHADOWD_CONNECTOR_CONFIG*.
 
 ### Profile
 
