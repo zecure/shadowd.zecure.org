@@ -9,7 +9,7 @@ weight: 60
 
 ## Download
 
-Stable releases can be found at the [download page](/download).
+Stable releases can be found at the [download page](/downloads/archives#python_connector).
 Make sure to use a compatible version, i.e. if you downloaded shadowd from Github you should also download the connector from Github:
 
     git clone https://github.com/zecure/shadowd_python.git

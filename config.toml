@@ -6,10 +6,9 @@ MetaDataFormat = "yaml"
   group = "groups"
 
 [[menu.main]]
-    name = "download"
+    name = "downloads"
     pre = "<i class='fa fa-download'></i>"
-    url = "/download"
-    weight = -200
+    weight = -120
 [[menu.main]]
     name = "about"
     pre = "<i class='fa fa-heart'></i>"

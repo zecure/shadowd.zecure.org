@@ -62,6 +62,26 @@ At the moment there are Shadow Daemon connectors for the following programming l
 Additional connectors are planned and will be released at some point.
 If you want to [contribute](/development/contributing) why not develop a new [connector](/documentation/connectors)?
 
+## What differentiates Shadow Daemon?
+
+Shadow Daemon is closer to the application than most other web application firewalls.
+It receives exactly the same input that the web application receives and thus it is almost impossible to bypass the detection by obfuscating the attack.
+Despite its closeness the complex parts are still separated from the targeted application which results in better security than other firewalls that use this approach.
+
+Another important distinction of Shadow Daemon are its attack detection algorithms.
+Most web application firewalls use simple keyword or signature based approaches that are either easy to bypass or that have a lot of false-positives.
+Shadow Daemon uses a keyword based approach as well, but unlike many other firewalls it does not directly block input that matches a single keyword.
+Instead its algorithm makes use of a dynamic threshold that allows to adjust the sensitivity of attack detection based on the context.
+This way it is possible to ensure good attack detection and simultaneously decrease the rate of false-positives.
+
+Shadow Daemon also makes use of an algorithm that detects abnormalities in request.
+This is a well-explored approach to find malicious user input, but is not used in many web application firewalls because of its expenditure.
+To reduce the required work as much as possible Shadow Daemon offers many handy tools to manage, generate and reuse rules.
+
+Shadow Daemon also does not completly block malicious requests.
+Instead it only filters out the dangerous parts and lets the rest proceed.
+This makes attacks impossible and does not unnecessary frustrate visitors in the case of false-positives.
+
 ## Who should use Shadow Daemon?
 
 Shadow Daemon is for people who want to run their own dynamic website without constantly having to worry about attacks and vulnerabilities.

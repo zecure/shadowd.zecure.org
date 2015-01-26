@@ -19,7 +19,7 @@ You need a [database](/overview/shadowd#database) and a web server with PHP supp
 
 ## Download
 
-Stable releases can be found at the [download page](/download).
+Stable releases can be found at the [download page](/downloads/archives#user_interface).
 Make sure to use a compatible version, i.e. if you downloaded shadowd from Github you should also download the user interface from Github:
 
     git clone https://github.com/zecure/shadowd_ui.git

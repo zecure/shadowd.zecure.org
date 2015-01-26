@@ -14,23 +14,21 @@ The easiest way to install the server is to use the packet manager of your distr
 
 ### Debian / Ubuntu
 
-    apt-get install shadowd
+The package is still [awaiting sponsorship](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=776012), so it is not possible to install it with *apt-get* from the official repositories yet.
+Please [download](https://shadowd.zecure.org/files/debian/) and install the *deb* package manually instead.
 
-### Red Hat / CentOS
+    dpkg -i shadowd_1.0.0-4_*.deb
 
-    yum install shadowd
+### Red Hat / CentOS / Fedora
 
-### Gentoo
+The package is still [awaiting sponsorship](https://bugzilla.redhat.com/show_bug.cgi?id=1185662), so it is not possible to install it with *yum* from the official repositories yet.
+Please [download](https://shadowd.zecure.org/files/redhat/) and install the *rpm* package manually instead.
 
-    emerge -av net-firewall/shadowd
-
-### FreeBSD
-
-    pkg install shadowd
-
-If you are using a distribution package you can skip the next section and directly jump to [database](#database).
+    rpm -i shadowd-1.0.0-1.*.rpm
 
 ## Manual Installation
+
+If you are using a distribution package you can skip this section and directly jump to the setup of the [database](#database).
 
 ### Dependencies
 
@@ -55,7 +53,7 @@ Several libraries are also required:
 
 ### Download
 
-Stable releases can be found at the [download page](/download).
+Stable releases of the source code can be found at the [download page](/downloads/archives#shadowd).
 If you want the newest and freshest version you should use Github to download the source code:
 
     git clone https://github.com/zecure/shadowd.git
