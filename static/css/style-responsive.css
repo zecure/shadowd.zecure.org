@@ -53,17 +53,19 @@
     .btn {
         margin-bottom: 5px;
     }
+
+    #top_menu {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {
-
     .notification-row {
         display: none;
     }
 }
 
 @media (max-width:320px) {
-
     .notification-row {
         display: none;
     }
