@@ -21,13 +21,11 @@ Shadow Daemon is [free software](https://www.gnu.org/philosophy/free-sw.html). I
 
 Shadow Daemon is closer to the application than most other web application firewalls.
 It receives exactly the same input that the web application receives and thus it is almost impossible to bypass the detection by obfuscating the attack.
-Despite its closeness the complex parts still are separated from the web application to guarantee a certain standard of security:
+Despite its closeness the complex parts are separated from the web application to guarantee a certain standard of security:
 
- * Analysis and storage of requests with *shadowd*
- * Management of shadowd with a *user interface*
+ * Analysis and storage of requests with the background server *shadowd*
+ * Management of shadowd with a *web interface*
  * Communication between web applications and shadowd with *connectors*
-
-The interface and connectors can be replaced by other modules that speak the same protocol, so it is also easy to extend the functionality of Shadow Daemon.
 
 ### Attack Detection
 
@@ -77,7 +75,7 @@ Shadow Daemon is for people who want to run their own dynamic website without co
 
 Shadow Daemon is for people who want to know if and how their website is attacked to learn from it.
 
-Shadow Daemon is for people who do not want to blindly place their trust in non-free software that does its work in secret.
+Shadow Daemon is for people who do not want to blindly place their trust in non-free software that does its work in secret and costs a fortune.
 
 ## How do I install Shadow Daemon?
 
