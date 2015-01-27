@@ -22,7 +22,7 @@ Shadow Daemon is [free software](https://www.gnu.org/philosophy/free-sw.html). I
 Shadow Daemon is closer to the application than most other web application firewalls.
 It receives exactly the same input that the web application receives and thus it is almost impossible to bypass the detection by obfuscating the attack.
 Despite its closeness the most complex parts are still separated from the web application to guarantee a certain standard of security.
-The different components of Shadow Daemon are split into the following categories:
+The different components of Shadow Daemon are divided into the following categories:
 
  * Analysis and storage of requests by the background server *shadowd*
  * Communication between web applications and shadowd with *connectors*
@@ -30,10 +30,8 @@ The different components of Shadow Daemon are split into the following categorie
 
 ### Attack Detection
 
-Shadow Daemon combines [white- and blacklisting](/documentation/architecture) to deliver the best detection results.
+Shadow Daemon combines [white- and blacklisting](/documentation/architecture) to deliver very good detection results.
 The blacklist makes use of the sophisticated PHPIDS filters and searches for known attack patterns in the user input.
-Its algorithm uses a dynamic threshold that allows to adjust the sensitivity of attack detection based on the context.
-
 The whitelist on the other hand searches for irregularities in the user input based on strict rules that define how the input should look like.
 Together they can detect almost any attack on a web application and still have a very low false-positive rate.
 Both systems are optional, e.g., it is possible to disable the whitelist and only rely on the blacklist to simplify the installation.
