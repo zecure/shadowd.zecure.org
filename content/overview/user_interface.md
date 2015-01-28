@@ -53,11 +53,11 @@ Use this user to login into the web interface.
 Navigate to *Profile* and click the *Add* button at the bottom of the page.
 Use the form to add a new profile:
 
- * Set the address of the connector as *server IP*.
- * Set a secure and unique *key* to authorize requests.
+ * Add the IP address of the connector as *server IP*.
+ * Create a secure and unique *key* to authorize requests.
  * Disable *learning* and the *whitelist* for now.
  * Enable the *blacklist*, because it is instantly ready for use.
- * Set the *blacklist threshold* to determine its sensivity.
+ * Enter a *blacklist threshold* to set the sensitivity.
 
 <div class="note info">
 <h1>What is a good blacklist threshold?</h1>
