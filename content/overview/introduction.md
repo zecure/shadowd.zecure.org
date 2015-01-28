@@ -21,7 +21,7 @@ Shadow Daemon is [free software](https://www.gnu.org/philosophy/free-sw.html). I
 
 Shadow Daemon is closer to the application than most other web application firewalls.
 It receives exactly the same input that the web application receives and thus it is almost impossible to bypass the detection by obfuscating the attack.
-The most complex parts are separated from the web application to guarantee a certain standard of security.
+However, the most complex parts are separated from the web application to guarantee a certain standard of security.
 
 ### Detection
 
