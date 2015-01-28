@@ -86,4 +86,3 @@ If you like it fast and simple you are done now!
 If you want the maximum security you should consider enabling the whitelist.
 The whitelist protects to some degree against unknown attack vectors as well as backdoors.
 There are tutorials that explain how to secure web applications with [existing rules sets](/tutorials/protect_wordpress) and how to generate [custom rules](/tutorials/protect_applications) for arbitrary web applications.
-You should also read the [documentation](/documentation/user_interface) if you need more information about how to configure the whitelist.
