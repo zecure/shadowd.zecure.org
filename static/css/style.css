@@ -420,3 +420,7 @@ figure {
   padding-bottom: 10px;
   text-align: center;
 }
+
+.intro-icon {
+  display: inline-block;
+}

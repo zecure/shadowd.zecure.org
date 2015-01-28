@@ -86,3 +86,18 @@ Installing Shadow Daemon is easy and only takes some minutes, really.
 The development of Shadow Daemon takes place at [Github](https://github.com/zecure).
 Announcements are published via [Twitter](https://twitter.com/zecureit).
 Make sure to star/follow to stay up to date.
+
+
+<figure class="intro-icon">
+ <a href="https://github.com/zecure">
+  <img src="/img/octocat.png" height="100px" />
+  <figcaption><h4>Github</h4></figcaption>
+ </a>
+</figure>
+
+<figure class="intro-icon">
+ <a href="https://twitter.com/zecureit">
+  <img src="/img/twitter.png" height="90px" />
+  <figcaption><h4>Twitter</h4></figcaption>
+ </a>
+</figure>
