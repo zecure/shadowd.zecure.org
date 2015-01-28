@@ -21,7 +21,7 @@ This can be used to automatically load the connector on every request.
 
 To do this move the content of *src* to a directory of your choice, e.g., */usr/share/shadowd*.
 Afterwards edit your *php.ini* and set *auto_prepend_file* to */usr/share/shadowd/shadowd_php_connector.php*.
-The change will take effect after you restart your web server, but you should wait with that until the configuration of the module is completly done.
+The change will take effect after you restart your web server, but you should wait with that until the configuration of the module is completely done.
 
 Apache servers can also use a *.htaccess* file to set *auto_prepend_file* for specific directories only.
 There is an example for this at *misc/examples/htaccess*.

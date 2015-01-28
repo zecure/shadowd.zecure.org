@@ -33,7 +33,7 @@ Both systems are optional, e.g., it is possible to disable the whitelist and onl
 
 ### Protection
 
-Unlike many other web application firewalls Shadow Daemon does not completly block malicious requests.
+Unlike many other web application firewalls Shadow Daemon does not completely block malicious requests.
 Instead it only filters out the dangerous parts of a request and lets it proceed afterwards.
 This makes attacks impossible, but does not unnecessary frustrate visitors in the case of false-positives.
 
