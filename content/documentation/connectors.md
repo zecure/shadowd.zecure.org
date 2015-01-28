@@ -52,7 +52,7 @@ If shadowd is running with SSL activated this parameter has to point to the SSL 
 The certificate is used to verify the identity of the server and is very important, otherwise it would be possible for an attacker to commit a man-in-the-middle attack.
 Use the full path of the certificate.
 
-### Observe
+### Observe {#observe}
 
 By default the connector will remove threats from requests.
 If you do not want to do that activate *observe*.

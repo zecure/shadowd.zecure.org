@@ -54,7 +54,9 @@ Finally you have to click on *Profiles* and enable the *whitelist* for the desir
 
 <div class="note info">
 <h1>Test your rules!</h1>
-<p>If you are using plugins or a different version of the blog it is possible that some rules have to be adjusted or added. To not scare away your visitors in such a case you should enable <i>observe</i> in the connector at the beginning of the deployment. This disables the protection and allows you to test the new rules.</p>
+<p>If you are using plugins or a different version of the blog it is possible that some rules have to be adjusted or added.
+To not scare away your visitors in such a case you should enable <a href="/documentation/connectors#observe">observe</a> in the connector at the beginning of the deployment.
+This disables the protection and allows you to test the new rules.</p>
 </div>
 
 ## Conclusion

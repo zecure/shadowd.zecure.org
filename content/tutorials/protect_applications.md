@@ -31,11 +31,16 @@ Logically this means that the result of the generator is only good if the learni
 It is recommended that the learning mode stays enabled for multiple days, but this heavily depends on how complex the web application is and how many visitors you have.
 The more data you have, the better are the results.
 
+{{% figure src="/img/tutorials/application1.jpg" title="Figure 1: Enabling the learning mode." %}}
+
 Once you think that you have enough data click on *Whitelist* and *Generator* on the bottom.
 The generator interface lets you change some of the thresholds, but the default values should be acceptable.
 If you want to know more about the generator settings have a look at the documentation.
 To start the process click on *Generate*.
 This should redirect you to the whitelist table again.
+
+{{% figure src="/img/tutorials/application2.jpg" title="Figure 2: Generating new rules." %}}
+
 The new rules are pending and have to be enabled.
 To do this you should use the mass action functionality at the bottom of the whitelist page.
 Simply check the box in the table header and all rules on the page should be selected.
@@ -46,7 +51,9 @@ Finally you have to click on *Profiles* and enable the *whitelist* for the desir
 
 <div class="note info">
 <h1>Test your rules!</h1>
-<p>It is possible that some rules have to be adjusted or added. To not scare away your visitors in such a case you should enable <i>observe</i> in the connector at the beginning of the deployment. This disables the protection and allows you to test the new rules.</p>
+<p>If you are using plugins or a different version of the blog it is possible that some rules have to be adjusted or added.
+To not scare away your visitors in such a case you should enable <a href="/documentation/connectors#observe">observe</a> in the connector at the beginning of the deployment.
+This disables the protection and allows you to test the new rules.</p>
 </div>
 
 If the rules are tested and working well you should also delete the training data of the profile to clean up the database.
