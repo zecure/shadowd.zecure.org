@@ -414,3 +414,9 @@ h1.top-menu {
 .info a {
   color: #81BEF7;
 }
+
+figure {
+  padding-top: 25px;
+  padding-bottom: 10px;
+  text-align: center;
+}

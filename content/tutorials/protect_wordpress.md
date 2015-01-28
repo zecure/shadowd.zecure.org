@@ -32,18 +32,23 @@ Open the Shadow Daemon interface and click on *Whitelist*.
 At the bottom of the page there is a button with the caption *Import*.
 Click it as well.
 
+{{% figure src="/img/tutorials/wordpress1.jpg" title="Figure 1: Navigating to the whitelist rules import." %}}
+
 To enable the whitelist you have to import two sets.
 First import *common/cgi-headers_w.txt*.
 Do not forget to select the correct profile.
 The base parameter is not used and should be empty.
-
 Next import *wordpress/4.0/wordpress-4.0_w.txt*.
-Unlike the server headers this set requires a base, e.g., if the root directory of your blog is at */home/blog/htdocs/* this has to be the base for the set.
+Unlike the server headers this set requires a base, e.g., if the root directory of your blog is at */var/www/blog/* this has to be the base for the set.
+
+{{% figure src="/img/tutorials/wordpress2.jpg" title="Figure 2: Importing the whitelist rules." %}}
 
 Now all the necessary rules are imported, but they are not active yet.
 To fix this you should use the mass action functionality at the bottom of the whitelist page.
 Simply check the box in the table header and all rules on the page should be selected.
 Since Wordpress has a lot of rules it is a good idea to increase the row limit to 1000.
+
+{{% figure src="/img/tutorials/wordpress3.jpg" title="Figure 3: Activating the new rules." %}}
 
 Finally you have to click on *Profiles* and enable the *whitelist* for the desired profile.
 
@@ -54,7 +59,7 @@ Finally you have to click on *Profiles* and enable the *whitelist* for the desir
 
 ## Conclusion
 
-As you saw: If there are existing rules for your web application it is not hard to use the whitelist.
+If there are existing rules for your web application it is not hard to use the whitelist.
 And it is worth it, because combined with the blacklist it makes your blog almost unhackable.
 If there are no existing rules it is much more work to configure the whitelist, but as you will see in the [next tutorial](/tutorials/protect_applications) Shadow Daemon has some handy helpers to automate this process to a certain degree.
 

@@ -30,7 +30,7 @@ The different components of Shadow Daemon are divided into the following categor
 
 ### Attack Detection
 
-Shadow Daemon combines [white- and blacklisting](/documentation/architecture) to deliver very good detection results.
+Shadow Daemon combines [white- and blacklisting](/documentation/architecture) to accurately detect malicious requests.
 The blacklist makes use of the sophisticated PHPIDS filters and searches for known attack patterns in the user input.
 The whitelist on the other hand searches for irregularities in the user input based on strict rules that define how the input should look like.
 Together they can detect almost any attack on a web application and still have a very low false-positive rate.
@@ -47,7 +47,7 @@ This makes attacks impossible, but does not unnecessary frustrate visitors in th
 Shadow Daemon can be managed with a clear and structured web interface.
 The interface lets you examine attacks in great detail.
 Discover the techniques, vulnerabilities and goals of your attackers!
-Keep in mind that this is optional, you do not have to use it.
+Keep in mind that this is optional though, you do not have to use it.
 If you just want to protect your site, but otherwise do not care about attacks you can forget about the web interface once Shadow Daemon is installed and configured.
 
 <div class="note info">
@@ -58,21 +58,21 @@ You can try out its web interface at <a target="_blank" href="https://demo.shado
 
 ### Supported Languages
 
-Shadow Daemon strives to be a single solution for all popular web languages that considers every characteristic feature and behaviour.
+Shadow Daemon strives to be a single solution for all popular web languages that considers every characteristic behaviour.
 At the moment the following programming languages are supported:
 
  * PHP
  * Perl
  * Python
 
-Additional connectors are planned and will be released at some point.
+Additional connectors are planned and will be released at some point in the future.
 If you want to [contribute](/development/contributing) why not develop a new [connector](/documentation/connectors)?
 
 ## Who should use Shadow Daemon?
 
 Shadow Daemon is for people who want to run their own dynamic website without constantly having to worry about attacks and vulnerabilities.
 
-Shadow Daemon is for people who want to know if and how their website is attacked to learn from it.
+Shadow Daemon is for people who want to know if and how their website is attacked.
 
 Shadow Daemon is for people who do not want to blindly place their trust in non-free software that does its work in secret and costs a fortune.
 
