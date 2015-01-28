@@ -87,8 +87,8 @@ If you are done create a new user and database and import the correct layout, e.
 
 ## Configuration {#configuration}
 
-The installer creates a configuration at */etc/shadowd/shadowd.ini* which has to be edited.
-The config is annotated and should be self-explanatory, but if you are stuck you can find more information in the [documentation](/documentation/shadowd#configuration).
+The installer creates a configuration file at */etc/shadowd/shadowd.ini* that has to be edited.
+The config is annotated and should be self-explanatory.
 
 <div class="note warning">
 <h1>Verify the file permissions!</h1>
