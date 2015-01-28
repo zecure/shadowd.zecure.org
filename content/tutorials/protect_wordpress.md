@@ -39,7 +39,7 @@ First import *common/cgi-headers_w.txt*.
 Do not forget to select the correct profile.
 The base parameter is not used and should be empty.
 Next import *wordpress/4.0/wordpress-4.0_w.txt*.
-Unlike the server headers this set requires a base, e.g., if the root directory of your blog is at */var/www/blog/* this has to be the base for the set.
+Unlike the server headers this set requires a base, e.g., if the root directory of your blog is at */var/www/wordpress/* this has to be the base for the set.
 
 {{% figure src="/img/tutorials/wordpress2.jpg" title="Figure 2: Importing the whitelist rules." %}}
 
