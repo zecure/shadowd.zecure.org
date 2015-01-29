@@ -5,13 +5,15 @@ menu:
     parent: documentation
     Identifier: DocumentationUserInterface
 title: User Interface
-weight: 20
+weight: 30
 ---
+
+## Description
 
 ## Configuration
 
-The configuration file is located at *app/config/parameters.yml*.
-It is recommended to use composer to edit the [configuration](https://getcomposer.org/doc/03-cli.md#config).
+The configuration is located at *app/config/parameters.yml*.
+Either edit the file manually or use [composer](https://getcomposer.org/doc/03-cli.md#config).
 
     php composer.phar config --list
     php composer.phar config [setting-key] [setting-value1] ... [setting-valueN]
@@ -40,5 +42,4 @@ It can be used to automatically clean up the database.
       -t [ --time_frame ] arg (-24 hours)
 
 This command sends a report about recent attacks to all users with a valid e-mail address.
-No e-mail is send if there are no logged requests.
-The content of the message is located in *src/Swd/AnalyzerBundle/Resources/views/Report/email.txt.twig*.
+No e-mails are send if there are no logged attacks in the time frame.
