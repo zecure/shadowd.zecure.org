@@ -63,7 +63,7 @@ Use the form to add a new profile:
 <h1>What is a good blacklist threshold?</h1>
 <p>If the threshold of the blacklist is too low there will be lots of false-positives.
 If the threshold is too high it might miss some attacks.</p>
-<p>A good threshold lies between 15 and 25.
+<p>A good threshold lies between 10 and 25.
 You should start with a low value and increase it over time if there are too many false-positives.</p>
 </div>
 
