@@ -46,9 +46,10 @@ You can test if everything works by visiting */config.php*.
 
 First add a new admin user:
 
-    php app/console swd:register --admin <name> <email>
+    php app/console swd:register --env=prod --admin --name=arg (--email=arg)
 
-If you do not wish to receive messages you can leave the email empty.
+The email address is optional and only used for the report command at the moment.
+
 Use this user to login into the web interface.
 Navigate to *Profile* and click the *Add* button at the bottom of the page.
 Use the form to add a new profile:

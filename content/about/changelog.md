@@ -11,14 +11,22 @@ weight: 10
 
 ### **1.0.0** Jan. 18, 2015
 
+ * Added blacklist rules to overwrite default threshold
  * Added switch for whitelist and blacklist in the profile
  * Decoupled whitelist from learning
  * Enhanced debugging messages
 
 ## User Interface
 
+### **1.0.1** Jan. 30, 2015
+
+ * Updated link to documentation
+ * Updated the register command
+
 ### **1.0.0** Jan. 18, 2015
 
+ * Added blacklist rules to overwrite default threshold
+ * Added import and export for blacklist rules
  * Added import and export for whitelist rules
  * Added switch for whitelist and blacklist in the profile
  * Added command to e-mail report
