@@ -31,10 +31,10 @@ The [DIGESTS](http://en.wikipedia.org/wiki/Cryptographic_hash_function) and [DIG
 
 ## User Interface {#user_interface}
 
- * https://shadowd.zecure.org/files/shadowd_ui-1.0.0.tar.gz
- * https://shadowd.zecure.org/files/shadowd_ui-1.0.0.tar.gz.DIGESTS
- * https://shadowd.zecure.org/files/shadowd_ui-1.0.0.tar.gz.DIGESTS.asc
- * https://github.com/zecure/shadowd_ui/releases/tag/v1.0.0
+ * https://shadowd.zecure.org/files/shadowd_ui-1.0.1.tar.gz
+ * https://shadowd.zecure.org/files/shadowd_ui-1.0.1.tar.gz.DIGESTS
+ * https://shadowd.zecure.org/files/shadowd_ui-1.0.1.tar.gz.DIGESTS.asc
+ * https://github.com/zecure/shadowd_ui/releases/tag/v1.0.1
 
 ## PHP Connector {#php_connector}
 
