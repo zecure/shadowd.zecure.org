@@ -30,7 +30,7 @@ First you have to download the rules repository:
 
 Open the Shadow Daemon interface and click on *Whitelist*.
 At the bottom of the page there is a button with the caption *Import*.
-Click it as well.
+Click on it as well.
 
 {{% figure src="/img/tutorials/wordpress1.jpg" title="Figure 1: Navigating to the whitelist rules import." %}}
 
