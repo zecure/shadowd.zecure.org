@@ -47,6 +47,10 @@ weight: 10
 
 ## Python Connector
 
+### **1.1.0** Feb. 03, 2015
+
+ * Added Django support
+
 ### **1.0.0** Jan. 18, 2015
 
  * Initial release
