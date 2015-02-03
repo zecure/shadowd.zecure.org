@@ -50,7 +50,7 @@ To do this create the file *middleware/shadowdconnector.py* in the application d
             if not status == True:
                 return status
 
-There also has to be an empty *__init__.py* file in the middleware directory.
+There also has to be an empty *\_\_init\_\_.py* file in the middleware directory.
 Next you have to register the middleware in the *settings.py* file of your application:
 
     MIDDLEWARE_CLASSES = (
