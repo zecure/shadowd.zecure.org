@@ -19,6 +19,12 @@ Shadow Daemon is [free software](https://www.gnu.org/philosophy/free-sw.html). I
 
 ### Modularity
 
+Shadow Daemon is comprised of:
+
+ * The background server *shadowd* that handles the analysis and storage of requests
+ * *Connectors* that send the user input from the web applications to *shadowd*
+ * And a *user interface* to manage the complete system
+
 Shadow Daemon is closer to the application than most other web application firewalls.
 It receives exactly the same input that the web application receives and thus it is almost impossible to bypass the detection by obfuscating the attack.
 However, the most complex parts of Shadow Daemon are separated from the web application to guarantee a certain standard of security.
