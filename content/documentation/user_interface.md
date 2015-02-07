@@ -20,7 +20,7 @@ Either edit the file manually or use [composer](https://getcomposer.org/doc/03-c
 
 ## Commands
 
-### Register
+### Register {#register}
 
     php app/console swd:register -e prod
       -A [ --admin ]
@@ -30,7 +30,7 @@ Either edit the file manually or use [composer](https://getcomposer.org/doc/03-c
 This command registers a new user.
 If the admin switch is not set the user is not able to change anything besides his own user settings.
 
-### Clean
+### Clean {#clean}
 
     php app/console swd:clean -e prod
       -t [ --time_frame ] arg (-1 month)
@@ -38,7 +38,7 @@ If the admin switch is not set the user is not able to change anything besides h
 This command deletes all requests and parameters that are older than the time frame.
 It can be used to automatically clean up the database.
 
-### Report
+### Report {#report}
 
     php app/console swd:report -e prod
       -t [ --time_frame ] arg (-24 hours)
