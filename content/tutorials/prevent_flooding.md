@@ -13,8 +13,8 @@ weight: 20
 Some attackers use automated tools that try to find vulnerabilities in web applications by injecting different payloads into every parameter and analyzing the output.
 Shadow Daemon will detect a vast majority of this probes, but there are still two problems:
 First, Shadow Daemon detects a vast majority, but not necessarily all probes.
-It is possible that some parameters are not correctly protected, because of misconfigurations or edge cases.
-So if every parameter is checked it is possible that the vulnerable parameter is found by the tools.
+It is possible that some parameters are not protected correctly, because of misconfigurations or edge cases.
+So if every parameter is checked it is possible that vulnerable parameters are found by the tools.
 And second, a mass scan will result in a lot of database entries.
 If there are millions of database entries this can decrease the performance of the firewall.
 
