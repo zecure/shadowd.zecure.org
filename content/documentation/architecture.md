@@ -47,9 +47,9 @@ The following JSON structure is expected, but without the additional newlines th
 
 The dictionary *input* contains identifiers/pathes and the associated values of all user input.
 
-### Answer
+### Response
 
-The server sends the following answer, but without the additional newlines that are added here for readability.
+The server sends the following response, but without the additional newlines that are added here for readability.
 
     {
         "status": ...,
