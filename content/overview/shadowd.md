@@ -19,11 +19,11 @@ Please [download](https://shadowd.zecure.org/files/debian/) and install the *deb
 
     dpkg -i shadowd_1.0.0-4_*.deb
 
-On Ubuntu you can also use [PPA](https://help.ubuntu.com/community/PPA) to install the package.
-Add this to your system's software sources:
+On Ubuntu you can also use [PPA](https://help.ubuntu.com/community/PPA) to install the package:
 
-    deb http://ppa.launchpad.net/zit-hb/shadowd/ubuntu trusty main 
-    deb-src http://ppa.launchpad.net/zit-hb/shadowd/ubuntu trusty main 
+    add-apt-repository ppa:zit-hb/shadowd
+    apt-get update
+    apt-get install shadowd
 
 ### Red Hat / CentOS / Fedora
 
