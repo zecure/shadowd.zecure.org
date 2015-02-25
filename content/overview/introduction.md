@@ -37,6 +37,16 @@ The whitelist on the other hand searches for irregularities in the user input ba
 Together they can detect almost any attack on a web application and still have a very low false-positive rate.
 Both systems are optional, e.g., it is possible to disable the whitelist and only rely on the blacklist to simplify the installation.
 
+Shadow Daemon is able to detect common attacks like:
+
+ * SQL Injections
+ * XML Injections
+ * Code Injections
+ * Command Injections
+ * Cross-Site Scripting
+ * Local/Remote File Inclusions
+ * And many more ...
+
 ### Protection
 
 Unlike many other web application firewalls Shadow Daemon does not completely block malicious requests.
