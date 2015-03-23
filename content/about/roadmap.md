@@ -20,8 +20,6 @@ This project tries to achieve:
 
 The following things will be added over time:
 
- * Integration of native flood protection to increase ease of use
  * Integration of file upload protection by checking the extension and hash
  * Integration of security headers like *X-Frame-Options*
- * Shift from simple text file logs to log apis
  * Windows version of shadowd
