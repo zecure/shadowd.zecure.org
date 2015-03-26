@@ -9,6 +9,14 @@ weight: 10
 
 ## Shadowd
 
+### **1.1.0** Mar. 26, 2015
+
+This update improves the performance and attack detection:
+
+ * Added native flood protection
+ * Optimized storage with a queue and database modifications
+ * Revised blacklist filters
+
 ### **1.0.0** Jan. 18, 2015
 
  * Added blacklist rules to overwrite default threshold
@@ -17,6 +25,12 @@ weight: 10
  * Enhanced debugging messages
 
 ## User Interface
+
+### **1.1.0** Mar. 26, 2015
+
+ * Added flood protection to profile
+ * Simplified whitelist rules generation
+ * Fixed some minor bugs
 
 ### **1.0.1** Jan. 30, 2015
 

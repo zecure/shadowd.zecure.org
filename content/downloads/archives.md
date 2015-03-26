@@ -24,40 +24,33 @@ The [DIGESTS](http://en.wikipedia.org/wiki/Cryptographic_hash_function) and [DIG
 
 ## Shadowd {#shadowd}
 
- * https://shadowd.zecure.org/files/shadowd-1.0.0.tar.gz
- * https://shadowd.zecure.org/files/shadowd-1.0.0.tar.gz.DIGESTS
- * https://shadowd.zecure.org/files/shadowd-1.0.0.tar.gz.DIGESTS.asc
- * https://github.com/zecure/shadowd/releases/tag/v1.0.0
+ * https://shadowd.zecure.org/files/shadowd-1.1.0.tar.gz
+ * https://shadowd.zecure.org/files/shadowd-1.1.0.tar.gz.DIGESTS
+ * https://shadowd.zecure.org/files/shadowd-1.1.0.tar.gz.DIGESTS.asc
 
 ## User Interface {#user_interface}
 
- * https://shadowd.zecure.org/files/shadowd_ui-1.0.1.tar.gz
- * https://shadowd.zecure.org/files/shadowd_ui-1.0.1.tar.gz.DIGESTS
- * https://shadowd.zecure.org/files/shadowd_ui-1.0.1.tar.gz.DIGESTS.asc
- * https://github.com/zecure/shadowd_ui/releases/tag/v1.0.1
+ * https://shadowd.zecure.org/files/shadowd_ui-1.1.0.tar.gz
+ * https://shadowd.zecure.org/files/shadowd_ui-1.1.0.tar.gz.DIGESTS
+ * https://shadowd.zecure.org/files/shadowd_ui-1.1.0.tar.gz.DIGESTS.asc
 
 ## PHP Connector {#php_connector}
 
  * https://shadowd.zecure.org/files/shadowd_php-1.0.0.tar.gz
  * https://shadowd.zecure.org/files/shadowd_php-1.0.0.tar.gz.DIGESTS
  * https://shadowd.zecure.org/files/shadowd_php-1.0.0.tar.gz.DIGESTS.asc
- * https://github.com/zecure/shadowd_php/releases/tag/v1.0.0
 
 ## Perl Connector {#perl_connector}
 
  * https://shadowd.zecure.org/files/shadowd_perl-1.0.3.tar.gz
  * https://shadowd.zecure.org/files/shadowd_perl-1.0.3.tar.gz.DIGESTS
  * https://shadowd.zecure.org/files/shadowd_perl-1.0.3.tar.gz.DIGESTS.asc
- * https://github.com/zecure/shadowd_perl/releases/tag/v1.0.3
- * http://search.cpan.org/~zithb/Shadowd-Connector-1.0.3/
 
 ## Python Connector {#python_connector}
 
  * https://shadowd.zecure.org/files/shadowd_python-1.1.1.tar.gz
  * https://shadowd.zecure.org/files/shadowd_python-1.1.1.tar.gz.DIGESTS
  * https://shadowd.zecure.org/files/shadowd_python-1.1.1.tar.gz.DIGESTS.asc
- * https://github.com/zecure/shadowd_python/releases/tag/v1.1.1
- * https://pypi.python.org/pypi/shadowd/1.1.1
 
 # Archives {#archives}
 
