@@ -30,7 +30,7 @@ The interface also comes with shell scripts that can be used to send weekly repo
 You can try out its web interface at <a target="_blank" href="https://demo.shadowd.zecure.org/">demo.shadowd.zecure.org</a>.</p>
 </div>
 
-### High Availability
+### High Coverage
 
 Shadow Daemon strives to be a single solution for all popular web languages.
 At the moment the following programming languages are supported:
