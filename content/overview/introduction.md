@@ -17,49 +17,12 @@ Shadow Daemon is [free software](https://www.gnu.org/philosophy/free-sw.html). I
 
 ## What differentiates Shadow Daemon?
 
-### Modularity
-
-Shadow Daemon is comprised of:
-
- * The background server *shadowd* that handles the analysis and storage of requests
- * *Connectors* that send the user input from the web applications to *shadowd*
- * And a *user interface* to manage the complete system
-
-Shadow Daemon is closer to the application than most other web application firewalls.
-It receives exactly the same input that the web application receives and thus it is almost impossible to bypass the detection by obfuscating the attack.
-However, the most complex parts of Shadow Daemon are separated from the web application to guarantee a certain standard of security.
-
-### Detection
-
-Shadow Daemon combines [white- and blacklisting](/documentation/architecture) to accurately detect malicious requests.
-The blacklist makes use of the sophisticated PHPIDS filters and searches for known attack patterns in the user input.
-The whitelist on the other hand searches for irregularities in the user input based on strict rules that define how the input should look like.
-Together they can detect almost any attack on a web application and still have a very low false-positive rate.
-Both systems are optional, e.g., it is possible to disable the whitelist and only rely on the blacklist to simplify the installation.
-
-Shadow Daemon is able to detect common attacks like:
-
- * SQL Injections
- * XML Injections
- * Code Injections
- * Command Injections
- * Cross-Site Scripting
- * Local/Remote File Inclusions
- * And many more ...
-
-### Protection
-
-Unlike many other web application firewalls Shadow Daemon does not completely block malicious requests.
-Instead it only filters out the dangerous parts of a request and lets it proceed afterwards.
-This makes attacks impossible, but does not unnecessary frustrate visitors in the case of false-positives.
-
-### Web Interface
+### Ease Of Use
 
 Shadow Daemon can be managed with a clear and structured web interface.
 The interface lets you examine attacks in great detail.
-Discover the techniques, vulnerabilities and goals of your attackers!
-Keep in mind that this is optional though, you do not have to use it.
 If you just want to protect your site, but otherwise do not care about attacks you can forget about the web interface once Shadow Daemon is installed and configured.
+The interface also comes with shell scripts that can be used to send weekly reports via e-mail, rotate the logs and the like.
 
 <div class="note info">
 <h1>Try out the demo!</h1>
@@ -67,7 +30,7 @@ If you just want to protect your site, but otherwise do not care about attacks y
 You can try out its web interface at <a target="_blank" href="https://demo.shadowd.zecure.org/">demo.shadowd.zecure.org</a>.</p>
 </div>
 
-### Supported Languages
+### High Availability
 
 Shadow Daemon strives to be a single solution for all popular web languages.
 At the moment the following programming languages are supported:
@@ -78,6 +41,35 @@ At the moment the following programming languages are supported:
 
 Additional connectors are planned and will be released at some point in the future.
 If you want to [contribute](/development/contributing) why not develop a new [connector](/documentation/connectors)?
+
+### Detection
+
+Shadow Daemon combines [white- and blacklisting](/documentation/architecture) to accurately detect malicious requests.
+The blacklist makes use of sophisticated regular expressions to search for known attack patterns in the user input.
+The whitelist on the other hand searches for irregularities in the user input based on strict rules that define how the input should look like.
+Together they can detect almost any attack on a web application and still have a very low false-positive rate.
+
+Shadow Daemon is able to detect common attacks like:
+
+ * SQL Injections
+ * XML Injections
+ * Code Injections
+ * Command Injections
+ * Cross-Site Scripting
+ * Local/Remote File Inclusions
+ * And more ...
+
+### Protection
+
+Unlike many other web application firewalls Shadow Daemon does not completely block malicious requests.
+Instead it only filters out the dangerous parts of a request and lets it proceed afterwards.
+This makes attacks impossible, but does not unnecessary frustrate visitors in the case of false-positives.
+
+### Architecture
+
+Shadow Daemon is closer to the application than most other web application firewalls.
+It receives exactly the same input that the web application receives and thus it is almost impossible to bypass the detection by obfuscating the attack.
+However, the most complex parts of Shadow Daemon are separated from the web application to guarantee a certain standard of security.
 
 ## Who should use Shadow Daemon?
 
