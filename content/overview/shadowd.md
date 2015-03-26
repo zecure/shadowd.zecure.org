@@ -17,7 +17,7 @@ The easiest way to install the server is to use the packet manager of your distr
 The package is still [awaiting sponsorship](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=776012), so it is not possible to install it with *apt-get* from the official repositories yet.
 Please [download](https://shadowd.zecure.org/files/debian/) and install the *deb* package manually instead.
 
-    dpkg -i shadowd_1.0.0-4_*.deb
+    dpkg -i shadowd_1.1.0-1_*.deb
 
 On Ubuntu you can also use [PPA](https://help.ubuntu.com/community/PPA) to install the package:
 
@@ -30,7 +30,7 @@ On Ubuntu you can also use [PPA](https://help.ubuntu.com/community/PPA) to insta
 The package is still [awaiting sponsorship](https://bugzilla.redhat.com/show_bug.cgi?id=1185662), so it is not possible to install it with *yum* from the official repositories yet.
 Please [download](https://shadowd.zecure.org/files/redhat/) and install the *rpm* package manually instead.
 
-    rpm -i shadowd-1.0.0-1.*.rpm
+    rpm -i shadowd-1.1.0-1.*.rpm
 
 ## Manual Installation
 
