@@ -68,7 +68,7 @@ The integer *status* is one of the following values:
 
 The array *threats* contains the identifiers/pathes of tagged user input.
 
-## Analyzer
+## Analyzer {#analyzer}
 
 ### Blacklist
 

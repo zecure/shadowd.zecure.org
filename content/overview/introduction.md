@@ -44,7 +44,7 @@ If you want to [contribute](/development/contributing) why not develop a new [co
 
 ### Accurate Detection
 
-Shadow Daemon combines [white- and blacklisting](/documentation/architecture) to accurately detect malicious requests.
+Shadow Daemon combines [white- and blacklisting](/documentation/architecture#analyzer) to accurately detect malicious requests.
 The blacklist makes use of sophisticated regular expressions to search for known attack patterns in the user input.
 The whitelist on the other hand searches for irregularities in the user input based on strict rules that define how the input should look like.
 Together they can detect almost any attack on a web application and still have a very low false-positive rate.
@@ -57,6 +57,7 @@ Shadow Daemon is able to detect common attacks like:
  * Command Injections
  * Cross-Site Scripting
  * Local/Remote File Inclusions
+ * Backdoor Access
  * And more ...
 
 ### Discreet Protection
