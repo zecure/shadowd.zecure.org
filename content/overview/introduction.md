@@ -42,7 +42,7 @@ At the moment the following programming languages are supported:
 Additional connectors are planned and will be released at some point in the future.
 If you want to [contribute](/development/contributing) why not develop a new [connector](/documentation/connectors)?
 
-### Detection
+### Accurate Detection
 
 Shadow Daemon combines [white- and blacklisting](/documentation/architecture) to accurately detect malicious requests.
 The blacklist makes use of sophisticated regular expressions to search for known attack patterns in the user input.
@@ -59,13 +59,13 @@ Shadow Daemon is able to detect common attacks like:
  * Local/Remote File Inclusions
  * And more ...
 
-### Protection
+### Discreet Protection
 
 Unlike many other web application firewalls Shadow Daemon does not completely block malicious requests.
 Instead it only filters out the dangerous parts of a request and lets it proceed afterwards.
 This makes attacks impossible, but does not unnecessary frustrate visitors in the case of false-positives.
 
-### Architecture
+### Secure Architecture
 
 Shadow Daemon is closer to the application than most other web application firewalls.
 It receives exactly the same input that the web application receives and thus it is almost impossible to bypass the detection by obfuscating the attack.
