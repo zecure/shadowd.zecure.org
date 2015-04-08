@@ -9,6 +9,12 @@ weight: 10
 
 ## Shadowd
 
+### **1.1.1** Apr. 08, 2015
+
+This update fixes a minor bug in the storage queue:
+
+ * Added graceful shut down for storage thread
+
 ### **1.1.0** Mar. 26, 2015
 
 This update improves the performance and attack detection:
