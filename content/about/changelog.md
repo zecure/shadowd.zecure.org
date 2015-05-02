@@ -9,6 +9,13 @@ weight: 10
 
 ## Shadowd
 
+### **1.1.2** May 02, 2015
+
+This update introduces two non-critical patches:
+
+ * Replaced sleep in storage consumer thread with condition variable to improve performance
+ * Added mutex for log just in case
+
 ### **1.1.1** Apr. 08, 2015
 
 This update fixes a minor bug in the storage queue:

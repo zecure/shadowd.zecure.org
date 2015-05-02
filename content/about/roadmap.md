@@ -15,11 +15,3 @@ This project tries to achieve:
  * Coverage of all common web languages with a single solution
  * Simple, secure and auditable modules
  * Deterministic and reproducible behaviour
-
-## To Do
-
-The following things will be added over time:
-
- * Integration of file upload protection by checking the extension and hash
- * Integration of security headers like *X-Frame-Options*
- * Windows version of shadowd
