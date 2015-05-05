@@ -7,7 +7,7 @@ title: Changelog
 weight: 10
 ---
 
-## Shadowd
+## Shadowd {#shadowd}
 
 ### **1.1.2** May 02, 2015
 
@@ -37,7 +37,7 @@ This update improves the performance and attack detection:
  * Decoupled whitelist from learning
  * Enhanced debugging messages
 
-## User Interface
+## User Interface {#user_interface}
 
 ### **1.1.0** Mar. 26, 2015
 
@@ -59,20 +59,28 @@ This update improves the performance and attack detection:
  * Added command to e-mail report
  * Added command to clean database
 
-## PHP Connector
+## PHP Connector {#php_connector}
 
 ### **1.0.0** Jan. 18, 2015
 
  * Restructured code
  * Added extended ignore function
 
-## Perl Connector
+## Perl Connector {#perl_connector}
 
 ### **1.0.0** Jan. 18, 2015
 
  * Initial release
 
-## Python Connector
+## Python Connector {#python_connector}
+
+### **1.2.0** May. 05, 2015
+
+This update improves old and adds new Python connectors:
+
+ * Added werkzeug support
+ * Added Flask support
+ * Improved threat removal in Django connector
 
 ### **1.1.0** Feb. 03, 2015
 
