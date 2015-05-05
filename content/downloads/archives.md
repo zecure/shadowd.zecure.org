@@ -48,9 +48,9 @@ The [DIGESTS](http://en.wikipedia.org/wiki/Cryptographic_hash_function) and [DIG
 
 ## Python Connector {#python_connector}
 
- * https://shadowd.zecure.org/files/shadowd_python-1.1.1.tar.gz
- * https://shadowd.zecure.org/files/shadowd_python-1.1.1.tar.gz.DIGESTS
- * https://shadowd.zecure.org/files/shadowd_python-1.1.1.tar.gz.DIGESTS.asc
+ * https://shadowd.zecure.org/files/shadowd_python-1.2.0.tar.gz
+ * https://shadowd.zecure.org/files/shadowd_python-1.2.0.tar.gz.DIGESTS
+ * https://shadowd.zecure.org/files/shadowd_python-1.2.0.tar.gz.DIGESTS.asc
 
 # Archives {#archives}
 

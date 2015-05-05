@@ -60,6 +60,20 @@ Next you have to register the middleware in the *settings.py* file of your appli
 
 The connector should be at the beginning of the *MIDDLEWARE_CLASSES* list.
 
+### Flask
+
+Flask applications require a small modification as well.
+It is necessary to create a hook to intercept requests:
+
+    from shadowd.flask_connector import InputFlask, OutputFlask, Connector
+
+    @app.before_request
+    def before_req():
+        input = InputFlask(request)
+        output = OutputFlask()
+
+        Connector().start(input, output)
+
 ## Configuration
 
 Copy the configuration from *misc/examples/connectors.ini* to */etc/shadowd/connectors.ini* and edit it.
