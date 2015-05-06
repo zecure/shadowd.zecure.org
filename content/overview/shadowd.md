@@ -12,7 +12,7 @@ weight: 20
 
 The easiest way to install the server is to use the packet manager of your distribution.
 
-### Debian / Ubuntu
+### Debian / Ubuntu {#debian}
 
 The package is still [awaiting sponsorship](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=776012), so it is not possible to install it with *apt-get* from the official repositories yet.
 Please [download](https://shadowd.zecure.org/files/debian/) and install the *deb* package manually instead.
@@ -26,12 +26,25 @@ On Ubuntu you can also use [PPA](https://help.ubuntu.com/community/PPA) to insta
     apt-get update
     apt-get install shadowd
 
-### Red Hat / CentOS / Fedora
+### Red Hat / CentOS / Fedora {#redhat}
 
 The package is still [awaiting sponsorship](https://bugzilla.redhat.com/show_bug.cgi?id=1185662), so it is not possible to install it with *yum* from the official repositories yet.
 Please [download](https://shadowd.zecure.org/files/redhat/) and install the *rpm* package manually instead.
 
     rpm -i shadowd-1.1.2-1.*.rpm
+
+### Docker {#docker}
+
+You can also use Docker to download and install shadowd.
+This is a good solution for distributions with outdated packets.
+You simply have to run:
+
+    wget -r -nd --no-parent https://shadowd.zecure.org/files/docker/
+    vim shadowd.ini
+    docker build -t shadowd_custom .
+    docker run -d -p 9115:9115 shadowd_custom
+
+This creates a new image based on [zecure/shadowd](https://registry.hub.docker.com/u/zecure/shadowd/) with a customized configuration file and starts it.
 
 ## Manual Installation
 
