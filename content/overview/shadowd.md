@@ -37,7 +37,7 @@ Please [download](https://shadowd.zecure.org/files/redhat/) and install the *rpm
 
 You can also use Docker to download and install shadowd.
 This is a good solution for distributions with outdated packets.
-You simply have to run:
+If you want to host the database and web interface yourself you simply have to run:
 
     wget -r -nd --no-parent https://shadowd.zecure.org/files/docker/
     vim shadowd.ini
@@ -46,9 +46,23 @@ You simply have to run:
 
 This creates a new image based on [zecure/shadowd](https://registry.hub.docker.com/u/zecure/shadowd/) with a customized configuration file and starts it.
 
+It is also possible to use Docker for the database and the web interface.
+This is the easiest and fastest way to install Shadow Daemon:
+
+    docker pull zecure/shadowd
+    docker pull zecure/shadowd_ui
+    docker pull zecure/shadowd_database
+    docker run -d --name shadowd_database zecure/shadowd_database
+    docker run -d -p 1337:80 --link shadowd_database:db zecure/shadowd_ui
+    docker run -d -p 9115:9115 --link shadowd_database:db zecure/shadowd
+
+If you chose this method you can directly jump to the [usage of the interface](/overview/user_interface#usage).
+You do not have to add a new user, you can log in with the name **admin** and the password **admin** at http://127.0.0.1:1337/.
+
 ## Manual Installation
 
-If you are using a distribution package you can skip this section and directly jump to the setup of the [database](#database).
+If you do not can or do not want to use a package you can also install shadowd manually by compiling it from source.
+If you are using a package you can skip this section and directly jump to the setup of the [database](#database).
 
 ### Dependencies
 

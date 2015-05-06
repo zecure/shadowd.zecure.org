@@ -20,7 +20,7 @@ The [DIGESTS](http://en.wikipedia.org/wiki/Cryptographic_hash_function) and [DIG
     sha512sum -c *.DIGESTS
     whirlpooldeep -c *.DIGESTS
 
-# Current
+# Current {#current}
 
 ## Shadowd {#shadowd}
 
@@ -52,7 +52,7 @@ The [DIGESTS](http://en.wikipedia.org/wiki/Cryptographic_hash_function) and [DIG
  * https://shadowd.zecure.org/files/shadowd_python-1.2.0.tar.gz.DIGESTS
  * https://shadowd.zecure.org/files/shadowd_python-1.2.0.tar.gz.DIGESTS.asc
 
-# Archives {#archives}
+# All {#all}
 
  * https://shadowd.zecure.org/files/
  * https://github.com/zecure/shadowd/releases

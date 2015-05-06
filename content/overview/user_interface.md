@@ -42,7 +42,7 @@ You can start the installation by running:
 
 You can test if everything works by visiting */config.php*.
 
-## Usage
+## Usage {#usage}
 
 First add a new admin user:
 
