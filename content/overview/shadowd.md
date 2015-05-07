@@ -10,7 +10,7 @@ weight: 20
 
 ## Installation
 
-The easiest way to install the server is to use the packet manager of your distribution.
+The easiest way to install the server is to use the packet manager of your distribution or [Docker]({{< ref "#docker" >}}).
 
 ### Debian / Ubuntu {#debian}
 
@@ -37,7 +37,7 @@ Please [download](https://shadowd.zecure.org/files/redhat/) and install the *rpm
 
 You can also use Docker to download and install shadowd.
 This is a good solution for distributions with outdated packets.
-If you want to host the database and web interface yourself you simply have to run:
+If you only want to run shadowd as a Docker container you simply have to run:
 
     wget -r -nd --no-parent https://shadowd.zecure.org/files/docker/
     vim shadowd.ini
@@ -47,7 +47,7 @@ If you want to host the database and web interface yourself you simply have to r
 This creates a new image based on [zecure/shadowd](https://registry.hub.docker.com/u/zecure/shadowd/) with a customized configuration file and starts it.
 
 It is also possible to use Docker for the database and the web interface.
-This is the easiest and fastest way to install Shadow Daemon:
+This is the *easiest* and *fastest* way to completely install Shadow Daemon (except connectors):
 
     docker pull zecure/shadowd
     docker pull zecure/shadowd_ui
