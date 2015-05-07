@@ -12,7 +12,7 @@ weight: 10
 
 Installing Shadow Daemon and protecting applications with only the blacklist is easy and requires almost no work.
 The blacklist does a decent job at identifying threats with the help of known attack signatures, but its detection is not flawless.
-The whitelist can compensate for most of these deficiencies, but unlike the blacklist it is a lot of work to set it up [from scratch](/tutorials/protect_applications).
+The whitelist can compensate for most of these deficiencies, but unlike the blacklist it is a lot of work to set it up [from scratch]({{< ref "tutorials/protect_applications.md" >}}).
 Luckily in many cases it is not necessary to set it up from scratch.
 It is possible to import [existing rules](https://github.com/zecure/shadowd_rules) instead and thus make the configuration of the whitelist child's play.
 
@@ -20,7 +20,7 @@ This tutorial demonstrates how to set up the whitelist with the help of [Wordpre
 
 ## Prerequisites
 
-This tutorial assumes that you already have [installed and configured](/overview/shadowd) the Shadow Daemon server and PHP connector.
+This tutorial assumes that you already have [installed and configured]({{< ref "overview/shadowd.md" >}}) the Shadow Daemon server and PHP connector.
 
 ## Whitelist
 
@@ -63,5 +63,5 @@ This disables the protection and allows you to test the new rules.</p>
 
 If there are existing rules for your web application it is not hard to use the whitelist.
 And it is worth it, because combined with the blacklist it makes your blog almost unhackable.
-If there are no existing rules it is much more work to configure the whitelist, but as you will see in the [next tutorial](/tutorials/protect_applications) Shadow Daemon has some handy helpers to automate this process to a certain degree.
+If there are no existing rules it is much more work to configure the whitelist, but as you will see in the [next tutorial]({{< ref "tutorials/protect_applications.md" >}}) Shadow Daemon has some handy helpers to automate this process to a certain degree.
 

@@ -13,7 +13,7 @@ weight: 5
 Technically speaking, Shadow Daemon is a **web application firewall** that intercepts requests and filters out malicious parameters.
 It is a modular system that separates web application, analysis and interface to increase security, flexibility and expandability.
 
-Shadow Daemon is [free software](https://www.gnu.org/philosophy/free-sw.html). It is released under the license [GPLv2](/about/license), so its source code can be examined, modified and distributed by everyone.
+Shadow Daemon is [free software](https://www.gnu.org/philosophy/free-sw.html). It is released under the license [GPLv2]({{< ref "about/license.md" >}}), so its source code can be examined, modified and distributed by everyone.
 
 ## What differentiates Shadow Daemon?
 
@@ -40,11 +40,11 @@ At the moment the following programming languages are supported:
  * Python
 
 Additional connectors are planned and will be released at some point in the future.
-If you want to [contribute](/development/contributing) why not develop a new [connector](/documentation/connectors)?
+If you want to [contribute]({{< ref "development/contributing.md" >}}) why not develop a new [connector]({{< ref "documentation/connectors.md" >}})?
 
 ### Accurate Detection
 
-Shadow Daemon combines [white- and blacklisting](/documentation/architecture#analyzer) to accurately detect malicious requests.
+Shadow Daemon combines [white- and blacklisting]({{< ref "documentation/architecture.md#analyzer" >}}) to accurately detect malicious requests.
 The blacklist makes use of sophisticated regular expressions to search for known attack patterns in the user input.
 The whitelist on the other hand searches for irregularities in the user input based on strict rules that define how the input should look like.
 Together they can detect almost any attack on a web application and still have a very low false-positive rate.
@@ -82,7 +82,7 @@ Shadow Daemon is for people who do not want to blindly place their trust in non-
 
 ## How do I install Shadow Daemon?
 
-*Getting Started* contains everything you need to know. Start by reading [shadowd](/overview/shadowd).
+*Getting Started* contains everything you need to know. Start by reading [shadowd]({{< ref "overview/shadowd.md" >}}).
 Installing Shadow Daemon is easy and only takes some minutes, really.
 
 ## How can I follow the development of Shadow Daemon?

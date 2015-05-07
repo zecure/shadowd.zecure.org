@@ -19,7 +19,7 @@ This tutorial explains how you can create whitelist rules for arbitrary web appl
 
 ## Prerequisites
 
-This tutorial assumes that you already have [installed and configured](/overview/shadowd) the Shadow Daemon server and the appropriate connector.
+This tutorial assumes that you already have [installed and configured]({{< ref "overview/shadowd.md" >}}) the Shadow Daemon server and the appropriate connector.
 
 ## Generation
 

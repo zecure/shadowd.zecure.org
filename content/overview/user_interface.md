@@ -10,7 +10,7 @@ weight: 30
 
 ## Dependencies
 
-You need a [database](/overview/shadowd#database) and a web server with PHP support as well as the PHP command line interface.
+You need a [database]({{< ref "overview/shadowd.md#database" >}}) and a web server with PHP support as well as the PHP command line interface.
 
  * apache / lighttpd / ...
  * php5-cgi
@@ -19,7 +19,7 @@ You need a [database](/overview/shadowd#database) and a web server with PHP supp
 
 ## Download
 
-Stable releases can be found at the [download page](/downloads/archives#user_interface).
+Stable releases can be found at the [download page]({{< ref "downloads/archives.md#user_interface" >}}).
 Make sure to use a compatible version, i.e. if you downloaded shadowd from Github you should also download the user interface from Github:
 
     git clone https://github.com/zecure/shadowd_ui.git
@@ -31,7 +31,8 @@ Make the *web* folder accessible via your web server, but nothing else, e.g., ch
 Make sure that *app/cache* and *app/logs* are writeable by the web server user.
 
 Open a terminal and navigate to the root folder of the user interface.
-To install the web application you have to download *composer* first:
+To install the web application you have to download *composer* first.
+It is recommended to do the installation without admin privileges.
 
     curl -s https://getcomposer.org/installer | php
 
@@ -70,4 +71,4 @@ You should start with a low value and increase it over time if there are too man
 
 ## What's next?
 
-You have to install connectors ([PHP](/overview/php_connector), [Perl](/overview/perl_connector), [Python](/overview/python_connector)) to connect your web applications with shadowd.
+You have to install connectors ([PHP]({{< ref "overview/php_connector.md" >}}), [Perl]({{< ref "overview/perl_connector.md" >}}), [Python]({{< ref "overview/python_connector.md" >}})) to connect your web applications with shadowd.

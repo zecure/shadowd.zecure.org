@@ -56,14 +56,14 @@ This is the easiest and fastest way to install Shadow Daemon:
     docker run -d -p 1337:80 --link shadowd_database:db zecure/shadowd_ui
     docker run -d -p 9115:9115 --link shadowd_database:db zecure/shadowd
 
-If you chose this method you can directly jump to the [usage of the interface](/overview/user_interface#usage).
+If you chose this method you can directly jump to the [usage of the interface]({{< ref "overview/user_interface.md#usage" >}}).
 Please note that you have to use the IP address of the docker network device as server IP for your profiles.
 You do not have to add a new user, you can log in with the name **admin** and the password **admin** at http://127.0.0.1:1337/.
 
 ## Manual Installation
 
 If you do not can or do not want to use a package you can also install shadowd manually by compiling it from source.
-If you are using a package you can skip this section and directly jump to the setup of the [database](#database).
+If you are using a package you can skip this section and directly jump to the setup of the [database]({{< ref "#database" >}}).
 
 ### Dependencies
 
@@ -88,7 +88,7 @@ Several libraries are also required:
 
 ### Download
 
-Stable releases of the source code can be found at the [download page](/downloads/archives#shadowd).
+Stable releases of the source code can be found at the [download page]({{< ref "downloads/archives.md#shadowd" >}}).
 If you want the newest and freshest version you should use Github to download the source code:
 
     git clone https://github.com/zecure/shadowd.git
@@ -131,4 +131,4 @@ The config is annotated and should be self-explanatory.
 </div>
 
 ## What's next?
-You have to install the [user interface](/overview/user_interface) to add profiles for web applications.
+You have to install the [user interface]({{< ref "overview/user_interface.md" >}}) to add profiles for web applications.

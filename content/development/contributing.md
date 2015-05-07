@@ -9,8 +9,8 @@ weight: 10
 
 All contributions to Shadow Daemon are welcome.
 If you think that you can improve one of the modules or this documentation you can fork it from Github, make your changes and propose them.
-Please keep the [roadmap](/about/roadmap) in mind before starting to work on changes.
-You can also [contact me](/about/credits) up front.
+Please keep the [roadmap]({{< ref "about/roadmap.md" >}}) in mind before starting to work on changes.
+You can also [contact me]({{< ref "about/credits.md" >}}) up front.
 
 ## Procedure
 

@@ -9,7 +9,7 @@ weight: 50
 
 ## Download
 
-Stable releases can be found at the [download page](/downloads/archives#perl_connector).
+Stable releases can be found at the [download page]({{< ref "downloads/archives.md#perl_connector" >}}).
 Make sure to use a compatible version, i.e. if you downloaded shadowd from Github you should also download the connector from Github:
 
     git clone https://github.com/zecure/shadowd_perl.git
@@ -71,7 +71,7 @@ The connector is only executed if the request matches a route.
 ## Configuration
 
 Copy the configuration from *misc/examples/connectors.ini* to */etc/shadowd/connectors.ini* and edit it.
-The config is annotated and should be self-explanatory, but if you are stuck you can find more information in the [documentation](/documentation/connectors).
+The config is annotated and should be self-explanatory, but if you are stuck you can find more information in the [documentation]({{< ref "documentation/connectors.md" >}}).
 
 <div class="note warning">
 <h1>Ignore sensitive input!</h1>
@@ -85,4 +85,4 @@ If you like it fast and simple you are done now!
 
 If you want the maximum security you should consider enabling the whitelist.
 The whitelist protects to some degree against unknown attack vectors as well as backdoors.
-There are tutorials that explain how to secure web applications with [existing rules sets](/tutorials/protect_wordpress) and how to generate [custom rules](/tutorials/protect_applications) for arbitrary web applications.
+There are tutorials that explain how to secure web applications with [existing rules sets]({{< ref "tutorials/protect_wordpress.md" >}}) and how to generate [custom rules]({{< ref "tutorials/protect_applications.md" >}}) for arbitrary web applications.
