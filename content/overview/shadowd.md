@@ -58,7 +58,7 @@ This is the *easiest* and *fastest* way to completely install Shadow Daemon (exc
 
 If you choose this method you can directly jump to the [usage of the interface]({{< ref "overview/user_interface.md#usage" >}}).
 Please note that you will have to use the IP address of the Docker network device as server IP for your profiles (e.g. docker0: 172.17.42.1).
-Also, you will not have to add a new user, because the database container ships with the default user account **admin** and the password **admin** at http://127.0.0.1:1337/.
+Also, you will not have to add a new user, because the database container ships with the default user account **admin** (password: **admin**).
 
 ## Manual Installation
 
