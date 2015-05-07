@@ -56,9 +56,9 @@ This is the *easiest* and *fastest* way to completely install Shadow Daemon (exc
     docker run -d -p 1337:80 --link shadowd_database:db zecure/shadowd_ui
     docker run -d -p 9115:9115 --link shadowd_database:db zecure/shadowd
 
-If you chose this method you can directly jump to the [usage of the interface]({{< ref "overview/user_interface.md#usage" >}}).
-Please note that you have to use the IP address of the docker network device as server IP for your profiles.
-You do not have to add a new user, you can log in with the name **admin** and the password **admin** at http://127.0.0.1:1337/.
+If you choose this method you can directly jump to the [usage of the interface]({{< ref "overview/user_interface.md#usage" >}}).
+Please note that you will have to use the IP address of the Docker network device as server IP for your profiles (e.g. docker0: 172.17.42.1).
+Also, you will not have to add a new user, because the database container ships with the default user account **admin** and the password **admin** at http://127.0.0.1:1337/.
 
 ## Manual Installation
 
