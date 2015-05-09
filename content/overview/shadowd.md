@@ -37,7 +37,7 @@ Please [download](https://shadowd.zecure.org/files/redhat/) and install the *rpm
 
 You can also use Docker to download and install shadowd.
 This is a good solution for distributions with outdated packets.
-If you only want to run shadowd as a Docker container you simply have to run:
+If you only want to use Docker for shadowd you simply have to run:
 
     wget -r -nd --no-parent https://shadowd.zecure.org/files/docker/
     vim shadowd.ini
