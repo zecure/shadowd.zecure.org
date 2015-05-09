@@ -49,16 +49,21 @@ This creates a new image based on [zecure/shadowd](https://registry.hub.docker.c
 It is also possible to use Docker for the database and the web interface.
 This is the *easiest* and *fastest* way to completely install Shadow Daemon (except connectors):
 
-    docker pull zecure/shadowd
-    docker pull zecure/shadowd_ui
     docker pull zecure/shadowd_database
     docker run -d --name shadowd_database zecure/shadowd_database
+    docker pull zecure/shadowd_ui
     docker run -d -p 1337:80 --link shadowd_database:db zecure/shadowd_ui
+    docker pull zecure/shadowd
     docker run -d -p 9115:9115 --link shadowd_database:db zecure/shadowd
 
 If you choose this method you can directly jump to the [usage of the interface]({{< ref "overview/user_interface.md#usage" >}}).
-Please note that you will have to use the IP address of the Docker network device as server IP for your profiles (e.g. docker0: 172.17.42.1).
-Also, you will not have to add a new user, because the database container ships with the default user account **admin** (password: **admin**).
+
+<div class="note info">
+<h1>Docker specifics</h1>
+<p>Please note that you will have to use the IP address of the Docker network device as <i>server IP</i> when you add a profile in the web interface (e.g. docker0: 172.17.42.1).
+Also, you will not have to add a new user, because the database container ships with a default user account: username <b>admin</b> and password <b>admin</b>.
+</p>
+</div>
 
 ## Manual Installation
 
