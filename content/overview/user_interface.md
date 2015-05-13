@@ -55,18 +55,20 @@ Use this user to login into the web interface.
 Navigate to *Profile* and click the *Add* button at the bottom of the page.
 Use the form to add a new profile:
 
- * Add the IP address of the connector as *server IP*.
- * Create a secure and unique *key* to authorize requests.
+ * Add the IP address of the connector as *server IP* to allow connections from this source.
+ * Add a secure and unique *key* to authorize requests.
  * Disable *learning* and the *whitelist* for now.
  * Enable the *blacklist*, because it is instantly ready for use.
  * Enter a *blacklist threshold* to set the sensitivity.
+ * Set a *flooding time* and *threshold* to protect the firewall from getting flooded with garbage data.
 
 <div class="note info">
 <h1>What is a good blacklist threshold?</h1>
 <p>If the threshold of the blacklist is too low there will be lots of false-positives.
 If the threshold is too high it might miss some attacks.</p>
-<p>A good threshold lies between 10 and 25.
-You should start with a low value and increase it over time if there are too many false-positives.</p>
+<p>A good threshold lies between 5 and 20.
+You should start with a low value and only increase it over time if there are way too many false-positives.
+If there are only single exceptions it is best to add blacklist rules that allow you to increase the threshold for very specific input.</p>
 </div>
 
 ## What's next?
