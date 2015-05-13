@@ -23,11 +23,6 @@ To do this move the content of *src* to a directory of your choice, e.g., */usr/
 Afterwards edit your *php.ini* and set *auto_prepend_file* to */usr/share/shadowd/shadowd_connector.php*.
 The change will take effect after you restart your web server, but you should wait with that until the configuration of the module is completely done.
 
-Apache servers can also use a *.htaccess* file to set *auto_prepend_file* for specific directories only.
-There is an example for this at *misc/examples/.htaccess*.
-
-## Examples
-
 ### Apache
 
 If you are using Apache you can easily load the connector for single vhosts only:
@@ -39,8 +34,7 @@ If you are using Apache you can easily load the connector for single vhosts only
         php_value  auto_prepend_file  "/usr/share/shadowd/shadowd_connector.php"
     </VirtualHost>
 
-It is also possible to use *php_value* inside a *.htaccess* file to enable the connector for specific directories.
-This method is well suited for shared hosting.
+Apache servers can also use *.htaccess* files to set *auto_prepend_file* for specific directories only.
 
 ## Configuration
 
