@@ -26,6 +26,22 @@ The change will take effect after you restart your web server, but you should wa
 Apache servers can also use a *.htaccess* file to set *auto_prepend_file* for specific directories only.
 There is an example for this at *misc/examples/.htaccess*.
 
+## Examples
+
+### Apache
+
+If you are using Apache you can easily load the connector for single vhosts only:
+
+    <VirtualHost *:80>
+        DocumentRoot "/www/example"
+        ServerName www.example.com
+      
+        php_value  auto_prepend_file  "/usr/share/shadowd/shadowd_connector.php"
+    </VirtualHost>
+
+It is also possible to use *php_value* inside a *.htaccess* file to enable the connector for specific directories.
+This method is well suited for shared hosting.
+
 ## Configuration
 
 Copy the configuration from *misc/examples/connectors.ini* to */etc/shadowd/connectors.ini* and edit it.
