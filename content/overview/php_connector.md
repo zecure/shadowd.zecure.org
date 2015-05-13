@@ -25,7 +25,7 @@ The change will take effect after you restart your web server, but you should wa
 
 ### Apache
 
-If you are using Apache you can easily load the connector for single vhosts only:
+If you are using Apache you do not have to enable the connector globally, you can easily load it for single vhosts only:
 
     <VirtualHost *:80>
         DocumentRoot "/www/example"
