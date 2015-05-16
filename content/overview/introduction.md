@@ -19,7 +19,7 @@ Shadow Daemon is [free software](https://www.gnu.org/philosophy/free-sw.html). I
 
 ### Ease Of Use
 
-Shadow Daemon can be managed with a clear and structured web interface.
+Shadow Daemon is easy to install and can be managed with a clear and structured web interface.
 The interface lets you examine attacks in great detail.
 If you just want to protect your site, but otherwise do not care about attacks you can forget about the web interface once Shadow Daemon is installed and configured.
 The interface also comes with shell scripts that can be used to send weekly reports via e-mail, rotate the logs and the like.
