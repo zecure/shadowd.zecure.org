@@ -16,8 +16,8 @@ Make sure to use a compatible version, i.e. if you downloaded shadowd from Githu
 
 ## Installation
 
-PHP provides the setting [auto_prepend_file](http://php.net/manual/en/ini.core.php#ini.auto-prepend-file) to include additional files.
-This can be used to automatically load the connector on every request.
+PHP provides the setting [auto_prepend_file](http://php.net/manual/en/ini.core.php#ini.auto-prepend-file) to automatically load additional PHP files every time the PHP binary is called.
+This can be used to load the connector on every request before the actual code is executed.
 
 To do this move the content of *src* to a directory of your choice, e.g., */usr/share/shadowd*.
 Afterwards edit your *php.ini* and set *auto_prepend_file* to */usr/share/shadowd/shadowd_connector.php*.

@@ -10,7 +10,7 @@ weight: 20
 
 ## Installation
 
-The easiest way to install the server is to use the packet manager of your distribution or [Docker]({{< ref "#docker" >}}).
+The easiest way to install the main component of Shadow Daemon - the background server - is to use the packet manager of your distribution or [Docker]({{< ref "#docker" >}}).
 
 ### Debian / Ubuntu {#debian}
 
