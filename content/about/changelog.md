@@ -9,6 +9,13 @@ weight: 10
 
 ## Shadowd {#shadowd}
 
+### **1.1.3** May 16, 2015
+
+The last performance improvement introduced a small bug in the storage queue. If many requests are pushed to the storage queue at the same time it is possible that a small percentage of them are not saved permanently. This is not a critical bug, but it still should not happen.
+
+ * Fixed bug in storage queue
+ * Improved flooding database queries to allow to disable check
+
 ### **1.1.2** May 02, 2015
 
 This update introduces two non-critical patches:
@@ -38,6 +45,16 @@ This update improves the performance and attack detection:
  * Enhanced debugging messages
 
 ## User Interface {#user_interface}
+
+### **1.2.0** May 16, 2015
+
+This update does not change any major things in the interface, but it should make the overall experience much more enjoyable.
+
+ * Added validation groups and improved ui layout and behaviour
+ * Added reasons (why the request is a threat) to requests list
+ * Added default values for threshold and length in rules forms
+ * Lowered the default blacklist threshold
+ * Deactivated learning and whitelist by default
 
 ### **1.1.0** Mar. 26, 2015
 
