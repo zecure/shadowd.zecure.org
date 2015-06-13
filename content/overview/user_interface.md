@@ -29,7 +29,7 @@ Make sure to use a compatible version, i.e. if you downloaded shadowd from Githu
 <div class="note info">
 <h1>In the case of an error...</h1>
 <p>The web interface uses the PHP framework <b>Symfony</b>.
-So if you are not able to install the interface for some reason you will most likely find a solution to your problem with the help of a search engine, e.g. <a href="https://duckduckgo.com/?q=symfony+cpanel">symfony cpanel</a></p>
+So if you are not able to install the interface for some reason you will most likely find a solution to your problem with the help of a search engine, e.g. <a href="https://duckduckgo.com/?q=symfony+cpanel" target="_blank">symfony and cPanel</a>.</p>
 </div>
 
 Move the user interface to a directory of your choice, e.g., */var/shadowd_ui*.
