@@ -15,3 +15,7 @@ This project tries to achieve:
  * Coverage of all common web languages with a single solution
  * Simple, secure and auditable modules
  * Deterministic and reproducible behaviour
+
+## Long-Time Features
+
+ * Iterative learning in shadowd, i.e. do not store all requests in learning mode anymore
