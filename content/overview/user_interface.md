@@ -30,7 +30,7 @@ Make sure to use a compatible version, i.e. if you downloaded shadowd from Githu
 <h1>In the case of an error...</h1>
 <p>The web interface uses the PHP framework <b>Symfony</b>.
 So if you are not able to install the interface for some reason you will most likely find a solution to your problem with the help of a search engine, e.g. <a href="https://duckduckgo.com/?q=symfony+cpanel" target="_blank">Symfony and cPanel</a>.
-Alternatively you can also use a <a href="https://registry.hub.docker.com/u/zecure/shadowd_ui/" target="_blank">Docker</a> container that ships with an own web server.</p>
+Alternatively you can also use the Docker container <a href="https://registry.hub.docker.com/u/zecure/shadowd_ui/" target="_blank">zecure/shadowd_ui</a> that ships with an own web server.</p>
 </div>
 
 Move the user interface to a directory of your choice, e.g., */var/shadowd_ui*.
