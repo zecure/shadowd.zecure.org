@@ -26,13 +26,6 @@ Make sure to use a compatible version, i.e. if you downloaded shadowd from Githu
 
 ## Installation
 
-<div class="note info">
-<h1>In the case of an error...</h1>
-<p>The web interface uses the PHP framework <b>Symfony</b>.
-So if you are not able to install the interface for some reason you will most likely find a solution to your problem with the help of a search engine, e.g. <a href="https://duckduckgo.com/?q=symfony+cpanel" target="_blank">Symfony and cPanel</a>.
-Alternatively you can also use the Docker container <a href="https://registry.hub.docker.com/u/zecure/shadowd_ui/" target="_blank">zecure/shadowd_ui</a> that ships with an own web server.</p>
-</div>
-
 Move the user interface to a directory of your choice, e.g., */var/shadowd_ui*.
 Make the *web* folder accessible via your web server, but nothing else, e.g., change the root directory of the web server to */var/shadowd_ui/web*.
 Make sure that *app/cache* and *app/logs* are writeable by the web server user.
@@ -49,6 +42,13 @@ You can start the installation by running:
     php composer.phar install
 
 You can test if everything works by visiting */config.php*.
+
+<div class="note info">
+<h1>In the case of an error...</h1>
+<p>The web interface uses the PHP framework <b>Symfony</b>.
+So if you are not able to install the interface for some reason you will most likely find a solution to your problem with the help of a search engine, e.g., <a href="https://duckduckgo.com/?q=symfony+cpanel" target="_blank">Symfony and cPanel</a>.
+Alternatively you can also use the Docker container <a href="https://registry.hub.docker.com/u/zecure/shadowd_ui/" target="_blank">zecure/shadowd_ui</a> that ships with an own web server.</p>
+</div>
 
 ## Usage {#usage}
 
