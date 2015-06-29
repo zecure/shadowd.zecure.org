@@ -20,7 +20,7 @@ PHP provides the setting [auto_prepend_file](http://php.net/manual/en/ini.core.p
 This can be used to load the connector on every request before the actual code is executed.
 
 To do this move the content of *src* to a directory of your choice, e.g., */usr/share/shadowd*.
-Afterwards edit your *php.ini* and set *auto_prepend_file* to */usr/share/shadowd/shadowd_connector.php*.
+Afterwards edit your *php.ini* and set *auto_prepend_file* to */usr/share/shadowd/shadowd_connector.php* to load the connector globally.
 The change will take effect after you restart your web server, but you should wait with that until the configuration of the module is completely done.
 
 ### Apache
@@ -35,6 +35,13 @@ If you are using Apache you do not have to enable the connector globally, you ca
     </VirtualHost>
 
 Apache servers can also use *.htaccess* files to set *auto_prepend_file* for specific directories only.
+
+### Nginx
+
+The same is true for Nginx, you do not have to set the PHP setting globally.
+To set it up for a single vhost or directory only just add:
+
+    fastcgi_param  PHP_ADMIN_VALUE  "auto_prepend_file=/usr/share/shadowd/shadowd_connector.php";
 
 ## Configuration
 
