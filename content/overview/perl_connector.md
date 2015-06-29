@@ -73,10 +73,9 @@ The connector is only executed if the request matches a route.
 Copy the configuration from *misc/examples/connectors.ini* to */etc/shadowd/connectors.ini* and edit it.
 The config is annotated and should be self-explanatory, but if you are stuck you can find more information in the [documentation]({{< ref "documentation/connectors.md" >}}).
 
-<div class="note warning">
-<h1>Ignore sensitive input!</h1>
-<p>You should use the <a href="/documentation/connectors#ignore">ignore</a> function of the connector to disregard very sensitive input, e.g., passwords.</p>
-</div>
+{{% note title="Ignore sensitive input!" type="warning" %}}
+You should use the [ignore]({{< ref "documentation/connectors.md#ignore" >}}) function of the connector to disregard very sensitive input, e.g., passwords.
+{{% /note %}}
 
 ## What's next?
 

@@ -10,7 +10,7 @@ weight: 5
 ## What is Shadow Daemon?
 
 *Shadow Daemon* is a collection of tools to *detect*, *protocol* and *prevent* *attacks* on *web applications*.
-Technically speaking, Shadow Daemon is a **web application firewall** that intercepts requests and filters out malicious parameters.
+Technically speaking, Shadow Daemon is a *web application firewall* that intercepts requests and filters out malicious parameters.
 It is a modular system that separates web application, analysis and interface to increase security, flexibility and expandability.
 
 Shadow Daemon is [free software](https://www.gnu.org/philosophy/free-sw.html). It is released under the license [GPLv2]({{< ref "about/license.md" >}}), so its source code can be examined, modified and distributed by everyone.
@@ -24,11 +24,10 @@ The interface lets you examine attacks in great detail.
 If you just want to protect your site, but otherwise do not care about attacks you can forget about the web interface once Shadow Daemon is installed and configured.
 The interface also comes with shell scripts that can be used to send weekly reports via e-mail, rotate the logs and the like.
 
-<div class="note info">
-<h1>Try out the demo!</h1>
-<p>Shadow Daemon monitors and protects the blog <a target="_blank" href="http://zecure.me/">zecure.me</a>.
-You can try out its web interface at <a target="_blank" href="https://demo.shadowd.zecure.org/">demo.shadowd.zecure.org</a>.</p>
-</div>
+{{% note title="Try out the demo!" type="info" %}}
+Shadow Daemon monitors and protects the blog [zecure.me](http://zecure.me/).
+You can try out its web interface at [demo.shadowd.zecure.org](https://demo.shadowd.zecure.org/).
+{{% /note %}}
 
 ### High Coverage
 

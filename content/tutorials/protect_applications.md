@@ -49,12 +49,11 @@ You should fix conflicts before activating the new rules.
 
 Finally you have to click on *Profiles* and enable the *whitelist* for the desired profile.
 
-<div class="note info">
-<h1>Test your rules!</h1>
-<p>It is possible that some rules have to be adjusted or added.
-To not scare away your visitors in such a case you should enable <a href="/documentation/connectors#observe">observe</a> in the connector at the beginning of the deployment.
-This disables the protection and allows you to test the new rules.</p>
-</div>
+{{% note title="Test your rules!" type="info" %}}
+It is possible that some rules have to be adjusted or added.
+To not scare away your visitors in such a case you should enable [observe]({{< ref "documentation/connectors.md#observe" >}}) in the connector at the beginning of the deployment.
+This disables the protection and allows you to test the new rules.
+{{% /note %}}
 
 If the rules are tested and working well you should also delete the training data of the profile to clean up the database.
 

@@ -43,12 +43,11 @@ You can start the installation by running:
 
 You can test if everything works by visiting */config.php*.
 
-<div class="note info">
-<h1>In the case of an error...</h1>
-<p>The web interface uses the PHP framework <b>Symfony</b>.
-So if you are not able to install the interface for some reason you will most likely find a solution to your problem with the help of a search engine, e.g., <a href="https://duckduckgo.com/?q=symfony+cpanel" target="_blank">Symfony and cPanel</a>.
-Alternatively you can also use the Docker container <a href="https://registry.hub.docker.com/u/zecure/shadowd_ui/" target="_blank">zecure/shadowd_ui</a> that ships with an own web server.</p>
-</div>
+{{% note title="In the case of an error..." type="info" %}}
+The web interface uses the PHP framework **Symfony**.
+So if you are not able to install the interface for some reason you will most likely find a solution to your problem with the help of a search engine, e.g., [Symfony and cPanel](https://duckduckgo.com/?q=symfony+cpanel).
+Alternatively you can also use the Docker container [zecure/shadowd_ui](https://registry.hub.docker.com/u/zecure/shadowd_ui/) that ships with an own web server.
+{{% /note %}}
 
 ## Usage {#usage}
 
@@ -69,14 +68,13 @@ Use the form to add a new profile:
  * Enter a *blacklist threshold* to set the sensitivity.
  * Set a *flooding time* and *threshold* to protect the firewall from getting flooded with garbage data.
 
-<div class="note info">
-<h1>What is a good blacklist threshold?</h1>
-<p>If the threshold of the blacklist is too low there will be lots of false-positives.
-If the threshold is too high it might miss some attacks.</p>
-<p>A good threshold lies between 5 and 20.
-You should start with a low value and only increase it over time if there are way too many false-positives.
-If there are only single exceptions it is best to add blacklist rules that allow you to increase the threshold for very specific input.</p>
-</div>
+{{% note title="What is a good blacklist threshold?" type="info" %}}
+If the threshold of the blacklist is too low there will be lots of false-positives.
+If the threshold is too high it might miss some attacks.
+Normally, a good (secure) threshold lies between 5 and 20.
+You should start with a low global value and only increase it over time if there are way too many false-positives.
+If there are only single exceptions it is best to add blacklist rules that allow you to increase the threshold for very specific input.
+{{% /note %}}
 
 ## What's next?
 

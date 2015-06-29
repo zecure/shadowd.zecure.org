@@ -65,12 +65,10 @@ So if you are using Docker anyway why not use it for everything?
 If you choose this method you can directly jump to the [usage of the interface]({{< ref "overview/user_interface.md#usage" >}}).
 You can access the web interface on port *1337*.
 
-<div class="note info">
-<h1>Docker specifics</h1>
-<p>Please note that you will have to use the IP address of the Docker network device as <i>server IP</i> when you add a profile in the web interface (e.g. docker0: 172.17.42.1).
-Also, you will not have to add a new user, because the database container ships with a default user account: username <b>admin</b> and password <b>admin</b>.
-</p>
-</div>
+{{% note title="Docker unique specifics" type="info" %}}
+Please note that you will have to use the IP address of the Docker network device as *server IP* when you add a profile in the web interface (e.g. docker0: 172.17.42.1).
+Also, you will not have to add a new user, because the database container ships with a default user account: username **admin** and password also **admin**.
+{{% /note %}}
 
 ## Manual Installation
 
@@ -137,10 +135,9 @@ If you are done create a new user and database and import the correct layout, e.
 The installer creates a configuration file at */etc/shadowd/shadowd.ini* that has to be edited.
 The config is annotated and should be self-explanatory.
 
-<div class="note warning">
-<h1>Verify the file permissions!</h1>
-<p>The configuration file contains your database password, so make sure that it is only readable by the shadowd user.</p>
-</div>
+{{% note title="Verify the file permissions!" type="warning" %}}
+The configuration file contains your database password, so make sure that it is only readable by the shadowd user.
+{{% /note %}}
 
 ## What's next?
 You have to install the [user interface]({{< ref "overview/user_interface.md" >}}) to add profiles for web applications.

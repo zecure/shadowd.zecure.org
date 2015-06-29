@@ -52,16 +52,15 @@ Since Wordpress has a lot of rules it is a good idea to increase the row limit t
 
 Finally you have to click on *Profiles* and enable the *whitelist* for the desired profile.
 
-<div class="note info">
-<h1>Test your rules!</h1>
-<p>If you are using plugins or a different version of the blog it is possible that some rules have to be adjusted or added.
-To not scare away your visitors in such a case you should enable <a href="/documentation/connectors#observe">observe</a> in the connector at the beginning of the deployment.
-This disables the protection and allows you to test the new rules.</p>
-</div>
+{{% note title="Test your rules!" type="info" %}}
+If you are using plugins or a different version of the blog it is possible that some rules have to be adjusted or added.
+To not scare away your visitors in such a case you should enable [observe]({{< ref "documentation/connectors.md#observe" >}}) in the connector at the beginning of the deployment.
+This disables the protection and allows you to test the new rules.
+{{% /note %}}
 
 ## Conclusion
 
 If there are existing rules for your web application it is not hard to use the whitelist.
 And it is worth it, because combined with the blacklist it makes your blog almost unhackable.
-If there are no existing rules it is much more work to configure the whitelist, but as you will see in the [next tutorial]({{< ref "tutorials/protect_applications.md" >}}) Shadow Daemon has some handy helpers to automate this process to a certain degree.
+If there are no existing rules it is much more work to configure the whitelist, but as you will see in the [next tutorial]({{< ref "tutorials/protect_applications.md" >}}) Shadow Daemon has some handy helpers to automate the creation of rules to a certain degree.
 
