@@ -11,10 +11,10 @@ weight: 10
 ## Introduction
 
 Installing Shadow Daemon and protecting applications with only the blacklist is easy and requires almost no work.
-The blacklist does a decent job at identifying threats with the help of known attack signatures, but its detection is not flawless.
+The blacklist does a decent job at identifying threats with the help of known attack patterns, but its detection is not flawless.
 The whitelist can compensate for most of these deficiencies, but unlike the blacklist it is a lot of work to set it up [from scratch]({{< ref "tutorials/protect_applications.md" >}}).
-Luckily in many cases it is not necessary to set it up from scratch.
-It is possible to import [existing rules](https://github.com/zecure/shadowd_rules) instead and thus make the configuration of the whitelist child's play.
+Luckily, in some cases it is not necessary to set it up from scratch.
+The interface allows you to import [existing rules](https://github.com/zecure/shadowd_rules) that other people created instead and thus make the configuration of the whitelist child's play.
 
 This tutorial demonstrates how to set up the whitelist with the help of [Wordpress 4.0](https://github.com/zecure/shadowd_rules/tree/master/src/wordpress/4.0).
 

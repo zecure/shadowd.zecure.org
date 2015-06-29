@@ -11,7 +11,7 @@ weight: 15
 ## Introduction
 
 Installing Shadow Daemon and protecting applications with only the blacklist is easy and requires almost no work.
-The blacklist does a decent job at identifying threats with the help of known attack signatures, but its detection is not flawless.
+The blacklist does a decent job at identifying threats with the help of known attack patterns, but its detection is not flawless.
 The whitelist can compensate for most of these deficiencies, but unlike the blacklist it is a lot of work to set it up from scratch.
 Luckily Shadow Daemon is able to generate rules and thus automate this process to a certain degree.
 
