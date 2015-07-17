@@ -30,7 +30,7 @@ The server expects a numerical id, an alphanumerical hash and JSON encoded data.
 Every value is separated by a single newline character and the server closes the connection after the third newline character.
 The server closes the connection prematurely though if the profile id is not numerical or if the hash is not alphanumerical.
 
-    profile id
+    profile_id
     sha256_hmac(json_data)
     json_data
 
