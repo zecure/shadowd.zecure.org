@@ -41,6 +41,10 @@ You can start the installation by running:
 
     php composer.phar install
 
+The installer asks you for a database driver.
+The default value is *pdo_pgsql* for PostgreSQL.
+If you are using MySQL change this value to *pdo_mysql*.
+
 You can test if everything works by visiting */config.php*.
 
 {{% note title="In the case of an error..." type="info" %}}
