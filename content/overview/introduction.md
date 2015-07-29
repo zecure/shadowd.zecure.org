@@ -77,7 +77,7 @@ Shadow Daemon is for people who want to run their own dynamic website without co
 
 Shadow Daemon is for people who want to know if and how their website is attacked.
 
-Shadow Daemon is for people who do not want to blindly place their trust in non-free software that does its work in secret and costs a fortune.
+Shadow Daemon is for people who do not want to blindly place their trust in closed-source software that does its work in secret and costs a fortune.
 
 ## How do I install Shadow Daemon?
 
