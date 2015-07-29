@@ -9,7 +9,7 @@ weight: 10
 ---
 
 This document describes how Shadow Daemon works under the hood.
-If you want to use Shadow Daemon to its limits it is recommended to read this.
+If you want to make best use of Shadow Daemon, it is recommended to read this short page.
 
 ## Layout
 
@@ -83,7 +83,7 @@ The impacts of all matching filters are aggregated and compared to a threshold.
 If the total impact is greater than the threshold the input is classified as a threat.
 
 The rules of the blacklist are stored in the database.
-You can find them in [pgsql_layout.sql](https://github.com/zecure/shadowd/blob/master/misc/databases/pgsql_layout.sql#L155-L239) or [mysql_layout.sql](https://github.com/zecure/shadowd/blob/master/misc/databases/mysql_layout.sql#L153-L237).
+You can find them in [pgsql_layout.sql](https://github.com/zecure/shadowd/blob/master/misc/databases/pgsql_layout.sql#L155-L239) and [mysql_layout.sql](https://github.com/zecure/shadowd/blob/master/misc/databases/mysql_layout.sql#L153-L237).
 
 ### Whitelist
 
