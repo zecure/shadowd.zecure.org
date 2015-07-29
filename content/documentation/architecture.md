@@ -8,6 +8,9 @@ title: Architecture
 weight: 10
 ---
 
+This document describes how Shadow Daemon works under the hood.
+If you want to use Shadow Daemon to its limits it is recommended to read this.
+
 ## Layout
 
 The following diagram represents the layout and communication of Shadow Daemon.
@@ -78,6 +81,9 @@ The blacklist uses regular expressions to identify known attack patterns.
 Every filter has a numerical impact that tries to specify the dangerousness and its unambiguity.
 The impacts of all matching filters are aggregated and compared to a threshold.
 If the total impact is greater than the threshold the input is classified as a threat.
+
+The rules of the blacklist are stored in the database.
+You can find them in [pgsql_layout.sql](https://github.com/zecure/shadowd/blob/master/misc/databases/pgsql_layout.sql#L155-L239) or [mysql_layout.sql](https://github.com/zecure/shadowd/blob/master/misc/databases/mysql_layout.sql#L153-L237).
 
 ### Whitelist
 
