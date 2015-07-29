@@ -9,7 +9,7 @@ weight: 10
 ---
 
 This document describes how Shadow Daemon works under the hood.
-If you want to make best use of Shadow Daemon, it is recommended to read this short page.
+If you want to make best use of Shadow Daemon, read this short page.
 
 ## Layout
 
