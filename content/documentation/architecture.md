@@ -82,7 +82,7 @@ Every filter has a numerical impact that tries to specify the dangerousness and 
 The impacts of all matching filters are aggregated and compared to a threshold.
 If the total impact is greater than the threshold the input is classified as a threat.
 
-The rules of the blacklist are stored in the database.
+The filters of the blacklist (regular expression, impact, description) are stored in the database.
 You can find them in [pgsql_layout.sql](https://github.com/zecure/shadowd/blob/master/misc/databases/pgsql_layout.sql#L155-L239) and [mysql_layout.sql](https://github.com/zecure/shadowd/blob/master/misc/databases/mysql_layout.sql#L153-L237).
 
 ### Whitelist
