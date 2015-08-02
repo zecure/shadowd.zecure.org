@@ -12,11 +12,7 @@ weight: 30
 
 ## Configuration
 
-The configuration is located at *app/config/parameters.yml*.
-Either edit the file manually or use [composer](https://getcomposer.org/doc/03-cli.md#config).
-
-    php composer.phar config --list
-    php composer.phar config [options] [setting-key] [setting-value1] ... [setting-valueN]
+The configuration file is located at *app/config/parameters.yml*.
 
 ## Commands
 
