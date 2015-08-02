@@ -68,7 +68,7 @@ This makes attacks impossible, but does not unnecessary frustrate visitors in th
 ### Secure Architecture
 
 Shadow Daemon is closer to the application than most other web application firewalls.
-It receives exactly the same input that the web application receives and thus it is almost impossible to bypass the detection by obfuscating the attack.
+It receives *exactly* the same input that the web application receives and thus it is almost impossible to bypass the detection by obfuscating the attack.
 However, the most complex parts of Shadow Daemon are separated from the web application to guarantee a certain standard of security.
 
 ## Who should use Shadow Daemon?
