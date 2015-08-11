@@ -103,7 +103,7 @@ The following character set filters for the whitelist are available (case-insens
 |Numeric (Extended)|-0123456789.,|
 |Hexadecimal|0123456789abcdef|
 |Alphanumeric|0123456789abcdefghijklmnopqrstuvwxyz|
-|Base64|0123456789abcdefghijklmnopqrstuvwxyz+/\s|
+|Base64|0123456789abcdefghijklmnopqrstuvwxyz=+/\s|
 |Special Characters|0123456789abcdefghijklmnopqrstuvwxyz.,:-+_\s|
 |Everything|*Absolutely everything*|
 
