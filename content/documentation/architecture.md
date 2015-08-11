@@ -95,7 +95,7 @@ The term whitelist implies that every input requires a matching rule, otherwise 
 If there is a rule the whitelist checks if the rule has a length restriction and if the restriction is adhered to.
 Finally the whitelist tests the character set of the input with the help of regular expressions.
 
-The following character set filters for the whitelist are available:
+The following character set filters for the whitelist are available (case-insensitive):
 
 |Name|Characters|
 |---|---|
