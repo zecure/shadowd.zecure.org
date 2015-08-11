@@ -1,13 +1,42 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic);
 
+table {
+	width: 100%;
+	color: #333;
+	font-family: Helvetica, Arial, sans-serif;
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
 thead {
     font-weight: bold;
 }
 
-table {
-    width: 100%;
+td, th {
+	border: 1px solid transparent;
+	height: 30px;
+	transition: all 0.3s;
+	padding-left: 10px;
 }
 
+th {
+	background: #DFDFDF;
+	font-weight: bold;
+}
+
+td {
+	background: #FAFAFA;
+}
+
+tr:nth-child(even) td {
+	background: #F1F1F1;
+}
+
+tr:nth-child(odd) td {
+	background: #FEFEFE;
+}
 
 h1, h2, h3 {
     margin-top: .8em;
