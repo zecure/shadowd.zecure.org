@@ -16,6 +16,13 @@ This project tries to achieve:
  * Simple, secure and auditable modules
  * Deterministic and reproducible behaviour
 
-## Long-Time Features
+## Pending
 
- * Iterative learning in shadowd, i.e. do not store all requests in learning mode anymore
+ * Support of HTTP security headers for additional security
+ * Analysis of file uploads
+ * Graphical representation of attacks
+ * Localization
+
+### Long-Time Features
+
+ * Iterative learning in shadowd, i.e. do not store all requests in learning mode
