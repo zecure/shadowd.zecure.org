@@ -23,6 +23,45 @@ It establishs a TCP connection with the server and transmits the client ip, the 
 The server processes and analyzes the data and returns the identifiers of dangerous input.
 The connector uses the identifiers to defuse all threats and the originally requested PHP script is executed.
 
+## Analyzer {#analyzer}
+
+### Blacklist
+
+![Flowchart Blacklist](/img/documentation/blacklist.png)
+
+The blacklist uses regular expressions to identify known attack patterns.
+Every filter has a numerical impact that tries to specify the dangerousness and its unambiguity.
+The impacts of all matching filters are aggregated and compared to a threshold.
+If the total impact is greater than the threshold the input is classified as a threat.
+
+The filters of the blacklist (regular expression, impact, description) are stored in the database.
+You can find them in [pgsql_layout.sql](https://github.com/zecure/shadowd/blob/master/misc/databases/pgsql_layout.sql#L155-L239) and [mysql_layout.sql](https://github.com/zecure/shadowd/blob/master/misc/databases/mysql_layout.sql#L153-L237).
+
+### Whitelist
+
+![Flowchart Whitelist](/img/documentation/whitelist.png)
+
+The whitelist does multiple things.
+First it checks if the input has a rule.
+The term whitelist implies that every input requires a matching rule, otherwise the input is considered a threat.
+If there is a rule the whitelist checks if the rule has a length restriction and if the restriction is adhered to.
+Finally the whitelist tests the character set of the input with the help of regular expressions.
+
+The following character set filters for the whitelist are available (case-insensitive):
+
+|Name|Characters|
+|---|---|
+|Numeric|0123456789|
+|Numeric (Extended)|-0123456789.,|
+|Hexadecimal|0123456789abcdef|
+|Alphanumeric|0123456789abcdefghijklmnopqrstuvwxyz|
+|Base64|0123456789abcdefghijklmnopqrstuvwxyz=+/\s|
+|Special Characters|0123456789abcdefghijklmnopqrstuvwxyz.,:-+_\s|
+|Everything|*Absolutely everything*|
+
+Direct user input always has to be checked with the filter *everything*.
+Only use the other, secure filters for input that always matches the same regular expression, e.g., passive user input like ids or category identifiers.
+
 ## Protocol {#protocol}
 
 The following network protocol is used for the communication between the connectors and shadowd.
@@ -70,42 +109,3 @@ The integer *status* is one of the following values:
  * ATTACK: 5
 
 The array *threats* contains the identifiers/pathes of tagged user input.
-
-## Analyzer {#analyzer}
-
-### Blacklist
-
-![Flowchart Blacklist](/img/documentation/blacklist.png)
-
-The blacklist uses regular expressions to identify known attack patterns.
-Every filter has a numerical impact that tries to specify the dangerousness and its unambiguity.
-The impacts of all matching filters are aggregated and compared to a threshold.
-If the total impact is greater than the threshold the input is classified as a threat.
-
-The filters of the blacklist (regular expression, impact, description) are stored in the database.
-You can find them in [pgsql_layout.sql](https://github.com/zecure/shadowd/blob/master/misc/databases/pgsql_layout.sql#L155-L239) and [mysql_layout.sql](https://github.com/zecure/shadowd/blob/master/misc/databases/mysql_layout.sql#L153-L237).
-
-### Whitelist
-
-![Flowchart Whitelist](/img/documentation/whitelist.png)
-
-The whitelist does multiple things.
-First it checks if the input has a rule.
-The term whitelist implies that every input requires a matching rule, otherwise the input is considered a threat.
-If there is a rule the whitelist checks if the rule has a length restriction and if the restriction is adhered to.
-Finally the whitelist tests the character set of the input with the help of regular expressions.
-
-The following character set filters for the whitelist are available (case-insensitive):
-
-|Name|Characters|
-|---|---|
-|Numeric|0123456789|
-|Numeric (Extended)|-0123456789.,|
-|Hexadecimal|0123456789abcdef|
-|Alphanumeric|0123456789abcdefghijklmnopqrstuvwxyz|
-|Base64|0123456789abcdefghijklmnopqrstuvwxyz=+/\s|
-|Special Characters|0123456789abcdefghijklmnopqrstuvwxyz.,:-+_\s|
-|Everything|*Absolutely everything*|
-
-Direct user input always has to be checked with the filter *everything*.
-Only use the other, secure filters for input that always matches the same regular expression, e.g., passive user input like ids or category identifiers.
