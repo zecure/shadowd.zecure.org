@@ -14,7 +14,7 @@ weight: 40
 ## Resources
 
  * Documentation based on and build with [Hugo](http://gohugo.io/)
- * Some blacklist filters based on [PHPIDS](http://phpids.org/)
+ * Some blacklist filters based on [PHPIDS](http://phpids.org/) and [mod_security](https://github.com/SpiderLabs/owasp-modsecurity-crs)
  * Network architecture vaguely based on [http_server3](http://www.boost.org/doc/libs/1_53_0/doc/html/boost_asio/example/http/server3/)
  * Web interface build with [Symfony](http://symfony.com/)
  * Layout makes use of [Bootstrap](http://getbootstrap.com/)
