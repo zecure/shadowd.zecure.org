@@ -98,8 +98,7 @@ Several libraries are also required:
 
 ### Download
 
-Stable releases of the source code can be found at the [download page]({{< ref "downloads/archives.md#shadowd" >}}).
-If you want the newest and freshest version you should use Github to download the source code:
+Stable releases of the source code can be found at the [download page]({{< ref "downloads/archives.md#shadowd" >}}) or at <a target="_blank" href="https://github.com/zecure/shadowd">Github</a>:
 
     git clone https://github.com/zecure/shadowd.git
 

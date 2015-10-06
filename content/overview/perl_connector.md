@@ -9,12 +9,10 @@ weight: 50
 
 ## Download
 
-Stable releases can be found at the [download page]({{< ref "downloads/archives.md#perl_connector" >}}).
-Make sure to use a compatible version, i.e. if you downloaded shadowd from Github you should also download the connector from Github:
+If you are using CPAN to install the module you do not have to download the source code manually.
+Stable releases of the source code can be found at the [download page]({{< ref "downloads/archives.md#perl_connector" >}}) or at <a target="_blank" href="https://github.com/zecure/shadowd_perl">Github</a>:
 
     git clone https://github.com/zecure/shadowd_perl.git
-
-If you are using CPAN to install the module you do not have to download it manually.
 
 ## Installation
 

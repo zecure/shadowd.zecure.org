@@ -8,6 +8,8 @@ title: User Interface
 weight: 30
 ---
 
+The web-based user interface is used to configure and manage the daemon.
+
 ## Dependencies
 
 You need a [database]({{< ref "overview/shadowd.md#database" >}}) and a web server with PHP support as well as the PHP command line interface.
@@ -19,8 +21,7 @@ You need a [database]({{< ref "overview/shadowd.md#database" >}}) and a web serv
 
 ## Download
 
-Stable releases can be found at the [download page]({{< ref "downloads/archives.md#user_interface" >}}).
-Make sure to use a compatible version, i.e. if you downloaded shadowd from Github you should also download the user interface from Github:
+Stable releases of the source code can be found at the [download page]({{< ref "downloads/archives.md#user_interface" >}}) or at <a target="_blank" href="https://github.com/zecure/shadowd_ui">Github</a>:
 
     git clone https://github.com/zecure/shadowd_ui.git
 

@@ -9,12 +9,10 @@ weight: 60
 
 ## Download
 
-Stable releases can be found at the [download page]({{< ref "downloads/archives.md#python_connector" >}}).
-Make sure to use a compatible version, i.e. if you downloaded shadowd from Github you should also download the connector from Github:
+If you are using Pypi to install the package you do not have to download the source code manually.
+Stable releases of the source code can be found at the [download page]({{< ref "downloads/archives.md#php_connector" >}}) or at <a target="_blank" href="https://github.com/zecure/shadowd_python">Github</a>:
 
     git clone https://github.com/zecure/shadowd_python.git
-
-If you are using Pypi to install the package you do not have to download it manually.
 
 ## Installation
 
