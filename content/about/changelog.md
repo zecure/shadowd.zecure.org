@@ -46,6 +46,10 @@ This update improves the performance and attack detection:
 
 ## User Interface {#user_interface}
 
+### **1.2.1** Oct 06, 2015
+
+This update fixes a small bug that happens in certain situations with PHP versions prior to 5.5.
+
 ### **1.2.0** May 16, 2015
 
 This update does not change any major things in the interface, but it should make the overall experience much more enjoyable.
