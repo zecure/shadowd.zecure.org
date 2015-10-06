@@ -10,7 +10,7 @@ weight: 30
 
 ## Description
 
-The user interface for Shadow Daemon is very important, because it is required to set up the firewall.
+The user interface for Shadow Daemon is important, because it is required to set up the firewall.
 It can be also used to analyze attacks manually, learn about attackers and improve the rules based on that new knowledge.
 
 At the moment there is only a web interface, but CLI/GUI applications are a possibility as well (at a later time).
