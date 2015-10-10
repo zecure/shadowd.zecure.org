@@ -17,7 +17,7 @@ Shadow Daemon is [free software](https://www.gnu.org/philosophy/free-sw.html). I
 
 ## What differentiates Shadow Daemon?
 
-### Ease Of Use
+### Ease of Use
 
 Shadow Daemon is easy to install and can be managed with a clear and structured web interface.
 The interface lets you examine attacks in great detail.
@@ -31,12 +31,22 @@ You can try out its web interface at <a target="_blank" href="https://demo.shado
 
 ### High Coverage
 
-Shadow Daemon strives to be a single solution for all popular web languages.
-At the moment the following programming languages are supported:
+Shadow Daemon uses small connectors on application level to intercept requests.
+This guarantees that the analyzed data is exactly the same as the input data of the web application, a task many firewalls fail to do properly.
+The installation of the connectors is easy and does not require coding abilities.
+
+At the moment the following programming languages, libs and frameworks are supported:
 
  * PHP
  * Perl
+  * CGI
+  * Mojolicious
+  * Mojolicious::Lite
  * Python
+  * CGI
+  * Django
+  * Werkzeug
+  * Flask
 
 Additional connectors are planned and will be released at some point in the future.
 If you want to [contribute]({{< ref "development/contributing.md" >}}) why not develop a new [connector]({{< ref "documentation/connectors.md" >}})?
