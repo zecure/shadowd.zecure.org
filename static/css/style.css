@@ -286,7 +286,7 @@ a.logo {
 
 a.logo:hover, a.logo:focus {
     text-decoration: none;
-    outline: none;
+    color: #ccc;
 }
 
 h1.top-menu {
