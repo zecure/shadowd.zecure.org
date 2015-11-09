@@ -41,5 +41,9 @@ $(document).ready(function(){
             $("#container").removeClass("sidebar-closed");
         }
     });
+
+    $('.nospam-email').each(function(i){
+        $(this).html($(this).html().replace("(a)","@"));
+    });
 });
 

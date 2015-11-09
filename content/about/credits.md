@@ -9,7 +9,11 @@ weight: 40
 
 ## Contributors
 
- * [Hendrik Buchwald](https://github.com/zit-hb) <<hb@zecure.org>>
+ * [Hendrik Buchwald](https://github.com/zit-hb) {{% nospam %}}hb(a)zecure.org{{% /nospam %}}
+
+### Translations
+
+ * sbilly {{% nospam %}}superli.1980(a)gmail.com{{% /nospam %}}
 
 ## Resources
 
