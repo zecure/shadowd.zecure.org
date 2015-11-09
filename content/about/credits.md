@@ -13,7 +13,7 @@ weight: 40
 
 ### Translations
 
- * sbilly {{% nospam %}}superli.1980(a)gmail.com{{% /nospam %}}
+ * [sbilly](https://github.com/sbilly) {{% nospam %}}superli.1980(a)gmail.com{{% /nospam %}}
 
 ## Resources
 
