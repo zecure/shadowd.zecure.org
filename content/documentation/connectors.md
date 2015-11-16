@@ -84,6 +84,8 @@ Every entry needs a caller and/or a path, i.e.:
       {"caller": "...", "path": "..."}
     ]
 
+Wildcards are not supported, every value has to match exactly.
+
 ### Client IP
 
 Some connectors allow to change the source of the client IP.
@@ -94,3 +96,59 @@ This is intended for web servers that are behind a proxy.
 Some connectors allow to change the source of the caller.
 In most cases the path and name of the executed script is the caller, but sometimes everything is routed through a single file.
 In such a case it might be a good idea to change the caller to the requested route.
+
+## Problems
+
+### The connector can't connect
+
+If you have problems to connect a web application with shadowd you should enable debugging in the configuration file.
+The error messages will help you to identify the cause of the problems in no time.
+
+#### config error
+
+If you get a config error the configuration file is either invalid or not readable by the web server user.
+
+#### xxx in config missing
+
+A required configuration value is not set, so make sure that it is set and not commented out by a semicolon.
+
+#### could not open ignore file
+
+An ignore file is set in the configuration file, but it is not possible to open it.
+This file has to be readable by the web server user.
+
+#### profile id not integer
+
+Only numerical identifiers for profiles are possible, so if the id is not an integer the connection can not succeed.
+The id of the profile is automatically assigned by your database software when you add a new profile.
+
+#### network error: xxx
+
+It was not possible to establish a connection with the shadowd server.
+
+#### unknown network error
+
+It was not possible to establish a connection with the shadowd server.
+The reason is not known.
+
+#### bad request
+
+There are multiple reasons why the request could be bad: the flood or integrity protection blocked the request, there is no matching profile or something has gone horribly wrong.
+For security reasons shadowd does not tell the connector exactly why the request is bad.
+To see what went wrong you have to look in the log file of shadowd itself.
+
+#### bad signature
+
+The signature is bad if the key in your connector configuration file does not match the profile key that is saved in the database.
+Make sure that the keys match and that the profile id is correct.
+
+#### bad json
+
+It should not happen that the json data is invalid.
+The most likely explanation is a mismatch of shadowd and connector versions.
+
+#### processing error
+
+It should not happen that the output of shadowd can not be processed.
+The most likely explanation is a crash of shadowd.
+If this is the case make sure to create a [Github issue](https://github.com/zecure/shadowd/issues), because shadowd should never crash under any circumstances.
