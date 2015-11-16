@@ -13,7 +13,7 @@ weight: 5
 Technically speaking, Shadow Daemon is a *web application firewall* that intercepts requests and filters out malicious parameters.
 It is a modular system that separates web application, analysis and interface to increase security, flexibility and expandability.
 
-Shadow Daemon is [free software](https://www.gnu.org/philosophy/free-sw.html). It is released under the license [GPLv2]({{< ref "about/license.md" >}}), so it is open source and the code can be examined, modified and distributed by everyone.
+Shadow Daemon is <a target="_blank" href="https://www.gnu.org/philosophy/free-sw.html">free software</a>. It is released under the license [GPLv2]({{< ref "about/license.md" >}}), so it is open source and the code can be examined, modified and distributed by everyone.
 
 ## What differentiates Shadow Daemon?
 

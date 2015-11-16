@@ -15,8 +15,13 @@ If you are unsure about something you can also contact us at <contact@zecure.org
 ## Procedure
 
  1. Fork the repository from https://github.com/zecure
- 2. Create your feature branch (`git checkout -b my-new-branch`)
- 3. Commit your changes (`git commit -am 'Changed this and that.'`)
- 4. Squash commits into a single (or logically grouped) commits (`git rebase -i`)
- 5. Push to the branch (`git push origin my-new-branch`)
- 6. Create new Pull Request
+ 2. Unless you are fixing a critical bug change to the dev branch (`git checkout dev`)
+ 3. Create your feature branch (`git checkout -b my-new-branch`)
+ 4. Commit your changes (`git commit -am 'Changed this and that.'`)
+ 5. Squash commits into a single (or logically grouped) commits (`git rebase -i`)
+ 6. Push to the branch (`git push origin my-new-branch`)
+ 7. Create new Pull Request
+
+## Documentation
+
+You can find a developer documentation/programming reference for shadowd [here](https://shadowd.zecure.org/references/current/).
