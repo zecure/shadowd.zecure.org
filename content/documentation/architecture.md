@@ -14,20 +14,19 @@ If you want to make best use of Shadow Daemon, read this short page.
 ## Layout
 
 The following diagram represents the layout and communication of Shadow Daemon.
-The PHP connector is used as an example, other connectors behave accordingly.
 
-![Layout](/img/documentation/layout.png)
+![Layout](/img/documentation/layout.svg)
 
-The connector is executed every time a client requests a PHP file.
+The connector is executed every time a client requests a resource.
 It establishs a TCP connection with the server and transmits the client ip, the caller and the user input.
 The server processes and analyzes the data and returns the identifiers of dangerous input.
-The connector uses the identifiers to defuse all threats and the originally requested PHP script is executed.
+The connector uses the identifiers to defuse all threats and the originally requested resource is loaded.
 
 ## Analyzer {#analyzer}
 
 ### Blacklist
 
-![Flowchart Blacklist](/img/documentation/blacklist.png)
+![Flowchart Blacklist](/img/documentation/blacklist.svg)
 
 The blacklist uses regular expressions to identify known attack patterns.
 Every filter has a numerical impact that tries to specify the dangerousness and its unambiguity.
@@ -39,7 +38,7 @@ You can find them in [pgsql_layout.sql](https://github.com/zecure/shadowd/blob/m
 
 ### Whitelist
 
-![Flowchart Whitelist](/img/documentation/whitelist.png)
+![Flowchart Whitelist](/img/documentation/whitelist.svg)
 
 The whitelist does multiple things.
 First it checks if the input has a rule.
