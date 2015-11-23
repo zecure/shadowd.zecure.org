@@ -7,7 +7,7 @@ title: Introduction
 weight: 5
 ---
 
-<img id="logo" src="/img/logo.png" />
+<img id="logo" src="/img/logo.jpg" />
 
 ## What is Shadow Daemon?
 
