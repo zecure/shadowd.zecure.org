@@ -469,7 +469,8 @@ figure {
 
 #logo {
   width: 40%;
-  min-width: 500px;
-  margin-bottom: -75px;
+  min-width: 300px;
+  max-width: 800px;
+  margin-bottom: -70px;
   margin-left: 5%;
 }
