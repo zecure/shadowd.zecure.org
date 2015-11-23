@@ -11,6 +11,10 @@ weight: 40
 
  * [Hendrik Buchwald](https://github.com/zit-hb) {{% nospam %}}hb(a)zecure.org{{% /nospam %}}
 
+### Logo
+
+ * [Pekka Hyvärinen](https://twitter.com/S3Dub)
+
 ### Translations
 
  * [sbilly](https://github.com/sbilly) {{% nospam %}}superli.1980(a)gmail.com{{% /nospam %}}

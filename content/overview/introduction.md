@@ -7,6 +7,8 @@ title: Introduction
 weight: 5
 ---
 
+<img id="logo" src="/img/logo.png" />
+
 ## What is Shadow Daemon?
 
 *Shadow Daemon* is a collection of tools to *detect*, *protocol* and *prevent* *attacks* on *web applications*.

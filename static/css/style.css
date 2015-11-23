@@ -466,3 +466,10 @@ figure {
 .intro-icon {
   display: inline-block;
 }
+
+#logo {
+  width: 40%;
+  min-width: 500px;
+  margin-bottom: -75px;
+  margin-left: 5%;
+}
