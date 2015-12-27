@@ -18,6 +18,7 @@ weight: 40
 ### Translations
 
  * [sbilly](https://github.com/sbilly) {{% nospam %}}superli.1980(a)gmail.com{{% /nospam %}}
+ * [Gyrth McMulin](https://twitter.com/GyrthMcMulin)
 
 ## Resources
 
