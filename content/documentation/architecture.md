@@ -8,9 +8,6 @@ title: Architecture
 weight: 10
 ---
 
-This document describes how Shadow Daemon works under the hood.
-If you want to make best use of Shadow Daemon, read this short page.
-
 ## Layout
 
 The following diagram represents the layout and communication of Shadow Daemon.
@@ -18,48 +15,9 @@ The following diagram represents the layout and communication of Shadow Daemon.
 ![Layout](/img/documentation/layout.svg)
 
 The connector is executed every time a client requests a resource.
-It establishs a TCP connection with the server and transmits the client ip, the caller and the user input.
-The server processes and analyzes the data and returns the identifiers of dangerous input.
+It establishs a TCP connection with the shadowd server and transmits the client ip, caller, resource, user input and checksums.
+The server processes and analyzes the data with the [blacklist]({{< ref "documentation/blacklist.md" >}}), [whitelist]({{< ref "documentation/whitelist.md" >}}) and [integrity]({{< ref "documentation/integrity.md" >}}) check and returns the identifiers of dangerous input.
 The connector uses the identifiers to defuse all threats and the originally requested resource is loaded.
-
-## Analyzer {#analyzer}
-
-### Blacklist
-
-![Flowchart Blacklist](/img/documentation/blacklist.svg)
-
-The blacklist uses regular expressions to identify known attack patterns.
-Every filter has a numerical impact that tries to specify the dangerousness and its unambiguity.
-The impacts of all matching filters are aggregated and compared to a threshold.
-If the total impact is greater than the threshold the input is classified as a threat.
-
-The filters of the blacklist (regular expression, impact, description) are stored in the database.
-You can find them in [pgsql_layout.sql](https://github.com/zecure/shadowd/blob/master/misc/databases/pgsql_layout.sql#L155-L239) and [mysql_layout.sql](https://github.com/zecure/shadowd/blob/master/misc/databases/mysql_layout.sql#L153-L237).
-
-### Whitelist
-
-![Flowchart Whitelist](/img/documentation/whitelist.svg)
-
-The whitelist does multiple things.
-First it checks if the input has a rule.
-The term whitelist implies that every input requires a matching rule, otherwise the input is considered a threat.
-If there is a rule the whitelist checks if the rule has a length restriction and if the restriction is adhered to.
-Finally the whitelist tests the character set of the input with the help of regular expressions.
-
-The following character set filters for the whitelist are available (case-insensitive):
-
-|Name|Characters|
-|---|---|
-|Numeric|0123456789|
-|Numeric (Extended)|-0123456789.,|
-|Hexadecimal|0123456789abcdef|
-|Alphanumeric|0123456789abcdefghijklmnopqrstuvwxyz|
-|Base64|0123456789abcdefghijklmnopqrstuvwxyz=+/\s|
-|Special Characters|0123456789abcdefghijklmnopqrstuvwxyz.,:-+_\s|
-|Everything|*Absolutely everything*|
-
-Direct user input always has to be checked with the filter *everything*.
-Only use the other, secure filters for input that always matches the same regular expression, e.g., passive user input like ids or category identifiers.
 
 ## Protocol {#protocol}
 
@@ -81,12 +39,17 @@ The following JSON structure is expected, but without the additional newlines th
         "version": "...",
         "client_ip": "...",
         "caller": "...",
+        "resource": "...",
         "input": {
+            "...": "..."
+        },
+        "hashes": {
             "...": "..."
         }
     }
 
 The dictionary *input* contains identifiers/pathes and the associated values of all user input.
+The dictionary *hashes* contains algorithms and the associated values of the executed script file.
 
 ### Response
 
@@ -106,5 +69,6 @@ The integer *status* is one of the following values:
  * BAD_SIGNATURE: 3
  * BAD_JSON: 4
  * ATTACK: 5
+ * CRITICAL_ATTACK: 6
 
 The array *threats* contains the identifiers/pathes of tagged user input.
