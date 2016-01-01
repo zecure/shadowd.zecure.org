@@ -15,7 +15,7 @@ It searches for known attack patterns in the user input.
 
 ![Flowchart blacklist](/img/documentation/blacklist.svg)
 
-The blacklist uses regular expressions to identify known attack patterns.
+The blacklist algorithm uses regular expressions to identify known attack patterns.
 Every filter has a numerical impact that tries to specify the dangerousness and its unambiguity.
 The impacts of all matching filters are aggregated and compared to a threshold.
 If the total impact is greater than the threshold the input is classified as a threat.
