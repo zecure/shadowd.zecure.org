@@ -90,7 +90,7 @@ Examples:
 
 Regular Expression: {{< regex >}}\{\{.*?\}\}{{< /regex >}}
 
-Description: Flask template
+Description: Flask curly syntax
 
 Tags:
 
@@ -183,10 +183,10 @@ Tags:
 
  * xss
 
-Impact: 6
+Impact: 5
 
  * Cross-site scripting [6]
- * Low risk of false-positives [0]
+ * Low risk of false-positives [-1]
 
 Examples:
 
@@ -203,10 +203,10 @@ Tags:
 
  * xss
 
-Impact: 6
+Impact: 3
 
  * Cross-site scripting [6]
- * Low risk of false-positives [0]
+ * Mediocre risk of false-positives [-3]
 
 Examples:
 
@@ -215,7 +215,7 @@ Examples:
 
 ## 10
 
-Regular Expression: {{< regex >}}&gt;[\w\s]*&lt;\s*\/?[\w\s]+&gt;{{< /regex >}}
+Regular Expression: {{< regex >}}&gt;.*?&lt;\s*\/?[\w\s]+&gt;{{< /regex >}}
 
 Description: Unquoted HTML breaking with closing tag
 
@@ -223,10 +223,10 @@ Tags:
 
  * xss
 
-Impact: 6
+Impact: 3
 
  * Cross-site scripting [6]
- * Low risk of false-positives [0]
+ * Mediocre risk of false-positives [-3]
 
 Examples:
 
@@ -235,18 +235,18 @@ Examples:
 
 ## 11
 
-Regular Expression: {{< regex >}}\W\s*hash\s*[^\w\s-]{{< /regex >}}
+Regular Expression: {{< regex >}}\bhash\b{{< /regex >}}
 
-Description: JavaScript hash
+Description: JavaScript "hash"
 
 Tags:
 
  * xss
 
-Impact: 4
+Impact: 2
 
- * Hidden payload [6]
- * Mediocre risk of false-positives [-2]
+ * Cross-site scripting [6]
+ * High risk of false-positives [-4]
 
 Examples:
 
@@ -265,7 +265,7 @@ Tags:
 
 Impact: 6
 
- * Hidden payload [6]
+ * Cross-site scripting [6]
  * Low risk of false-positives [0]
 
 Resources:
@@ -290,10 +290,10 @@ Tags:
  * xss
  * dos
 
-Impact: 2
+Impact: 4
 
- * Very common code pattern [6]
- * High risk of false-positives [-4]
+ * Common code pattern [6]
+ * Mediocre risk of false-positives [-2]
 
 Examples:
 
@@ -314,7 +314,7 @@ Tags:
 
 Impact: 2
 
- * Very common code pattern [6]
+ * Common code pattern [6]
  * High risk of false-positives [-4]
 
 Examples:
@@ -326,7 +326,7 @@ Examples:
 
 Regular Expression: {{< regex >}}\\u00[a-f0-9]{2}{{< /regex >}}
 
-Description: Octal entities
+Description: Octal entity
 
 Tags:
 
@@ -347,7 +347,7 @@ Examples:
 
 Regular Expression: {{< regex >}}\\x0*[a-f0-9]{2}{{< /regex >}}
 
-Description: Hex entities
+Description: Hex entity
 
 Tags:
 
@@ -368,7 +368,7 @@ Examples:
 
 Regular Expression: {{< regex >}}\\\d{2,3}{{< /regex >}}
 
-Description: Unicode entities
+Description: Unicode entity
 
 Tags:
 
@@ -479,7 +479,7 @@ Examples:
 
 Regular Expression: {{< regex >}}\.(ht(access|passwd|group))|(apache|httpd)\d?\.conf{{< /regex >}}
 
-Description: Common sensitive Apache files
+Description: Common Apache files
 
 Tags:
 
@@ -500,7 +500,7 @@ Examples:
 
 Regular Expression: {{< regex >}}\/etc\/[.\/]*(passwd|shadow|master\.passwd){{< /regex >}}
 
-Description: Common sensitive Unix files
+Description: Common Unix files
 
 Tags:
 
@@ -529,7 +529,7 @@ Tags:
 
 Impact: 2
 
- * Obfuscated payload [6]
+ * Cross-site scripting [6]
  * High risk of false-positives [-4]
 
 Resources:
@@ -545,7 +545,7 @@ Examples:
 
 Regular Expression: {{< regex >}};base64|base64,{{< /regex >}}
 
-Description: Data URI scheme base64
+Description: Data URI scheme "base64"
 
 Tags:
 
@@ -553,7 +553,7 @@ Tags:
 
 Impact: 2
 
- * Obfuscated payload [6]
+ * Cross-site scripting [6]
  * High risk of false-positives [-4]
 
 Resources:
@@ -569,7 +569,7 @@ Examples:
 
 Regular Expression: {{< regex >}}php:\/\/filter{{< /regex >}}
 
-Description: PHP input/output stream filters
+Description: PHP input/output stream filter
 
 Tags:
 
@@ -577,10 +577,10 @@ Tags:
  * rce
  * php
 
-Impact: 4
+Impact: 6
 
- * Obfuscated payload / file disclosure [6]
- * Mediocre risk of false-positives [-2]
+ * Obfuscation / file disclosure [6]
+ * Low risk of false-positives [0]
 
 Resources:
 
@@ -602,10 +602,10 @@ Tags:
  * rce
  * php
 
-Impact: 4
+Impact: 6
 
- * Obfuscated payload [6]
- * Mediocre risk of false-positives [-2]
+ * Obfuscation [6]
+ * Low risk of false-positives [0]
 
 Resources:
 
@@ -623,10 +623,10 @@ Tags:
  * xss
  * php
 
-Impact: 4
+Impact: 6
 
- * Obfuscated payload [6]
- * Mediocre risk of false-positives [-2]
+ * Cross-site scripting [6]
+ * Low risk of false-positives [0]
 
 Resources:
 
@@ -637,7 +637,7 @@ Resources:
 
 Regular Expression: {{< regex >}}convert\.base64-(de|en)code{{< /regex >}}
 
-Description: PHP input/output stream filters
+Description: PHP input/output stream filter "base64"
 
 Tags:
 
@@ -645,10 +645,10 @@ Tags:
  * rce
  * php
 
-Impact: 4
+Impact: 6
 
- * Obfuscated payload / file disclosure [6]
- * Mediocre risk of false-positives [-2]
+ * Obfuscation / file disclosure [6]
+ * Low risk of false-positives [0]
 
 Resources:
 
@@ -663,7 +663,7 @@ Examples:
 
 Regular Expression: {{< regex >}}zlib\.(de|in)flate{{< /regex >}}
 
-Description: PHP input/output stream filters
+Description: PHP input/output stream filter "zlib"
 
 Tags:
 
@@ -671,10 +671,10 @@ Tags:
  * rce
  * php
 
-Impact: 4
+Impact: 6
 
- * Obfuscated payload / file disclosure [6]
- * Mediocre risk of false-positives [-2]
+ * Obfuscation / file disclosure [6]
+ * Low risk of false-positives [0]
 
 Resources:
 
@@ -689,7 +689,7 @@ Examples:
 
 Regular Expression: {{< regex >}}@import\b{{< /regex >}}
 
-Description: CSS import
+Description: CSS "import"
 
 Tags:
 
@@ -698,7 +698,7 @@ Tags:
 
 Impact: 3
 
- * Hidden payload [6]
+ * Obfuscation [6]
  * Mediocre risk of false-positives [-3]
 
 Resources:
@@ -714,7 +714,7 @@ Examples:
 
 Regular Expression: {{< regex >}}\burl\b\s*\(.+?\){{< /regex >}}
 
-Description: CSS pointer to a resource
+Description: CSS pointer to resource
 
 Tags:
 
@@ -724,7 +724,7 @@ Tags:
 
 Impact: 2
 
- * Hidden payload [6]
+ * Obfuscation [6]
  * High risk of false-positives [-4]
 
 Resources:
@@ -738,7 +738,7 @@ Examples:
 
 ## 33
 
-Regular Expression: {{< regex >}}\/\s*\/*+\/{{< /regex >}}
+Regular Expression: {{< regex >}}\/\/.+?\/{{< /regex >}}
 
 Description: URL
 
@@ -748,7 +748,7 @@ Tags:
 
 Impact: 1
 
- * Hidden payload [6]
+ * Obfuscation [6]
  * Very high risk of false-positives [-5]
 
 Examples:
@@ -798,7 +798,7 @@ Examples:
 
 Regular Expression: {{< regex >}}%SYSTEM(DRIVE|ROOT)%{{< /regex >}}
 
-Description: Common Windows environment variables
+Description: Common Windows environment variable
 
 Tags:
 
@@ -819,7 +819,7 @@ Resources:
 
 Regular Expression: {{< regex >}}%WINDIR%{{< /regex >}}
 
-Description: Common Windows environment variables
+Description: Common Windows environment variable
 
 Tags:
 
@@ -840,7 +840,7 @@ Resources:
 
 Regular Expression: {{< regex >}}%USER(DOMAIN|PROFILE|NAME)%{{< /regex >}}
 
-Description: Common Windows environment variables
+Description: Common Windows environment variable
 
 Tags:
 
@@ -861,7 +861,7 @@ Resources:
 
 Regular Expression: {{< regex >}}%HOME(DRIVE|PATH)%{{< /regex >}}
 
-Description: Common Windows environment variables
+Description: Common Windows environment variable
 
 Tags:
 
@@ -882,7 +882,7 @@ Resources:
 
 Regular Expression: {{< regex >}}%((LOCAL)?APP|PROGRAM)DATA%{{< /regex >}}
 
-Description: Common Windows environment variables
+Description: Common Windows environment variable
 
 Tags:
 
@@ -903,7 +903,7 @@ Resources:
 
 Regular Expression: {{< regex >}}%\w+%{{< /regex >}}
 
-Description: Common Windows environment variables pattern
+Description: Windows environment variable pattern
 
 Tags:
 
@@ -915,10 +915,6 @@ Impact: 1
  * File disclosure [5]
  * High risk of false-positives [-3]
  * Overlaps with 36-40 [-1]
-
-Resources:
-
- * <https://en.wikipedia.org/wiki/Environment_variable#Default_values>
 
 
 ## 42
@@ -957,7 +953,7 @@ Impact: 5
 
 Regular Expression: {{< regex >}}\/\/{{< /regex >}}
 
-Description: Common C-style comment syntax
+Description: C-style comment syntax
 
 Tags:
 
@@ -973,33 +969,33 @@ Impact: 1
 
 Regular Expression: {{< regex >}}\/\*.*?\*\/{{< /regex >}}
 
-Description: Common C-style comment syntax
+Description: C-style comment syntax
 
 Tags:
 
  * sqli
 
-Impact: 1
+Impact: 3
 
  * SQL injection [6]
- * Very high risk of false-positives [-5]
+ * Mediocre risk of false-positives [-3]
 
 
 ## 46
 
 Regular Expression: {{< regex >}}&lt;!-.+?--&gt;{{< /regex >}}
 
-Description: Common XML comment syntax
+Description: XML comment syntax
 
 Tags:
 
  * xss
  * xxe
 
-Impact: 2
+Impact: 3
 
  * Cross-site scripting [6]
- * High risk of false-positives [-4]
+ * Mediocre risk of false-positives [-3]
 
 
 ## 47
@@ -1012,10 +1008,10 @@ Tags:
 
  * xss
 
-Impact: 8
+Impact: 6
 
  * Cross-site scripting [6]
- * Low risk of false-positives [-2]
+ * Low risk of false-positives [0]
 
 Resources:
 
@@ -1037,10 +1033,10 @@ Tags:
  * xss
  * xxe
 
-Impact: 8
+Impact: 6
 
  * File disclosure [6]
- * Low risk of false-positives [2]
+ * Low risk of false-positives [0]
 
 Examples:
 
@@ -1116,7 +1112,7 @@ Impact: 4
 
 Regular Expression: {{< regex >}}(?&lt;!\w)(boot\.ini|global\.asa|sam)\b{{< /regex >}}
 
-Description: Common sensitive Windows files
+Description: Common Windows files
 
 Tags:
 
@@ -1135,9 +1131,9 @@ Examples:
 
 ## 54
 
-Regular Expression: {{< regex >}}[^\w]on(\w+)(\s*)={{< /regex >}}
+Regular Expression: {{< regex >}}\bon\w+\s*={{< /regex >}}
 
-Description: Event handlers
+Description: HTML event handler
 
 Tags:
 
@@ -1155,7 +1151,7 @@ Examples:
 
 ## 55
 
-Regular Expression: {{< regex >}}(chrome|file):\/\/{{< /regex >}}
+Regular Expression: {{< regex >}}\b(chrome|file):\/\/{{< /regex >}}
 
 Description: Local file inclusion
 
@@ -1177,16 +1173,16 @@ Examples:
 
 Regular Expression: {{< regex >}}&amp;#?(\w+);{{< /regex >}}
 
-Description: HTML escaped characters
+Description: HTML escaped character
 
 Tags:
 
  * xss
 
-Impact: 3
+Impact: 2
 
  * Cross-site scripting [6]
- * Mediocre risk of false-positives [-3]
+ * High risk of false-positives [-4]
 
 Examples:
 
@@ -1269,41 +1265,41 @@ Impact: 5
 
 Regular Expression: {{< regex >}}\bcall_user_func\b.*?\(.+?\){{< /regex >}}
 
-Description: Critical PHP functions
+Description: Critical PHP function "call_user_func"
 
 Tags:
 
  * rce
  * php
 
-Impact: 5
+Impact: 7
 
  * Command execution [8]
- * Mediocre risk of false-positives [-3]
+ * Low risk of false-positives [-1]
 
 
 ## 62
 
 Regular Expression: {{< regex >}}\bcreate_function\b.*?\(.+?\){{< /regex >}}
 
-Description: Critical PHP functions
+Description: Critical PHP function "create_function"
 
 Tags:
 
  * rce
  * php
 
-Impact: 5
+Impact: 7
 
  * Command execution [8]
- * Mediocre risk of false-positives [-3]
+ * Low risk of false-positives [-1]
 
 
 ## 63
 
 Regular Expression: {{< regex >}}\beval\b.*?(\(.+?\)|\{.+?\}){{< /regex >}}
 
-Description: Critical functions
+Description: Critical function "eval"
 
 Tags:
 
@@ -1321,7 +1317,7 @@ Impact: 4
 
 Regular Expression: {{< regex >}}\bexec\b.*?\(.+?\){{< /regex >}}
 
-Description: Critical PHP functions
+Description: Critical PHP function "exec"
 
 Tags:
 
@@ -1338,7 +1334,7 @@ Impact: 4
 
 Regular Expression: {{< regex >}}\bf(get|open|read|write)\b.*?\(.+?\){{< /regex >}}
 
-Description: Critical PHP functions
+Description: Critical PHP function "fopen/..."
 
 Tags:
 
@@ -1355,109 +1351,109 @@ Impact: 5
 
 Regular Expression: {{< regex >}}\bfile_(get|put)_contents\b.*?\(.+?\){{< /regex >}}
 
-Description: Critical PHP functions
+Description: Critical PHP function "file_get_contents/file_put_contents"
 
 Tags:
 
  * rce
  * php
 
-Impact: 5
+Impact: 7
 
  * Command execution / file disclosure [8]
- * Mediocre risk of false-positives [-3]
+ * Low risk of false-positives [-1]
 
 
 ## 67
 
 Regular Expression: {{< regex >}}\bmove_uploaded_file\b.*?\(.+?\){{< /regex >}}
 
-Description: Critical PHP functions
+Description: Critical PHP function "move_uploaded_file"
 
 Tags:
 
  * rce
  * php
 
-Impact: 5
+Impact: 7
 
  * Command execution [8]
- * Mediocre risk of false-positives [-3]
+ * Low risk of false-positives [-1]
 
 
 ## 68
 
 Regular Expression: {{< regex >}}\bpassthru\b.*?\(.+?\){{< /regex >}}
 
-Description: Critical PHP functions
+Description: Critical PHP function "passthru"
 
 Tags:
 
  * rce
  * php
 
-Impact: 5
+Impact: 7
 
  * Command execution [8]
- * Mediocre risk of false-positives [-3]
+ * Low risk of false-positives [-1]
 
 
 ## 69
 
 Regular Expression: {{< regex >}}\bp(roc_)?open\b.*?\(.+?\){{< /regex >}}
 
-Description: Critical PHP functions
+Description: Critical PHP function "popen/proc_open"
 
 Tags:
 
  * rce
  * php
 
-Impact: 5
+Impact: 6
 
  * Command execution [8]
- * Mediocre risk of false-positives [-3]
+ * Mediocre risk of false-positives [-2]
 
 
 ## 70
 
 Regular Expression: {{< regex >}}\breadfile\b.*?\(.+?\){{< /regex >}}
 
-Description: Critical PHP functions
+Description: Critical PHP function "readfile"
 
 Tags:
 
  * lfi
  * php
 
-Impact: 4
+Impact: 5
 
  * File disclosure [7]
- * Mediocre risk of false-positives [-3]
+ * Mediocre risk of false-positives [-2]
 
 
 ## 71
 
 Regular Expression: {{< regex >}}\bshell_exec\b.*?\(.+?\){{< /regex >}}
 
-Description: Critical PHP functions
+Description: Critical PHP function "shell_exec"
 
 Tags:
 
  * rce
  * php
 
-Impact: 5
+Impact: 7
 
  * Command execution [8]
- * Mediocre risk of false-positives [-3]
+ * Low risk of false-positives [-1]
 
 
 ## 72
 
 Regular Expression: {{< regex >}}\bsystem\b.*?\(.+?\){{< /regex >}}
 
-Description: Critical PHP functions
+Description: Critical PHP function "system"
 
 Tags:
 
@@ -1474,34 +1470,34 @@ Impact: 5
 
 Regular Expression: {{< regex >}}\bpreg_(replace|match)\b.*?\(.+?\){{< /regex >}}
 
-Description: Critical PHP functions
+Description: Critical PHP function "preg_match/preg_replace"
 
 Tags:
 
  * rce
  * php
 
-Impact: 5
+Impact: 7
 
  * Command execution [8]
- * Mediocre risk of false-positives [-3]
+ * Low risk of false-positives [-1]
 
 
 ## 74
 
 Regular Expression: {{< regex >}}\binclude(_once)?\b.*?;{{< /regex >}}
 
-Description: Critical PHP functions
+Description: Critical PHP function "include"
 
 Tags:
 
  * rce
  * php
 
-Impact: 3
+Impact: 4
 
  * Command execution [8]
- * High risk of false-positives [-5]
+ * High risk of false-positives [-4]
 
 Examples:
 
@@ -1513,17 +1509,17 @@ Examples:
 
 Regular Expression: {{< regex >}}\brequire(_once)?\b.*?;{{< /regex >}}
 
-Description: Critical PHP functions
+Description: Critical PHP function "require"
 
 Tags:
 
  * rce
  * php
 
-Impact: 3
+Impact: 4
 
  * Command execution [8]
- * High risk of false-positives [-5]
+ * High risk of false-positives [-4]
 
 Examples:
 
@@ -1535,7 +1531,7 @@ Examples:
 
 Regular Expression: {{< regex >}}\{\s*\$\s*\{.+?\}\s*\}{{< /regex >}}
 
-Description: Complex curly syntax
+Description: PHP complex curly syntax
 
 Tags:
 
@@ -1544,7 +1540,7 @@ Tags:
 
 Impact: 8
 
- * Command execution [8]
+ * Command execution / information disclosure [8]
  * Low risk of false-positives [0]
 
 Resources:
@@ -1558,9 +1554,9 @@ Examples:
 
 ## 77
 
-Regular Expression: {{< regex >}}@(cc_on|set)[\s@,&quot;=]{{< /regex >}}
+Regular Expression: {{< regex >}}@(cc_on|set)\b{{< /regex >}}
 
-Description: Conditional compilation tokens
+Description: Conditional compilation token
 
 Tags:
 
@@ -1580,7 +1576,7 @@ Resources:
 
 Regular Expression: {{< regex >}}\bfirefoxurl\s*:{{< /regex >}}
 
-Description: Firefox firefoxurl URI handler
+Description: Firefox "firefoxurl" URI handler
 
 Tags:
 
@@ -1588,7 +1584,7 @@ Tags:
 
 Impact: 3
 
- * Cross-site scripting [6]
+ * Cache poisoning [6]
  * Mediocre risk of false-positives [-3]
 
 Resources:
@@ -1600,7 +1596,7 @@ Resources:
 
 Regular Expression: {{< regex >}}\bwyciwyg\s*:{{< /regex >}}
 
-Description: Firefox wyciwyg URI handler
+Description: Firefox "wyciwyg" URI handler
 
 Tags:
 
@@ -1608,7 +1604,7 @@ Tags:
 
 Impact: 3
 
- * Cross-site scripting [6]
+ * Cache poisoning [6]
  * Mediocre risk of false-positives [-3]
 
 Resources:
@@ -1620,7 +1616,7 @@ Resources:
 
 Regular Expression: {{< regex >}}\bdocument\b.*?\.{{< /regex >}}
 
-Description: Common JavaScript functions
+Description: JavaScript attribute "document"
 
 Tags:
 
@@ -1640,7 +1636,7 @@ Resources:
 
 Regular Expression: {{< regex >}}\bwindow\b.*?\.{{< /regex >}}
 
-Description: Common JavaScript functions
+Description: JavaScript attribute "window"
 
 Tags:
 
@@ -1660,7 +1656,7 @@ Resources:
 
 Regular Expression: {{< regex >}}=\s*\w+\s*\+\s*['&quot;]{{< /regex >}}
 
-Description: Common concatenation patterns
+Description: Common concatenation pattern
 
 Tags:
 
@@ -1676,7 +1672,7 @@ Impact: 1
 
 Regular Expression: {{< regex >}}\+=\s*\(\s*['&quot;]{{< /regex >}}
 
-Description: Common concatenation patterns
+Description: Common concatenation pattern
 
 Tags:
 
@@ -1692,7 +1688,7 @@ Impact: 1
 
 Regular Expression: {{< regex >}}['&quot;]\s*\+\s*['&quot;]{{< /regex >}}
 
-Description: Common concatenation patterns
+Description: Common concatenation pattern
 
 Tags:
 
@@ -1728,7 +1724,7 @@ Resources:
 
 Regular Expression: {{< regex >}}\bfunction\b[^(]*\([^)]*\){{< /regex >}}
 
-Description: Common function declarations
+Description: Common function declaration
 
 Tags:
 
@@ -1745,7 +1741,7 @@ Impact: 3
 
 Regular Expression: {{< regex >}}\bbenchmark\b.*?\(.+?,.+?\){{< /regex >}}
 
-Description: Blind SQL
+Description: Blind SQL "benchmark"
 
 Tags:
 
@@ -1766,7 +1762,7 @@ Resources:
 
 Regular Expression: {{< regex >}}\bsleep\b.*?\(.+?\){{< /regex >}}
 
-Description: Blind SQL
+Description: Blind SQL "sleep"
 
 Tags:
 
@@ -1787,7 +1783,7 @@ Resources:
 
 Regular Expression: {{< regex >}}\bload_file\b.*?\(.+?\){{< /regex >}}
 
-Description: MySQL file disclosure
+Description: MySQL file disclosure "load_file"
 
 Tags:
 
@@ -1808,7 +1804,7 @@ Resources:
 
 Regular Expression: {{< regex >}}\bload\b.*?\bdata\b.*?\binfile\b.*?\binto\b.*?\btable\b{{< /regex >}}
 
-Description: MySQL file disclosure
+Description: MySQL file disclosure "load data"
 
 Tags:
 
@@ -1829,7 +1825,7 @@ Resources:
 
 Regular Expression: {{< regex >}}\bselect\b.*?\binto\b.*?\b(out|dump)file\b{{< /regex >}}
 
-Description: MySQL file write
+Description: MySQL file write "into outfile"
 
 Tags:
 
@@ -1850,7 +1846,7 @@ Resources:
 
 Regular Expression: {{< regex >}}\b(group_)?concat(_ws)?\b.*?\(.+?\){{< /regex >}}
 
-Description: Common MySQL functions
+Description: MySQL function "concat"
 
 Tags:
 
@@ -1892,7 +1888,7 @@ Resources:
 
 Regular Expression: {{< regex >}}\bpg_sleep\b.*?\(.+?\){{< /regex >}}
 
-Description: Blind SQL
+Description: Blind SQL "pg_sleep"
 
 Tags:
 
@@ -1914,7 +1910,7 @@ Resources:
 
 Regular Expression: {{< regex >}}\bwaitfor\b.*?\b(delay|time(out)?)\b{{< /regex >}}
 
-Description: Blind SQL
+Description: Blind SQL "waitfor"
 
 Tags:
 
@@ -1936,7 +1932,7 @@ Resources:
 
 Regular Expression: {{< regex >}}\b(char_|bit_)?length\b.*?\(.+?\){{< /regex >}}
 
-Description: Common SQL functions
+Description: Common SQL function "length"
 
 Tags:
 
@@ -1957,7 +1953,7 @@ Resources:
 
 Regular Expression: {{< regex >}}\bfind_in_set\b.*?\(.+?,.+?\){{< /regex >}}
 
-Description: Common MySQL functions
+Description: Common MySQL function "find_in_set"
 
 Tags:
 
@@ -1978,7 +1974,7 @@ Resources:
 
 Regular Expression: {{< regex >}}\b(un)?hex\b.*?\(.+?\){{< /regex >}}
 
-Description: Common SQL functions
+Description: Common SQL function "hex/unhex"
 
 Tags:
 
@@ -1998,7 +1994,7 @@ Resources:
 
 Regular Expression: {{< regex >}}\b(from|to)_base64\b.*?\(.+?\){{< /regex >}}
 
-Description: Common MySQL functions
+Description: Common MySQL function "from_base64/to_base64"
 
 Tags:
 
@@ -2018,7 +2014,7 @@ Resources:
 
 Regular Expression: {{< regex >}}\bsubstr(ing(_index)?)?\b.*?\(.+?,.+?\){{< /regex >}}
 
-Description: Common SQL functions
+Description: Common SQL function "substr"
 
 Tags:
 
@@ -2038,7 +2034,7 @@ Resources:
 
 Regular Expression: {{< regex >}}\b(current_)?user\b.*?\(\){{< /regex >}}
 
-Description: Common MySQL functions
+Description: Common SQL function "user"
 
 Tags:
 
@@ -2054,7 +2050,7 @@ Impact: 2
 
 Regular Expression: {{< regex >}}\bversion\b.*?\(\){{< /regex >}}
 
-Description: Common MySQL functions
+Description: Common SQL function "version"
 
 Tags:
 
@@ -2070,7 +2066,7 @@ Impact: 2
 
 Regular Expression: {{< regex >}}@@.+?{{< /regex >}}
 
-Description: MySQL system variables
+Description: MySQL system variable
 
 Tags:
 
@@ -2086,7 +2082,7 @@ Impact: 1
 
 Regular Expression: {{< regex >}}\boct\b.*?\(.+?\){{< /regex >}}
 
-Description: Common SQL functions
+Description: Common SQL function "oct"
 
 Tags:
 
@@ -2106,7 +2102,7 @@ Resources:
 
 Regular Expression: {{< regex >}}\bord\b.*?\(.+?\){{< /regex >}}
 
-Description: Common SQL functions
+Description: Common SQL function "ord"
 
 Tags:
 
@@ -2126,7 +2122,7 @@ Resources:
 
 Regular Expression: {{< regex >}}\bascii\b.*?\(.+?\){{< /regex >}}
 
-Description: Common SQL functions
+Description: Common SQL function "ascii"
 
 Tags:
 
@@ -2146,7 +2142,7 @@ Resources:
 
 Regular Expression: {{< regex >}}\bbin\b.*?\(.+?\){{< /regex >}}
 
-Description: Common SQL functions
+Description: Common SQL function "bin"
 
 Tags:
 
@@ -2166,7 +2162,7 @@ Resources:
 
 Regular Expression: {{< regex >}}\bcha?r\b.*?\(.+?\){{< /regex >}}
 
-Description: Common SQL functions
+Description: Common SQL function "char"
 
 Tags:
 
@@ -2186,7 +2182,7 @@ Resources:
 
 Regular Expression: {{< regex >}}\bwhere\b.+?(\b(not_)?(like|regexp)\b|[=&lt;&gt;]){{< /regex >}}
 
-Description: Common SQL comparisons
+Description: Common SQL comparison "where"
 
 Tags:
 
@@ -2207,7 +2203,7 @@ Resources:
 
 Regular Expression: {{< regex >}}\bif\b.*?\(.+?,.+?,.+?\){{< /regex >}}
 
-Description: Common SQL functions
+Description: Common SQL comparison "if"
 
 Tags:
 
@@ -2227,7 +2223,7 @@ Resources:
 
 Regular Expression: {{< regex >}}\b(ifnull|nullif)\b.*?\(.+?,.+?\){{< /regex >}}
 
-Description: Common SQL functions
+Description: Common SQL comparison "ifnull"
 
 Tags:
 
@@ -2248,7 +2244,7 @@ Resources:
 
 Regular Expression: {{< regex >}}\bwhere\b.+?(\b(n?and|x?or|not)\b|(\&amp;\&amp;|\|\|)){{< /regex >}}
 
-Description: Common SQL comparisons
+Description: Common SQL comparison "where"
 
 Tags:
 
@@ -2264,7 +2260,7 @@ Impact: 2
 
 Regular Expression: {{< regex >}}\bcase\b.+?\bwhen\b.+?\bend\b.+?\bcase\b{{< /regex >}}
 
-Description: Common MySQL comparisons
+Description: Common MySQL comparison "case"
 
 Tags:
 
@@ -2284,25 +2280,7 @@ Resources:
 
 Regular Expression: {{< regex >}}\bexec\b.+?\bxp_cmdshell\b{{< /regex >}}
 
-Description: MSSQL code execution
-
-Tags:
-
- * sqli
- * rce
- * mssql
-
-Impact: 9
-
- * SQL injection / code execution [8]
- * Low risk of false-positives [1]
-
-
-## 113
-
-Regular Expression: {{< regex >}}\bexec\b.+?\bxp_cmdshell\b{{< /regex >}}
-
-Description: MSSQL code execution
+Description: MSSQL code execution "xp_cmdshell"
 
 Tags:
 
@@ -2320,7 +2298,7 @@ Impact: 9
 
 Regular Expression: {{< regex >}}\bcreate\b.+?\b(procedure|function)\b.*?\(.*?\){{< /regex >}}
 
-Description: Common SQL commands
+Description: Common SQL command "create"
 
 Tags:
 
@@ -2336,7 +2314,7 @@ Impact: 4
 
 Regular Expression: {{< regex >}}\binsert\b.+?\binto\b.*?\bvalues\b.*?\(.+?\){{< /regex >}}
 
-Description: Common SQL commands
+Description: Common SQL command "insert"
 
 Tags:
 
@@ -2352,7 +2330,7 @@ Impact: 4
 
 Regular Expression: {{< regex >}}\bselect\b.+?\bfrom\b{{< /regex >}}
 
-Description: Common SQL commands
+Description: Common SQL command "select"
 
 Tags:
 
@@ -2368,7 +2346,7 @@ Impact: 2
 
 Regular Expression: {{< regex >}}\bunion\b.+?\bselect\b{{< /regex >}}
 
-Description: Common SQL commands
+Description: Common SQL command "union select"
 
 Tags:
 
@@ -2379,3 +2357,50 @@ Impact: 2
  * SQL injection [6]
  * High risk of false-positives [-4]
 
+
+## 118
+
+Regular Expression: {{< regex >}}\bupdate\b.+?\bset\b{{< /regex >}}
+
+Description: Common SQL command "update"
+
+Tags:
+
+ * sqli
+
+Impact: 2
+
+ * SQL injection [6]
+ * High risk of false-positives [-4]
+
+
+## 119
+
+Regular Expression: {{< regex >}}\bdrop\b.+?\b(database|table)\b{{< /regex >}}
+
+Description: Common SQL command "drop"
+
+Tags:
+
+ * sqli
+
+Impact: 2
+
+ * SQL injection [6]
+ * High risk of false-positives [-4]
+
+
+## 120
+
+Regular Expression: {{< regex >}}\bdelete\b.+?\bfrom\b{{< /regex >}}
+
+Description: Common SQL command "delete"
+
+Tags:
+
+ * sqli
+
+Impact: 2
+
+ * SQL injection [6]
+ * High risk of false-positives [-4]
