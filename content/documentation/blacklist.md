@@ -2231,9 +2231,9 @@ Impact: 3
 
 ## 112
 
-Regular Expression: {{< regex >}}\bcase\b.+?\bwhen\b.+?\bend\b.+?\bcase\b{{< /regex >}}
+Regular Expression: {{< regex >}}\bcase\b.+?\bwhen\b.+?\bend\b{{< /regex >}}
 
-Description: Common MySQL comparison "case"
+Description: Common SQL comparison "case"
 
 Tags:
 
