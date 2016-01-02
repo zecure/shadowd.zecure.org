@@ -27,4 +27,4 @@ weight: 40
  * Network architecture vaguely based on [http_server3](http://www.boost.org/doc/libs/1_53_0/doc/html/boost_asio/example/http/server3/)
  * Web interface build with [Symfony](http://symfony.com/)
  * Layout makes use of [Bootstrap](http://getbootstrap.com/)
- * Icons by [Iconic](http://useiconic.com/) and [Font Awesome](https://fortawesome.github.io/Font-Awesome/)
+ * Icons by [Font Awesome](https://fortawesome.github.io/Font-Awesome/)
