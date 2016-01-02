@@ -18,7 +18,7 @@ It compares cryptographically secure checksums of the executed script to rules t
 The integrity algorithm also uses a whitelisting approach.
 First it checks if the request has a rule.
 The term whitelist implies that every request requires a matching rule, otherwise it is considered a threat.
-If there is a rule the algorithm checks if the request has a digest for the corresponding algorithm.
+If there is a rule the algorithm checks if the request has a digest for it.
 Finally the algorithm tests if the digest of the request matches the digest of the rule.
 
 # Security
