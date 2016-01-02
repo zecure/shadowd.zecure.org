@@ -153,26 +153,6 @@ Examples:
  * {{< example >}}&quot;&gt;{{< /example >}}
 
 
-## 7
-
-Regular Expression: {{< regex >}}[&quot;'].*?={{< /regex >}}
-
-Description: HTML breaking
-
-Tags:
-
- * xss
-
-Impact: 1
-
- * Cross-site scripting [6]
- * High risk of false-positives [-5]
-
-Examples:
-
- * {{< example >}}&quot;={{< /example >}}
-
-
 ## 8
 
 Regular Expression: {{< regex >}}#.+?\)[&quot;\s]*&gt;{{< /regex >}}
