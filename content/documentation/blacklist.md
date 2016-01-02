@@ -790,8 +790,8 @@ Impact: 3
 
 Examples:
 
- * {{< example >}}<?php{{< /example >}}
- * {{< example >}}<?{{< /example >}}
+ * {{< example >}}&lt;?php{{< /example >}}
+ * {{< example >}}&lt;?{{< /example >}}
 
 
 ## 36
