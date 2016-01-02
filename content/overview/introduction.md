@@ -19,7 +19,7 @@ Shadow Daemon is <a target="_blank" href="https://www.gnu.org/philosophy/free-sw
 
 ## What differentiates Shadow Daemon?
 
-### Ease of Use
+### Ease of use
 
 Shadow Daemon is easy to install and can be managed with a clear and structured web interface.
 The interface lets you examine attacks in great detail.
@@ -31,7 +31,7 @@ Shadow Daemon monitors and protects the blog <a target="_blank" href="http://zec
 You can try out its web interface at <a target="_blank" href="https://demo.shadowd.zecure.org/">demo.shadowd.zecure.org</a>.
 {{% /note %}}
 
-### High Coverage
+### High coverage
 
 Shadow Daemon uses small connectors on application level to intercept requests.
 This guarantees that the analyzed data is exactly the same as the input data of the web application, a task many firewalls fail to do properly.
@@ -53,7 +53,7 @@ At the moment the following programming languages, libs and frameworks are suppo
 Additional connectors are planned and will be released at some point in the future.
 If you want to [contribute]({{< ref "development/contributing.md" >}}) why not develop a new [connector]({{< ref "documentation/connectors.md" >}})?
 
-### Accurate Detection
+### Accurate detection
 
 Shadow Daemon combines [white- and blacklisting]({{< ref "documentation/architecture.md#analyzer" >}}) to accurately detect malicious requests.
 The blacklist makes use of sophisticated regular expressions to search for known attack patterns in the user input.
@@ -62,22 +62,22 @@ Together they can detect almost any attack on a web application and still have a
 
 Shadow Daemon is able to detect common attacks like:
 
- * SQL Injections
- * XML Injections
- * Code Injections
- * Command Injections
- * Cross-Site Scripting
- * Local/Remote File Inclusions
- * Backdoor Access
+ * SQL injections
+ * XML injections
+ * Code injections
+ * Command injections
+ * Cross-site scripting
+ * Local/remote file inclusions
+ * Backdoor access
  * And more ...
 
-### Discreet Protection
+### Discreet protection
 
 Unlike many other web application firewalls Shadow Daemon does not completely block malicious requests.
 Instead it only filters out the dangerous parts of a request and lets it proceed afterwards.
 This makes attacks impossible, but does not unnecessary frustrate visitors in the case of false-positives.
 
-### Secure Architecture
+### Secure architecture
 
 Shadow Daemon is closer to the application than most other web application firewalls.
 It receives *exactly* the same input that the web application receives and thus it is almost impossible to bypass the detection by obfuscating the attack.
