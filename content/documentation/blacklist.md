@@ -936,6 +936,7 @@ Description: MongoDB SQL commands
 Tags:
 
  * sqli
+ * mongo
 
 Impact: 5
 
@@ -945,18 +946,18 @@ Impact: 5
 
 ## 44
 
-Regular Expression: {{< regex >}}\/\/{{< /regex >}}
+Regular Expression: {{< regex >}}\$\(.+?\){{< /regex >}}
 
-Description: C-style comment syntax
+Description: jQuery selector
 
 Tags:
 
- * sqli
+ * xss
 
-Impact: 1
+Impact: 2
 
- * SQL injection [6]
- * Very high risk of false-positives [-5]
+ * Cross-site scripting [6]
+ * High risk of false-positives [-4]
 
 
 ## 45
@@ -1151,6 +1152,7 @@ Description: Local file inclusion
 
 Tags:
 
+ * xss
  * lfi
 
 Impact: 3
@@ -1333,6 +1335,7 @@ Description: Critical PHP function "fopen/fget/fread/fwrite"
 Tags:
 
  * rce
+ * lfi
  * php
 
 Impact: 5
@@ -1350,6 +1353,7 @@ Description: Critical PHP function "file_get_contents/file_put_contents"
 Tags:
 
  * rce
+ * lfi
  * php
 
 Impact: 7
@@ -1486,6 +1490,7 @@ Description: Critical PHP function "include"
 Tags:
 
  * rce
+ * lfi
  * php
 
 Impact: 4
@@ -1508,6 +1513,7 @@ Description: Critical PHP function "require"
 Tags:
 
  * rce
+ * lfi
  * php
 
 Impact: 4
@@ -2039,7 +2045,7 @@ Impact: 2
 
 Regular Expression: {{< regex >}}@@.+?{{< /regex >}}
 
-Description: MySQL system variable
+Description: SQL system variable
 
 Tags:
 
@@ -2113,7 +2119,7 @@ Resources:
 
 ## 106
 
-Regular Expression: {{< regex >}}\bbin\b.*?\(.+?\){{< /regex >}}
+Regular Expression: {{< regex >}}\bbin(ary)?\b.*?\(.+?\){{< /regex >}}
 
 Description: Common SQL function "bin"
 
