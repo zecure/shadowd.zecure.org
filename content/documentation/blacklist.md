@@ -2005,7 +2005,7 @@ Resources:
 
 ## 100
 
-Regular Expression: {{< regex >}}\b(current_)?user\b.*?\(\){{< /regex >}}
+Regular Expression: {{< regex >}}\b(current_)?user\b.*?\(.*?\){{< /regex >}}
 
 Description: Common SQL function "user"
 
@@ -2021,7 +2021,7 @@ Impact: 2
 
 ## 101
 
-Regular Expression: {{< regex >}}\bversion\b.*?\(\){{< /regex >}}
+Regular Expression: {{< regex >}}\bversion\b.*?\(.*?\){{< /regex >}}
 
 Description: Common SQL function "version"
 
@@ -2368,7 +2368,7 @@ Impact: 7
 
 ## 120
 
-Regular Expression: {{< regex >}}\b(current_)?database\b.*?\(\){{< /regex >}}
+Regular Expression: {{< regex >}}\b(current_)?database\b.*?\(.*?\){{< /regex >}}
 
 Description: Common SQL function "database"
 
