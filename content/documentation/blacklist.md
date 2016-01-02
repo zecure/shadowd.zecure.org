@@ -1842,7 +1842,7 @@ Resources:
 
 ## 93
 
-Regular Expression: {{< regex >}}\bfrom\b.*?\binformation_schema\b{{< /regex >}}
+Regular Expression: {{< regex >}}\binformation_schema\b{{< /regex >}}
 
 Description: MySQL information disclosure
 
