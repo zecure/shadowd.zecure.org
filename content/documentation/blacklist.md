@@ -172,7 +172,7 @@ Impact: 7
 
 ## 7
 
-Regular Expression: {{< regex >}}\bmysql\.user\b{{< /regex >}}
+Regular Expression: {{< regex >}}\bmysql.*?\..*?user\b{{< /regex >}}
 
 Description: MySQL information disclosure "mysql.user"
 
@@ -181,10 +181,10 @@ Tags:
  * sqli
  * mysql
 
-Impact: 7
+Impact: 3
 
  * SQL injection [6]
- * Low risk of false-positives [1]
+ * Mediocre risk of false-positives [-3]
 
 
 ## 8
