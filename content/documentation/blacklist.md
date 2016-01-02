@@ -111,6 +111,27 @@ Examples:
  * {{< example >}}{{foo.bar}}{{< /example >}}
 
 
+## 4
+
+Regular Expression: {{< regex >}}\bfind_in_set\b.*?\(.+?,.+?\){{< /regex >}}
+
+Description: Common MySQL function "find_in_set"
+
+Tags:
+
+ * sqli
+ * mysql
+
+Impact: 6
+
+ * SQL injection [6]
+ * Low risk of false-positives [0]
+
+Resources:
+
+ * <https://dev.mysql.com/doc/refman/5.7/en/string-functions.html#function_find-in-set>
+
+
 ## 5
 
 Regular Expression: {{< regex >}}[&quot;'].*?&gt;{{< /regex >}}
@@ -235,9 +256,9 @@ Examples:
 
 ## 11
 
-Regular Expression: {{< regex >}}\bhash\b{{< /regex >}}
+Regular Expression: {{< regex >}}\blocation\b.*?\..*?\bhash\b{{< /regex >}}
 
-Description: JavaScript "hash"
+Description: JavaScript "location.hash"
 
 Tags:
 
@@ -387,7 +408,7 @@ Examples:
 
 ## 18
 
-Regular Expression: {{< regex >}}[\/\\]?\.+[\/\\]{{< /regex >}}
+Regular Expression: {{< regex >}}\.\.[\/\\]{{< /regex >}}
 
 Description: Directory traversal
 
@@ -712,7 +733,7 @@ Examples:
 
 ## 32
 
-Regular Expression: {{< regex >}}\burl\b\s*\(.+?\){{< /regex >}}
+Regular Expression: {{< regex >}}\burl\s*\(.+?\){{< /regex >}}
 
 Description: CSS pointer to resource
 
@@ -796,7 +817,7 @@ Examples:
 
 ## 36
 
-Regular Expression: {{< regex >}}%SYSTEM(DRIVE|ROOT)%{{< /regex >}}
+Regular Expression: {{< regex >}}%(HOME(DRIVE|PATH)|SYSTEM(DRIVE|ROOT)|WINDIR|USER(DOMAIN|PROFILE|NAME)|((LOCAL)?APP|PROGRAM)DATA)%{{< /regex >}}
 
 Description: Common Windows environment variable
 
@@ -817,90 +838,6 @@ Resources:
 
 ## 37
 
-Regular Expression: {{< regex >}}%WINDIR%{{< /regex >}}
-
-Description: Common Windows environment variable
-
-Tags:
-
- * lfi
- * win
-
-Impact: 2
-
- * File disclosure [5]
- * Mediocre risk of false-positives [-3]
-
-Resources:
-
- * <https://en.wikipedia.org/wiki/Environment_variable#Default_values>
-
-
-## 38
-
-Regular Expression: {{< regex >}}%USER(DOMAIN|PROFILE|NAME)%{{< /regex >}}
-
-Description: Common Windows environment variable
-
-Tags:
-
- * lfi
- * win
-
-Impact: 2
-
- * File disclosure [5]
- * Mediocre risk of false-positives [-3]
-
-Resources:
-
- * <https://en.wikipedia.org/wiki/Environment_variable#Default_values>
-
-
-## 39
-
-Regular Expression: {{< regex >}}%HOME(DRIVE|PATH)%{{< /regex >}}
-
-Description: Common Windows environment variable
-
-Tags:
-
- * lfi
- * win
-
-Impact: 2
-
- * File disclosure [5]
- * Mediocre risk of false-positives [-3]
-
-Resources:
-
- * <https://en.wikipedia.org/wiki/Environment_variable#Default_values>
-
-
-## 40
-
-Regular Expression: {{< regex >}}%((LOCAL)?APP|PROGRAM)DATA%{{< /regex >}}
-
-Description: Common Windows environment variable
-
-Tags:
-
- * lfi
- * win
-
-Impact: 2
-
- * File disclosure [5]
- * Mediocre risk of false-positives [-3]
-
-Resources:
-
- * <https://en.wikipedia.org/wiki/Environment_variable#Default_values>
-
-
-## 41
-
 Regular Expression: {{< regex >}}%\w+%{{< /regex >}}
 
 Description: Windows environment variable pattern
@@ -914,7 +851,71 @@ Impact: 1
 
  * File disclosure [5]
  * High risk of false-positives [-3]
- * Overlaps with 36-40 [-1]
+ * Overlaps with 36 [-1]
+
+
+## 38
+
+Regular Expression: {{< regex >}}\bunion\b.+?\bselect\b{{< /regex >}}
+
+Description: Common SQL command "union select"
+
+Tags:
+
+ * sqli
+
+Impact: 3
+
+ * SQL injection [7]
+ * High risk of false-positives [-4]
+
+
+## 39
+
+Regular Expression: {{< regex >}}\bupdate\b.+?\bset\b{{< /regex >}}
+
+Description: Common SQL command "update"
+
+Tags:
+
+ * sqli
+
+Impact: 3
+
+ * SQL injection [7]
+ * High risk of false-positives [-4]
+
+
+## 40
+
+Regular Expression: {{< regex >}}\bdrop\b.+?\b(database|table)\b{{< /regex >}}
+
+Description: Common SQL command "drop"
+
+Tags:
+
+ * sqli
+
+Impact: 3
+
+ * SQL injection [7]
+ * High risk of false-positives [-4]
+
+
+## 41
+
+Regular Expression: {{< regex >}}\bdelete\b.+?\bfrom\b{{< /regex >}}
+
+Description: Common SQL command "delete"
+
+Tags:
+
+ * sqli
+
+Impact: 3
+
+ * SQL injection [7]
+ * High risk of false-positives [-4]
 
 
 ## 42
@@ -1000,7 +1001,7 @@ Impact: 3
 
 ## 47
 
-Regular Expression: {{< regex >}}&lt;\bbase\b.+?\bhref\b.+?&gt;{{< /regex >}}
+Regular Expression: {{< regex >}}&lt;base\b.+?\bhref\b.+?&gt;{{< /regex >}}
 
 Description: Base URL
 
@@ -1062,7 +1063,7 @@ Impact: 2
 
 ## 50
 
-Regular Expression: {{< regex >}}&lt;\ba\b.+?\bhref\b{{< /regex >}}
+Regular Expression: {{< regex >}}&lt;a\b.+?\bhref\b{{< /regex >}}
 
 Description: Common JavaScript injection points (links)
 
@@ -1334,7 +1335,7 @@ Impact: 4
 
 Regular Expression: {{< regex >}}\bf(get|open|read|write)\b.*?\(.+?\){{< /regex >}}
 
-Description: Critical PHP function "fopen/..."
+Description: Critical PHP function "fopen/fget/fread/fwrite"
 
 Tags:
 
@@ -1741,7 +1742,7 @@ Impact: 3
 
 Regular Expression: {{< regex >}}\bbenchmark\b.*?\(.+?,.+?\){{< /regex >}}
 
-Description: Blind SQL "benchmark"
+Description: Blind MySQL "benchmark"
 
 Tags:
 
@@ -1888,7 +1889,7 @@ Resources:
 
 Regular Expression: {{< regex >}}\bpg_sleep\b.*?\(.+?\){{< /regex >}}
 
-Description: Blind SQL "pg_sleep"
+Description: Blind PgSQL "pg_sleep"
 
 Tags:
 
@@ -1910,7 +1911,7 @@ Resources:
 
 Regular Expression: {{< regex >}}\bwaitfor\b.*?\b(delay|time(out)?)\b{{< /regex >}}
 
-Description: Blind SQL "waitfor"
+Description: Blind TSQL "waitfor"
 
 Tags:
 
@@ -1947,27 +1948,6 @@ Resources:
 
  * <https://dev.mysql.com/doc/refman/5.7/en/string-functions.html#function_length>
  * <https://dev.mysql.com/doc/refman/5.7/en/string-functions.html#function_bit-length>
-
-
-## 96
-
-Regular Expression: {{< regex >}}\bfind_in_set\b.*?\(.+?,.+?\){{< /regex >}}
-
-Description: Common MySQL function "find_in_set"
-
-Tags:
-
- * sqli
- * mysql
-
-Impact: 6
-
- * SQL injection [6]
- * Low risk of false-positives [0]
-
-Resources:
-
- * <https://dev.mysql.com/doc/refman/5.7/en/string-functions.html#function_find-in-set>
 
 
 ## 97
@@ -2250,9 +2230,9 @@ Tags:
 
  * sqli
 
-Impact: 2
+Impact: 3
 
- * SQL injection [6]
+ * SQL injection [7]
  * High risk of false-positives [-4]
 
 
@@ -2306,8 +2286,8 @@ Tags:
 
 Impact: 4
 
- * SQL injection [6]
- * Mediocre risk of false-positives [-2]
+ * SQL injection [7]
+ * Mediocre risk of false-positives [-3]
 
 
 ## 115
@@ -2320,9 +2300,9 @@ Tags:
 
  * sqli
 
-Impact: 4
+Impact: 5
 
- * SQL injection [6]
+ * SQL injection [7]
  * Mediocre risk of false-positives [-2]
 
 
@@ -2336,71 +2316,8 @@ Tags:
 
  * sqli
 
-Impact: 2
+Impact: 3
 
- * SQL injection [6]
+ * SQL injection [7]
  * High risk of false-positives [-4]
 
-
-## 117
-
-Regular Expression: {{< regex >}}\bunion\b.+?\bselect\b{{< /regex >}}
-
-Description: Common SQL command "union select"
-
-Tags:
-
- * sqli
-
-Impact: 2
-
- * SQL injection [6]
- * High risk of false-positives [-4]
-
-
-## 118
-
-Regular Expression: {{< regex >}}\bupdate\b.+?\bset\b{{< /regex >}}
-
-Description: Common SQL command "update"
-
-Tags:
-
- * sqli
-
-Impact: 2
-
- * SQL injection [6]
- * High risk of false-positives [-4]
-
-
-## 119
-
-Regular Expression: {{< regex >}}\bdrop\b.+?\b(database|table)\b{{< /regex >}}
-
-Description: Common SQL command "drop"
-
-Tags:
-
- * sqli
-
-Impact: 2
-
- * SQL injection [6]
- * High risk of false-positives [-4]
-
-
-## 120
-
-Regular Expression: {{< regex >}}\bdelete\b.+?\bfrom\b{{< /regex >}}
-
-Description: Common SQL command "delete"
-
-Tags:
-
- * sqli
-
-Impact: 2
-
- * SQL injection [6]
- * High risk of false-positives [-4]
