@@ -35,6 +35,7 @@ The base impact of a filter is determined by the dangerousness of successful exp
 A low risk of false-positives is rewarded, whereas a high risk of false-positives is penalized.
 If multiple filters are overlapping this is also penalized, depending on how big the chances are that the same pattern is detected more than once.
 
+If you have suggestions for existing or new filters feel free to open an [issue](https://github.com/zecure/shadowd.zecure.org/issues).
 
 ## 1
 
@@ -145,33 +146,11 @@ Tags:
 Impact: 3
 
  * Cross-site scripting [6]
- * Mediocre risk of false-positives [-2]
- * Overlaps with rule 6 [-1]
+ * Mediocre risk of false-positives [-3]
 
 Examples:
 
  * {{< example >}}&quot;&gt;{{< /example >}}
-
-
-## 6
-
-Regular Expression: {{< regex >}}[^\w\s]\s*\/&gt;{{< /regex >}}
-
-Description: HTML breaking
-
-Tags:
-
- * xss
-
-Impact: 2
-
- * Cross-site scripting [6]
- * High risk of false-positives [-3]
- * Overlaps with rule 5 [-1]
-
-Examples:
-
- * {{< example >}}&quot; /&gt;{{< /example >}}
 
 
 ## 7
@@ -184,10 +163,10 @@ Tags:
 
  * xss
 
-Impact: 2
+Impact: 1
 
  * Cross-site scripting [6]
- * High risk of false-positives [-4]
+ * High risk of false-positives [-5]
 
 Examples:
 
