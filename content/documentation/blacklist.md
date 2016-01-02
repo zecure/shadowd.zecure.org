@@ -157,12 +157,29 @@ Examples:
 
 Regular Expression: {{< regex >}}\bsqlite_master\b{{< /regex >}}
 
-Description: SQLite information disclosure
+Description: SQLite information disclosure "sqlite_master"
 
 Tags:
 
  * sqli
  * sqlite
+
+Impact: 7
+
+ * SQL injection [6]
+ * Low risk of false-positives [1]
+
+
+## 7
+
+Regular Expression: {{< regex >}}\bmysql\.user\b{{< /regex >}}
+
+Description: MySQL information disclosure "mysql.user"
+
+Tags:
+
+ * sqli
+ * mysql
 
 Impact: 7
 
@@ -2296,4 +2313,72 @@ Impact: 3
 
  * SQL injection [7]
  * High risk of false-positives [-4]
+
+
+## 117
+
+Regular Expression: {{< regex >}}\bpg_user\b{{< /regex >}}
+
+Description: PgSQL information disclosure "pg_user"
+
+Tags:
+
+ * sqli
+ * pgsql
+
+Impact: 7
+
+ * SQL injection [6]
+ * Low risk of false-positives [1]
+
+
+## 118
+
+Regular Expression: {{< regex >}}\bpg_database\b{{< /regex >}}
+
+Description: PgSQL information disclosure "pg_database"
+
+Tags:
+
+ * sqli
+ * pgsql
+
+Impact: 7
+
+ * SQL injection [6]
+ * Low risk of false-positives [1]
+
+
+## 119
+
+Regular Expression: {{< regex >}}\bpg_shadow\b{{< /regex >}}
+
+Description: PgSQL information disclosure "pg_shadow"
+
+Tags:
+
+ * sqli
+ * pgsql
+
+Impact: 7
+
+ * SQL injection [6]
+ * Low risk of false-positives [1]
+
+
+## 120
+
+Regular Expression: {{< regex >}}\b(current_)?database\b.*?\(\){{< /regex >}}
+
+Description: Common SQL function "database"
+
+Tags:
+
+ * sqli
+
+Impact: 2
+
+ * SQL injection / information disclosure [6]
+ * High risk of false-positives [-4]
+
 
