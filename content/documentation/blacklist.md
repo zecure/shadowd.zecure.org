@@ -153,6 +153,23 @@ Examples:
  * {{< example >}}&quot;&gt;{{< /example >}}
 
 
+## 6
+
+Regular Expression: {{< regex >}}\bsqlite_master\b{{< /regex >}}
+
+Description: SQLite information disclosure
+
+Tags:
+
+ * sqli
+ * sqlite
+
+Impact: 7
+
+ * SQL injection [6]
+ * Low risk of false-positives [1]
+
+
 ## 8
 
 Regular Expression: {{< regex >}}#.+?\)[&quot;\s]*&gt;{{< /regex >}}
@@ -1834,10 +1851,10 @@ Tags:
  * sqli
  * mysql
 
-Impact: 5
+Impact: 7
 
  * SQL injection [6]
- * Low risk of false-positives [-1]
+ * Low risk of false-positives [1]
 
 Resources:
 
