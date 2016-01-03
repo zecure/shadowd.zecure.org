@@ -132,6 +132,10 @@ Resources:
 
  * <https://dev.mysql.com/doc/refman/5.7/en/string-functions.html#function_find-in-set>
 
+Examples:
+
+ * {{< example >}}SELECT FIND_IN_SET('b','a,b,c,d'){{< /example >}}
+
 
 ## 5
 
@@ -169,6 +173,10 @@ Impact: 7
  * SQL injection [6]
  * Low risk of false-positives [1]
 
+Examples:
+
+ * {{< example >}}SELECT name FROM sqlite_master{{< /example >}}
+
 
 ## 7
 
@@ -185,6 +193,10 @@ Impact: 3
 
  * SQL injection [6]
  * Mediocre risk of false-positives [-3]
+
+Examples:
+
+ * {{< example >}}SELECT user FROM mysql.user{{< /example >}}
 
 
 ## 8
@@ -416,7 +428,7 @@ Impact: 4
 
 Examples:
 
- * {{< example >}}../../../../etc/passwd{{< /example >}}
+ * {{< example >}}../../etc/passwd{{< /example >}}
 
 
 ## 19
@@ -462,7 +474,7 @@ Impact: 4
 
 Examples:
 
- * {{< example >}}%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd{{< /example >}}
+ * {{< example >}}%2e%2e/%2e%2e/etc/passwd{{< /example >}}
 
 
 ## 21
@@ -486,7 +498,7 @@ Resources:
 
 Examples:
 
- * {{< example >}}%c0%ae/%c0%ae/%c0%ae/%c0%ae/etc/passwd{{< /example >}}
+ * {{< example >}}%c0%ae/%c0%ae/etc/passwd{{< /example >}}
 
 
 ## 22
@@ -507,7 +519,8 @@ Impact: 4
 Examples:
 
  * {{< example >}}../.htaccess{{< /example >}}
- * {{< example >}}/etc/apache/apache2.conf{{< /example >}}
+ * {{< example >}}/etc/apache/httpd.conf{{< /example >}}
+ * {{< example >}}/etc/apache2/apache2.conf{{< /example >}}
 
 
 ## 23
@@ -529,6 +542,7 @@ Impact: 4
 Examples:
 
  * {{< example >}}/etc/shadow{{< /example >}}
+ * {{< example >}}/etc/./passwd{{< /example >}}
 
 
 ## 24
@@ -625,6 +639,10 @@ Resources:
 
  * <https://secure.php.net/manual/en/wrappers.php.php>
 
+Examples:
+
+ * {{< example >}}include('php://input');{{< /example >}}
+
 
 ## 28
 
@@ -645,6 +663,10 @@ Impact: 6
 Resources:
 
  * <https://secure.php.net/manual/en/wrappers.php.php>
+
+Examples:
+
+ * {{< example >}}file_put_contents('php://output', 'foo');{{< /example >}}
 
 
 ## 29
@@ -767,7 +789,7 @@ Impact: 1
 
 Examples:
 
- * {{< example >}}http://foobar.org/shell.txt{{< /example >}}
+ * {{< example >}}http://foobar.org/{{< /example >}}
 
 
 ## 34
@@ -784,6 +806,10 @@ Impact: 2
 
  * Cross-site scripting [6]
  * High risk of false-positives [-4]
+
+Examples:
+
+ * {{< example >}}) [{{< /example >}}
 
 
 ## 35
@@ -828,6 +854,10 @@ Resources:
 
  * <https://en.wikipedia.org/wiki/Environment_variable#Default_values>
 
+Examples:
+
+ * {{< example >}}%WINDIR%\\cmd.exe{{< /example >}}
+
 
 ## 37
 
@@ -846,6 +876,10 @@ Impact: 1
  * High risk of false-positives [-3]
  * Overlaps with 36 [-1]
 
+Examples:
+
+ * {{< example >}}%FOO%{{< /example >}}
+
 
 ## 38
 
@@ -861,6 +895,10 @@ Impact: 3
 
  * SQL injection [7]
  * High risk of false-positives [-4]
+
+Examples:
+
+ * {{< example >}}' UNION SELECT user()-- -{{< /example >}}
 
 
 ## 39
@@ -878,6 +916,10 @@ Impact: 3
  * SQL injection [7]
  * High risk of false-positives [-4]
 
+Examples:
+
+ * {{< example >}}UPDATE users SET permissions='admin'{{< /example >}}
+
 
 ## 40
 
@@ -893,6 +935,11 @@ Impact: 3
 
  * SQL injection [7]
  * High risk of false-positives [-4]
+
+Examples:
+
+ * {{< example >}}DROP TABLE users{{< /example >}}
+ * {{< example >}}DROP DATABASE blog{{< /example >}}
 
 
 ## 41
@@ -910,6 +957,10 @@ Impact: 3
  * SQL injection [7]
  * High risk of false-positives [-4]
 
+Examples:
+
+ * {{< example >}}DELETE FROM users{{< /example >}}
+
 
 ## 42
 
@@ -926,10 +977,14 @@ Impact: 1
  * SQL injection [6]
  * Very high risk of false-positives [-5]
 
+Examples:
+
+ * {{< example >}}' OR 1-- -{{< /example >}}
+
 
 ## 43
 
-Regular Expression: {{< regex >}}\[\$(?:ne|eq|lte?|gte?|n?in|mod|all|size|exists|type|slice|or)\]{{< /regex >}}
+Regular Expression: {{< regex >}}\[\$(ne|eq|lte?|gte?|n?in|mod|all|size|exists|type|slice|or)\]{{< /regex >}}
 
 Description: MongoDB SQL commands
 
@@ -942,6 +997,10 @@ Impact: 5
 
  * SQL injection [6]
  * Low risk of false-positives [-1]
+
+Examples:
+
+ * {{< example >}}[$ne]{{< /example >}}
 
 
 ## 44
@@ -959,6 +1018,10 @@ Impact: 2
  * Cross-site scripting [6]
  * High risk of false-positives [-4]
 
+Examples:
+
+ * {{< example >}}$('#login'){{< /example >}}
+
 
 ## 45
 
@@ -974,6 +1037,10 @@ Impact: 3
 
  * SQL injection [6]
  * Mediocre risk of false-positives [-3]
+
+Examples:
+
+ * {{< example >}}/**/{{< /example >}}
 
 
 ## 46
@@ -991,6 +1058,10 @@ Impact: 3
 
  * Cross-site scripting [6]
  * Mediocre risk of false-positives [-3]
+
+Examples:
+
+ * {{< example >}}&lt;!- --&gt;{{< /example >}}
 
 
 ## 47
@@ -1054,6 +1125,10 @@ Impact: 2
  * Cross-site scripting [6]
  * High risk of false-positives [-4]
 
+Examples:
+
+ * {{< example >}}&lt;img onerror=&quot;&quot; /&gt;{{< /example >}}
+
 
 ## 50
 
@@ -1069,6 +1144,10 @@ Impact: 2
 
  * Cross-site scripting [6]
  * High risk of false-positives [-4]
+
+Examples:
+
+ * {{< example >}}&lt;a href=&quot;&quot;&gt;&lt;/a&gt;{{< /example >}}
 
 
 ## 51
@@ -1086,6 +1165,10 @@ Impact: 4
  * Cross-site scripting [6]
  * Mediocre risk of false-positives [-2]
 
+Examples:
+
+ * {{< example >}}&lt;form&gt;&lt;/form&gt;{{< /example >}}
+
 
 ## 52
 
@@ -1101,6 +1184,10 @@ Impact: 4
 
  * Cross-site scripting [6]
  * Mediocre risk of false-positives [-2]
+
+Examples:
+
+ * {{< example >}}&lt;script&gt;&lt;/script&gt;{{< /example >}}
 
 
 ## 53
@@ -1141,7 +1228,7 @@ Impact: 3
 
 Examples:
 
- * {{< example >}}&lt;img onerror=&quot;foo&quot;/&gt;{{< /example >}}
+ * {{< example >}}&lt;img onerror=&quot;&quot; /&gt;{{< /example >}}
 
 
 ## 55
@@ -1224,6 +1311,10 @@ Impact: 6
  * Command injection / file disclosure [8]
  * Low risk of false-positives [-2]
 
+Examples:
+
+ * {{< example >}}&lt;!--#include{{< /example >}}
+
 
 ## 59
 
@@ -1240,6 +1331,10 @@ Impact: 5
  * Everything is possible [8]
  * Mediocre risk of false-positives [-3]
 
+Examples:
+
+ * {{< example >}}O:3:&quot;foo&quot;:1:{s:8:&quot;foobar&quot;;s:3:&quot;quz&quot;;}{{< /example >}}
+
 
 ## 60
 
@@ -1255,6 +1350,10 @@ Impact: 5
 
  * Spam [4]
  * Low risk of false-positives [1]
+
+Examples:
+
+ * {{< example >}}\nto: foo@bar.de{{< /example >}}
 
 
 ## 61
@@ -1273,6 +1372,14 @@ Impact: 7
  * Command execution [8]
  * Low risk of false-positives [-1]
 
+Resources:
+
+ * <https://secure.php.net/manual/function.call-user-func.php>
+
+Examples:
+
+ * {{< example >}}call_user_func('foo', $a);{{< /example >}}
+
 
 ## 62
 
@@ -1289,6 +1396,14 @@ Impact: 7
 
  * Command execution [8]
  * Low risk of false-positives [-1]
+
+Resources:
+
+ * <https://secure.php.net/manual/function.create-function.php>
+
+Examples:
+
+ * {{< example >}}create_function('$a', 'return $a;');{{< /example >}}
 
 
 ## 63
@@ -1308,6 +1423,16 @@ Impact: 4
  * Command execution [8]
  * High risk of false-positives [-4]
 
+Resources:
+
+ * <https://secure.php.net/manual/function.eval.php>
+ * <http://perldoc.perl.org/functions/eval.html>
+
+Examples:
+
+ * {{< example >}}eval('foo');{{< /example >}}
+ * {{< example >}}eval { foo(); }{{< /example >}}
+
 
 ## 64
 
@@ -1324,6 +1449,14 @@ Impact: 4
 
  * Command execution [8]
  * High risk of false-positives [-4]
+
+Resources:
+
+ * <https://secure.php.net/manual/function.exec.php>
+
+Examples:
+
+ * {{< example >}}exec('cat /etc/passwd');{{< /example >}}
 
 
 ## 65
@@ -1343,6 +1476,14 @@ Impact: 5
  * Command execution / file disclosure [8]
  * Mediocre risk of false-positives [-3]
 
+Resources:
+
+ * <https://secure.php.net/manual/function.fopen.php>
+
+Examples:
+
+ * {{< example >}}fopen('/etc/passwd', 'r');{{< /example >}}
+
 
 ## 66
 
@@ -1361,6 +1502,16 @@ Impact: 7
  * Command execution / file disclosure [8]
  * Low risk of false-positives [-1]
 
+Resources:
+
+ * <https://secure.php.net/manual/function.file-get-contents.php>
+ * <https://secure.php.net/manual/function.file-put-contents.php>
+
+Examples:
+
+ * {{< example >}}file_get_contents('/etc/passwd');{{< /example >}}
+ * {{< example >}}file_put_contents('/etc/passwd', 'foo');{{< /example >}}
+
 
 ## 67
 
@@ -1377,6 +1528,14 @@ Impact: 7
 
  * Command execution [8]
  * Low risk of false-positives [-1]
+
+Resources:
+
+ * <https://secure.php.net/manual/function.move-uploaded-file.php>
+
+Examples:
+
+ * {{< example >}}move_uploaded_file($tmp_name, $name);{{< /example >}}
 
 
 ## 68
@@ -1395,6 +1554,14 @@ Impact: 7
  * Command execution [8]
  * Low risk of false-positives [-1]
 
+Resources:
+
+ * <https://secure.php.net/manual/function.passthru.php>
+
+Examples:
+
+ * {{< example >}}passthru('cat /etc/passwd');{{< /example >}}
+
 
 ## 69
 
@@ -1411,6 +1578,14 @@ Impact: 6
 
  * Command execution [8]
  * Mediocre risk of false-positives [-2]
+
+Resources:
+
+ * <https://secure.php.net/manual/function.proc-open.php>
+
+Examples:
+
+ * {{< example >}}proc_open('cat', $descriptorspec, $pipes, $cwd, $env);{{< /example >}}
 
 
 ## 70
@@ -1429,6 +1604,14 @@ Impact: 5
  * File disclosure [7]
  * Mediocre risk of false-positives [-2]
 
+Resources:
+
+ * <https://secure.php.net/manual/function.readfile.php>
+
+Examples:
+
+ * {{< example >}}readfile('/etc/passwd');{{< /example >}}
+
 
 ## 71
 
@@ -1445,6 +1628,14 @@ Impact: 7
 
  * Command execution [8]
  * Low risk of false-positives [-1]
+
+Resources:
+
+ * <https://secure.php.net/manual/function.shell-exec.php>
+
+Examples:
+
+ * {{< example >}}shell_exec('cat /etc/passwd');{{< /example >}}
 
 
 ## 72
@@ -1463,6 +1654,14 @@ Impact: 5
  * Command execution [8]
  * Mediocre risk of false-positives [-3]
 
+Resources:
+
+ * <https://secure.php.net/manual/function.system.php>
+
+Examples:
+
+ * {{< example >}}system('cat /etc/passwd');{{< /example >}}
+
 
 ## 73
 
@@ -1479,6 +1678,15 @@ Impact: 7
 
  * Command execution [8]
  * Low risk of false-positives [-1]
+
+Resources:
+
+ * <https://secure.php.net/manual/function.preg-replace.php>
+ * <https://secure.php.net/manual/function.preg-match.php>
+
+Examples:
+
+ * {{< example >}}preg_replace('//e', 'phpinfo()', $x);{{< /example >}}
 
 
 ## 74
@@ -1571,6 +1779,10 @@ Resources:
 
  * <https://en.wikipedia.org/wiki/Conditional_comment#Conditional_comments_in_JScript>
 
+Examples:
+
+ * {{< example >}}@cc_on{{< /example >}}
+
 
 ## 78
 
@@ -1590,6 +1802,10 @@ Impact: 3
 Resources:
 
  * <http://www.mozillazine.org/talkback.html?article=22198>
+
+Examples:
+
+ * {{< example >}}firefoxurl://{{< /example >}}
 
 
 ## 79
@@ -1611,6 +1827,10 @@ Resources:
 
  * <https://en.wikipedia.org/wiki/WYCIWYG>
 
+Examples:
+
+ * {{< example >}}wyciwyg://{{< /example >}}
+
 
 ## 80
 
@@ -1630,6 +1850,10 @@ Impact: 2
 Resources:
 
  * <https://developer.mozilla.org/en-US/docs/Web/API/document>
+
+Examples:
+
+ * {{< example >}}document.cookie{{< /example >}}
 
 
 ## 81
@@ -1651,6 +1875,10 @@ Resources:
 
  * <https://developer.mozilla.org/en-US/docs/Web/API/window>
 
+Examples:
+
+ * {{< example >}}window.content{{< /example >}}
+
 
 ## 82
 
@@ -1666,6 +1894,10 @@ Impact: 1
 
  * Cross-site scripting [6]
  * High risk of false-positives [-5]
+
+Examples:
+
+ * {{< example >}}= foo + '{{< /example >}}
 
 
 ## 83
@@ -1683,6 +1915,10 @@ Impact: 1
  * Cross-site scripting [6]
  * High risk of false-positives [-5]
 
+Examples:
+
+ * {{< example >}}+= ('{{< /example >}}
+
 
 ## 84
 
@@ -1698,6 +1934,10 @@ Impact: 1
 
  * Cross-site scripting [6]
  * High risk of false-positives [-5]
+
+Examples:
+
+ * {{< example >}}' + '{{< /example >}}
 
 
 ## 85
@@ -1719,6 +1959,10 @@ Resources:
 
  * <https://www.blackhat.com/presentations/bh-europe-08/Alonso-Parada/Whitepaper/bh-eu-08-alonso-parada-WP.pdf>
 
+Examples:
+
+ * {{< example >}}|(foo={{< /example >}}
+
 
 ## 86
 
@@ -1735,6 +1979,10 @@ Impact: 3
 
  * Common code pattern [6]
  * Mediocre risk of false-positives [-3]
+
+Examples:
+
+ * {{< example >}}function foo() {}{{< /example >}}
 
 
 ## 87
@@ -1757,6 +2005,10 @@ Resources:
 
  * <https://dev.mysql.com/doc/refman/5.7/en/information-functions.html#function_benchmark>
 
+Examples:
+
+ * {{< example >}}SELECT BENCHMARK(1000000,ENCODE('hello','goodbye')){{< /example >}}
+
 
 ## 88
 
@@ -1777,6 +2029,10 @@ Impact: 2
 Resources:
 
  * <https://dev.mysql.com/doc/refman/5.7/en/miscellaneous-functions.html#function_sleep>
+
+Examples:
+
+ * {{< example >}}SELECT SLEEP(1000){{< /example >}}
 
 
 ## 89
@@ -1799,6 +2055,10 @@ Resources:
 
  * <https://dev.mysql.com/doc/refman/5.7/en/string-functions.html#function_load-file>
 
+Examples:
+
+ * {{< example >}}SELECT LOAD_FILE('/etc/passwd'){{< /example >}}
+
 
 ## 90
 
@@ -1819,6 +2079,10 @@ Impact: 7
 Resources:
 
  * <https://dev.mysql.com/doc/refman/5.7/en/load-data.html>
+
+Examples:
+
+ * {{< example >}}LOAD DATA INFILE 'foo' INTO TABLE bar{{< /example >}}
 
 
 ## 91
@@ -1841,6 +2105,11 @@ Resources:
 
  * <https://dev.mysql.com/doc/refman/5.7/en/select-into.html>
 
+Examples:
+
+ * {{< example >}}SELECT 'foo' INTO OUTFILE 'bar'{{< /example >}}
+ * {{< example >}}SELECT 'foo' INTO DUMPFILE 'bar'{{< /example >}}
+
 
 ## 92
 
@@ -1862,6 +2131,11 @@ Resources:
 
  * <https://dev.mysql.com/doc/refman/5.7/en/string-functions.html#function_concat>
 
+Examples:
+
+ * {{< example >}}SELECT CONCAT(foo, ':', bar){{< /example >}}
+ * {{< example >}}SELECT GROUP_CONCAT(foo){{< /example >}}
+
 
 ## 93
 
@@ -1882,6 +2156,10 @@ Impact: 7
 Resources:
 
  * <https://dev.mysql.com/doc/refman/5.7/en/information-schema.html>
+
+Examples:
+
+ * {{< example >}}SELECT schema_name FROM information_schema.schemata{{< /example >}}
 
 
 ## 94
@@ -1905,6 +2183,10 @@ Resources:
 
  * <http://www.postgresql.org/docs/9.0/static/functions-datetime.html#FUNCTIONS-DATETIME-DELAY>
 
+Examples:
+
+ * {{< example >}}SELECT pg_sleep(1.5){{< /example >}}
+
 
 ## 95
 
@@ -1927,6 +2209,11 @@ Resources:
 
  * <https://msdn.microsoft.com/en-us/library/ms187331.aspx>
 
+Examples:
+
+ * {{< example >}}WAITFOR { DELAY '1000' }{{< /example >}}
+ * {{< example >}}WAITFOR { TIME '1000' }{{< /example >}}
+
 
 ## 96
 
@@ -1948,6 +2235,11 @@ Resources:
  * <https://dev.mysql.com/doc/refman/5.7/en/string-functions.html#function_length>
  * <https://dev.mysql.com/doc/refman/5.7/en/string-functions.html#function_bit-length>
 
+Examples:
+
+ * {{< example >}}SELECT LENGTH('foo'){{< /example >}}
+ * {{< example >}}SELECT CHAR_LENGTH('foo'){{< /example >}}
+ * {{< example >}}SELECT BIT_LENGTH('foo'){{< /example >}}
 
 ## 97
 
@@ -1967,6 +2259,12 @@ Impact: 2
 Resources:
 
  * <https://dev.mysql.com/doc/refman/5.7/en/string-functions.html#function_hex>
+ * <https://dev.mysql.com/doc/refman/5.7/en/string-functions.html#function_unhex>
+
+Examples:
+
+ * {{< example >}}SELECT HEX('foo'){{< /example >}}
+ * {{< example >}}SELECT UNHEX('00'){{< /example >}}
 
 
 ## 98
@@ -1987,6 +2285,12 @@ Impact: 4
 Resources:
 
  * <https://dev.mysql.com/doc/refman/5.7/en/string-functions.html#function_from-base64>
+ * <https://dev.mysql.com/doc/refman/5.7/en/string-functions.html#function_to-base64>
+
+Examples:
+
+ * {{< example >}}SELECT TO_BASE64('foo'){{< /example >}}
+ * {{< example >}}SELECT FROM_BASE64('foo'){{< /example >}}
 
 
 ## 99
@@ -2008,6 +2312,12 @@ Resources:
 
  * <https://dev.mysql.com/doc/refman/5.7/en/string-functions.html#function_substr>
 
+Examples:
+
+ * {{< example >}}SELECT SUBSTR('foo',1){{< /example >}}
+ * {{< example >}}SELECT SUBSTRING('foo',1){{< /example >}}
+ * {{< example >}}SELECT SUBSTRING_INDEX('foo',1){{< /example >}}
+
 
 ## 100
 
@@ -2023,6 +2333,11 @@ Impact: 2
 
  * SQL injection / information disclosure [6]
  * High risk of false-positives [-4]
+
+Examples:
+
+ * {{< example >}}SELECT user(){{< /example >}}
+ * {{< example >}}SELECT current_user(){{< /example >}}
 
 
 ## 101
@@ -2040,6 +2355,10 @@ Impact: 2
  * SQL injection / information disclosure [6]
  * High risk of false-positives [-4]
 
+Examples:
+
+ * {{< example >}}SELECT version(){{< /example >}}
+
 
 ## 102
 
@@ -2055,6 +2374,10 @@ Impact: 1
 
  * SQL injection / information disclosure [6]
  * High risk of false-positives [-5]
+
+Examples:
+
+ * {{< example >}}SELECT @@user{{< /example >}}
 
 
 ## 103
@@ -2076,6 +2399,10 @@ Resources:
 
  * <https://dev.mysql.com/doc/refman/5.7/en/string-functions.html#function_oct>
 
+Examples:
+
+ * {{< example >}}SELECT OCT(12){{< /example >}}
+
 
 ## 104
 
@@ -2095,6 +2422,10 @@ Impact: 2
 Resources:
 
  * <https://dev.mysql.com/doc/refman/5.7/en/string-functions.html#function_ord>
+
+Examples:
+
+ * {{< example >}}SELECT ORD('2'){{< /example >}}
 
 
 ## 105
@@ -2116,10 +2447,14 @@ Resources:
 
  * <https://dev.mysql.com/doc/refman/5.7/en/string-functions.html#function_ascii>
 
+Examples:
+
+ * {{< example >}}SELECT ASCII('2'){{< /example >}}
+
 
 ## 106
 
-Regular Expression: {{< regex >}}\bbin(ary)?\b.*?\(.+?\){{< /regex >}}
+Regular Expression: {{< regex >}}\bbin\b.*?\(.+?\){{< /regex >}}
 
 Description: Common SQL function "bin"
 
@@ -2135,6 +2470,10 @@ Impact: 2
 Resources:
 
  * <https://dev.mysql.com/doc/refman/5.7/en/string-functions.html#function_bin>
+
+Examples:
+
+ * {{< example >}}SELECT BIN(12){{< /example >}}
 
 
 ## 107
@@ -2155,6 +2494,10 @@ Impact: 2
 Resources:
 
  * <https://dev.mysql.com/doc/refman/5.7/en/string-functions.html#function_char>
+
+Examples:
+
+ * {{< example >}}SELECT CHAR(77,121,83,81,76){{< /example >}}
 
 
 ## 108
@@ -2177,6 +2520,10 @@ Resources:
  * <https://dev.mysql.com/doc/refman/5.7/en/string-comparison-functions.html#operator_like>
  * <https://dev.mysql.com/doc/refman/5.7/en/regexp.html#operator_regexp>
 
+Examples:
+
+ * {{< example >}}SELECT foo FROM bar WHERE name LIKE '%admin%'{{< /example >}}
+
 
 ## 109
 
@@ -2196,6 +2543,10 @@ Impact: 2
 Resources:
 
  * <https://dev.mysql.com/doc/refman/5.7/en/control-flow-functions.html#function_if>
+
+Examples:
+
+ * {{< example >}}SELECT IF(1>2,2,3){{< /example >}}
 
 
 ## 110
@@ -2218,6 +2569,11 @@ Resources:
  * <https://dev.mysql.com/doc/refman/5.7/en/control-flow-functions.html#function_ifnull>
  * <https://dev.mysql.com/doc/refman/5.7/en/control-flow-functions.html#function_nullif>
 
+Examples:
+
+ * {{< example >}}SELECT IFNULL(1,0){{< /example >}}
+ * {{< example >}}SELECT NULLIF(1,1){{< /example >}}
+
 
 ## 111
 
@@ -2233,6 +2589,10 @@ Impact: 3
 
  * SQL injection [7]
  * High risk of false-positives [-4]
+
+Examples:
+
+ * {{< example >}}SELECT foo FROM bar WHERE id = 1 OR id = 2{{< /example >}}
 
 
 ## 112
@@ -2254,6 +2614,10 @@ Resources:
 
  * <https://dev.mysql.com/doc/refman/5.7/en/case.html>
 
+Examples:
+
+ * {{< example >}}CASE case_value WHEN when_value THEN statement_list END CASE{{< /example >}}
+
 
 ## 113
 
@@ -2272,6 +2636,10 @@ Impact: 9
  * SQL injection / code execution [8]
  * Low risk of false-positives [1]
 
+Examples:
+
+ * {{< example >}}exec master..xp_cmdshell 'echo foo'{{< /example >}}
+
 
 ## 114
 
@@ -2287,6 +2655,10 @@ Impact: 4
 
  * SQL injection [7]
  * Mediocre risk of false-positives [-3]
+
+Examples:
+
+ * {{< example >}}CREATE PROCEDURE foo(){{< /example >}}
 
 
 ## 115
@@ -2304,6 +2676,10 @@ Impact: 5
  * SQL injection [7]
  * Mediocre risk of false-positives [-2]
 
+Examples:
+
+ * {{< example >}}INSERT INTO table (col1,col2) VALUES('foo','bar'){{< /example >}}
+
 
 ## 116
 
@@ -2319,6 +2695,10 @@ Impact: 3
 
  * SQL injection [7]
  * High risk of false-positives [-4]
+
+Examples:
+
+ * {{< example >}}SELECT foo FROM bar{{< /example >}}
 
 
 ## 117
@@ -2337,6 +2717,10 @@ Impact: 7
  * SQL injection [6]
  * Low risk of false-positives [1]
 
+Examples:
+
+ * {{< example >}}SELECT * FROM pg_user{{< /example >}}
+
 
 ## 118
 
@@ -2353,6 +2737,10 @@ Impact: 7
 
  * SQL injection [6]
  * Low risk of false-positives [1]
+
+Examples:
+
+ * {{< example >}}SELECT * FROM pg_database{{< /example >}}
 
 
 ## 119
@@ -2371,6 +2759,10 @@ Impact: 7
  * SQL injection [6]
  * Low risk of false-positives [1]
 
+Examples:
+
+ * {{< example >}}SELECT * FROM pg_shadow{{< /example >}}
+
 
 ## 120
 
@@ -2387,4 +2779,8 @@ Impact: 2
  * SQL injection / information disclosure [6]
  * High risk of false-positives [-4]
 
+Examples:
+
+ * {{< example >}}SELECT database(){{< /example >}}
+ * {{< example >}}SELECT current_database(){{< /example >}}
 
