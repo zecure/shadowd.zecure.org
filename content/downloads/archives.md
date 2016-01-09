@@ -24,33 +24,33 @@ The [DIGESTS](http://en.wikipedia.org/wiki/Cryptographic_hash_function) and [DIG
 
 ## Shadowd {#shadowd}
 
- * https://shadowd.zecure.org/files/shadowd-1.1.3.tar.gz
- * https://shadowd.zecure.org/files/shadowd-1.1.3.tar.gz.DIGESTS
- * https://shadowd.zecure.org/files/shadowd-1.1.3.tar.gz.DIGESTS.asc
+ * https://shadowd.zecure.org/files/shadowd-2.0.0.tar.gz
+ * https://shadowd.zecure.org/files/shadowd-2.0.0.tar.gz.DIGESTS
+ * https://shadowd.zecure.org/files/shadowd-2.0.0.tar.gz.DIGESTS.asc
 
 ## User Interface {#user_interface}
 
- * https://shadowd.zecure.org/files/shadowd_ui-1.2.1.tar.gz
- * https://shadowd.zecure.org/files/shadowd_ui-1.2.1.tar.gz.DIGESTS
- * https://shadowd.zecure.org/files/shadowd_ui-1.2.1.tar.gz.DIGESTS.asc
+ * https://shadowd.zecure.org/files/shadowd_ui-2.0.0.tar.gz
+ * https://shadowd.zecure.org/files/shadowd_ui-2.0.0.tar.gz.DIGESTS
+ * https://shadowd.zecure.org/files/shadowd_ui-2.0.0.tar.gz.DIGESTS.asc
 
 ## PHP Connector {#php_connector}
 
- * https://shadowd.zecure.org/files/shadowd_php-1.0.0.tar.gz
- * https://shadowd.zecure.org/files/shadowd_php-1.0.0.tar.gz.DIGESTS
- * https://shadowd.zecure.org/files/shadowd_php-1.0.0.tar.gz.DIGESTS.asc
+ * https://shadowd.zecure.org/files/shadowd_php-2.0.0.tar.gz
+ * https://shadowd.zecure.org/files/shadowd_php-2.0.0.tar.gz.DIGESTS
+ * https://shadowd.zecure.org/files/shadowd_php-2.0.0.tar.gz.DIGESTS.asc
 
 ## Perl Connector {#perl_connector}
 
- * https://shadowd.zecure.org/files/shadowd_perl-1.0.3.tar.gz
- * https://shadowd.zecure.org/files/shadowd_perl-1.0.3.tar.gz.DIGESTS
- * https://shadowd.zecure.org/files/shadowd_perl-1.0.3.tar.gz.DIGESTS.asc
+ * https://shadowd.zecure.org/files/shadowd_perl-2.0.0.tar.gz
+ * https://shadowd.zecure.org/files/shadowd_perl-2.0.0.tar.gz.DIGESTS
+ * https://shadowd.zecure.org/files/shadowd_perl-2.0.0.tar.gz.DIGESTS.asc
 
 ## Python Connector {#python_connector}
 
- * https://shadowd.zecure.org/files/shadowd_python-1.2.0.tar.gz
- * https://shadowd.zecure.org/files/shadowd_python-1.2.0.tar.gz.DIGESTS
- * https://shadowd.zecure.org/files/shadowd_python-1.2.0.tar.gz.DIGESTS.asc
+ * https://shadowd.zecure.org/files/shadowd_python-2.0.0.tar.gz
+ * https://shadowd.zecure.org/files/shadowd_python-2.0.0.tar.gz.DIGESTS
+ * https://shadowd.zecure.org/files/shadowd_python-2.0.0.tar.gz.DIGESTS.asc
 
 # All {#all}
 
