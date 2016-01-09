@@ -106,7 +106,7 @@ Stable releases of the source code can be found at the [download page]({{< ref "
 
 Use cmake to configure and prepare the project.
 It is a good idea to create a separate directory for this.
-A typical installation might look like this:
+A typical installation might look like this.
 
     mkdir build
     cd build
@@ -115,18 +115,38 @@ A typical installation might look like this:
 ### Compilation
 
 If cmake is successful it creates a makefile.
-Use it to compile and install the project:
+Use it to compile and install the project.
 
-    make
+    make shadowd
     make install
+
+### Autostart
+
+If you compile shadowd from source it will not start automatically on boot, so you will have to set this up manually.
+How exactly this is done depends on your operating system.
+You can find init scripts for the most common Linux distributions in the [packaging repository](https://github.com/zecure/packaging).
+
+It is recommended to not run shadowd with root privileges, so you should add a new user and group.
+
+    useradd shadowd
+
+This user needs access to the configuration file.
+
+    chown root:shadowd /etc/shadowd/shadowd.ini
+    chmod 640 /etc/shadowd/shadowd.ini
 
 ## Database {#database}
 
 Install and configure a database server.
 At the moment shadowd officially supports PostgreSQL and MySQL.
-If you are done create a new user and database and import the correct layout, e.g.:
+Afterwards create a new user and database for shadowd and import the correct layout.
+
+If you are using PostgreSQL you can use `psql` to import the layout.
 
     psql -Ushadowd shadowd < /usr/share/shadowd/pgsql_layout.sql
+
+If you are using MySQL you can use `mysql` to import the layout. The user requires the `CREATE ROUTINE` privilege.
+
     mysql -ushadowd -p shadowd < /usr/share/shadowd/mysql_layout.sql
 
 ## Configuration {#configuration}

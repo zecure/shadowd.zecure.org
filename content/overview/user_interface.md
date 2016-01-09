@@ -45,6 +45,7 @@ You can start the installation by running:
 The installer asks you for a database driver.
 The default value is *pdo_pgsql* for PostgreSQL.
 If you are using MySQL change this value to *pdo_mysql*.
+It is highly recommended to change the secret token to a random string.
 
 You can test if everything works by visiting */config.php*.
 
