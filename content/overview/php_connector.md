@@ -30,7 +30,7 @@ If you are using Apache you do not have to enable the connector globally, you ca
         DocumentRoot "/www/example"
         ServerName www.example.com
       
-        php_value  auto_prepend_file  "/usr/share/shadowd/shadowd_connector.php"
+        php_value  auto_prepend_file  "/usr/share/shadowd/php/Connector.php"
     </VirtualHost>
 
 Apache servers can also use *.htaccess* files to set *auto_prepend_file* for specific directories only.
@@ -40,7 +40,7 @@ Apache servers can also use *.htaccess* files to set *auto_prepend_file* for spe
 The same is true for Nginx, you do not have to set the PHP setting globally.
 To set it up for a single vhost or directory only just add:
 
-    fastcgi_param  PHP_ADMIN_VALUE  "auto_prepend_file=/usr/share/shadowd/shadowd_connector.php";
+    fastcgi_param  PHP_ADMIN_VALUE  "auto_prepend_file=/usr/share/shadowd/php/Connector.php";
 
 ## Configuration
 
