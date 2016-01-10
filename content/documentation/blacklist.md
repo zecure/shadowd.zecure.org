@@ -8,10 +8,12 @@ title: Blacklist
 weight: 11
 ---
 
+## Description
+
 The blacklist algorithm is one of the three methods of Shadow Daemon to identify malicious requests.
 It searches for known attack patterns in the user input.
 
-# Layout
+## Layout
 
 ![Flowchart blacklist](/img/documentation/blacklist.svg)
 
@@ -21,7 +23,7 @@ The impacts of all matching filters are aggregated and compared to a threshold.
 If the total impact is greater than the threshold the input is classified as a threat.
 
 
-# Security
+## Security
 
 Be aware that a blacklist does not guarantee perfect security.
 It is good at detecting a majority of common attack patterns, but there will be always techniques it does not know and therefore does not detect.
@@ -29,7 +31,7 @@ Once attackers are able to execute own code they have many ways to obfuscate the
 To compensate for this make sure to use a very low global impact threshold and only increase it via rules for specific user input if necessary.
 
 
-# Filters
+## Filters
 
 The base impact of a filter is determined by the dangerousness of successful exploitation.
 A low risk of false-positives is rewarded, whereas a high risk of false-positives is penalized.
@@ -37,7 +39,7 @@ If multiple filters are overlapping this is also penalized, depending on how big
 
 If you have suggestions for existing or new filters feel free to open an [issue](https://github.com/zecure/shadowd.zecure.org/issues).
 
-## 1
+### 1
 
 Regular Expression: {{< regex >}}\(\)\s*\{.*?;\s*\}\s*;{{< /regex >}}
 
@@ -62,7 +64,7 @@ Examples:
  * {{< example >}}env x='() { :;}; echo vulnerable' bash -c &quot;echo this is a test&quot;{{< /example >}}
 
 
-## 2
+### 2
 
 Regular Expression: {{< regex >}}\(\)\s*\{.*?\(.*?\).*?=&gt;.*?\\'{{< /regex >}}
 
@@ -87,7 +89,7 @@ Examples:
  * {{< example >}}env X='() { (a)=&gt;\' bash -c &quot;echo date&quot;; cat echo{{< /example >}}
 
 
-## 3
+### 3
 
 Regular Expression: {{< regex >}}\{\{.*?\}\}{{< /regex >}}
 
@@ -112,7 +114,7 @@ Examples:
  * {{< example >}}{{foo.bar}}{{< /example >}}
 
 
-## 4
+### 4
 
 Regular Expression: {{< regex >}}\bfind_in_set\b.*?\(.+?,.+?\){{< /regex >}}
 
@@ -137,7 +139,7 @@ Examples:
  * {{< example >}}SELECT FIND_IN_SET('b','a,b,c,d'){{< /example >}}
 
 
-## 5
+### 5
 
 Regular Expression: {{< regex >}}[&quot;'].*?&gt;{{< /regex >}}
 
@@ -157,7 +159,7 @@ Examples:
  * {{< example >}}&quot;&gt;{{< /example >}}
 
 
-## 6
+### 6
 
 Regular Expression: {{< regex >}}\bsqlite_master\b{{< /regex >}}
 
@@ -178,7 +180,7 @@ Examples:
  * {{< example >}}SELECT name FROM sqlite_master{{< /example >}}
 
 
-## 7
+### 7
 
 Regular Expression: {{< regex >}}\bmysql.*?\..*?user\b{{< /regex >}}
 
@@ -199,7 +201,7 @@ Examples:
  * {{< example >}}SELECT user FROM mysql.user{{< /example >}}
 
 
-## 8
+### 8
 
 Regular Expression: {{< regex >}}#.+?\)[&quot;\s]*&gt;{{< /regex >}}
 
@@ -219,7 +221,7 @@ Examples:
  * {{< example >}}#foo)&quot;&gt;{{< /example >}}
 
 
-## 9
+### 9
 
 Regular Expression: {{< regex >}}['&quot;][,;\s]+\w*[\[\(]{{< /regex >}}
 
@@ -239,7 +241,7 @@ Examples:
  * {{< example >}}&quot;; foo({{< /example >}}
 
 
-## 10
+### 10
 
 Regular Expression: {{< regex >}}&gt;.*?&lt;\s*\/?[\w\s]+&gt;{{< /regex >}}
 
@@ -259,7 +261,7 @@ Examples:
  * {{< example >}}&gt;&lt;/foo&gt;{{< /example >}}
 
 
-## 11
+### 11
 
 Regular Expression: {{< regex >}}\blocation\b.*?\..*?\bhash\b{{< /regex >}}
 
@@ -279,7 +281,7 @@ Examples:
  * {{< example >}}location.hash.slice(1){{< /example >}}
 
 
-## 12
+### 12
 
 Regular Expression: {{< regex >}}\bwith\b\s*\(.+?\)[\s\w]+\({{< /regex >}}
 
@@ -304,7 +306,7 @@ Examples:
  * {{< example >}}with(location)with(hash)eval(substring(1)){{< /example >}}
 
 
-## 13
+### 13
 
 Regular Expression: {{< regex >}}(\b(do|while|for)\b.*?\([^)]*\).*?\{)|(\}.*?\b(do|while|for)\b.*?\([^)]*\)){{< /regex >}}
 
@@ -327,7 +329,7 @@ Examples:
  * {{< example >}}{fork();} while (true);{{< /example >}}
 
 
-## 14
+### 14
 
 Regular Expression: {{< regex >}}[=(].+?\?.+?:{{< /regex >}}
 
@@ -348,7 +350,7 @@ Examples:
  * {{< example >}}1=1 ? true : false{{< /example >}}
 
 
-## 15
+### 15
 
 Regular Expression: {{< regex >}}\\u00[a-f0-9]{2}{{< /regex >}}
 
@@ -369,7 +371,7 @@ Examples:
  * {{< example >}}\u00ff{{< /example >}}
 
 
-## 16
+### 16
 
 Regular Expression: {{< regex >}}\\x0*[a-f0-9]{2}{{< /regex >}}
 
@@ -390,7 +392,7 @@ Examples:
  * {{< example >}}\x0ff{{< /example >}}
 
 
-## 17
+### 17
 
 Regular Expression: {{< regex >}}\\\d{2,3}{{< /regex >}}
 
@@ -411,7 +413,7 @@ Examples:
  * {{< example >}}\01{{< /example >}}
 
 
-## 18
+### 18
 
 Regular Expression: {{< regex >}}\.\.[\/\\]{{< /regex >}}
 
@@ -431,7 +433,7 @@ Examples:
  * {{< example >}}../../etc/passwd{{< /example >}}
 
 
-## 19
+### 19
 
 Regular Expression: {{< regex >}}%(c0\.|af\.|5c\.){{< /regex >}}
 
@@ -457,7 +459,7 @@ Examples:
  * {{< example >}}%5c.{{< /example >}}
 
 
-## 20
+### 20
 
 Regular Expression: {{< regex >}}%2e%2e[\/\\]{{< /regex >}}
 
@@ -477,7 +479,7 @@ Examples:
  * {{< example >}}%2e%2e/%2e%2e/etc/passwd{{< /example >}}
 
 
-## 21
+### 21
 
 Regular Expression: {{< regex >}}%c0%ae[\/\\]{{< /regex >}}
 
@@ -501,7 +503,7 @@ Examples:
  * {{< example >}}%c0%ae/%c0%ae/etc/passwd{{< /example >}}
 
 
-## 22
+### 22
 
 Regular Expression: {{< regex >}}\.(ht(access|passwd|group))|(apache|httpd)\d?\.conf{{< /regex >}}
 
@@ -523,7 +525,7 @@ Examples:
  * {{< example >}}/etc/apache2/apache2.conf{{< /example >}}
 
 
-## 23
+### 23
 
 Regular Expression: {{< regex >}}\/etc\/[.\/]*(passwd|shadow|master\.passwd){{< /regex >}}
 
@@ -545,7 +547,7 @@ Examples:
  * {{< example >}}/etc/./passwd{{< /example >}}
 
 
-## 24
+### 24
 
 Regular Expression: {{< regex >}}\bdata:.*?,{{< /regex >}}
 
@@ -569,7 +571,7 @@ Examples:
  * {{< example >}}data:image/png;base64,foo{{< /example >}}
 
 
-## 25
+### 25
 
 Regular Expression: {{< regex >}};base64|base64,{{< /regex >}}
 
@@ -593,7 +595,7 @@ Examples:
  * {{< example >}}data:image/png;base64,foo{{< /example >}}
 
 
-## 26
+### 26
 
 Regular Expression: {{< regex >}}php:\/\/filter{{< /regex >}}
 
@@ -619,7 +621,7 @@ Examples:
  * {{< example >}}php://filter/convert.base64-encode/resource=config.php{{< /example >}}
 
 
-## 27
+### 27
 
 Regular Expression: {{< regex >}}php:\/\/input{{< /regex >}}
 
@@ -644,7 +646,7 @@ Examples:
  * {{< example >}}include('php://input');{{< /example >}}
 
 
-## 28
+### 28
 
 Regular Expression: {{< regex >}}php:\/\/output{{< /regex >}}
 
@@ -669,7 +671,7 @@ Examples:
  * {{< example >}}file_put_contents('php://output', 'foo');{{< /example >}}
 
 
-## 29
+### 29
 
 Regular Expression: {{< regex >}}convert\.base64-(de|en)code{{< /regex >}}
 
@@ -695,7 +697,7 @@ Examples:
  * {{< example >}}php://filter/convert.base64-encode/resource=config.php{{< /example >}}
 
 
-## 30
+### 30
 
 Regular Expression: {{< regex >}}zlib\.(de|in)flate{{< /regex >}}
 
@@ -721,7 +723,7 @@ Examples:
  * {{< example >}}php://filter/zlib.deflate/resource=config.php{{< /example >}}
 
 
-## 31
+### 31
 
 Regular Expression: {{< regex >}}@import\b{{< /regex >}}
 
@@ -746,7 +748,7 @@ Examples:
  * {{< example >}}@import url(http://foo/bar);{{< /example >}}
 
 
-## 32
+### 32
 
 Regular Expression: {{< regex >}}\burl\s*\(.+?\){{< /regex >}}
 
@@ -772,7 +774,7 @@ Examples:
  * {{< example >}}@import url(http://foo/bar);{{< /example >}}
 
 
-## 33
+### 33
 
 Regular Expression: {{< regex >}}\/\/.+?\/{{< /regex >}}
 
@@ -792,7 +794,7 @@ Examples:
  * {{< example >}}http://foobar.org/{{< /example >}}
 
 
-## 34
+### 34
 
 Regular Expression: {{< regex >}}\)\s*\[{{< /regex >}}
 
@@ -812,7 +814,7 @@ Examples:
  * {{< example >}}) [{{< /example >}}
 
 
-## 35
+### 35
 
 Regular Expression: {{< regex >}}&lt;\?(?!xml\s){{< /regex >}}
 
@@ -834,7 +836,7 @@ Examples:
  * {{< example >}}&lt;?{{< /example >}}
 
 
-## 36
+### 36
 
 Regular Expression: {{< regex >}}%(HOME(DRIVE|PATH)|SYSTEM(DRIVE|ROOT)|WINDIR|USER(DOMAIN|PROFILE|NAME)|((LOCAL)?APP|PROGRAM)DATA)%{{< /regex >}}
 
@@ -859,7 +861,7 @@ Examples:
  * {{< example >}}%WINDIR%\\cmd.exe{{< /example >}}
 
 
-## 37
+### 37
 
 Regular Expression: {{< regex >}}%\w+%{{< /regex >}}
 
@@ -881,7 +883,7 @@ Examples:
  * {{< example >}}%FOO%{{< /example >}}
 
 
-## 38
+### 38
 
 Regular Expression: {{< regex >}}\bunion\b.+?\bselect\b{{< /regex >}}
 
@@ -901,7 +903,7 @@ Examples:
  * {{< example >}}' UNION SELECT user()-- -{{< /example >}}
 
 
-## 39
+### 39
 
 Regular Expression: {{< regex >}}\bupdate\b.+?\bset\b{{< /regex >}}
 
@@ -921,7 +923,7 @@ Examples:
  * {{< example >}}UPDATE users SET permissions='admin'{{< /example >}}
 
 
-## 40
+### 40
 
 Regular Expression: {{< regex >}}\bdrop\b.+?\b(database|table)\b{{< /regex >}}
 
@@ -942,7 +944,7 @@ Examples:
  * {{< example >}}DROP DATABASE blog{{< /example >}}
 
 
-## 41
+### 41
 
 Regular Expression: {{< regex >}}\bdelete\b.+?\bfrom\b{{< /regex >}}
 
@@ -962,7 +964,7 @@ Examples:
  * {{< example >}}DELETE FROM users{{< /example >}}
 
 
-## 42
+### 42
 
 Regular Expression: {{< regex >}}--.+?{{< /regex >}}
 
@@ -982,7 +984,7 @@ Examples:
  * {{< example >}}' OR 1-- -{{< /example >}}
 
 
-## 43
+### 43
 
 Regular Expression: {{< regex >}}\[\$(ne|eq|lte?|gte?|n?in|mod|all|size|exists|type|slice|or)\]{{< /regex >}}
 
@@ -1003,7 +1005,7 @@ Examples:
  * {{< example >}}[$ne]{{< /example >}}
 
 
-## 44
+### 44
 
 Regular Expression: {{< regex >}}\$\(.+?\){{< /regex >}}
 
@@ -1023,7 +1025,7 @@ Examples:
  * {{< example >}}$('#login'){{< /example >}}
 
 
-## 45
+### 45
 
 Regular Expression: {{< regex >}}\/\*.*?\*\/{{< /regex >}}
 
@@ -1043,7 +1045,7 @@ Examples:
  * {{< example >}}/**/{{< /example >}}
 
 
-## 46
+### 46
 
 Regular Expression: {{< regex >}}&lt;!-.+?--&gt;{{< /regex >}}
 
@@ -1064,7 +1066,7 @@ Examples:
  * {{< example >}}&lt;!- --&gt;{{< /example >}}
 
 
-## 47
+### 47
 
 Regular Expression: {{< regex >}}&lt;base\b.+?\bhref\b.+?&gt;{{< /regex >}}
 
@@ -1088,7 +1090,7 @@ Examples:
  * {{< example >}}&lt;base href=&quot;http://foo/&quot;&gt;{{< /example >}}
 
 
-## 48
+### 48
 
 Regular Expression: {{< regex >}}&lt;!(element|entity|\[CDATA){{< /regex >}}
 
@@ -1110,7 +1112,7 @@ Examples:
  * {{< example >}}&lt;!ENTITY xxe SYSTEM &quot;file:///dev/random&quot; &gt;]&gt;{{< /example >}}
 
 
-## 49
+### 49
 
 Regular Expression: {{< regex >}}&lt;(applet|object|embed|audio|video|img|svg){{< /regex >}}
 
@@ -1130,7 +1132,7 @@ Examples:
  * {{< example >}}&lt;img onerror=&quot;&quot; /&gt;{{< /example >}}
 
 
-## 50
+### 50
 
 Regular Expression: {{< regex >}}&lt;a\b.+?\bhref\b{{< /regex >}}
 
@@ -1150,7 +1152,7 @@ Examples:
  * {{< example >}}&lt;a href=&quot;&quot;&gt;&lt;/a&gt;{{< /example >}}
 
 
-## 51
+### 51
 
 Regular Expression: {{< regex >}}&lt;(form|button|input|keygen|textarea|select|option){{< /regex >}}
 
@@ -1170,7 +1172,7 @@ Examples:
  * {{< example >}}&lt;form&gt;&lt;/form&gt;{{< /example >}}
 
 
-## 52
+### 52
 
 Regular Expression: {{< regex >}}&lt;(html|body|meta|link|i?frame|script|map){{< /regex >}}
 
@@ -1190,7 +1192,7 @@ Examples:
  * {{< example >}}&lt;script&gt;&lt;/script&gt;{{< /example >}}
 
 
-## 53
+### 53
 
 Regular Expression: {{< regex >}}(?&lt;!\w)(boot\.ini|global\.asa|sam)\b{{< /regex >}}
 
@@ -1211,7 +1213,7 @@ Examples:
  * {{< example >}}C:\boot.ini{{< /example >}}
 
 
-## 54
+### 54
 
 Regular Expression: {{< regex >}}\bon\w+\s*={{< /regex >}}
 
@@ -1231,7 +1233,7 @@ Examples:
  * {{< example >}}&lt;img onerror=&quot;&quot; /&gt;{{< /example >}}
 
 
-## 55
+### 55
 
 Regular Expression: {{< regex >}}\b(chrome|file):\/\/{{< /regex >}}
 
@@ -1252,7 +1254,7 @@ Examples:
  * {{< example >}}file:///etc/passwd{{< /example >}}
 
 
-## 56
+### 56
 
 Regular Expression: {{< regex >}}&amp;#?(\w+);{{< /regex >}}
 
@@ -1272,7 +1274,7 @@ Examples:
  * {{< example >}}&amp;amp;{{< /example >}}
 
 
-## 57
+### 57
 
 Regular Expression: {{< regex >}}^(\s*)\||\|(\s*)${{< /regex >}}
 
@@ -1294,7 +1296,7 @@ Examples:
  * {{< example >}}id|{{< /example >}}
 
 
-## 58
+### 58
 
 Regular Expression: {{< regex >}}&lt;!--\W*?#\W*?(cmd|echo|exec|include|printenv)\b{{< /regex >}}
 
@@ -1316,7 +1318,7 @@ Examples:
  * {{< example >}}&lt;!--#include{{< /example >}}
 
 
-## 59
+### 59
 
 Regular Expression: {{< regex >}}\{\s*\w+\s*:\s*[+-]?\s*\d+\s*:.*?\}{{< /regex >}}
 
@@ -1336,7 +1338,7 @@ Examples:
  * {{< example >}}O:3:&quot;foo&quot;:1:{s:8:&quot;foobar&quot;;s:3:&quot;quz&quot;;}{{< /example >}}
 
 
-## 60
+### 60
 
 Regular Expression: {{< regex >}}[\n\r]\s*\b(?:to|b?cc)\b\s*:.*?\@{{< /regex >}}
 
@@ -1356,7 +1358,7 @@ Examples:
  * {{< example >}}\nto: foo@bar.de{{< /example >}}
 
 
-## 61
+### 61
 
 Regular Expression: {{< regex >}}\bcall_user_func\b.*?\(.+?\){{< /regex >}}
 
@@ -1381,7 +1383,7 @@ Examples:
  * {{< example >}}call_user_func('foo', $a);{{< /example >}}
 
 
-## 62
+### 62
 
 Regular Expression: {{< regex >}}\bcreate_function\b.*?\(.+?\){{< /regex >}}
 
@@ -1406,7 +1408,7 @@ Examples:
  * {{< example >}}create_function('$a', 'return $a;');{{< /example >}}
 
 
-## 63
+### 63
 
 Regular Expression: {{< regex >}}\beval\b.*?(\(.+?\)|\{.+?\}){{< /regex >}}
 
@@ -1434,7 +1436,7 @@ Examples:
  * {{< example >}}eval { foo(); }{{< /example >}}
 
 
-## 64
+### 64
 
 Regular Expression: {{< regex >}}\bexec\b.*?\(.+?\){{< /regex >}}
 
@@ -1459,7 +1461,7 @@ Examples:
  * {{< example >}}exec('cat /etc/passwd');{{< /example >}}
 
 
-## 65
+### 65
 
 Regular Expression: {{< regex >}}\bf(get|open|read|write)\b.*?\(.+?\){{< /regex >}}
 
@@ -1485,7 +1487,7 @@ Examples:
  * {{< example >}}fopen('/etc/passwd', 'r');{{< /example >}}
 
 
-## 66
+### 66
 
 Regular Expression: {{< regex >}}\bfile_(get|put)_contents\b.*?\(.+?\){{< /regex >}}
 
@@ -1513,7 +1515,7 @@ Examples:
  * {{< example >}}file_put_contents('/etc/passwd', 'foo');{{< /example >}}
 
 
-## 67
+### 67
 
 Regular Expression: {{< regex >}}\bmove_uploaded_file\b.*?\(.+?\){{< /regex >}}
 
@@ -1538,7 +1540,7 @@ Examples:
  * {{< example >}}move_uploaded_file($tmp_name, $name);{{< /example >}}
 
 
-## 68
+### 68
 
 Regular Expression: {{< regex >}}\bpassthru\b.*?\(.+?\){{< /regex >}}
 
@@ -1563,7 +1565,7 @@ Examples:
  * {{< example >}}passthru('cat /etc/passwd');{{< /example >}}
 
 
-## 69
+### 69
 
 Regular Expression: {{< regex >}}\bp(roc_)?open\b.*?\(.+?\){{< /regex >}}
 
@@ -1588,7 +1590,7 @@ Examples:
  * {{< example >}}proc_open('cat', $descriptorspec, $pipes, $cwd, $env);{{< /example >}}
 
 
-## 70
+### 70
 
 Regular Expression: {{< regex >}}\breadfile\b.*?\(.+?\){{< /regex >}}
 
@@ -1613,7 +1615,7 @@ Examples:
  * {{< example >}}readfile('/etc/passwd');{{< /example >}}
 
 
-## 71
+### 71
 
 Regular Expression: {{< regex >}}\bshell_exec\b.*?\(.+?\){{< /regex >}}
 
@@ -1638,7 +1640,7 @@ Examples:
  * {{< example >}}shell_exec('cat /etc/passwd');{{< /example >}}
 
 
-## 72
+### 72
 
 Regular Expression: {{< regex >}}\bsystem\b.*?\(.+?\){{< /regex >}}
 
@@ -1663,7 +1665,7 @@ Examples:
  * {{< example >}}system('cat /etc/passwd');{{< /example >}}
 
 
-## 73
+### 73
 
 Regular Expression: {{< regex >}}\bpreg_(replace|match)\b.*?\(.+?\){{< /regex >}}
 
@@ -1689,7 +1691,7 @@ Examples:
  * {{< example >}}preg_replace('//e', 'phpinfo()', $x);{{< /example >}}
 
 
-## 74
+### 74
 
 Regular Expression: {{< regex >}}\binclude(_once)?\b.*?;{{< /regex >}}
 
@@ -1712,7 +1714,7 @@ Examples:
  * {{< example >}}include_once '/etc/passwd';{{< /example >}}
 
 
-## 75
+### 75
 
 Regular Expression: {{< regex >}}\brequire(_once)?\b.*?;{{< /regex >}}
 
@@ -1735,7 +1737,7 @@ Examples:
  * {{< example >}}require_once '/etc/passwd';{{< /example >}}
 
 
-## 76
+### 76
 
 Regular Expression: {{< regex >}}\{\s*\$\s*\{.+?\}\s*\}{{< /regex >}}
 
@@ -1760,7 +1762,7 @@ Examples:
  * {{< example >}}{${phpinfo()}}{{< /example >}}
 
 
-## 77
+### 77
 
 Regular Expression: {{< regex >}}@(cc_on|set)\b{{< /regex >}}
 
@@ -1784,7 +1786,7 @@ Examples:
  * {{< example >}}@cc_on{{< /example >}}
 
 
-## 78
+### 78
 
 Regular Expression: {{< regex >}}\bfirefoxurl\s*:{{< /regex >}}
 
@@ -1808,7 +1810,7 @@ Examples:
  * {{< example >}}firefoxurl://{{< /example >}}
 
 
-## 79
+### 79
 
 Regular Expression: {{< regex >}}\bwyciwyg\s*:{{< /regex >}}
 
@@ -1832,7 +1834,7 @@ Examples:
  * {{< example >}}wyciwyg://{{< /example >}}
 
 
-## 80
+### 80
 
 Regular Expression: {{< regex >}}\bdocument\b.*?\.{{< /regex >}}
 
@@ -1856,7 +1858,7 @@ Examples:
  * {{< example >}}document.cookie{{< /example >}}
 
 
-## 81
+### 81
 
 Regular Expression: {{< regex >}}\bwindow\b.*?\.{{< /regex >}}
 
@@ -1880,7 +1882,7 @@ Examples:
  * {{< example >}}window.content{{< /example >}}
 
 
-## 82
+### 82
 
 Regular Expression: {{< regex >}}=\s*\w+\s*\+\s*['&quot;]{{< /regex >}}
 
@@ -1900,7 +1902,7 @@ Examples:
  * {{< example >}}= foo + '{{< /example >}}
 
 
-## 83
+### 83
 
 Regular Expression: {{< regex >}}\+=\s*\(\s*['&quot;]{{< /regex >}}
 
@@ -1920,7 +1922,7 @@ Examples:
  * {{< example >}}+= ('{{< /example >}}
 
 
-## 84
+### 84
 
 Regular Expression: {{< regex >}}['&quot;]\s*\+\s*['&quot;]{{< /regex >}}
 
@@ -1940,7 +1942,7 @@ Examples:
  * {{< example >}}' + '{{< /example >}}
 
 
-## 85
+### 85
 
 Regular Expression: {{< regex >}}\|\(\w+={{< /regex >}}
 
@@ -1964,7 +1966,7 @@ Examples:
  * {{< example >}}|(foo={{< /example >}}
 
 
-## 86
+### 86
 
 Regular Expression: {{< regex >}}\bfunction\b[^(]*\([^)]*\){{< /regex >}}
 
@@ -1985,7 +1987,7 @@ Examples:
  * {{< example >}}function foo() {}{{< /example >}}
 
 
-## 87
+### 87
 
 Regular Expression: {{< regex >}}\bbenchmark\b.*?\(.+?,.+?\){{< /regex >}}
 
@@ -2010,7 +2012,7 @@ Examples:
  * {{< example >}}SELECT BENCHMARK(1000000,ENCODE('hello','goodbye')){{< /example >}}
 
 
-## 88
+### 88
 
 Regular Expression: {{< regex >}}\bsleep\b.*?\(.+?\){{< /regex >}}
 
@@ -2035,7 +2037,7 @@ Examples:
  * {{< example >}}SELECT SLEEP(1000){{< /example >}}
 
 
-## 89
+### 89
 
 Regular Expression: {{< regex >}}\bload_file\b.*?\(.+?\){{< /regex >}}
 
@@ -2060,7 +2062,7 @@ Examples:
  * {{< example >}}SELECT LOAD_FILE('/etc/passwd'){{< /example >}}
 
 
-## 90
+### 90
 
 Regular Expression: {{< regex >}}\bload\b.*?\bdata\b.*?\binfile\b.*?\binto\b.*?\btable\b{{< /regex >}}
 
@@ -2085,7 +2087,7 @@ Examples:
  * {{< example >}}LOAD DATA INFILE 'foo' INTO TABLE bar{{< /example >}}
 
 
-## 91
+### 91
 
 Regular Expression: {{< regex >}}\bselect\b.*?\binto\b.*?\b(out|dump)file\b{{< /regex >}}
 
@@ -2111,7 +2113,7 @@ Examples:
  * {{< example >}}SELECT 'foo' INTO DUMPFILE 'bar'{{< /example >}}
 
 
-## 92
+### 92
 
 Regular Expression: {{< regex >}}\b(group_)?concat(_ws)?\b.*?\(.+?\){{< /regex >}}
 
@@ -2137,7 +2139,7 @@ Examples:
  * {{< example >}}SELECT GROUP_CONCAT(foo){{< /example >}}
 
 
-## 93
+### 93
 
 Regular Expression: {{< regex >}}\binformation_schema\b{{< /regex >}}
 
@@ -2162,7 +2164,7 @@ Examples:
  * {{< example >}}SELECT schema_name FROM information_schema.schemata{{< /example >}}
 
 
-## 94
+### 94
 
 Regular Expression: {{< regex >}}\bpg_sleep\b.*?\(.+?\){{< /regex >}}
 
@@ -2188,7 +2190,7 @@ Examples:
  * {{< example >}}SELECT pg_sleep(1.5){{< /example >}}
 
 
-## 95
+### 95
 
 Regular Expression: {{< regex >}}\bwaitfor\b.*?\b(delay|time(out)?)\b{{< /regex >}}
 
@@ -2215,7 +2217,7 @@ Examples:
  * {{< example >}}WAITFOR { TIME '1000' }{{< /example >}}
 
 
-## 96
+### 96
 
 Regular Expression: {{< regex >}}\b(char_|bit_)?length\b.*?\(.+?\){{< /regex >}}
 
@@ -2241,7 +2243,7 @@ Examples:
  * {{< example >}}SELECT CHAR_LENGTH('foo'){{< /example >}}
  * {{< example >}}SELECT BIT_LENGTH('foo'){{< /example >}}
 
-## 97
+### 97
 
 Regular Expression: {{< regex >}}\b(un)?hex\b.*?\(.+?\){{< /regex >}}
 
@@ -2267,7 +2269,7 @@ Examples:
  * {{< example >}}SELECT UNHEX('00'){{< /example >}}
 
 
-## 98
+### 98
 
 Regular Expression: {{< regex >}}\b(from|to)_base64\b.*?\(.+?\){{< /regex >}}
 
@@ -2293,7 +2295,7 @@ Examples:
  * {{< example >}}SELECT FROM_BASE64('foo'){{< /example >}}
 
 
-## 99
+### 99
 
 Regular Expression: {{< regex >}}\bsubstr(ing(_index)?)?\b.*?\(.+?,.+?\){{< /regex >}}
 
@@ -2319,7 +2321,7 @@ Examples:
  * {{< example >}}SELECT SUBSTRING_INDEX('foo',1){{< /example >}}
 
 
-## 100
+### 100
 
 Regular Expression: {{< regex >}}\b(current_)?user\b.*?\(.*?\){{< /regex >}}
 
@@ -2340,7 +2342,7 @@ Examples:
  * {{< example >}}SELECT current_user(){{< /example >}}
 
 
-## 101
+### 101
 
 Regular Expression: {{< regex >}}\bversion\b.*?\(.*?\){{< /regex >}}
 
@@ -2360,7 +2362,7 @@ Examples:
  * {{< example >}}SELECT version(){{< /example >}}
 
 
-## 102
+### 102
 
 Regular Expression: {{< regex >}}@@.+?{{< /regex >}}
 
@@ -2380,7 +2382,7 @@ Examples:
  * {{< example >}}SELECT @@user{{< /example >}}
 
 
-## 103
+### 103
 
 Regular Expression: {{< regex >}}\boct\b.*?\(.+?\){{< /regex >}}
 
@@ -2404,7 +2406,7 @@ Examples:
  * {{< example >}}SELECT OCT(12){{< /example >}}
 
 
-## 104
+### 104
 
 Regular Expression: {{< regex >}}\bord\b.*?\(.+?\){{< /regex >}}
 
@@ -2428,7 +2430,7 @@ Examples:
  * {{< example >}}SELECT ORD('2'){{< /example >}}
 
 
-## 105
+### 105
 
 Regular Expression: {{< regex >}}\bascii\b.*?\(.+?\){{< /regex >}}
 
@@ -2452,7 +2454,7 @@ Examples:
  * {{< example >}}SELECT ASCII('2'){{< /example >}}
 
 
-## 106
+### 106
 
 Regular Expression: {{< regex >}}\bbin\b.*?\(.+?\){{< /regex >}}
 
@@ -2476,7 +2478,7 @@ Examples:
  * {{< example >}}SELECT BIN(12){{< /example >}}
 
 
-## 107
+### 107
 
 Regular Expression: {{< regex >}}\bcha?r\b.*?\(.+?\){{< /regex >}}
 
@@ -2500,7 +2502,7 @@ Examples:
  * {{< example >}}SELECT CHAR(77,121,83,81,76){{< /example >}}
 
 
-## 108
+### 108
 
 Regular Expression: {{< regex >}}\bwhere\b.+?(\b(not_)?(like|regexp)\b|[=&lt;&gt;]){{< /regex >}}
 
@@ -2525,7 +2527,7 @@ Examples:
  * {{< example >}}SELECT foo FROM bar WHERE name LIKE '%admin%'{{< /example >}}
 
 
-## 109
+### 109
 
 Regular Expression: {{< regex >}}\bif\b.*?\(.+?,.+?,.+?\){{< /regex >}}
 
@@ -2549,7 +2551,7 @@ Examples:
  * {{< example >}}SELECT IF(1>2,2,3){{< /example >}}
 
 
-## 110
+### 110
 
 Regular Expression: {{< regex >}}\b(ifnull|nullif)\b.*?\(.+?,.+?\){{< /regex >}}
 
@@ -2575,7 +2577,7 @@ Examples:
  * {{< example >}}SELECT NULLIF(1,1){{< /example >}}
 
 
-## 111
+### 111
 
 Regular Expression: {{< regex >}}\bwhere\b.+?(\b(n?and|x?or|not)\b|(\&amp;\&amp;|\|\|)){{< /regex >}}
 
@@ -2595,7 +2597,7 @@ Examples:
  * {{< example >}}SELECT foo FROM bar WHERE id = 1 OR id = 2{{< /example >}}
 
 
-## 112
+### 112
 
 Regular Expression: {{< regex >}}\bcase\b.+?\bwhen\b.+?\bend\b{{< /regex >}}
 
@@ -2619,7 +2621,7 @@ Examples:
  * {{< example >}}CASE case_value WHEN when_value THEN statement_list END CASE{{< /example >}}
 
 
-## 113
+### 113
 
 Regular Expression: {{< regex >}}\bexec\b.+?\bxp_cmdshell\b{{< /regex >}}
 
@@ -2641,7 +2643,7 @@ Examples:
  * {{< example >}}exec master..xp_cmdshell 'echo foo'{{< /example >}}
 
 
-## 114
+### 114
 
 Regular Expression: {{< regex >}}\bcreate\b.+?\b(procedure|function)\b.*?\(.*?\){{< /regex >}}
 
@@ -2661,7 +2663,7 @@ Examples:
  * {{< example >}}CREATE PROCEDURE foo(){{< /example >}}
 
 
-## 115
+### 115
 
 Regular Expression: {{< regex >}}\binsert\b.+?\binto\b.*?\bvalues\b.*?\(.+?\){{< /regex >}}
 
@@ -2681,7 +2683,7 @@ Examples:
  * {{< example >}}INSERT INTO table (col1,col2) VALUES('foo','bar'){{< /example >}}
 
 
-## 116
+### 116
 
 Regular Expression: {{< regex >}}\bselect\b.+?\bfrom\b{{< /regex >}}
 
@@ -2701,7 +2703,7 @@ Examples:
  * {{< example >}}SELECT foo FROM bar{{< /example >}}
 
 
-## 117
+### 117
 
 Regular Expression: {{< regex >}}\bpg_user\b{{< /regex >}}
 
@@ -2722,7 +2724,7 @@ Examples:
  * {{< example >}}SELECT * FROM pg_user{{< /example >}}
 
 
-## 118
+### 118
 
 Regular Expression: {{< regex >}}\bpg_database\b{{< /regex >}}
 
@@ -2743,7 +2745,7 @@ Examples:
  * {{< example >}}SELECT * FROM pg_database{{< /example >}}
 
 
-## 119
+### 119
 
 Regular Expression: {{< regex >}}\bpg_shadow\b{{< /regex >}}
 
@@ -2764,7 +2766,7 @@ Examples:
  * {{< example >}}SELECT * FROM pg_shadow{{< /example >}}
 
 
-## 120
+### 120
 
 Regular Expression: {{< regex >}}\b(current_)?database\b.*?\(.*?\){{< /regex >}}
 

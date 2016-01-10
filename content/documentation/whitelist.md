@@ -8,10 +8,12 @@ title: Whitelist
 weight: 12
 ---
 
+## Description
+
 The whitelist algorithm is one of the three methods of Shadow Daemon to identify malicious requests.
 It compares user input to rules that specify how the input should look like.
 
-# Layout
+## Layout
 
 ![Flowchart Whitelist](/img/documentation/whitelist.svg)
 
@@ -21,8 +23,7 @@ The term whitelist implies that every parameter requires a matching rule, otherw
 If there is a rule the algorithm checks if the rule has a length restriction and if the restriction is adhered to.
 Finally the algorithm tests the character set of the input with the help of regular expressions.
 
-
-# Filters
+## Filters
 
 The following character set filters for the whitelist are available (case-insensitive):
 
