@@ -50,8 +50,9 @@ So if you are using Docker anyway why not use it for everything?
     docker pull zecure/shadowd
     docker run -d -p 9115:9115 --link shadowd_database:db zecure/shadowd
 
-{{% note title="Docker unique specifics" type="info" %}}
-You will not have to add a new user, because the database container ships with a default user account: username **admin** and password also **admin**.
+{{% note title="Docker specifics" type="info" %}}
+You will not have to add a new user, because the database container ships with a default user account: the username and password are **admin**.
+Make sure to change it as soon as possible.
 {{% /note %}}
 
 If you choose this method you can directly jump to the [usage of the interface]({{< ref "overview/user_interface.md#usage" >}}).
@@ -59,7 +60,7 @@ You can access the web interface on port *1337*.
 
 #### Option 2: Docker for shadowd
 
-If you only want to use Docker for shadowd only you simply have to run:
+If you only want to use Docker for shadowd you simply have to run:
 
     wget -r -nd --no-parent https://shadowd.zecure.org/files/docker/
     vim shadowd.ini
