@@ -10,10 +10,8 @@ weight: 30
 
 ## Description
 
-The user interface for Shadow Daemon is important, because it is required to set up the firewall.
-It can be also used to analyze attacks manually, learn about attackers and improve the rules based on that new knowledge.
-
-At the moment there is only a web interface, but CLI/GUI applications are a possibility as well (at a later time).
+The user interface is required to configure Shadow Daemon.
+It can be also used to analyze attacks, learn about attackers and improve the rules based on that new knowledge.
 
 ## Configuration
 
@@ -46,3 +44,17 @@ It can be used to automatically clean up the database.
 
 This command sends a report about recent attacks to all users with a valid e-mail address.
 No e-mails are send if there are no logged attacks in the time frame.
+
+## Filters
+
+The user interface provides powerful filters to help you quickly find information you are interested in or hide information you are not interested in.
+
+### Include
+
+If you specify an *include* filter only results are shown that match this filter.
+Different *include* filters are combined with a logical `AND`, while *include* filters of the same type are combined with a logical `OR`.
+
+### Exclude
+
+If you specify an *exclude* filter only results are shown that do not match this filter.
+Both *exclude* filters of the same type and different *exclude* filters are combined with a logical `OR`.
