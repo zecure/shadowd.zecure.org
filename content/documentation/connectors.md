@@ -117,6 +117,10 @@ A required configuration value is not set, so make sure that it is set and not c
 An ignore file is set in the configuration file, but it is not possible to open it.
 This file has to be readable by the web server user.
 
+#### ignore file is corrupted
+
+The ignore file does not contain valid json-encoded data.
+
 #### profile id not integer
 
 Only numerical identifiers for profiles are possible, so if the id is not an integer the connection can not succeed.
@@ -133,7 +137,7 @@ The reason is not known.
 
 #### bad request
 
-There are multiple reasons why the request could be bad: the flood or integrity protection blocked the request, there is no matching profile or something has gone horribly wrong.
+There are multiple reasons why the request could be bad: the flood protection blocked the request, there is no matching profile or something has gone horribly wrong.
 For security reasons shadowd does not tell the connector exactly why the request is bad.
 To see what went wrong you have to look in the log file of shadowd itself.
 
