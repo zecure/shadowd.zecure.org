@@ -81,7 +81,7 @@ First add a new admin user:
 The email address is optional and only used for the report command at the moment.
 
 Use this user to login into the web interface.
-Navigate to *Profile* and click the *Add* button at the bottom of the page.
+Navigate to *Management*, *Profile* and click the *Add* button at the bottom of the page.
 Use the form to add a new profile:
 
  * You can set the IP address of the connector as *server IP* to only allow connections from this source.
