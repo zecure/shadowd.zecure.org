@@ -24,6 +24,7 @@ Shadow Daemon is <a target="_blank" href="https://www.gnu.org/philosophy/free-sw
 Shadow Daemon is easy to install and can be managed with a clear and structured web interface.
 The interface lets you examine attacks in great detail.
 If you just want to protect your site, but otherwise do not care about attacks you can forget about the web interface once Shadow Daemon is installed and configured.
+
 The interface also comes with shell scripts that can be used to send weekly reports via e-mail, rotate the logs and the like.
 
 {{% note title="Try out the demo!" type="info" %}}
@@ -55,9 +56,11 @@ If you want to [contribute]({{< ref "development/contributing.md" >}}) why not d
 
 ### Accurate detection
 
-Shadow Daemon combines [white- and blacklisting]({{< ref "documentation/architecture.md#analyzer" >}}) to accurately detect malicious requests.
+Shadow Daemon combines [blacklisting]({{< ref "documentation/blacklist.md" >}}), [whitelisting]({{< ref "documentation/whitelist.md" >}}) and [integrity checking]({{< ref "documentation/integrity.md" >}}) to accurately detect malicious requests.
 The blacklist makes use of sophisticated regular expressions to search for known attack patterns in the user input.
 The whitelist on the other hand searches for irregularities in the user input based on strict rules that define how the input should look like.
+The integrity check compares cryptographically secure checksums of the executed scripts against predefined values.
+
 Together they can detect almost any attack on a web application and still have a very low false-positive rate.
 
 Shadow Daemon is able to detect common attacks like:
@@ -73,7 +76,7 @@ Shadow Daemon is able to detect common attacks like:
 
 ### Discreet protection
 
-Unlike many other web application firewalls Shadow Daemon does not completely block malicious requests.
+Unlike many other web application firewalls Shadow Daemon does not completely block malicious requests if possible.
 Instead it only filters out the dangerous parts of a request and lets it proceed afterwards.
 This makes attacks impossible, but does not unnecessary frustrate visitors in the case of false-positives.
 

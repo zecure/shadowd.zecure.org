@@ -9,7 +9,7 @@ weight: 40
 
 ## Download
 
-Stable releases of the source code can be found at the [download page]({{< ref "downloads/archives.md#php_connector" >}}) or at <a target="_blank" href="https://github.com/zecure/shadowd_php">Github</a>:
+Stable releases of the source code can be found at the [download page]({{< ref "downloads/archives.md#php_connector" >}}) or at <a target="_blank" href="https://github.com/zecure/shadowd_php">Github</a>.
 
     git clone https://github.com/zecure/shadowd_php.git
 
@@ -44,8 +44,9 @@ To set it up for a single vhost or directory only just add:
 
 ## Configuration
 
-Copy the configuration from *misc/examples/connectors.ini* to */etc/shadowd/connectors.ini* and edit it.
-The config is annotated and should be self-explanatory, but if you are stuck you can find more information in the [documentation]({{< ref "documentation/connectors.md" >}}).
+Copy the configuration file from *misc/examples/connectors.ini* to */etc/shadowd/connectors.ini* and edit it.
+The file is annotated and should be self-explanatory, but if you are stuck you can find more information in the [documentation]({{< ref "documentation/connectors.md" >}}).
+Make sure that it is readable by the web server user, otherwise your site will not work anymore.
 
 {{% note title="Ignore sensitive input!" type="warning" %}}
 You should use the [ignore]({{< ref "documentation/connectors.md#ignore" >}}) function of the connector to disregard very sensitive input, e.g., passwords.
@@ -53,9 +54,5 @@ You should use the [ignore]({{< ref "documentation/connectors.md#ignore" >}}) fu
 
 ## What's next?
 
-You have successfully installed Shadow Daemon and the web application is protected by the blacklist.
-If you like it fast and simple you are done now!
-
-If you want the maximum security you should consider enabling the whitelist.
-The whitelist protects to some degree against unknown attack vectors as well as backdoors.
-There are tutorials that explain how to secure web applications with [existing rules sets]({{< ref "tutorials/protect_wordpress.md" >}}) and how to generate [custom rules]({{< ref "tutorials/protect_applications.md" >}}) for arbitrary web applications.
+You have successfully installed Shadow Daemon, now you can start with the configuration.
+If you do not know how to configure Shadow Daemon check out the tutorial about [rules]({{< ref "tutorials/rules.md" >}}).
