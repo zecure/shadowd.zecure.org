@@ -10,24 +10,24 @@ weight: 60
 ## Download
 
 If you are using Pypi to install the package you do not have to download the source code manually.
-Stable releases of the source code can be found at the [download page]({{< ref "downloads/archives.md#php_connector" >}}) or at <a target="_blank" href="https://github.com/zecure/shadowd_python">Github</a>:
+Stable releases of the source code can be found at the [download page]({{< ref "downloads/archives.md#php_connector" >}}) or at <a target="_blank" href="https://github.com/zecure/shadowd_python">Github</a>.
 
     git clone https://github.com/zecure/shadowd_python.git
 
 ## Installation
 
-You can install the package from Pypi with easy_install or pip:
+You can install the package from Pypi with easy_install or pip.
 
     easy_install shadowd
     pip install shadowd
 
-Or by hand:
+Or by hand.
 
     python setup.py install
 
 ### CGI
 
-To protect CGI applications you simply have to load the module:
+To protect CGI applications you simply have to load the module.
 
     import shadowd.cgi_connector
 
@@ -35,7 +35,7 @@ To protect CGI applications you simply have to load the module:
 
 Django applications require a small modification.
 It is necessary to create a hook to intercept requests.
-To do this create the file *middleware/shadowdconnector.py* in the application directory:
+To do this create the file *middleware/shadowdconnector.py* in the application directory.
 
     from shadowd.django_connector import InputDjango, OutputDjango, Connector
     
@@ -49,7 +49,7 @@ To do this create the file *middleware/shadowdconnector.py* in the application d
                 return status
 
 There also has to be an empty *\_\_init\_\_.py* file in the middleware directory.
-Next you have to register the middleware in the *settings.py* file of your application:
+Next you have to register the middleware in the *settings.py* file of your application.
 
     MIDDLEWARE_CLASSES = (
         'middleware.shadowdconnector.ShadowdConnectorMiddleware',
@@ -61,7 +61,7 @@ The connector should be at the beginning of the *MIDDLEWARE_CLASSES* list.
 ### Flask
 
 Flask applications require a small modification as well.
-It is necessary to create a hook to intercept requests:
+It is necessary to create a hook to intercept requests.
 
     from shadowd.flask_connector import InputFlask, OutputFlask, Connector
 

@@ -10,7 +10,7 @@ weight: 50
 ## Download
 
 If you are using CPAN to install the module you do not have to download the source code manually.
-Stable releases of the source code can be found at the [download page]({{< ref "downloads/archives.md#perl_connector" >}}) or at <a target="_blank" href="https://github.com/zecure/shadowd_perl">Github</a>:
+Stable releases of the source code can be found at the [download page]({{< ref "downloads/archives.md#perl_connector" >}}) or at <a target="_blank" href="https://github.com/zecure/shadowd_perl">Github</a>.
 
     git clone https://github.com/zecure/shadowd_perl.git
 
@@ -28,7 +28,7 @@ Or by hand:
 
 ### CGI
 
-To protect CGI applications you simply have to load the module:
+To protect CGI applications you simply have to load the module.
 
     use Shadowd::Connector::CGI;
 
@@ -38,7 +38,7 @@ This can be automated by executing Perl scripts with:
 
 ### Mojolicious
 
-Mojolicious applications require a small modification. It is necessary to create a hook to intercept requests:
+Mojolicious applications require a small modification. It is necessary to create a hook to intercept requests.
 
     use Shadowd::Connector::Mojolicious;
     
@@ -55,7 +55,7 @@ Mojolicious applications require a small modification. It is necessary to create
 
 ### Mojolicious::Lite
 
-Mojolicious::Lite applications require a small change as well:
+Mojolicious::Lite applications require a small change as well.
 
     use Shadowd::Connector::Mojolicious;
     
