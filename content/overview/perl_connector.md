@@ -16,11 +16,11 @@ Stable releases of the source code can be found at the [download page]({{< ref "
 
 ## Installation
 
-You can install the modules with CPAN:
+You can install the modules with CPAN.
 
     cpan -i Shadowd::Connector
 
-Or by hand:
+Or by hand.
 
     perl Makefile.PL
     make
