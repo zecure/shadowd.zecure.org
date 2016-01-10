@@ -151,7 +151,7 @@ If you are using MySQL you can use `mysql` to import the layout. The user requir
 ## Configuration {#configuration}
 
 The installer creates a configuration file at */etc/shadowd/shadowd.ini* that has to be edited.
-The config is annotated and should be self-explanatory.
+The file is annotated and should be self-explanatory.
 
 {{% note title="Verify the file permissions!" type="warning" %}}
 The configuration file contains your database password, so make sure that it is only readable by the shadowd user.
