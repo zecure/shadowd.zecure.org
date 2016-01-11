@@ -69,6 +69,12 @@ The configuration should look similar to [this](https://www.nginx.com/resources/
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
     }
 
+{{% note title="In the case of an error..." type="info" %}}
+The web interface uses the PHP framework **Symfony**.
+So if you are not able to install the interface for some reason you will most likely find a solution to your problem with the help of a search engine, e.g., <a href="https://duckduckgo.com/?q=symfony+cpanel" target="_blank">Symfony and cPanel</a>.
+Alternatively you can also use the Docker container <a href="https://registry.hub.docker.com/u/zecure/shadowd_ui/" target="_blank">zecure/shadowd_ui</a> that ships with an own web server.
+{{% /note %}}
+
 ## Installation
 
 Open a terminal and navigate to the root folder of the user interface.
@@ -89,12 +95,6 @@ Set the other settings accordingly for the database you set up on the previous p
 It is highly recommended to change the secret token to a completely random string.
 
 You can test if everything works by visiting */config.php*.
-
-{{% note title="In the case of an error..." type="info" %}}
-The web interface uses the PHP framework **Symfony**.
-So if you are not able to install the interface for some reason you will most likely find a solution to your problem with the help of a search engine, e.g., <a href="https://duckduckgo.com/?q=symfony+cpanel" target="_blank">Symfony and cPanel</a>.
-Alternatively you can also use the Docker container <a href="https://registry.hub.docker.com/u/zecure/shadowd_ui/" target="_blank">zecure/shadowd_ui</a> that ships with an own web server.
-{{% /note %}}
 
 ## Usage {#usage}
 
