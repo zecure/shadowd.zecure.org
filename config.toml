@@ -29,7 +29,3 @@ MetaDataFormat = "yaml"
     name = "development"
     pre = "<i class='fa fa-cog'></i>"
     weight = -70
-[[menu.main]]
-    name = "community"
-    pre = "<i class='fa fa-group'></i>"
-    weight = -50

@@ -17,7 +17,7 @@ The easiest way to install the main component of Shadow Daemon - the background 
 The package is still [awaiting sponsorship](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=776012), so it is not possible to install it with *apt-get* from the official repositories yet.
 Please [download](https://shadowd.zecure.org/files/debian/) and install the *deb* package manually instead.
 
-    dpkg -i shadowd_1.1.3-1_*.deb
+    dpkg -i shadowd_2.0.0-1_*.deb
     apt-get -f install
 
 On Ubuntu you can also use [PPA](https://help.ubuntu.com/community/PPA) to install the package:
@@ -26,32 +26,20 @@ On Ubuntu you can also use [PPA](https://help.ubuntu.com/community/PPA) to insta
     apt-get update
     apt-get install shadowd
 
-### Red Hat / CentOS / Fedora {#redhat}
+### Red Hat / CentOS {#redhat}
 
 The package is still [awaiting sponsorship](https://bugzilla.redhat.com/show_bug.cgi?id=1185662), so it is not possible to install it with *yum* from the official repositories yet.
 Please [download](https://shadowd.zecure.org/files/redhat/) and install the *rpm* package manually instead.
 
-    rpm -i shadowd-1.1.3-1.*.rpm
+    rpm -i shadowd-2.0.0-1.*.rpm
 
 ### Docker {#docker}
 
 You can also use Docker to download and install shadowd.
 This is a good solution for distributions with outdated packets.
 
-#### Option 1: Docker for shadowd
+#### Option 1: Docker for everything
 
-If you only want to use Docker for shadowd you simply have to run:
-
-    wget -r -nd --no-parent https://shadowd.zecure.org/files/docker/
-    vim shadowd.ini
-    docker build -t shadowd_custom .
-    docker run -d -p 9115:9115 shadowd_custom
-
-This creates a new image based on [zecure/shadowd](https://registry.hub.docker.com/u/zecure/shadowd/) with a customized configuration file and starts it.
-
-#### Option 2: Docker for everything
-
-It is also possible to use Docker for the database and the web interface.
 This is the *easiest* and *fastest* way to completely install Shadow Daemon (except connectors).
 So if you are using Docker anyway why not use it for everything?
 
@@ -62,13 +50,24 @@ So if you are using Docker anyway why not use it for everything?
     docker pull zecure/shadowd
     docker run -d -p 9115:9115 --link shadowd_database:db zecure/shadowd
 
+{{% note title="Docker specifics" type="info" %}}
+You will not have to add a new user, because the database container ships with a default user account: the username and password are **admin**.
+Make sure to change it as soon as possible.
+{{% /note %}}
+
 If you choose this method you can directly jump to the [usage of the interface]({{< ref "overview/user_interface.md#usage" >}}).
 You can access the web interface on port *1337*.
 
-{{% note title="Docker unique specifics" type="info" %}}
-Please note that you will have to use the IP address of the Docker network device as *server IP* when you add a profile in the web interface (e.g. docker0: 172.17.42.1).
-Also, you will not have to add a new user, because the database container ships with a default user account: username **admin** and password also **admin**.
-{{% /note %}}
+#### Option 2: Docker for shadowd
+
+If you only want to use Docker for shadowd you simply have to run:
+
+    wget -r -nd --no-parent https://shadowd.zecure.org/files/docker/
+    vim shadowd.ini
+    docker build -t shadowd_custom .
+    docker run -d -p 9115:9115 shadowd_custom
+
+This creates a new image based on [zecure/shadowd](https://registry.hub.docker.com/u/zecure/shadowd/) with a customized configuration file and starts it.
 
 ## Manual Installation
 
@@ -98,7 +97,7 @@ Several libraries are also required:
 
 ### Download
 
-Stable releases of the source code can be found at the [download page]({{< ref "downloads/archives.md#shadowd" >}}) or at <a target="_blank" href="https://github.com/zecure/shadowd">Github</a>:
+Stable releases of the source code can be found at the [download page]({{< ref "downloads/archives.md#shadowd" >}}) or at <a target="_blank" href="https://github.com/zecure/shadowd">Github</a>.
 
     git clone https://github.com/zecure/shadowd.git
 
@@ -106,7 +105,7 @@ Stable releases of the source code can be found at the [download page]({{< ref "
 
 Use cmake to configure and prepare the project.
 It is a good idea to create a separate directory for this.
-A typical installation might look like this:
+A typical installation might look like this.
 
     mkdir build
     cd build
@@ -115,28 +114,48 @@ A typical installation might look like this:
 ### Compilation
 
 If cmake is successful it creates a makefile.
-Use it to compile and install the project:
+Use it to compile and install the project.
 
-    make
+    make shadowd
     make install
+
+### Autostart
+
+If you compile shadowd from source it will not start automatically on boot, so you will have to set this up manually.
+How exactly this is done depends on your operating system.
+You can find init scripts for the most common Linux distributions in the [packaging repository](https://github.com/zecure/packaging).
+
+It is recommended to not run shadowd with root privileges, so you should add a new user and group.
+
+    useradd shadowd
+
+This user needs access to the configuration file.
+
+    chown root:shadowd /etc/shadowd/shadowd.ini
+    chmod 640 /etc/shadowd/shadowd.ini
 
 ## Database {#database}
 
 Install and configure a database server.
 At the moment shadowd officially supports PostgreSQL and MySQL.
-If you are done create a new user and database and import the correct layout, e.g.:
+Afterwards create a new user and database for shadowd and import the correct layout.
+
+If you are using PostgreSQL you can use `psql` to import the layout.
 
     psql -Ushadowd shadowd < /usr/share/shadowd/pgsql_layout.sql
+
+If you are using MySQL you can use `mysql` to import the layout. The user requires the `CREATE ROUTINE` privilege.
+
     mysql -ushadowd -p shadowd < /usr/share/shadowd/mysql_layout.sql
 
 ## Configuration {#configuration}
 
 The installer creates a configuration file at */etc/shadowd/shadowd.ini* that has to be edited.
-The config is annotated and should be self-explanatory.
+The file is annotated and should be self-explanatory.
 
 {{% note title="Verify the file permissions!" type="warning" %}}
 The configuration file contains your database password, so make sure that it is only readable by the shadowd user.
 {{% /note %}}
 
 ## What's next?
-You have to install the [user interface]({{< ref "overview/user_interface.md" >}}) to add profiles for web applications.
+You have to install the [user interface]({{< ref "overview/user_interface.md" >}}) to add profiles and rules for web applications.

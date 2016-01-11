@@ -43,7 +43,7 @@ $(document).ready(function(){
     });
 
     $('.nospam-email').each(function(i){
-        $(this).html($(this).html().replace("(a)","@"));
+        $(this).html($(this).html().replace("_(a)_","@"));
     });
 });
 

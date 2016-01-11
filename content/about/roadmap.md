@@ -19,10 +19,14 @@ This project tries to achieve:
 ## Pending
 
  * Support of HTTP security headers for additional security
- * Analysis of file uploads
- * Graphical representation of attacks
+ * Decoding filters for user input, e.g., base64, xml, json and yml
+ * Selection of blacklist filters by environment
+
+### Partly done
+
  * Localization
 
-### Long-Time Features
+### Nice to have
 
+ * Graphical representation of attacks
  * Iterative learning in shadowd, i.e. do not store all requests in learning mode

@@ -9,9 +9,28 @@ weight: 10
 
 ## Shadowd {#shadowd}
 
+### **2.0.0** Jan. 11, 2016
+
+ * Added integrity check
+ * Replaced blacklist filters with completely new filters
+ * Added cache for database access
+ * Added security limitations for requests and parameters
+ * Updated signature code to use timing independent comparison
+ * Removed unnecessary indices from database
+ * Replaced wildcards with stored procedures
+ * Added wildcard support to profile server ip
+ * Changed model structure
+ * Added resource to request
+ * Replaced learning with more general mode
+ * Added unit tests
+ * Added Travis-CI integration
+ * Added const-correctness
+
 ### **1.1.3** May 16, 2015
 
-The last performance improvement introduced a small bug in the storage queue. If many requests are pushed to the storage queue at the same time it is possible that a small percentage of them are not saved permanently. This is not a critical bug, but it still should not happen.
+The last performance improvement introduced a small bug in the storage queue.
+If many requests are pushed to the storage queue at the same time it is possible that a small percentage of them are not saved permanently.
+This is not a critical bug, but it still should not happen.
 
  * Fixed bug in storage queue
  * Improved flooding database queries to allow to disable check
@@ -46,7 +65,28 @@ This update improves the performance and attack detection:
 
 ## User Interface {#user_interface}
 
-### **1.2.1** Oct 06, 2015
+### **2.0.0** Jan. 11, 2016
+
+ * Added more advanced filter system for data
+ * Replaced filter shortcuts
+ * Updated profile defaults to less error-prone values
+ * Replaced learning with more general mode
+ * Added resource to request
+ * Replaced icons with Font Awesome
+ * Updated themes and layout
+ * Added localization support
+ * Added Chinese, Dutch and German translations
+ * Added right-to-left support
+ * Added integrity rules
+ * Updated and improved rules generator
+ * Added conflicts for blacklist and integrity rules
+ * Added cache integration and invalidation
+ * Added new logo to home page
+ * Simplified configuration by removing dev parameters
+ * Updated export file names
+ * Fixed date update in quick actions
+
+### **1.2.1** Oct. 06, 2015
 
 This update fixes a small bug that happens in certain situations with PHP versions prior to 5.5.
 
@@ -82,6 +122,21 @@ This update does not change any major things in the interface, but it should mak
 
 ## PHP Connector {#php_connector}
 
+### **2.0.0** Jan. 11, 2016
+
+ * Added resource to request data
+ * Added hashes for integrity check
+ * Added critical attacks
+ * Added request variable to cleansing
+ * Changed cleansing to remove variables instead of clearing them
+ * Added the names of file uploads to user input
+ * Added raw user input
+ * Updated the code structure
+ * Added unit tests
+ * Added Travis-CI integration
+ * Fixed bug with ssl connections
+ * Added error message for corrupted ignore files
+
 ### **1.0.0** Jan. 18, 2015
 
  * Restructured code
@@ -89,11 +144,29 @@ This update does not change any major things in the interface, but it should mak
 
 ## Perl Connector {#perl_connector}
 
+### **2.0.0** Jan. 11, 2016
+
+ * Added resource to request data
+ * Added hashes for integrity check
+ * Added critical attacks
+ * Added unit tests
+ * Added Travis-CI integration
+ * Added file upload support
+
 ### **1.0.0** Jan. 18, 2015
 
  * Initial release
 
 ## Python Connector {#python_connector}
+
+### **2.0.0** Jan. 11, 2016
+
+ * Added resource to request data
+ * Added hashes for integrity check
+ * Added critical attacks
+ * Added unit tests
+ * Added Travis-CI integration
+ * Added file upload support
 
 ### **1.2.0** May. 05, 2015
 
