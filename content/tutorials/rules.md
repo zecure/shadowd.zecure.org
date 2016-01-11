@@ -63,12 +63,9 @@ The results are not perfect, but if you have good data they are not bad either.
 In practise this means that it is often necessary to improve the generated rules by hand, but you still save most of the work.
 To collect learning data you have to enable the *learning* mode of the desired profile, but be aware that this saves every request in the database.
 
-The generator has settings that allow you to influence the results.
+The generator has [settings]({{< ref "documentation/user_interface.md#generator" >}}) that allow you to influence the results.
 Some settings produce secure rules, while other settings produce insecure rules.
 On the other hand, the secure rules are more likely to be incomplete, while insecure rules tend to include most of the input.
 So there is a trade-off and you have to choose: Better security or less work?
 There are predefined profiles that reflect this settings.
-The default profile - moderate security - is pretty secure and results in an acceptable amount of work, so it is recommended to keep this settings.
-
-The setting *min. unique visitors* specifies how many different clients have to request a certain resource, so that it is considered by the generator.
-This is used to ignore outliers, e.g., non-existent parameters that were only requested by a single client.
+The default profile - moderate security - is pretty secure and results in an acceptable amount of work, so it is recommended to keep this setting.

@@ -42,6 +42,37 @@ This mode disables the protection and every request is recorded, no matter if it
 It is used to gather learning data for the rules generator.
 Be cautious, if there are too many requests that have to be saved this mode could drastically slow down your site!
 
+## Generator
+
+### Min. unique visitors
+
+This setting specifies how many different clients have to request a certain resource, so that it is considered by the generator.
+This is used to ignore outliers, e.g., non-existent parameters that were only requested by a single client.
+
+### Min. filter dominance
+
+This setting defines the required percentage of a filter to be dominant.
+If there is no dominant filter the all including *everything* filter is used.
+
+### Max. length variance
+
+This setting defines the maximum allowed variance in length in which the length is still considered limited.
+If the variance is lower than this value the shortest and the longest parameter are used as restrictions.
+If the variance is higher than this value there is no length restriction for the parameter.
+
+### Min. threshold dominance
+
+This setting defines the required percentage of a threshold to be dominant.
+If there is no dominant threshold no rule is added.
+
+### Unify arrays
+
+This setting unifies arrays in pathes by replacing the arrays with wildcards, e.g., instead of `GET|foo|0` and `GET|foo|1` there will be only `GET|foo|*`.
+
+### Unify callers
+
+This setting unifies callers by replacing pathes with wildcards.
+
 ## Filters
 
 The user interface provides powerful filters to help you quickly find information you are interested in or hide information you are not interested in.
