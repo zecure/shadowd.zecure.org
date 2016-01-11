@@ -9,7 +9,7 @@ weight: 10
 
 ## Shadowd {#shadowd}
 
-### **2.0.0** Jan 12, 2016
+### **2.0.0** Jan. 11, 2016
 
  * Added integrity check
  * Replaced blacklist filters with completely new filters
@@ -65,7 +65,7 @@ This update improves the performance and attack detection:
 
 ## User Interface {#user_interface}
 
-### **2.0.0** Jan 12, 2016
+### **2.0.0** Jan. 11, 2016
 
  * Added more advanced filter system for data
  * Replaced filter shortcuts
@@ -86,7 +86,7 @@ This update improves the performance and attack detection:
  * Updated export file names
  * Fixed date update in quick actions
 
-### **1.2.1** Oct 06, 2015
+### **1.2.1** Oct. 06, 2015
 
 This update fixes a small bug that happens in certain situations with PHP versions prior to 5.5.
 
@@ -122,7 +122,7 @@ This update does not change any major things in the interface, but it should mak
 
 ## PHP Connector {#php_connector}
 
-### **2.0.0** Jan 12, 2016
+### **2.0.0** Jan. 11, 2016
 
  * Added resource to request data
  * Added hashes for integrity check
@@ -144,7 +144,7 @@ This update does not change any major things in the interface, but it should mak
 
 ## Perl Connector {#perl_connector}
 
-### **2.0.0** Jan 12, 2016
+### **2.0.0** Jan. 11, 2016
 
  * Added resource to request data
  * Added hashes for integrity check
@@ -159,7 +159,7 @@ This update does not change any major things in the interface, but it should mak
 
 ## Python Connector {#python_connector}
 
-### **2.0.0** Jan 12, 2016
+### **2.0.0** Jan. 11, 2016
 
  * Added resource to request data
  * Added hashes for integrity check
