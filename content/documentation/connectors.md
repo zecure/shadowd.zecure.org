@@ -34,8 +34,6 @@ Every profile is protected by a key.
 Messages from the connector to the server are authenticated with a message authentication code.
 This is a password authentication without having to send the actual password.
 
-The key should be unique, private and non-guessable.
-
 ### Host
 
 By default the connectors will try to connect to the localhost.
