@@ -37,13 +37,37 @@ You should rewrite requests to *app.php*.
 
 #### Apache
 
-It is done automatically with an htaccess file in the *web* folder, but it requires that the module *rewrite* is loaded and that *AllowOverride* is not *None*.
+If you are using Apache this is done automatically with an .htaccess file in the *web* folder.
+The only requirements are that the module *rewrite* is loaded and that *AllowOverride* is not *None*.
 
 #### Lighttpd
 
-You can use the following configuration to rewrite requests if the module *rewrite* is loaded.
+If you are using Lighttpd you can use the module *rewrite* as well to do this, you have to add the following directive manually though.
 
     url.rewrite-if-not-file = ( "(.+)" => "/app.php$1" )
+
+#### Nginx
+
+It is slightly more complicated for NGINX.
+The configuration should look similar to [this](https://www.nginx.com/resources/wiki/start/topics/recipes/symfony/).
+
+    rewrite ^/app\.php/?(.*)$ /$1 permanent;
+
+    location / {
+        index app.php;
+        try_files $uri @rewriteapp;
+    }
+
+    location @rewriteapp {
+        rewrite ^(.*)$ /app.php/$1 last;
+    }
+
+    location ~ ^/(app|app_dev|config)\.php(/|$) {
+        fastcgi_pass phpfcgi;
+        fastcgi_split_path_info ^(.+\.php)(/.*)$;
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    }
 
 ## Installation
 
