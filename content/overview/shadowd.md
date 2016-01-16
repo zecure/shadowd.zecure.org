@@ -30,8 +30,11 @@ On Ubuntu you can also use [PPA](https://help.ubuntu.com/community/PPA) to insta
 
 The package is still [awaiting sponsorship](https://bugzilla.redhat.com/show_bug.cgi?id=1185662), so it is not possible to install it with *yum* from the official repositories yet.
 Please [download](https://shadowd.zecure.org/files/redhat/) and install the *rpm* package manually instead.
+For some of the dependencies you will need the EPEL repository (extra packages for enterprise linux).
 
-    rpm -i shadowd-2.0.0-1.*.rpm
+    yum install epel-release
+    yum localinstall shadowd-2.0.0-1.*.rpm
+    systemctl enable shadowd
 
 ### Docker {#docker}
 
