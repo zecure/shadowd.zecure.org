@@ -11,7 +11,7 @@ weight: 40
 ## Description
 
 A connector connects a web application with a background server.
-The connector is executed everytime a request arrives.
+The connector is executed every time a request arrives.
 It gathers all user input, encodes it and sends it to the server.
 The server analyzes and processes the input and returns the names of all dangerous parameters.
 The connector uses this names to remove the parameters.
