@@ -78,6 +78,8 @@ Copy the configuration file from *misc/examples/connectors.ini* to */etc/shadowd
 The file is annotated and should be self-explanatory, but if you are stuck you can find more information in the [documentation]({{< ref "documentation/connectors.md" >}}).
 Make sure that it is readable by the web server user, otherwise your site will not work anymore.
 
+If you plan to protect multiple applications you can use the environment variable *SHADOWD_CONNECTOR_CONFIG* to specify different configuration files for every target.
+
 {{% note title="Ignore sensitive input!" type="warning" %}}
 You should use the [ignore]({{< ref "documentation/connectors.md#ignore" >}}) function of the connector to disregard very sensitive input, e.g., passwords.
 {{% /note %}}
