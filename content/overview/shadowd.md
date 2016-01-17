@@ -73,20 +73,20 @@ If you only want to use Docker for shadowd you simply have to run:
 
 This creates a new image based on [zecure/shadowd](https://registry.hub.docker.com/u/zecure/shadowd/) with a customized configuration file and starts it.
 
-## Manual Installation
+### Manual
 
 If you do not can or do not want to use a package you can also install shadowd manually by compiling it from source.
 If you are using a package you can skip this section and directly jump to the setup of the [database]({{< ref "#database" >}}).
 
-### Dependencies
+#### Dependencies
 
-The server is written in C++. To compile it on a Unix-like system you need:
+The server is written in C++. To compile it on a Unix-like system you need the following tools.
 
  * g++
  * make
  * cmake
 
-Several libraries are also required:
+Several libraries are also required.
 
  * libssl
  * libboost
@@ -99,13 +99,13 @@ Several libraries are also required:
  * libdbi
  * libdbd-mysql / libdbd-pgsql
 
-### Download
+#### Download
 
 Stable releases of the source code can be found at the [download page]({{< ref "downloads/archives.md#shadowd" >}}) or at <a target="_blank" href="https://github.com/zecure/shadowd">Github</a>.
 
     git clone https://github.com/zecure/shadowd.git
 
-### Preparation
+#### Preparation
 
 Use cmake to configure and prepare the project.
 It is a good idea to create a separate directory for this.
@@ -115,7 +115,7 @@ A typical installation might look like this.
     cd build
     cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr -DCMAKE_BUILD_TYPE=Release ..
 
-### Compilation
+#### Compilation
 
 If cmake is successful it creates a makefile.
 Use it to compile and install the project.
@@ -123,9 +123,9 @@ Use it to compile and install the project.
     make shadowd
     make install
 
-### Autostart
+#### Autostart
 
-If you compile shadowd from source it will not start automatically on boot, so you will have to set this up manually.
+If you compile shadowd from source it will not start automatically on boot, so you will have to set up the autostart manually as well.
 How exactly this is done depends on your operating system.
 You can find init scripts for the most common Linux distributions in the [packaging repository](https://github.com/zecure/packaging).
 
