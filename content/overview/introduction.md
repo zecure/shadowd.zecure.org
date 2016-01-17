@@ -29,7 +29,7 @@ If you just want to protect your site, but otherwise do not care about attacks y
 The interface also comes with shell scripts that can be used to send weekly reports via e-mail, rotate the logs and the like.
 
 {{% note title="Try out the demo!" type="info" %}}
-Shadow Daemon monitors and protects the blog <a target="_blank" href="http://zecure.me/">zecure.me</a>.
+Shadow Daemon monitors and protects the Wordpress blog <a target="_blank" href="http://zecure.me/">zecure.me</a>.
 You can try out its web interface at <a target="_blank" href="https://demo.shadowd.zecure.org/">demo.shadowd.zecure.org</a>.
 {{% /note %}}
 
