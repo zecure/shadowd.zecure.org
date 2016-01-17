@@ -9,13 +9,11 @@ longtitle: Getting started with the Shadow Daemon user interface
 weight: 30
 ---
 
-The web-based user interface is used to configure and manage the daemon.
-
 ## Dependencies
 
 You need a [database]({{< ref "overview/shadowd.md#database" >}}) and a web server with PHP support as well as the PHP command line interface.
 
- * apache / lighttpd / ...
+ * Apache / Lighttpd / NGINX / ...
  * php5-cgi
  * php5-cli
  * php5-mysql / php5-pgsql
@@ -47,7 +45,7 @@ If you are using Lighttpd you can use the module *rewrite* as well to do this, y
 
     url.rewrite-if-not-file = ( "(.+)" => "/app.php$1" )
 
-#### Nginx
+#### NGINX
 
 It is slightly more complicated for NGINX.
 The configuration should look similar to [this](https://www.nginx.com/resources/wiki/start/topics/recipes/symfony/).
@@ -71,7 +69,7 @@ The configuration should look similar to [this](https://www.nginx.com/resources/
     }
 
 {{% note title="In the case of an error..." type="info" %}}
-The web interface uses the PHP framework **Symfony**.
+The web interface uses the PHP framework **Symfony 2**.
 So if you are not able to install the interface for some reason you will most likely find a solution to your problem with the help of a search engine, e.g., <a href="https://duckduckgo.com/?q=symfony+cpanel" target="_blank">Symfony and cPanel</a>.
 Alternatively you can also use the Docker container <a href="https://registry.hub.docker.com/u/zecure/shadowd_ui/" target="_blank">zecure/shadowd_ui</a> that ships with an own web server.
 {{% /note %}}
