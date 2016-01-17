@@ -18,7 +18,7 @@ Stable releases of the source code can be found at the [download page]({{< ref "
 PHP provides a setting with the name [auto_prepend_file](http://php.net/manual/en/ini.core.php#ini.auto-prepend-file) to automatically load additional PHP files every time the PHP binary is called.
 This can be used to load the connector on every request before the actual script is executed without having to change a single line of code.
 
-To install the connectour you have to move the directory *src* to a location that is accessible by the web server, e.g., */usr/share/shadowd/php*.
+To install the connector you have to move the directory *src* to a location that is accessible by the web server, e.g., */usr/share/shadowd/php*.
 
 ### Global
 
