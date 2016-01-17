@@ -18,16 +18,16 @@
                     <li{{if $currentNode.IsMenuCurrent "main" . }} class="active"{{end}}><a href="{{.URL}}"> {{ .Name }} </a> </li>
                     {{ end }}
                 </ul>
-              {{else}}
+              {{ else }}
                 <li>
                 <a class="" href="{{.URL}}">
                     {{ .Pre }}
                     <!--<i class="icon_house_alt"></i>-->
                     <span>{{ .Name }}</span>
                 </a>
-              {{end}}
+              {{ end }}
               </li>
-          {{end}}
+          {{ end }}
             <li class="sub-menu">
             <a href="javascript:;" class="">
                 <i class='fa fa-group'></i>

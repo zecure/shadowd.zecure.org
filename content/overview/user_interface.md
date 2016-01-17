@@ -5,6 +5,7 @@ menu:
     parent: getting started
     Identifier: AboutUserInterface
 title: User Interface
+longtitle: Getting started with the Shadow Daemon user interface
 weight: 30
 ---
 

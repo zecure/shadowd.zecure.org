@@ -4,6 +4,7 @@ menu:
   main:
     parent: about
 title: Roadmap
+longtitle: Foundations and goals of Shadow Daemon
 weight: 20
 ---
 

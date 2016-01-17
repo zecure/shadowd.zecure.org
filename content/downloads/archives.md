@@ -4,6 +4,7 @@ menu:
   main:
     parent: downloads
 title: Archives
+longtitle: Files of Shadow Daemon
 weight: 10
 ---
 

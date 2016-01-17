@@ -4,6 +4,7 @@ menu:
   main:
     parent: development
 title: Contributing
+longtitle: Contributing to the Shadow Daemon development
 weight: 10
 ---
 

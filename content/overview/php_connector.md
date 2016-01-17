@@ -4,6 +4,7 @@ menu:
   main:
     parent: getting started
 title: PHP Connector
+longtitle: Getting started with the Shadow Daemon PHP connector
 weight: 40
 ---
 

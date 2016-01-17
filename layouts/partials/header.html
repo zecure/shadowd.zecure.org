@@ -6,7 +6,7 @@
     <meta name="author" content="Hendrik Buchwald">
     <meta name="keyword" content="Open Source Web Application Firewall">
     <link rel="shortcut icon" href="/img/favicon.ico">
-    <title>Shadow Daemon: {{.Title}}</title>
+    <title>{{ if .Params.longtitle }}{{.Params.longtitle}}{{ else }}{{.Title}}{{ end }}</title>
     <link href="/css/bootstrap-theme.css" rel="stylesheet">
     <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
     <link href="/css/style.css" rel="stylesheet">

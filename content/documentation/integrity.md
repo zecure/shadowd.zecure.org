@@ -5,6 +5,7 @@ menu:
     parent: documentation
     Identifier: DocumentationIntegrity
 title: Integrity
+longtitle: The integrity algorithm of Shadow Daemon
 weight: 13
 ---
 

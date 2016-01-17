@@ -4,6 +4,7 @@ menu:
   main:
     parent: about
 title: Changelog
+longtitle: Changes in the official Shadow Daemon modules
 weight: 10
 ---
 

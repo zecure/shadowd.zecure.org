@@ -5,6 +5,7 @@ menu:
     parent: documentation
     Identifier: DocumentationUserInterface
 title: User Interface
+longtitle: The documentation of the Shadow Daemon user interface
 weight: 30
 ---
 

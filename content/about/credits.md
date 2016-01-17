@@ -4,6 +4,7 @@ menu:
   main:
     parent: about
 title: Credits
+longtitle: Contributors and resources of Shadow Daemon
 weight: 40
 ---
 
