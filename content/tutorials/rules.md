@@ -4,7 +4,7 @@ menu:
   main:
     parent: tutorials
 title: Rules
-longtitle: How to create Shadow Daemon rules?
+longtitle: How to create rules for Shadow Daemon?
 weight: 10
 ---
 

@@ -4,7 +4,7 @@ menu:
   main:
     parent: getting started
 title: Introduction
-longtitle: Introduction to the open-source web application firewall Shadow Daemon
+longtitle: Shadow Daemon open-source web application firewall
 weight: 5
 ---
 
