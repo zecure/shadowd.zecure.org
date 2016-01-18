@@ -4,7 +4,7 @@ menu:
   main:
     parent: getting started
 title: Perl Connector
-longtitle: Getting started with the Shadow Daemon Perl Connector
+longtitle: Getting Started with the Shadow Daemon Perl Connector
 weight: 50
 ---
 

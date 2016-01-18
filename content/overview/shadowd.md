@@ -5,7 +5,7 @@ menu:
     parent: getting started
     Identifier: AboutShadowd
 title: Shadowd
-longtitle: Getting started with the Shadow Daemon Server
+longtitle: Getting Started with the Shadow Daemon Server
 weight: 20
 ---
 
