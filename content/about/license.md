@@ -4,7 +4,7 @@ menu:
   main:
     parent: about
 title: License
-longtitle: Shadow Daemon license (GPLv2)
+longtitle: Shadow Daemon License (GPLv2)
 weight: 50
 ---
 

@@ -4,7 +4,7 @@ menu:
   main:
     parent: getting started
 title: Python Connector
-longtitle: Getting started with the Shadow Daemon Python connector
+longtitle: Getting started with the Shadow Daemon Python Connector
 weight: 60
 ---
 
