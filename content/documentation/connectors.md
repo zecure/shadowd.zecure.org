@@ -11,12 +11,9 @@ weight: 40
 
 ## Description
 
-A connector connects a web application with a background server.
-The connector is executed every time a request arrives.
-It gathers all user input, encodes it and sends it to the server.
-The server analyzes and processes the input and returns the names of all dangerous parameters.
-The connector uses this names to remove the parameters.
-Afterwards the execution of the original scripts continues with the defused input.
+A connector is a small module that connects a web application with a shadowd server.
+The connector intercepts requests before they are processed by the web application.
+It sends the request data to the server and uses the answer to sanitize the requests.
 
 ## Configuration
 
