@@ -4,7 +4,7 @@ menu:
   main:
     parent: getting started
 title: Introduction
-longtitle: Shadow Daemon Open-Source Web Application Firewall for PHP, Perl and Python
+longtitle: Shadow Daemon Open-Source Web Application Firewall
 weight: 5
 ---
 
