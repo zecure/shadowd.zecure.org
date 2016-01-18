@@ -5,7 +5,7 @@ menu:
     parent: documentation
     Identifier: DocumentationWhitelist
 title: Whitelist
-longtitle: The Whitelist Algorithm and Filters of Shadow Daemon
+longtitle: Whitelist Algorithm and Filters of Shadow Daemon
 weight: 12
 ---
 

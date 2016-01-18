@@ -5,7 +5,7 @@ menu:
     parent: documentation
     Identifier: DocumentationArchitecture
 title: Architecture
-longtitle: The Architecture and Protocol of Shadow Daemon
+longtitle: Architecture and Protocol of Shadow Daemon
 weight: 10
 ---
 

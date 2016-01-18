@@ -5,7 +5,7 @@ menu:
     parent: documentation
     Identifier: DocumentationBlacklist
 title: Blacklist
-longtitle: The Blacklist Algorithm and Filters of Shadow Daemon
+longtitle: Blacklist Algorithm and Filters of Shadow Daemon
 weight: 11
 ---
 

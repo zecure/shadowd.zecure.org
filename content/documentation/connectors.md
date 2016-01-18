@@ -5,7 +5,7 @@ menu:
     parent: documentation
     Identifier: DocumentationConnectors
 title: Connectors
-longtitle: The Documentation of Shadow Daemon Connectors
+longtitle: Documentation of Shadow Daemon Connectors
 weight: 40
 ---
 
