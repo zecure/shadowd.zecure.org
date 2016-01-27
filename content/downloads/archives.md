@@ -43,9 +43,9 @@ The [DIGESTS](http://en.wikipedia.org/wiki/Cryptographic_hash_function) and [DIG
 
 ## Perl Connector {#perl_connector}
 
- * https://shadowd.zecure.org/files/shadowd_perl-2.0.0.tar.gz
- * https://shadowd.zecure.org/files/shadowd_perl-2.0.0.tar.gz.DIGESTS
- * https://shadowd.zecure.org/files/shadowd_perl-2.0.0.tar.gz.DIGESTS.asc
+ * https://shadowd.zecure.org/files/shadowd_perl-2.0.1.tar.gz
+ * https://shadowd.zecure.org/files/shadowd_perl-2.0.1.tar.gz.DIGESTS
+ * https://shadowd.zecure.org/files/shadowd_perl-2.0.1.tar.gz.DIGESTS.asc
 
 ## Python Connector {#python_connector}
 

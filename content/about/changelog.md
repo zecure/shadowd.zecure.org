@@ -123,6 +123,12 @@ This update does not change any major things in the interface, but it should mak
 
 ## PHP Connector {#php_connector}
 
+### **2.0.1** Jan. 27, 2016
+
+shadowd_php uses `spl_autoload_register`. As a result of that `__autoload` is not called anymore.
+
+ * Added fix for __autoload.
+
 ### **2.0.0** Jan. 11, 2016
 
  * Added resource to request data
