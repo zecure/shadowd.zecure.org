@@ -49,6 +49,10 @@ Even errors will not result in an unusable application.
 
 ### User interface
 
+It is recommended to switch your honeypot profile to the passive mode as a fall back for the *observe* setting in the connector.
+This makes sure that *shadowd* never tells the connector to modify or stop a request, but this should not prevent you from using *observe*.
+In case that *shadowd* does not work correctly (e.g., the database is overloaded) it can not tell the connector that it is in passive mode and thus this would result in a stopped request.
+
 If your web application is a pure honeypot you should completely disable the flooding protection for the corresponding profile.
 This is not a good idea for production systems though, because large quantities of parallel attacks that have to be stored in the database could drastically slow down the application.
 You should still consider to loosen up the flooding protection and allow more attacks than the default configuration, e.g., 5 attacks every 10 seconds.
@@ -61,7 +65,7 @@ In any case it is a good idea to at least increase the values and thus make it l
 
 ## Conclusion
 
-As you can see using Shadow Daemon as a honeypot is very easy.
+As you can see, using Shadow Daemon as a honeypot is very easy.
 All you have to do is to disable the protections and you end up with a passive system that only monitors attacks.
 The user interface makes it possible to sift through a large amount of data and find the interesting information in seconds.
 You can also combine Shadow Daemon with other honeypot systems and integrate it into honeynets as an additional source of information.
