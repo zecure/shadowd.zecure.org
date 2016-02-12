@@ -29,6 +29,15 @@ With some simple modifications to the configuration files the protections can be
 
 This tutorial assumes that you have already [installed]({{< ref "overview/shadowd.md" >}}) and [configured]({{< ref "tutorials/rules.md" >}}) Shadow Daemon and the web application you want to observe.
 
+## Distinctions
+
+There are two possibilities how to use Shadow Daemon as a honeypot.
+First, you can use it to monitor attacks on web applications that are in active use.
+This yields the best results, but drastically limits the applications you can cover.
+Logically, you can also use it to create pure honeypots with arbitrary applications.
+As stated in the introduction this reduces the meaningfulness of the data, but it can still provide a valuable insight into attacks.
+After all, it is still a real application in the background and thus much more convincing than most other web honeypots.
+
 ## Configuration
 
 ### Connector
