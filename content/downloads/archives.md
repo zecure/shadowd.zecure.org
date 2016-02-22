@@ -19,7 +19,7 @@ The [DIGESTS](http://en.wikipedia.org/wiki/Cryptographic_hash_function) and [DIG
     
     # Test the integrity of the archives
     sha512sum -c *.DIGESTS
-    whirlpooldeep -c *.DIGESTS
+    whirlpoolsum -c *.DIGESTS
 
 # Current {#current}
 
