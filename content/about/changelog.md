@@ -10,6 +10,11 @@ weight: 10
 
 ## Shadowd {#shadowd}
 
+### **2.0.1** Mar. 06, 2016
+
+This update fixes a critical bug that is caused by null-bytes.
+You can find more information about the update in [this](http://blog.zecure.org/post/shadowd_2.0.1/) blog post.
+
 ### **2.0.0** Jan. 11, 2016
 
  * Added integrity check

@@ -25,9 +25,9 @@ The [DIGESTS](http://en.wikipedia.org/wiki/Cryptographic_hash_function) and [DIG
 
 ## Shadowd {#shadowd}
 
- * https://shadowd.zecure.org/files/shadowd-2.0.0.tar.gz
- * https://shadowd.zecure.org/files/shadowd-2.0.0.tar.gz.DIGESTS
- * https://shadowd.zecure.org/files/shadowd-2.0.0.tar.gz.DIGESTS.asc
+ * https://shadowd.zecure.org/files/shadowd-2.0.1.tar.gz
+ * https://shadowd.zecure.org/files/shadowd-2.0.1.tar.gz.DIGESTS
+ * https://shadowd.zecure.org/files/shadowd-2.0.1.tar.gz.DIGESTS.asc
 
 ## User Interface {#user_interface}
 
