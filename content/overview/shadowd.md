@@ -18,7 +18,7 @@ The easiest way to install the main component of Shadow Daemon - the background 
 The package is still [awaiting sponsorship](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=776012), so it is not possible to install it with *apt-get* from the official repositories yet.
 Please [download](https://shadowd.zecure.org/files/debian/) and install the *deb* package manually instead.
 
-    dpkg -i shadowd_2.0.0-1_*.deb
+    dpkg -i shadowd_2.*.deb
     apt-get -f install
 
 On Ubuntu you can also use [PPA](https://help.ubuntu.com/community/PPA) to install the package:
@@ -34,7 +34,7 @@ Please [download](https://shadowd.zecure.org/files/redhat/) and install the *rpm
 For some of the dependencies you will need the EPEL repository (extra packages for enterprise linux).
 
     yum install epel-release
-    yum localinstall shadowd-2.0.0-1.*.rpm
+    yum localinstall shadowd-2.*.rpm
     systemctl enable shadowd
 
 ### Docker {#docker}
