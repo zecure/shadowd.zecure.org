@@ -128,6 +128,10 @@ This update does not change any major things in the interface, but it should mak
 
 ## PHP Connector {#php_connector}
 
+### **2.0.2** Apr. 19, 2016
+
+This update acknowledges $_COOKIE in $_REQUEST when removing threats.
+
 ### **2.0.1** Jan. 27, 2016
 
 shadowd_php uses `spl_autoload_register`. As a result of that `__autoload` is not called anymore.
