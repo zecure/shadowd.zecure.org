@@ -71,6 +71,22 @@ This update improves the performance and attack detection:
 
 ## User Interface {#user_interface}
 
+### **2.0.1** May 05, 2016
+
+This patch release fixes quite a lot (non-critical) bugs.
+
+* Fixed last attack filter name
+* Fixed home table position
+* Renamed last attack to last request
+* Fixed naming collisions of filter subselects
+* Fixed wrong bind name for date-exclude filters in request
+* Fixed wrong table name in getExcludeBrokenIntegrityRule
+* Replaced outdated include-path method in blacklist export
+* Replaced outdated threshold column in profile
+* Changed profile mode filter to dropdown
+* Get jQuery via https (Composer)
+* Delete a user even when there are no settings
+
 ### **2.0.0** Jan. 11, 2016
 
  * Added more advanced filter system for data
