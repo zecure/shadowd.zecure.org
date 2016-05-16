@@ -71,7 +71,7 @@ This update improves the performance and attack detection:
 
 ## User Interface {#user_interface}
 
-### **2.0.1** May 05, 2016
+### **2.0.1** May 16, 2016
 
 This patch release fixes quite a lot (non-critical) bugs.
 
