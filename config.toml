@@ -1,4 +1,4 @@
-baseurl = "//shadowd.zecure.org"
+baseurl = "https://shadowd.zecure.org"
 MetaDataFormat = "yaml"
 
 [indexes]
