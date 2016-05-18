@@ -111,9 +111,9 @@ Use the form to add a new profile:
  * You have to add a secure and unique *key* to authorize requests.
   * The key has to added to the configuration file of the connectors later on.
  * You should set the mode to *passive* for now, until you are sure that the system works correctly.
-  * In passive mode shadowd will never tell a connector to stop an attack.
+  * In passive mode shadowd will never tell a connector to modify or stop a request.
  * You should disable the *whitelist* and *integrity* checks for now, because they need well-fitting rules to work.
- * You can enable the *blacklist* and *flooding* check, because unlike the other checks they are instantly ready for use.
+ * You can enable the *blacklist* and *flooding* checks, because they are instantly ready for use.
   * The [blacklist]({{< ref "documentation/blacklist.md" >}}) checks user input for malicious patterns and compares their total impact to the threshold.
   * The flooding protection limits the amount of *attacks* that are stored and analyzed by Shadow Daemon. It does not count non-malicious requests.
 
