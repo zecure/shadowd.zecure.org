@@ -109,7 +109,7 @@ Use the form to add a new profile:
   * You can use asterisk as a wildcard.
  * You have to add a name for the profile.
  * You have to add a secure and unique *key* to authorize requests.
-  * The key has to added to the configuration file of the connectors later on.
+  * The key has to be added to the configuration file of the connector later on.
  * You should set the mode to *passive* for now, until you are sure that the system works correctly.
   * In passive mode shadowd will never tell a connector to modify or stop a request.
  * You should disable the *whitelist* and *integrity* checks for now, because they need well-fitting rules to work.
