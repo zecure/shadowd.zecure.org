@@ -113,6 +113,8 @@ Use the form to add a new profile:
  * You should set the mode to *passive* for now, until you are sure that the system works correctly.
  * You should also disable the *whitelist* and *integrity* check for now, because they need rules to work.
  * You can enable the *blacklist* and *flooding* check, because they are instantly ready for use.
+  * The [blacklist]({{< ref "documentation/blacklist.md" >}}) checks user input for malicious patterns and compares their total impact to the threshold.
+  * The flooding protection limits the amount of *attacks* that are stored and analyzed by Shadow Daemon. It does not count non-malicious requests.
 
 {{% note title="What is a good blacklist threshold?" type="info" %}}
 If the threshold of the blacklist is too low there will be lots of false-positives.
