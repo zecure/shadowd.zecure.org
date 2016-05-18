@@ -101,14 +101,15 @@ First add a new admin user:
 
 The email address is optional and only used for the report command at the moment.
 
-Use this user to login into the web interface.
+Go to the web interface and login with your newly created admin user.
 Navigate to *Management*, *Profile* and click the *Add* button at the bottom of the page.
-Use the form to add a new profile:
+Use the form to add a new profile.
+The default values should be reasonable for most new installations.
 
  * You can set the IP address of the connector as *server IP* to only allow connections from this source.
   * You can use asterisk as a wildcard.
  * You have to add a name for the profile.
- * You have to add a secure and unique *key* to authorize requests.
+ * You have to add a secure and unique *key* to authorize requests from connectors.
   * The key has to be added to the configuration file of the connector later on.
  * You should set the mode to *passive* for now, until you are sure that the system works correctly.
   * In passive mode shadowd will never tell a connector to modify or stop a request.
