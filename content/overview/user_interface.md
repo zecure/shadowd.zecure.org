@@ -14,9 +14,7 @@ weight: 30
 You need a [database]({{< ref "overview/shadowd.md#database" >}}) and a web server with PHP support as well as the PHP command line interface.
 
  * Apache / Lighttpd / NGINX / ...
- * php5-cgi
- * php5-cli
- * php5-mysql / php5-pgsql
+ * PHP CGI + CLI
 
 ## Download
 
@@ -108,11 +106,14 @@ Navigate to *Management*, *Profile* and click the *Add* button at the bottom of 
 Use the form to add a new profile:
 
  * You can set the IP address of the connector as *server IP* to only allow connections from this source.
+  * You can use asterisk as a wildcard.
  * You have to add a name for the profile.
  * You have to add a secure and unique *key* to authorize requests.
+  * The key has to added to the configuration file of the connectors later on.
  * You should set the mode to *passive* for now, until you are sure that the system works correctly.
- * You should also disable the *whitelist* and *integrity* check for now, because they need rules to work.
- * You can enable the *blacklist* and *flooding* check, because they are instantly ready for use.
+  * In passive mode shadowd will never tell a connector to stop an attack.
+ * You should disable the *whitelist* and *integrity* checks for now, because they need well-fitting rules to work.
+ * You can enable the *blacklist* and *flooding* check, because unlike the other checks they are instantly ready for use.
   * The [blacklist]({{< ref "documentation/blacklist.md" >}}) checks user input for malicious patterns and compares their total impact to the threshold.
   * The flooding protection limits the amount of *attacks* that are stored and analyzed by Shadow Daemon. It does not count non-malicious requests.
 
