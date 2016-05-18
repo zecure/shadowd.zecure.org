@@ -36,8 +36,8 @@ You should rewrite requests to *app.php*.
 
 #### Apache
 
-If you are using Apache this is done automatically with an .htaccess file in the *web* folder.
-The only requirements are that the module *rewrite* is loaded and that *AllowOverride* is not *None*.
+If you are using Apache the rewrite is done automatically by an *.htaccess file* in the *web* folder.
+The only requirements are that the module *rewrite* is loaded and that *AllowOverride* is *All*.
 
 #### Lighttpd
 
@@ -47,7 +47,7 @@ If you are using Lighttpd you can use the module *rewrite* as well to do this, y
 
 #### NGINX
 
-It is slightly more complicated for NGINX.
+Rewriting requests is slightly more complicated for NGINX.
 The configuration should look similar to [this](https://www.nginx.com/resources/wiki/start/topics/recipes/symfony/).
 
     rewrite ^/app\.php/?(.*)$ /$1 permanent;
