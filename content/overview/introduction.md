@@ -121,22 +121,15 @@ Make sure to star/follow to stay up to date.
  </a>
 </figure>
 
-## I want more security!
+## Do you want more security?
 
 Shadow Daemon is a passive security system.
 It intercepts requests and tries to block attacks on your web applications.
 If this is not enough for you and you want to actively find and fix vulnerabilities in your PHP applications to reduce the attack surface to an absolute minimum you should check out the *source code analyser* [RIPS](https://www.ripstech.com).
 
-The new RIPS engine is armed with innovative code analysis algorithms that are specifically dedicated to the intricate features of the PHP language.
+The new [RIPS](https://www.ripstech.com) engine is armed with innovative code analysis algorithms that are specifically dedicated to the intricate features of the PHP language.
 It is capable of analyzing modern PHP applications for complex security vulnerabilities within minutes.
 The full feature stack of the PHP language is supported, including object-oriented code, pitfall-prone security mechanisms, and PHP built-in functions.
 Security vulnerabilities are accurately detected by analyzing the data flow from user-controlled input parameters to sensitive operations in your application with 100% code coverage.
 
-
-<figure class="intro-icon">
- <a href="https://www.ripstech.com">
-  <img src="/img/rips.png" height="90px" />
-  <figcaption><h4>RIPS</h4></figcaption>
- </a>
-</figure>
 
