@@ -20,8 +20,8 @@ It compares user input to rules that specify how the input should look like.
 
 The whitelist algorithm does multiple things.
 First it checks if the parameter has a rule.
-The term whitelist implies that every parameter requires a matching rule, otherwise it is considered a threat.
-If there is a rule the algorithm checks if the rule has a length restriction and if the restriction is adhered to.
+The term whitelist implies that every parameter without at least one matching rule is considered a threat.
+If there are rules the algorithm checks if they have length restrictions and if they are adhered to.
 Finally the algorithm tests the character set of the input with the help of regular expressions.
 
 ## Filters
