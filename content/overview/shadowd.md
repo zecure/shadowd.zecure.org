@@ -26,7 +26,10 @@ Wait until the shadowd_ui container is started (15-30 seconds) and add a user ac
 
     sudo ./shadowdctl exec web php app/console swd:register --admin --name=arg (--email=arg)
 
-For more information about commands check out the [docker-compose manual](https://docs.docker.com/compose/).
+You need this user account to log in to the web interface.
+The e-mail address is optional.
+
+For more information about other commands check out the [docker-compose manual](https://docs.docker.com/compose/).
 
 ## What's next?
-You have to add an application [profile]({{< ref "overview/user_interface.md" >}})) with the user interface.
+You have to add an application [profile]({{< ref "overview/user_interface.md" >}}) with the user interface.

@@ -95,4 +95,4 @@ You can test if everything works by visiting */config.php*.
 
 ## What's next?
 
-You have to add a [profile]({{< ref "overview/user_interface.md" >}})) with the user interface.
+You have to add a [profile]({{< ref "overview/user_interface.md" >}}) with the user interface.
