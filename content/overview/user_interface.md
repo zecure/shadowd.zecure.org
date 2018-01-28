@@ -12,7 +12,7 @@ weight: 30
 ## Usage {#usage}
 
 Go to the web interface and log in with your admin user.
-By default you can reach it at (http://127.0.0.1:8080)[http://127.0.0.1:8080].
+By default you can reach it at http://127.0.0.1:8080.
 
 Navigate to *Management*, *Profile* and click the *Add* button at the bottom of the page.
 Use the form to add a new profile.
