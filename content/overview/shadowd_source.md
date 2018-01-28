@@ -11,7 +11,7 @@ weight: 70
 
 ## Installation
 
-It is recommended to use [shadowdctl]({{< ref "overview/shadowd.md" >}}) to control Shadow Daemon.
+It is highly recommended to use [shadowdctl]({{< ref "overview/shadowd.md" >}}) to install Shadow Daemon.
 If this is not an option you can also compile shadowd yourself.
 Be aware though that it is much more work to install shadowd from source.
 
