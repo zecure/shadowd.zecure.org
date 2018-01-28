@@ -4,9 +4,9 @@ menu:
   main:
     parent: getting started
     Identifier: AboutUserInterfaceSource
-title: User Interface
+title: User Interface (Source)
 longtitle: Getting Started with the Shadow Daemon User Interface (From Source)
-weight: 31
+weight: 71
 ---
 
 ## Dependencies

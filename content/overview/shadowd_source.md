@@ -4,9 +4,9 @@ menu:
   main:
     parent: getting started
     Identifier: AboutShadowdSource
-title: Shadowd
+title: Shadowd (Source)
 longtitle: Getting Started with the Shadow Daemon Server (From Source)
-weight: 21
+weight: 70
 ---
 
 ## Installation
