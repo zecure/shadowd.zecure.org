@@ -93,6 +93,14 @@ It is highly recommended to change the secret token to a completely random strin
 
 You can test if everything works by visiting */config.php*.
 
+## Setup
+
+You have to add a new user for the web interface.
+
+    php app/console swd:register --env=prod --admin --name=arg (--email=arg)
+
+The email address is optional and only used for the report command at the moment.
+
 ## What's next?
 
-You have to add a [profile]({{< ref "overview/user_interface.md" >}}) with the user interface.
+You have to add an application [profile]({{< ref "overview/user_interface.md" >}}) with the user interface.

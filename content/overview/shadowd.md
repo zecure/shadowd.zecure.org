@@ -10,12 +10,15 @@ weight: 20
 ---
 
 ## Installation
+
 Installing Shadow Daemon is easy!
 
 ### Requirements
+
 Install [Docker CE](https://docs.docker.com/install/), [docker-compose](https://docs.docker.com/compose/install/), and [git](https://git-scm.com/).
 
-### Commands
+### Setup
+
 You install and control Shadow Daemon through `shadowdctl`, a simple docker-compose wrapper.
 
     git clone https://github.com/zecure/packaging
@@ -32,4 +35,5 @@ The e-mail address is optional.
 For more information about other commands check out the [docker-compose manual](https://docs.docker.com/compose/).
 
 ## What's next?
+
 You have to add an application [profile]({{< ref "overview/user_interface.md" >}}) with the user interface.

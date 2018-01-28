@@ -11,12 +11,6 @@ weight: 30
 
 ## Usage {#usage}
 
-First add a new admin user:
-
-    php app/console swd:register --env=prod --admin --name=arg (--email=arg)
-
-The email address is optional and only used for the report command at the moment.
-
 Go to the web interface and login with your newly created admin user.
 Navigate to *Management*, *Profile* and click the *Add* button at the bottom of the page.
 Use the form to add a new profile.
