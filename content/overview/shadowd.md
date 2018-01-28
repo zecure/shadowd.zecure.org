@@ -15,7 +15,7 @@ Installing Shadow Daemon is easy!
 
 ### Requirements
 
-Install [Docker CE](https://docs.docker.com/install/), [docker-compose](https://docs.docker.com/compose/install/), and [git](https://git-scm.com/).
+Install [Docker CE](https://docs.docker.com/install/), [Docker Compose](https://docs.docker.com/compose/install/), and [git](https://git-scm.com/).
 
 ### Setup
 
@@ -32,7 +32,7 @@ Wait until the shadowd_ui container is started (15-30 seconds) and add a user ac
 You need this user account to log in to the web interface.
 The e-mail address is optional.
 
-For more information about other commands check out the [docker-compose manual](https://docs.docker.com/compose/).
+For more information about other commands check out the [Docker Compose manual](https://docs.docker.com/compose/).
 
 ## What's next?
 
