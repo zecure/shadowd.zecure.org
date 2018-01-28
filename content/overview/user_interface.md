@@ -11,13 +11,15 @@ weight: 30
 
 ## Usage {#usage}
 
-Go to the web interface and login with your newly created admin user.
+Go to the web interface and log in with your admin user.
+By default you can reach it at (http://127.0.0.1:8080)[http://127.0.0.1:8080].
+
 Navigate to *Management*, *Profile* and click the *Add* button at the bottom of the page.
 Use the form to add a new profile.
 The default values should be reasonable for most new installations.
 
  * You can set the IP address of the connector as *server IP* to only allow connections from this source.
-  * You can use asterisk as a wildcard.
+  * If you use `shadowdctl` you should use the default value `*`!
  * You have to add a name for the profile.
  * You have to add a secure and unique *key* to authorize requests from connectors.
   * The key has to be added to the configuration file of the connector later on.
