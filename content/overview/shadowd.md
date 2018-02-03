@@ -19,7 +19,7 @@ Install [Docker CE](https://docs.docker.com/install/), [Docker Compose](https://
 
 ### Setup
 
-You install and control Shadow Daemon through `shadowdctl`, a simple docker-compose wrapper.
+You install and control Shadow Daemon through `shadowdctl`, a simple docker-compose wrapper. Modify the file `docker-compose.yml` for fine-grained control.
 
     git clone https://github.com/zecure/packaging
     cd packaging/docker/compose
@@ -32,7 +32,7 @@ Wait until the shadowd_ui container is started (15-30 seconds) and add a user ac
 You need this user account to log in to the web interface.
 The e-mail address is optional.
 
-For more information about other commands check out the [Docker Compose manual](https://docs.docker.com/compose/).
+For more information about other commands and configuration options check out the [Docker Compose manual](https://docs.docker.com/compose/).
 
 ## What's next?
 
