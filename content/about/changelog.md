@@ -71,6 +71,11 @@ This update improves the performance and attack detection:
 
 ## User Interface {#user_interface}
 
+### **2.0.2** Jan 03, 2018
+
+* Integerated demo system
+* Manually check filters if request is not GET
+
 ### **2.0.1** May 16, 2016
 
 This patch release fixes quite a lot (non-critical) bugs.
