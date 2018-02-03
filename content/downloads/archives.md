@@ -31,9 +31,9 @@ The [DIGESTS](http://en.wikipedia.org/wiki/Cryptographic_hash_function) and [DIG
 
 ## User Interface {#user_interface}
 
- * https://shadowd.zecure.org/files/shadowd_ui-2.0.1.tar.gz
- * https://shadowd.zecure.org/files/shadowd_ui-2.0.1.tar.gz.DIGESTS
- * https://shadowd.zecure.org/files/shadowd_ui-2.0.1.tar.gz.DIGESTS.asc
+ * https://shadowd.zecure.org/files/shadowd_ui-2.0.2.tar.gz
+ * https://shadowd.zecure.org/files/shadowd_ui-2.0.2.tar.gz.DIGESTS
+ * https://shadowd.zecure.org/files/shadowd_ui-2.0.2.tar.gz.DIGESTS.asc
 
 ## PHP Connector {#php_connector}
 
