@@ -25,7 +25,7 @@ You install and control Shadow Daemon through `shadowdctl`, a simple docker-comp
     cd packaging/docker/compose
     sudo ./shadowdctl up -d
 
-Wait until the shadowd_ui container is started (15-30 seconds) and add a user account.
+Wait until the `shadowd_ui` container is ready. On the first start this takes about 15-30 seconds since the database has to be initialized. Once the initialization is done you have to add a user account for the web interface.
 
     sudo ./shadowdctl exec web php app/console swd:register --admin --name=arg (--email=arg)
 
