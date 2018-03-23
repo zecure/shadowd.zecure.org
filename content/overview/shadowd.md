@@ -29,9 +29,6 @@ Wait until the `shadowd_ui` container is ready. On the first start this takes ab
 
     sudo ./shadowdctl exec web php app/console swd:register --admin --name=arg (--email=arg)
 
-You need this user account to log in to the web interface.
-The e-mail address is optional.
-
 For more information about other commands and configuration options check out the [Docker Compose manual](https://docs.docker.com/compose/).
 
 ## What's next?
