@@ -19,17 +19,16 @@ Install [Docker CE](https://docs.docker.com/install/), [Docker Compose](https://
 
 ### Setup
 
-You install and control Shadow Daemon through `shadowdctl`, a simple docker-compose wrapper. Modify the file `docker-compose.yml` for fine-grained control.
+You install and control Shadow Daemon through `shadowdctl`, a simple [docker-compose](https://docs.docker.com/compose/) wrapper. You can modify the file `docker-compose.yml` for fine-grained control.
+To start Shadow Daemon permanently execute the following commands.
 
     git clone https://github.com/zecure/packaging
     cd packaging/docker/compose
     sudo ./shadowdctl up -d
 
-Wait until the `shadowd_ui` container is ready. On the first start this takes about 15-30 seconds since the database has to be initialized. Once the initialization is done you have to add a user account for the web interface.
+Wait until the `shadowd_ui` container is completely started. On the first start this takes about 15 to 30 seconds since the database has to be initialized. Once the initialization is done you have to add a user account for the web interface.
 
-    sudo ./shadowdctl exec web php app/console swd:register --admin --name=arg (--email=arg)
-
-For more information about other commands and configuration options check out the [Docker Compose manual](https://docs.docker.com/compose/).
+    sudo ./shadowdctl exec web ./app/console swd:register --admin --name=arg (--email=arg)
 
 ## What's next?
 
