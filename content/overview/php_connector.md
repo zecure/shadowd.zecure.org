@@ -23,7 +23,7 @@ To install the connector you have to move the directory *src* to a location that
 
 ### Global
 
-If you want to enable Shadow Daemon globally you can set *auto_prepend_file* to */usr/share/shadowd/Connector.php* in the *php.ini*.
+If you want to enable Shadow Daemon globally you can set *auto_prepend_file* to */usr/share/shadowd/php/Connector.php* in your *php.ini* file (for example, `/etc/php/7.2/cgi/php.ini`).
 The change will take effect after you restart your web server, but you should wait with that until the configuration of the module is completely done.
 
 ### Apache
