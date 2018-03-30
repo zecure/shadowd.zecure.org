@@ -1,5 +1,5 @@
 ---
-date: 2016-01-01
+date: 2018-03-30
 menu:
   main:
     parent: tutorials
@@ -60,9 +60,13 @@ This is the reason why it is recommended to use the [generator]({{< ref "#genera
 ## Generator
 
 The generator is a handy tool to turn learning data into rules.
+It does this by calculating statistics about pre-recorded requests.
+It assumes that a majority of requests are not malicious and creates rules based on probabilities.
 The results are not perfect, but if you have good data they are not bad either.
 In practise this means that it is often necessary to improve the generated rules by hand, but you still save most of the work.
 To collect learning data you have to enable the *learning* mode of the desired profile, but be aware that this saves every request in the database.
+
+<img src="/img/tutorials/generator.png" title="Generator" />
 
 The generator has [settings]({{< ref "documentation/user_interface.md#generator" >}}) that allow you to influence the results.
 Some settings produce secure rules, while other settings produce insecure rules.
