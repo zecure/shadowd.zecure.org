@@ -41,6 +41,8 @@ To compensate for this you can add exceptions for the (normally very few) parame
 This way you can have a low global threshold to make sure that even obfuscated attacks are detected most of the time and still eliminate a vast majority of false-positives.
 You can easily identify such parameters by submitting multiple examples from the [blacklist documentation]({{< ref "documentation/blacklist.md#filters" >}}) at once and thus trigger the blacklist intentionally.
 
+<img src="/img/tutorials/blacklist.png" title="Blacklist" />
+
 ## Whitelist
 
 Whitelist rules are used to define which user input is allowed and how this input should look like.
@@ -52,10 +54,14 @@ Modern web applications have a lot of parameters and every one of them requires 
 Because of this it is not recommended to add the rules by hand.
 Instead use the [generator]({{< ref "#generator" >}}) to create rules out of learning data and only fix incorrect or missing rules by hand.
 
+<img src="/img/tutorials/whitelist.png" title="Whitelist" />
+
 ## Integrity
 
 Integrity rules are used to define which checksums are allowed and what this checksums should be, so it is also using a whitelisting approach.
 This is the reason why it is recommended to use the [generator]({{< ref "#generator" >}}) to create rules out of learning data.
+
+<img src="/img/tutorials/integrity.png" title="Integrity" />
 
 ## Generator
 
