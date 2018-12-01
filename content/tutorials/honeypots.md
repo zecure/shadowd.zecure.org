@@ -58,9 +58,13 @@ This is not a good idea for production systems though, because large quantities 
 You should still consider to loosen up the flooding protection and allow more attacks than the default configuration, e.g., 5 attacks every 10 seconds.
 After all, you don't want to miss important bits of an attack just because there were a few too many requests.
 
+<img src="/img/tutorials/filter.png" title="Filter" />
+
+Once you start recording attacks you can easily sift through the data using the filter system. You can enable it by clicking on the gears icon. Use the plus and minus icons in the tables to add new filters even quicker.
+
 ### Shadowd
 
-If your web application is a pure honeypot you should also consider disabling the parameter limitations *max-parameters*, *max-length-path* and *max-length-value* in the configuration file of shadowd.
+If your web application is a pure honeypot you should consider disabling the parameter limitations *max-parameters*, *max-length-path* and *max-length-value* in the configuration file of shadowd.
 In any case it is a good idea to at least increase the values and thus make it less likely to miss attacks.
 
 ## Conclusion
