@@ -16,7 +16,7 @@ By default you can reach it at http://127.0.0.1:8080.
 
 <img src="/img/overview/ui_add_profile1.png" title="Profiles" />
 
-Navigate to *Management*, *Profile* and click the *Add* button at the bottom of the page.
+Navigate to *Management*, *Profiles*, and click the *Add* button at the bottom of the page.
 Use the form to add a new profile.
 The default values should be reasonable for most new installations.
 The only required values that are not added by default are the *name* and the *key*.
