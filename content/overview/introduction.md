@@ -22,11 +22,9 @@ Shadow Daemon is <a target="_blank" href="https://www.gnu.org/philosophy/free-sw
 
 ### Ease of use
 
-Shadow Daemon is easy to install and can be managed with a clear and structured web interface.
-The interface lets you examine attacks in great detail.
-If you just want to protect your site, but otherwise do not care about attacks you can forget about the web interface once Shadow Daemon is installed and configured.
+Shadow Daemon is easy to install and can be managed with a clear and structured web interface that lets you examine attacks in great detail.
 
-The interface also comes with shell scripts that can be used to send weekly reports via e-mail, rotate the logs and the like.
+The interface also comes with shell scripts that can be used to send weekly reports via e-mail, rotate the logs, and the like.
 
 {{% note title="Try out the demo!" type="info" %}}
 Shadow Daemon monitors and protects the Wordpress blog <a target="_blank" href="http://zecure.me/">zecure.me</a>.
