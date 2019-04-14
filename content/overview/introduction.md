@@ -14,7 +14,7 @@ weight: 5
 
 *Shadow Daemon* is a collection of tools to *detect*, *record*, and *prevent* *attacks* on *web applications*.
 Technically speaking, Shadow Daemon is a *web application firewall* that intercepts requests and filters out malicious parameters.
-It is a modular system that separates web application, analysis, and interface to increase security, flexibility and expandability.
+It is a modular system that separates web application, analysis, and interface to increase security, flexibility, and expandability.
 
 Shadow Daemon is <a target="_blank" href="https://www.gnu.org/philosophy/free-sw.html">free software</a>. It is released under the license [GPLv2]({{< ref "about/license.md" >}}), so it is open source and the code can be examined, modified, and distributed by everyone.
 
@@ -37,7 +37,7 @@ Shadow Daemon uses small connectors on application level to intercept requests.
 This guarantees that the analyzed data is exactly the same as the input data of the web application, a task many firewalls fail to do properly.
 The installation of the connectors is easy and does not require coding abilities.
 
-At the moment the following programming languages, libs and frameworks are supported:
+At the moment the following programming languages, libs, and frameworks are supported:
 
  * PHP
  * Perl
@@ -55,7 +55,7 @@ If you want to [contribute]({{< ref "development/contributing.md" >}}) why not d
 
 ### Accurate detection
 
-Shadow Daemon combines [blacklisting]({{< ref "documentation/blacklist.md" >}}), [whitelisting]({{< ref "documentation/whitelist.md" >}}) and [integrity checking]({{< ref "documentation/integrity.md" >}}) to accurately detect malicious requests.
+Shadow Daemon combines [blacklisting]({{< ref "documentation/blacklist.md" >}}), [whitelisting]({{< ref "documentation/whitelist.md" >}}), and [integrity checking]({{< ref "documentation/integrity.md" >}}) to accurately detect malicious requests.
 The blacklist makes use of sophisticated regular expressions to search for known attack patterns in the user input.
 The whitelist on the other hand searches for irregularities in the user input based on strict rules that define how the input should look like.
 The integrity check compares cryptographically secure checksums of the executed scripts against predefined values.
