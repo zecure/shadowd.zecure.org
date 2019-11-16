@@ -1,5 +1,5 @@
 ---
-date: 2019-11-09
+date: 2019-11-16
 menu:
   main:
     parent: downloads
@@ -31,9 +31,9 @@ The [DIGESTS](http://en.wikipedia.org/wiki/Cryptographic_hash_function) and [DIG
 
 ## User Interface {#user_interface}
 
- * https://shadowd.zecure.org/files/shadowd_ui-2.0.3.tar.gz
- * https://shadowd.zecure.org/files/shadowd_ui-2.0.3.tar.gz.DIGESTS
- * https://shadowd.zecure.org/files/shadowd_ui-2.0.3.tar.gz.DIGESTS.asc
+ * https://shadowd.zecure.org/files/shadowd_ui-2.0.4.tar.gz
+ * https://shadowd.zecure.org/files/shadowd_ui-2.0.4.tar.gz.DIGESTS
+ * https://shadowd.zecure.org/files/shadowd_ui-2.0.4.tar.gz.DIGESTS.asc
 
 ## PHP Connector {#php_connector}
 

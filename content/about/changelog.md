@@ -1,5 +1,5 @@
 ---
-date: 2019-11-09
+date: 2019-11-16
 menu:
   main:
     parent: about
@@ -70,6 +70,10 @@ This update improves the performance and attack detection:
  * Enhanced debugging messages
 
 ## User Interface {#user_interface}
+
+### **2.0.4** Nov 16, 2019
+
+* Update dependencies because of CVE-2019-10909 (precautionary, no expected impact)
 
 ### **2.0.3** Nov 09, 2019
 
