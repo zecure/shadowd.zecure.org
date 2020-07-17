@@ -119,15 +119,3 @@ Make sure to star/follow to stay up to date.
  </a>
 </figure>
 
-## Do you want more security?
-
-Shadow Daemon is a passive security system.
-It intercepts requests and tries to block attacks on your web applications.
-If this is not enough for you and you want to actively find and fix vulnerabilities in your PHP and Java applications to reduce the attack surface to an absolute minimum you should check out the *source code analyser* [RIPS](https://www.ripstech.com).
-
-The new [RIPS](https://www.ripstech.com) engine is armed with innovative code analysis algorithms that are specifically dedicated to the intricate features of the PHP and Java languages.
-It is capable of analyzing modern applications for complex security vulnerabilities within minutes.
-The full feature stack of both languages is supported, including object-oriented code, pitfall-prone security mechanisms, and built-in functions.
-Security vulnerabilities are accurately detected by analyzing the data flow from user-controlled input parameters to sensitive operations in your application with 100% code coverage.
-
-
