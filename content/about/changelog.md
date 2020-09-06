@@ -10,6 +10,11 @@ weight: 10
 
 ## Shadowd {#shadowd}
 
+### **2.0.2** Sep. 06, 2020
+
+ * Enable PIE
+ * Refactor tests for newer Boost versions
+
 ### **2.0.1** Mar. 06, 2016
 
 This update fixes a critical bug that is caused by null-bytes.
