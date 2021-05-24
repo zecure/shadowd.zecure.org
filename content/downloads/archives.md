@@ -1,5 +1,5 @@
 ---
-date: 2019-11-16
+date: 2021-05-24
 menu:
   main:
     parent: downloads
@@ -9,25 +9,14 @@ weight: 10
 ---
 
 Official projects of Shadow Daemon are hosted at *shadowd.zecure.org* and *github.com/zecure*.
-The [DIGESTS](http://en.wikipedia.org/wiki/Cryptographic_hash_function) and [DIGESTS.asc](https://en.wikipedia.org/wiki/Digital_signature) files can be used to validate the integrity and authenticity of the downloaded archives:
-
-    # Import the public key
-    gpg --recv-keys 0x08672A08415EAC5B
-    
-    # Test the authenticity of the hashes
-    gpg --verify *.DIGESTS.asc
-    
-    # Test the integrity of the archives
-    sha512sum -c *.DIGESTS
-    whirlpoolsum -c *.DIGESTS
 
 # Current {#current}
 
 ## Shadowd {#shadowd}
 
- * https://shadowd.zecure.org/files/shadowd-2.0.2.tar.gz
- * https://shadowd.zecure.org/files/shadowd-2.0.2.tar.gz.DIGESTS
- * https://shadowd.zecure.org/files/shadowd-2.0.2.tar.gz.DIGESTS.asc
+ * https://shadowd.zecure.org/files/shadowd-2.1.0.tar.gz
+ * https://shadowd.zecure.org/files/shadowd-2.1.0.tar.gz.DIGESTS
+ * https://shadowd.zecure.org/files/shadowd-2.1.0.tar.gz.DIGESTS.asc
 
 ## User Interface {#user_interface}
 
@@ -37,9 +26,9 @@ The [DIGESTS](http://en.wikipedia.org/wiki/Cryptographic_hash_function) and [DIG
 
 ## PHP Connector {#php_connector}
 
- * https://shadowd.zecure.org/files/shadowd_php-2.0.2.tar.gz
- * https://shadowd.zecure.org/files/shadowd_php-2.0.2.tar.gz.DIGESTS
- * https://shadowd.zecure.org/files/shadowd_php-2.0.2.tar.gz.DIGESTS.asc
+ * https://shadowd.zecure.org/files/shadowd_php-2.1.0.tar.gz
+ * https://shadowd.zecure.org/files/shadowd_php-2.1.0.tar.gz.DIGESTS
+ * https://shadowd.zecure.org/files/shadowd_php-2.1.0.tar.gz.DIGESTS.asc
 
 ## Perl Connector {#perl_connector}
 
@@ -53,11 +42,16 @@ The [DIGESTS](http://en.wikipedia.org/wiki/Cryptographic_hash_function) and [DIG
  * https://shadowd.zecure.org/files/shadowd_python-2.0.0.tar.gz.DIGESTS
  * https://shadowd.zecure.org/files/shadowd_python-2.0.0.tar.gz.DIGESTS.asc
 
-# All {#all}
+# Signatures
 
- * https://shadowd.zecure.org/files/
- * https://github.com/zecure/shadowd/releases
- * https://github.com/zecure/shadowd_ui/releases
- * https://github.com/zecure/shadowd_php/releases
- * https://github.com/zecure/shadowd_perl/releases
- * https://github.com/zecure/shadowd_python/releases
+The [DIGESTS](http://en.wikipedia.org/wiki/Cryptographic_hash_function) and [DIGESTS.asc](https://en.wikipedia.org/wiki/Digital_signature) files can be used to validate the integrity and authenticity of the downloaded archives:
+
+    # Import the public key
+    gpg --recv-keys 0x08672A08415EAC5B
+    
+    # Test the authenticity of the hashes
+    gpg --verify *.DIGESTS.asc
+    
+    # Test the integrity of the archives
+    sha512sum -c *.DIGESTS
+    whirlpoolsum -c *.DIGESTS
