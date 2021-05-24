@@ -1,5 +1,5 @@
 ---
-date: 2019-11-16
+date: 2021-05-24
 menu:
   main:
     parent: about
@@ -9,6 +9,10 @@ weight: 10
 ---
 
 ## Shadowd {#shadowd}
+
+### **2.1.0** May. 24, 2021
+
+ * Add additional error messages to the reply to help identify problems
 
 ### **2.0.2** Sep. 06, 2020
 
@@ -162,6 +166,15 @@ This update does not change any major things in the interface, but it should mak
 
 ## PHP Connector {#php_connector}
 
+### **2.1.0** May. 24, 2021
+
+This update adds proper error pages instead of a generic error.
+
+**Warning:**
+
+  * Instead of `src/Connector.php` now the file `shadowd.php` has to be auto-loaded
+  * Composer has to be used to initialize the connector unless the prepared distribution is used
+
 ### **2.0.2** Apr. 19, 2016
 
 This update acknowledges $_COOKIE in $_REQUEST when removing threats.
@@ -170,7 +183,7 @@ This update acknowledges $_COOKIE in $_REQUEST when removing threats.
 
 shadowd_php uses `spl_autoload_register`. As a result of that `__autoload` is not called anymore.
 
- * Added fix for __autoload.
+ * Added fix for __autoload
 
 ### **2.0.0** Jan. 11, 2016
 
