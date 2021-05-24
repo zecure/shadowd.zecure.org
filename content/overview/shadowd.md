@@ -23,7 +23,7 @@ You install and control Shadow Daemon through `shadowdctl`, a simple [docker-com
 You can modify the file `docker-compose.yml` for fine-grained control.
 To start Shadow Daemon permanently execute the following commands.
 
-    git clone https://github.com/zecure/shadowdctl
+    git clone https://github.com/zecure/shadowdctl.git
     cd shadowdctl
     sudo ./shadowdctl up -d
 
