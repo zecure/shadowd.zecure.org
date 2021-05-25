@@ -12,7 +12,7 @@ weight: 30
 ## Usage {#usage}
 
 Go to the web interface and log in with your admin user.
-By default you can reach it at http://127.0.0.1:8080.
+By default you can reach it at port 8080, for example [http://127.0.0.1:8080](http://127.0.0.1:8080) if it is running on localhost.
 
 <img src="/img/overview/ui_add_profile1.png" title="Profiles" />
 
