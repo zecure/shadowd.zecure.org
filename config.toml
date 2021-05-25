@@ -1,6 +1,9 @@
 baseurl = "https://shadowd.zecure.org"
 MetaDataFormat = "yaml"
 
+[markup.goldmark.renderer]
+unsafe= true
+
 [indexes]
   tag = "tags"
   group = "groups"
