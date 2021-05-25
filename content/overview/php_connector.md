@@ -10,7 +10,7 @@ weight: 40
 
 ## Download
 
-Stable releases of the source code can be found at the [download page]({{< ref "downloads/archives.md#php_connector" >}}) or at <a target="_blank" href="https://github.com/zecure/shadowd_php">Github</a>.
+Stable releases of the source code can be found at the [download page]({{< ref "downloads/projects.md" >}}) or at <a target="_blank" href="https://github.com/zecure/shadowd_php">Github</a>.
 
     wget https://shadowd.zecure.org/files/shadowd_php-2.1.0.tar.gz
 

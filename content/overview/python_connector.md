@@ -11,7 +11,7 @@ weight: 60
 ## Download
 
 If you are using Pypi to install the package you do not have to download the source code manually.
-Stable releases of the source code can be found at the [download page]({{< ref "downloads/archives.md#php_connector" >}}) or at <a target="_blank" href="https://github.com/zecure/shadowd_python">Github</a>.
+Stable releases of the source code can be found at the [download page]({{< ref "downloads/projects.md" >}}) or at <a target="_blank" href="https://github.com/zecure/shadowd_python">Github</a>.
 
     git clone https://github.com/zecure/shadowd_python.git
 

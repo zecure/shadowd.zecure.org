@@ -11,7 +11,7 @@ weight: 50
 ## Download
 
 If you are using CPAN to install the module you do not have to download the source code manually.
-Stable releases of the source code can be found at the [download page]({{< ref "downloads/archives.md#perl_connector" >}}) or at <a target="_blank" href="https://github.com/zecure/shadowd_perl">Github</a>.
+Stable releases of the source code can be found at the [download page]({{< ref "downloads/projects.md" >}}) or at <a target="_blank" href="https://github.com/zecure/shadowd_perl">Github</a>.
 
     git clone https://github.com/zecure/shadowd_perl.git
 

@@ -18,7 +18,7 @@ You need a [database]({{< ref "overview/shadowd_source.md#database" >}}) and a w
 
 ## Download
 
-Stable releases of the source code can be found at the [download page]({{< ref "downloads/archives.md#user_interface" >}}) or at <a target="_blank" href="https://github.com/zecure/shadowd_ui">Github</a>.
+Stable releases of the source code can be found at the [download page]({{< ref "downloads/projects.md" >}}) or at <a target="_blank" href="https://github.com/zecure/shadowd_ui">Github</a>.
 
     git clone https://github.com/zecure/shadowd_ui.git
 
