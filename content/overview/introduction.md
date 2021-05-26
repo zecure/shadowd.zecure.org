@@ -41,14 +41,14 @@ At the moment the following programming languages, libs, and frameworks are supp
 
  * PHP
  * Perl
-  * CGI
-  * Mojolicious
-  * Mojolicious::Lite
+   * CGI
+   * Mojolicious
+   * Mojolicious::Lite
  * Python
-  * CGI
-  * Django
-  * Werkzeug
-  * Flask
+   * CGI
+   * Django
+   * Werkzeug
+   * Flask
 
 Additional connectors are planned and will be released at some point in the future.
 If you want to [contribute]({{< ref "development/contributing.md" >}}) why not develop a new [connector]({{< ref "documentation/connectors.md" >}})?
