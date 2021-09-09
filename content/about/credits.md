@@ -20,6 +20,7 @@ weight: 40
 
  * [sbilly](https://github.com/sbilly) {{% nospam %}}superli.1980_(a)_gmail.com{{% /nospam %}}
  * [Gyrth McMulin](https://twitter.com/GyrthMcMulin)
+ * [BaBeuloula](https://github.com/babeuloula)
 
 ## Resources
 
