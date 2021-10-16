@@ -45,9 +45,9 @@ Official projects of Shadow Daemon are hosted at *shadowd.zecure.org* and *githu
     <tr>
       <td>PHP Connector</td>
       <td>
-        <a href="https://shadowd.zecure.org/files/shadowd_php-2.1.0.tar.gz">shadowd_php-2.1.0.tar.gz</a>
-        <a href="https://shadowd.zecure.org/files/shadowd_php-2.1.0.tar.gz.DIGESTS" class="signature">[DIGESTS]</a>
-        <a href="https://shadowd.zecure.org/files/shadowd_php-2.1.0.tar.gz.DIGESTS.asc" class="signature">[asc]</a>
+        <a href="https://shadowd.zecure.org/files/shadowd_php-2.1.1.tar.gz">shadowd_php-2.1.1.tar.gz</a>
+        <a href="https://shadowd.zecure.org/files/shadowd_php-2.1.1.tar.gz.DIGESTS" class="signature">[DIGESTS]</a>
+        <a href="https://shadowd.zecure.org/files/shadowd_php-2.1.1.tar.gz.DIGESTS.asc" class="signature">[asc]</a>
       </td>
     </tr>
     <tr>

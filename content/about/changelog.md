@@ -173,6 +173,10 @@ This update does not change any major things in the interface, but it should mak
 
 ## PHP Connector {#php_connector}
 
+### **2.1.1** Oct 16, 2021
+
+ * Fix wrong default value for timeout
+
 ### **2.1.0** May. 24, 2021
 
 This update adds proper error pages instead of a generic error.
