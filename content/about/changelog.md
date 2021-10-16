@@ -1,5 +1,5 @@
 ---
-date: 2021-05-24
+date: 2021-10-16
 menu:
   main:
     parent: about
@@ -79,6 +79,13 @@ This update improves the performance and attack detection:
  * Enhanced debugging messages
 
 ## User Interface {#user_interface}
+
+### **2.0.5** Oct 16, 2021
+
+* Add French translation
+* Add Dockerfile for building and running
+* Update dependencies
+* Add fallbacks for register command
 
 ### **2.0.4** Nov 16, 2019
 
