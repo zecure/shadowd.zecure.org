@@ -1,5 +1,5 @@
 ---
-date: 2021-10-16
+date: 2021-10-17
 menu:
   main:
     parent: downloads
@@ -20,6 +20,14 @@ Official projects of Shadow Daemon are hosted at *shadowd.zecure.org* and *githu
     <td>Docker</td>
   </thead>
   <tbody>
+    <tr>
+      <td>Shadowd Controller</td>
+      <td>
+        <a href="https://shadowd.zecure.org/files/shadowdctl-2.0.0.tar.gz">shadowd-2.0.0.tar.gz</a>
+        <a href="https://shadowd.zecure.org/files/shadowdctl-2.0.0.tar.gz.DIGESTS" class="signature">[DIGESTS]</a>
+        <a href="https://shadowd.zecure.org/files/shadowdctl-2.0.0.tar.gz.DIGESTS.asc" class="signature">[asc]</a>
+      </td>
+    </tr>
     <tr>
       <td>Shadowd</td>
       <td>
