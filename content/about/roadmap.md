@@ -1,5 +1,5 @@
 ---
-date: 2015-01-01
+date: 2021-10-17
 menu:
   main:
     parent: about
@@ -20,10 +20,6 @@ This project tries to achieve:
 
 ## Pending
 
- * Support of HTTP security headers for additional security
- * Decoding filters for user input, e.g., base64, xml, json and yml
- * Selection of blacklist filters by environment
-
 ### Partly done
 
  * Localization
@@ -32,3 +28,5 @@ This project tries to achieve:
 
  * Graphical representation of attacks
  * Iterative learning in shadowd, i.e. do not store all requests in learning mode
+ * Support of HTTP security headers for additional security
+ * Decoding filters for user input, e.g., base64, xml, json and yml
