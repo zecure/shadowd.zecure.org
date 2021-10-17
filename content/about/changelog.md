@@ -1,5 +1,5 @@
 ---
-date: 2021-10-16
+date: 2021-10-17
 menu:
   main:
     parent: about
@@ -10,7 +10,7 @@ weight: 10
 
 ## Shadowd {#shadowd}
 
-### **2.1.0** May. 24, 2021
+### **2.1.0** May 24, 2021
 
  * Add additional error messages to the reply to help identify problems
 
@@ -80,22 +80,22 @@ This update improves the performance and attack detection:
 
 ## User Interface {#user_interface}
 
-### **2.0.5** Oct 16, 2021
+### **2.0.5** Oct. 16, 2021
 
 * Add French translation
 * Add Dockerfile for building and running
 * Update dependencies
 * Add fallbacks for register command
 
-### **2.0.4** Nov 16, 2019
+### **2.0.4** Nov. 16, 2019
 
 * Update dependencies because of CVE-2019-10909 (precautionary, no expected impact)
 
-### **2.0.3** Nov 09, 2019
+### **2.0.3** Nov. 09, 2019
 
 * Optimize code to access last request
 
-### **2.0.2** Jan 03, 2018
+### **2.0.2** Jan. 03, 2018
 
 * Integerated demo system
 * Manually check filters if request is not GET
@@ -173,11 +173,11 @@ This update does not change any major things in the interface, but it should mak
 
 ## PHP Connector {#php_connector}
 
-### **2.1.1** Oct 16, 2021
+### **2.1.1** Oct. 16, 2021
 
  * Fix wrong default value for timeout
 
-### **2.1.0** May. 24, 2021
+### **2.1.0** May 24, 2021
 
 This update adds proper error pages instead of a generic error.
 
@@ -242,7 +242,7 @@ shadowd_php uses `spl_autoload_register`. As a result of that `__autoload` is no
  * Added Travis-CI integration
  * Added file upload support
 
-### **1.2.0** May. 05, 2015
+### **1.2.0** May 05, 2015
 
 This update improves old and adds new Python connectors:
 
