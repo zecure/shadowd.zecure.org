@@ -21,14 +21,6 @@ Official projects of Shadow Daemon are hosted at *shadowd.zecure.org* and *githu
   </thead>
   <tbody>
     <tr>
-      <td>Shadowd Controller</td>
-      <td>
-        <a href="https://shadowd.zecure.org/files/shadowdctl-2.0.0.tar.gz">shadowd-2.0.0.tar.gz</a>
-        <a href="https://shadowd.zecure.org/files/shadowdctl-2.0.0.tar.gz.DIGESTS" class="signature">[DIGESTS]</a>
-        <a href="https://shadowd.zecure.org/files/shadowdctl-2.0.0.tar.gz.DIGESTS.asc" class="signature">[asc]</a>
-      </td>
-    </tr>
-    <tr>
       <td>Shadowd</td>
       <td>
         <a href="https://shadowd.zecure.org/files/shadowd-2.1.0.tar.gz">shadowd-2.1.0.tar.gz</a>
@@ -72,6 +64,14 @@ Official projects of Shadow Daemon are hosted at *shadowd.zecure.org* and *githu
         <a href="https://shadowd.zecure.org/files/shadowd_python-3.0.1.tar.gz">shadowd_python-3.0.1.tar.gz</a>
         <a href="https://shadowd.zecure.org/files/shadowd_python-3.0.1.tar.gz.DIGESTS" class="signature">[DIGESTS]</a>
         <a href="https://shadowd.zecure.org/files/shadowd_python-3.0.1.tar.gz.DIGESTS.asc" class="signature">[asc]</a>
+      </td>
+    </tr>
+    <tr>
+      <td>Shadowd Controller</td>
+      <td>
+        <a href="https://shadowd.zecure.org/files/shadowdctl-2.0.0.tar.gz">shadowdctl-2.0.0.tar.gz</a>
+        <a href="https://shadowd.zecure.org/files/shadowdctl-2.0.0.tar.gz.DIGESTS" class="signature">[DIGESTS]</a>
+        <a href="https://shadowd.zecure.org/files/shadowdctl-2.0.0.tar.gz.DIGESTS.asc" class="signature">[asc]</a>
       </td>
     </tr>
   </tbody>
