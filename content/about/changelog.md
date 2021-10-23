@@ -1,5 +1,5 @@
 ---
-date: 2021-10-17
+date: 2021-10-23
 menu:
   main:
     parent: about
@@ -9,6 +9,10 @@ weight: 10
 ---
 
 ## Shadowd {#shadowd}
+
+### **2.1.1** Oct., 2021
+
+ * Reset config when starting Docker container
 
 ### **2.1.0** May 24, 2021
 
