@@ -10,7 +10,7 @@ weight: 10
 
 ## Shadowd {#shadowd}
 
-### **2.1.1** Oct., 2021
+### **2.1.1** Oct. 23, 2021
 
  * Reset config when starting Docker container
 
