@@ -84,6 +84,10 @@ This update improves the performance and attack detection:
 
 ## User Interface {#user_interface}
 
+### **2.0.6** Jan. 23, 2022
+
+* Fix report command
+
 ### **2.0.5** Oct. 16, 2021
 
 * Add French translation
