@@ -2787,3 +2787,30 @@ Examples:
  * {{< example >}}SELECT database(){{< /example >}}
  * {{< example >}}SELECT current_database(){{< /example >}}
 
+## Tags
+
+Each filter has tags associated which are typically abbreviations of attacks. These stand for:
+
+- bash: Bash-related attacks
+- css: Cascading Style Sheets
+- dos: Denial of Service
+- id: Information Disclosure
+- ldap: LDAP protocol
+- lfi: Local File Inclusions
+- mongo: MongoDB injections
+- mssql: MSSQL injections
+- mysql: MySQL injections
+- perl: Perl-related attacks
+- pgsql: PostgreSQL injections
+- php: PHP-related attacks
+- rce: Remote Code Execution
+- rfi: Remote File Inclusion
+- spam: Attempts to send spam
+- sqli: SQL injections
+- sqlite: SQLite injections
+- tsql: Transact-SQL injections
+- unix: \*nix-related attacks (Linux, Unix, etc.)
+- win: Windows-related attacks
+- xss: Cross-Site Scripting
+- xxe: XML External Entity attacks
+
