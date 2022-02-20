@@ -68,7 +68,10 @@ The connector should be at the beginning of the *MIDDLEWARE_CLASSES* list.
 Flask applications require a small modification as well.
 It is necessary to create a hook to intercept requests.
 
+    from flask import Flask, request
     from shadowd.flask_connector import InputFlask, OutputFlask, Connector
+
+    app = Flask(__name__)
 
     @app.before_request
     def before_req():
