@@ -61,9 +61,9 @@ Official projects of Shadow Daemon are hosted at *shadowd.zecure.org* and *githu
     <tr>
       <td>Python Connector</td>
       <td>
-        <a href="https://shadowd.zecure.org/files/shadowd_python-3.0.1.tar.gz">shadowd_python-3.0.1.tar.gz</a>
-        <a href="https://shadowd.zecure.org/files/shadowd_python-3.0.1.tar.gz.DIGESTS" class="signature">[DIGESTS]</a>
-        <a href="https://shadowd.zecure.org/files/shadowd_python-3.0.1.tar.gz.DIGESTS.asc" class="signature">[asc]</a>
+        <a href="https://shadowd.zecure.org/files/shadowd_python-3.0.2.tar.gz">shadowd_python-3.0.2.tar.gz</a>
+        <a href="https://shadowd.zecure.org/files/shadowd_python-3.0.2.tar.gz.DIGESTS" class="signature">[DIGESTS]</a>
+        <a href="https://shadowd.zecure.org/files/shadowd_python-3.0.2.tar.gz.DIGESTS.asc" class="signature">[asc]</a>
       </td>
     </tr>
     <tr>

@@ -241,6 +241,14 @@ shadowd_php uses `spl_autoload_register`. As a result of that `__autoload` is no
 
 ## Python Connector {#python_connector}
 
+### **3.0.2** Jul. 29, 2022
+
+ * Fix wrong type of custom port
+
+### **3.0.1** Feb. 06, 2021
+
+ * Updated to Python 3
+
 ### **2.0.0** Jan. 11, 2016
 
  * Added resource to request data
