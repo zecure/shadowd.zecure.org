@@ -85,37 +85,7 @@ Shadow Daemon is closer to the application than most other web application firew
 It receives *exactly* the same input that the web application receives and thus it is almost impossible to bypass the detection by obfuscating the attack.
 However, the most complex parts of Shadow Daemon are separated from the web application to guarantee a certain standard of security.
 
-## Who should use Shadow Daemon?
-
-Shadow Daemon is for people who want to run their own dynamic website without constantly having to worry about attacks and vulnerabilities.
-
-Shadow Daemon is for people who want to know if and how their website is attacked.
-
-Shadow Daemon is for people who do not want to blindly place their trust in closed-source software that does its work in secret and costs a fortune.
-
 ## How do I install Shadow Daemon?
 
 *Getting Started* contains everything you need to know. Start by reading [shadowd]({{< ref "overview/shadowd.md" >}}).
 Installing Shadow Daemon is easy and only takes some minutes, really.
-
-## How can I follow the development of Shadow Daemon?
-
-The development of Shadow Daemon takes place at [Github](https://github.com/zecure).
-Announcements are published via [Twitter](https://twitter.com/zecureit).
-Make sure to star/follow to stay up to date.
-
-
-<figure class="intro-icon">
- <a href="https://github.com/zecure">
-  <img src="/img/octocat.png" height="100px" />
-  <figcaption><h4>Github</h4></figcaption>
- </a>
-</figure>
-
-<figure class="intro-icon">
- <a href="https://twitter.com/zecureit">
-  <img src="/img/twitter.png" height="90px" />
-  <figcaption><h4>Twitter</h4></figcaption>
- </a>
-</figure>
-
