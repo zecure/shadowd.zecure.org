@@ -10,7 +10,7 @@ aliases:
     - /downloads/archives/
 ---
 
-Official projects of Shadow Daemon are hosted at *shadowd.zecure.org* and *github.com/zecure*.
+Official projects of Shadow Daemon are hosted at [shadowd.zecure.org](https://shadowd.zecure.org/files/) and [github.com/zecure](https://github.com/zecure).
 
 
 <table class="table">
