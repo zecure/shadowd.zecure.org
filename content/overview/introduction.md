@@ -1,5 +1,5 @@
 ---
-date: 2016-08-15
+date: 2022-07-30
 menu:
   main:
     parent: getting started
@@ -12,19 +12,14 @@ weight: 5
 
 ## What is Shadow Daemon?
 
-*Shadow Daemon* is a collection of tools to *detect*, *record*, and *block* *attacks* on *web applications*.
-Technically speaking, Shadow Daemon is a *web application firewall* that intercepts requests and filters out malicious parameters.
-It is a modular system that separates web application, analysis, and interface to increase security, flexibility, and expandability.
-
-Shadow Daemon is <a target="_blank" href="https://www.gnu.org/philosophy/free-sw.html">free software</a>. It is released under the license [GPLv2]({{< ref "about/license.md" >}}), so it is open source and the code can be examined, modified, and distributed by everyone.
+*Shadow Daemon* is a *web application firewall* that intercepts requests at application-level.
+It is <a target="_blank" href="https://www.gnu.org/philosophy/free-sw.html">free and open-source software</a>.
 
 ## What differentiates Shadow Daemon?
 
 ### Ease of use
 
 Shadow Daemon is easy to install and can be managed with a clear and structured web interface that lets you examine attacks in great detail.
-
-The interface also comes with shell scripts that can be used to send weekly reports via e-mail, rotate the logs, and the like.
 
 {{% note title="Try out the demo!" type="info" %}}
 Shadow Daemon monitors and protects the Wordpress blog <a target="_blank" href="http://zecure.me/">zecure.me</a>.
@@ -35,7 +30,6 @@ You can try out its web interface at <a target="_blank" href="https://demo.shado
 
 Shadow Daemon uses small connectors on application level to intercept requests.
 This guarantees that the analyzed data is exactly the same as the input data of the web application, a task many firewalls fail to do properly.
-The installation of the connectors is easy and does not require coding abilities.
 
 At the moment the following programming languages, libs, and frameworks are supported:
 
