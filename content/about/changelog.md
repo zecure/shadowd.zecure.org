@@ -1,5 +1,5 @@
 ---
-date: 2021-10-23
+date: 2022-07-30
 menu:
   main:
     parent: about
@@ -9,6 +9,13 @@ weight: 10
 ---
 
 ## Shadowd {#shadowd}
+
+### **2.2.0** Jul. 30, 2022
+
+ * Analyze parameter paths with blacklist
+ * Optimize initial database connection
+ * Allow to specify database settings by command line parameter
+ * Allow empty callers
 
 ### **2.1.1** Oct. 23, 2021
 
