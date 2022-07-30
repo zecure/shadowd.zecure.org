@@ -21,7 +21,7 @@ To begin with the installation you need [Docker CE](https://docs.docker.com/inst
 
 You install and control Shadow Daemon through `shadowdctl`, a simple [docker-compose](https://docs.docker.com/compose/) wrapper.
 You can modify the file `docker-compose.yml` for fine-grained control.
-To start Shadow Daemon permanently execute the following commands.
+To start Shadow Daemon execute the following commands.
 
     git clone https://github.com/zecure/shadowdctl.git
     cd shadowdctl
@@ -36,4 +36,4 @@ For more information about commands and configuration options check out the [Doc
 
 ## What's next?
 
-You have to add an application profile with the [user interface]]({{< ref "overview/user_interface.md" >}}).
+You have to add an application profile with the [user interface]({{< ref "overview/user_interface.md" >}}).
