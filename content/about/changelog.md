@@ -181,6 +181,11 @@ This update does not change any major things in the interface, but it should mak
 
 ## PHP Connector {#php_connector}
 
+### **2.2.0** Jul. 30, 2022
+
+ * Allow to set configuration options by env
+ * Improve clarity of example config
+
 ### **2.1.1** Oct. 16, 2021
 
  * Fix wrong default value for timeout
