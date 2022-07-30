@@ -15,7 +15,7 @@ Installing Shadow Daemon is easy!
 
 ### Requirements
 
-Install [Docker CE](https://docs.docker.com/install/), [Docker Compose](https://docs.docker.com/compose/install/), and [git](https://git-scm.com/).
+To begin with the installation you need [Docker CE](https://docs.docker.com/install/), [Docker Compose](https://docs.docker.com/compose/install/), and [git](https://git-scm.com/).
 
 ### Setup
 
@@ -32,8 +32,8 @@ Once the initialization is done you have to add a user account for the web inter
 
     sudo ./shadowdctl exec web ./app/console swd:register --admin --name=admin
 
-For more information about other commands and configuration options check out the [Docker Compose manual](https://docs.docker.com/compose/).
+For more information about commands and configuration options check out the [Docker Compose manual](https://docs.docker.com/compose/).
 
 ## What's next?
 
-You have to add an application [profile]({{< ref "overview/user_interface.md" >}}) with the user interface.
+You have to add an application profile with the [user interface]]({{< ref "overview/user_interface.md" >}}).
