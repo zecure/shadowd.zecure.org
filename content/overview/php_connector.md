@@ -1,18 +1,19 @@
 ---
-date: 2022-07-30
+date: 2022-07-31
 menu:
   main:
     parent: getting started
 title: PHP Connector
 longtitle: Getting Started with the Shadow Daemon PHP Connector
 weight: 40
+release-version: '2.2.0'
 ---
 
 ## Download
 
 Stable releases of the source code can be found at the [download page]({{< ref "downloads/projects.md" >}}) or at <a target="_blank" href="https://github.com/zecure/shadowd_php">Github</a>.
 
-    wget https://shadowd.zecure.org/files/shadowd_php-2.2.0.tar.gz
+    wget https://shadowd.zecure.org/files/shadowd_php-{{< param release-version >}}.tar.gz
 
 ## Installation
 
@@ -20,6 +21,11 @@ PHP provides a setting with the name [auto_prepend_file](http://php.net/manual/e
 This can be used to load the connector on every request before the actual script is executed without having to change a single line of code.
 
 To install the connector you have to extract it and move the content to a location that is accessible by the web server, e.g., */usr/share/shadowd/php*.
+
+    tar -xvf shadowd_php-{{< param release-version >}}.tar.gz
+    sudo mkdir /usr/share/shadowd
+    sudo mv shadowd_php-{{< param release-version >}} /usr/share/shadowd/php
+    sudo chown -R root:root /usr/share/shadowd/php
 
 ### Apache
 
@@ -44,6 +50,11 @@ This option is not recommended since the used configuration file depends on the 
 Copy the configuration file from *misc/examples/connectors.ini* to */etc/shadowd/connectors.ini* and edit it.
 The file is annotated and should be self-explanatory, but if you are stuck you can find more information in the [documentation]({{< ref "documentation/connectors.md" >}}).
 Make sure that it is readable by the web server user, otherwise your site will not work anymore.
+
+    sudo mkdir /etc/shadowd
+    sudo cp /usr/share/shadowd/php/misc/examples/connectors.ini /etc/shadowd
+    sudo chown root:www-data /etc/shadowd/connectors.ini
+    sudo chmod 640 /etc/shadowd/connectors.ini
 
 If you plan to protect multiple applications you can use the environment variable *SHADOWD_CONNECTOR_CONFIG* to specify different configuration files for every target.
 
