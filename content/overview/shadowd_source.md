@@ -68,12 +68,12 @@ You can find init scripts for the most common Linux distributions in the [packag
 
 It is recommended to not run shadowd with root privileges, so you should add a new user and group.
 
-    useradd shadowd
+    sudo useradd shadowd
 
 This user needs access to the configuration file.
 
-    chown root:shadowd /etc/shadowd/shadowd.ini
-    chmod 640 /etc/shadowd/shadowd.ini
+    sudo chown root:shadowd /etc/shadowd/shadowd.ini
+    sudo chmod 640 /etc/shadowd/shadowd.ini
 
 ## Database {#database}
 
