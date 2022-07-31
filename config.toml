@@ -35,7 +35,6 @@ MetaDataFormat = "yaml"
 
 [params]
   shadowd-version = '2.2.0'
-  foobar = 'boofar'
   shadowd_ui-version = '2.0.6'
   shadowd_php-version = '2.2.0'
   shadowd_perl-version = '2.0.0'
