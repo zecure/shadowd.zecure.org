@@ -8,12 +8,6 @@ longtitle: Files of Shadow Daemon
 weight: 10
 aliases:
     - /downloads/archives/
-shadowd-version: '2.2.0'
-shadowd_ui-version: '2.0.6'
-shadowd_php-version: '2.2.0'
-shadowd_perl-version: '2.0.0'
-shadowd_python-version: '3.0.2'
-shadowdctl-version: '2.0.0'
 ---
 
 Official projects of Shadow Daemon are hosted at [shadowd.zecure.org](https://shadowd.zecure.org/files/) and [github.com/zecure](https://github.com/zecure).

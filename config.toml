@@ -2,7 +2,7 @@ baseurl = "https://shadowd.zecure.org"
 MetaDataFormat = "yaml"
 
 [markup.goldmark.renderer]
-unsafe= true
+  unsafe= true
 
 [indexes]
   tag = "tags"
@@ -32,3 +32,12 @@ unsafe= true
     name = "development"
     pre = "<i class='fa fa-cog'></i>"
     weight = -70
+
+[params]
+  shadowd-version = '2.2.0'
+  foobar = 'boofar'
+  shadowd_ui-version = '2.0.6'
+  shadowd_php-version = '2.2.0'
+  shadowd_perl-version = '2.0.0'
+  shadowd_python-version = '3.0.2'
+  shadowdctl-version = '2.0.0'

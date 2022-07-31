@@ -6,22 +6,21 @@ menu:
 title: PHP Connector
 longtitle: Getting Started with the Shadow Daemon PHP Connector
 weight: 40
-release-version: '2.2.0'
 ---
 
 ## Download
 
 Stable releases of the source code can be found at the [download page]({{< ref "downloads/projects.md" >}}) or at <a target="_blank" href="https://github.com/zecure/shadowd_php">Github</a>.
 
-    wget https://shadowd.zecure.org/files/shadowd_php-{{< param release-version >}}.tar.gz
+    wget https://shadowd.zecure.org/files/shadowd_php-{{< param shadowd_php-version >}}.tar.gz
 
 ## Installation
 
 To install the connector you have to extract it and move the content to a location that is accessible by the web server, e.g., */usr/share/shadowd/php*.
 
-    tar -xvf shadowd_php-{{< param release-version >}}.tar.gz
+    tar -xvf shadowd_php-{{< param shadowd_php-version >}}.tar.gz
     sudo mkdir /usr/share/shadowd
-    sudo mv shadowd_php-{{< param release-version >}} /usr/share/shadowd/php
+    sudo mv shadowd_php-{{< param shadowd_php-version >}} /usr/share/shadowd/php
     sudo chown -R root:root /usr/share/shadowd/php
 
 PHP provides a setting with the name [auto_prepend_file](http://php.net/manual/en/ini.core.php#ini.auto-prepend-file) to automatically load additional PHP files every time the PHP binary is called.
