@@ -8,6 +8,12 @@ longtitle: Files of Shadow Daemon
 weight: 10
 aliases:
     - /downloads/archives/
+shadowd-version: '2.2.0'
+shadowd_ui-version: '2.0.6'
+shadowd_php-version: '2.2.0'
+shadowd_perl-version: '2.0.0'
+shadowd_python-version: '3.0.2'
+shadowdctl-version: '2.0.0'
 ---
 
 Official projects of Shadow Daemon are hosted at [shadowd.zecure.org](https://shadowd.zecure.org/files/) and [github.com/zecure](https://github.com/zecure).
@@ -23,9 +29,9 @@ Official projects of Shadow Daemon are hosted at [shadowd.zecure.org](https://sh
     <tr>
       <td>Shadowd</td>
       <td>
-        <a href="https://shadowd.zecure.org/files/shadowd-2.2.0.tar.gz">shadowd-2.2.0.tar.gz</a>
-        <a href="https://shadowd.zecure.org/files/shadowd-2.2.0.tar.gz.DIGESTS" class="signature">[DIGESTS]</a>
-        <a href="https://shadowd.zecure.org/files/shadowd-2.2.0.tar.gz.DIGESTS.asc" class="signature">[asc]</a>
+        <a href="https://shadowd.zecure.org/files/shadowd-{{< param shadowd-version >}}.tar.gz">shadowd-{{< param shadowd-version >}}.tar.gz</a>
+        <a href="https://shadowd.zecure.org/files/shadowd-{{< param shadowd-version >}}.tar.gz.DIGESTS" class="signature">[DIGESTS]</a>
+        <a href="https://shadowd.zecure.org/files/shadowd-{{< param shadowd-version >}}.tar.gz.DIGESTS.asc" class="signature">[asc]</a>
       </td>
       <td>
         <a href="https://hub.docker.com/r/zecure/shadowd">zecure/shadowd</a>
@@ -34,9 +40,9 @@ Official projects of Shadow Daemon are hosted at [shadowd.zecure.org](https://sh
     <tr>
       <td>User Interface</td>
       <td>
-        <a href="https://shadowd.zecure.org/files/shadowd_ui-2.0.6.tar.gz">shadowd_ui-2.0.6.tar.gz</a>
-        <a href="https://shadowd.zecure.org/files/shadowd_ui-2.0.6.tar.gz.DIGESTS" class="signature">[DIGESTS]</a>
-        <a href="https://shadowd.zecure.org/files/shadowd_ui-2.0.6.tar.gz.DIGESTS.asc" class="signature">[asc]</a>
+        <a href="https://shadowd.zecure.org/files/shadowd_ui-{{< param shadowd_ui-version >}}.tar.gz">shadowd_ui-{{< param shadowd_ui-version >}}.tar.gz</a>
+        <a href="https://shadowd.zecure.org/files/shadowd_ui-{{< param shadowd_ui-version >}}.tar.gz.DIGESTS" class="signature">[DIGESTS]</a>
+        <a href="https://shadowd.zecure.org/files/shadowd_ui-{{< param shadowd_ui-version >}}.tar.gz.DIGESTS.asc" class="signature">[asc]</a>
       </td>
       <td>
         <a href="https://hub.docker.com/r/zecure/shadowd_ui">zecure/shadowd_ui</a>
@@ -45,33 +51,33 @@ Official projects of Shadow Daemon are hosted at [shadowd.zecure.org](https://sh
     <tr>
       <td>PHP Connector</td>
       <td>
-        <a href="https://shadowd.zecure.org/files/shadowd_php-2.2.0.tar.gz">shadowd_php-2.2.0.tar.gz</a>
-        <a href="https://shadowd.zecure.org/files/shadowd_php-2.2.0.tar.gz.DIGESTS" class="signature">[DIGESTS]</a>
-        <a href="https://shadowd.zecure.org/files/shadowd_php-2.2.0.tar.gz.DIGESTS.asc" class="signature">[asc]</a>
+        <a href="https://shadowd.zecure.org/files/shadowd_php-{{< param shadowd_php-version >}}.tar.gz">shadowd_php-{{< param shadowd_php-version >}}.tar.gz</a>
+        <a href="https://shadowd.zecure.org/files/shadowd_php-{{< param shadowd_php-version >}}.tar.gz.DIGESTS" class="signature">[DIGESTS]</a>
+        <a href="https://shadowd.zecure.org/files/shadowd_php-{{< param shadowd_php-version >}}.tar.gz.DIGESTS.asc" class="signature">[asc]</a>
       </td>
     </tr>
     <tr>
       <td>Perl Connector</td>
       <td>
-        <a href="https://shadowd.zecure.org/files/shadowd_perl-2.0.0.tar.gz">shadowd_perl-2.0.0.tar.gz</a>
-        <a href="https://shadowd.zecure.org/files/shadowd_perl-2.0.0.tar.gz.DIGESTS" class="signature">[DIGESTS]</a>
-        <a href="https://shadowd.zecure.org/files/shadowd_perl-2.0.0.tar.gz.DIGESTS.asc" class="signature">[asc]</a>
+        <a href="https://shadowd.zecure.org/files/shadowd_perl-{{< param shadowd_perl-version >}}.tar.gz">shadowd_perl-{{< param shadowd_perl-version >}}.tar.gz</a>
+        <a href="https://shadowd.zecure.org/files/shadowd_perl-{{< param shadowd_perl-version >}}.tar.gz.DIGESTS" class="signature">[DIGESTS]</a>
+        <a href="https://shadowd.zecure.org/files/shadowd_perl-{{< param shadowd_perl-version >}}.tar.gz.DIGESTS.asc" class="signature">[asc]</a>
       </td>
     </tr>
     <tr>
       <td>Python Connector</td>
       <td>
-        <a href="https://shadowd.zecure.org/files/shadowd_python-3.0.2.tar.gz">shadowd_python-3.0.2.tar.gz</a>
-        <a href="https://shadowd.zecure.org/files/shadowd_python-3.0.2.tar.gz.DIGESTS" class="signature">[DIGESTS]</a>
-        <a href="https://shadowd.zecure.org/files/shadowd_python-3.0.2.tar.gz.DIGESTS.asc" class="signature">[asc]</a>
+        <a href="https://shadowd.zecure.org/files/shadowd_python-{{< param shadowd_python-version >}}.tar.gz">shadowd_python-{{< param shadowd_python-version >}}.tar.gz</a>
+        <a href="https://shadowd.zecure.org/files/shadowd_python-{{< param shadowd_python-version >}}.tar.gz.DIGESTS" class="signature">[DIGESTS]</a>
+        <a href="https://shadowd.zecure.org/files/shadowd_python-{{< param shadowd_python-version >}}.tar.gz.DIGESTS.asc" class="signature">[asc]</a>
       </td>
     </tr>
     <tr>
       <td>Shadowd Controller</td>
       <td>
-        <a href="https://shadowd.zecure.org/files/shadowdctl-2.0.0.tar.gz">shadowdctl-2.0.0.tar.gz</a>
-        <a href="https://shadowd.zecure.org/files/shadowdctl-2.0.0.tar.gz.DIGESTS" class="signature">[DIGESTS]</a>
-        <a href="https://shadowd.zecure.org/files/shadowdctl-2.0.0.tar.gz.DIGESTS.asc" class="signature">[asc]</a>
+        <a href="https://shadowd.zecure.org/files/shadowdctl-{{< param shadowdctl-version >}}.tar.gz">shadowdctl-{{< param shadowdctl-version >}}.tar.gz</a>
+        <a href="https://shadowd.zecure.org/files/shadowdctl-{{< param shadowdctl-version >}}.tar.gz.DIGESTS" class="signature">[DIGESTS]</a>
+        <a href="https://shadowd.zecure.org/files/shadowdctl-{{< param shadowdctl-version >}}.tar.gz.DIGESTS.asc" class="signature">[asc]</a>
       </td>
     </tr>
   </tbody>
