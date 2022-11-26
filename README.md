@@ -1,7 +1,7 @@
 ![Logo](https://shadowd.zecure.org/img/logo_small.png)
 
 **Shadow Daemon** is a *web application firewall* that intercepts requests at the application level.
-This is the documentation of Shadow Daemon.
+This repository contains the documentation of Shadow Daemon.
 
 # Output
 Go to [shadowd.zecure.org](https://shadowd.zecure.org/) to see the generated documentation in all its beauty.
