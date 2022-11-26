@@ -1,6 +1,6 @@
 ![Logo](https://shadowd.zecure.org/img/logo_small.png)
 
-**Shadow Daemon** is a *web application firewall* that intercepts requests at application level.
+**Shadow Daemon** is a *web application firewall* that intercepts requests at the application level.
 This is the documentation of Shadow Daemon.
 
 # Output
