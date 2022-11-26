@@ -17,7 +17,7 @@ Installing Shadow Daemon is easy!
 
 ### Requirements
 
-To begin with the installation you need [Docker](https://docs.docker.com/install/), [Docker Compose](https://docs.docker.com/compose/install/), and [git](https://git-scm.com/).
+To begin with the installation you need [Docker](https://docs.docker.com/install/), [Docker Compose](https://docs.docker.com/compose/install/other/), and [git](https://git-scm.com/).
 
 ### Setup
 
