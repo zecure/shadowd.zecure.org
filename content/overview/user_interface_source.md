@@ -1,5 +1,5 @@
 ---
-date: 2018-01-28
+date: 2022-11-26
 menu:
   main:
     parent: getting started
@@ -18,7 +18,7 @@ You need a [database]({{< ref "overview/shadowd_source.md#database" >}}) and a w
 
 ## Download
 
-Stable releases of the source code can be found at the [download page]({{< ref "downloads/projects.md" >}}) or at <a target="_blank" href="https://github.com/zecure/shadowd_ui">Github</a>.
+Stable releases of the source code can be found on the [download page]({{< ref "downloads/projects.md" >}}) or on <a target="_blank" href="https://github.com/zecure/shadowd_ui">Github</a>.
 
     git clone https://github.com/zecure/shadowd_ui.git
 
