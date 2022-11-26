@@ -1,12 +1,14 @@
 ---
-date: 2022-07-30
+date: 2022-11-26
 menu:
   main:
     parent: getting started
     Identifier: AboutShadowd
-title: Shadowd
+title: Shadowdctl
 longtitle: Getting Started with the Shadow Daemon Server
 weight: 20
+aliases:
+    - /overview/shadowd/
 ---
 
 ## Installation

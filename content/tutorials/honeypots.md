@@ -1,5 +1,5 @@
 ---
-date: 2016-01-20
+date: 2022-11-26
 menu:
   main:
     parent: tutorials
@@ -27,7 +27,7 @@ With some simple modifications to the configuration files the protections can be
 
 ## Prerequisites
 
-This tutorial assumes that you have already [installed]({{< ref "overview/shadowd.md" >}}) and [configured]({{< ref "tutorials/rules.md" >}}) Shadow Daemon and the web application you want to observe.
+This tutorial assumes that you have already [installed]({{< ref "overview/shadowdctl.md" >}}) and [configured]({{< ref "tutorials/rules.md" >}}) Shadow Daemon and the web application you want to observe.
 
 ## Distinctions
 

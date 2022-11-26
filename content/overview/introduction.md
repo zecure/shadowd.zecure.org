@@ -78,4 +78,4 @@ However, the most complex parts of Shadow Daemon are separated from the web appl
 
 ## How do I install Shadow Daemon?
 
-*Getting Started* contains everything you need to know. Start by reading [shadowd]({{< ref "overview/shadowd.md" >}}).
+*Getting Started* contains everything you need to know. Start by reading [shadowdctl]({{< ref "overview/shadowdctl.md" >}}).
