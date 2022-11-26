@@ -12,7 +12,7 @@ weight: 5
 
 ## What is Shadow Daemon?
 
-*Shadow Daemon* is a *web application firewall* that intercepts requests at application level.
+*Shadow Daemon* is a *web application firewall* that intercepts requests at the application level.
 It is <a target="_blank" href="https://www.gnu.org/philosophy/free-sw.html">free and open-source software</a>.
 
 ## What differentiates Shadow Daemon?
