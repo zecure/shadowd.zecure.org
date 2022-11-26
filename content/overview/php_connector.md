@@ -1,5 +1,5 @@
 ---
-date: 2022-07-31
+date: 2022-11-26
 menu:
   main:
     parent: getting started
@@ -10,7 +10,7 @@ weight: 40
 
 ## Download
 
-Stable releases of the source code can be found at the [download page]({{< ref "downloads/projects.md" >}}) or at <a target="_blank" href="https://github.com/zecure/shadowd_php">Github</a>.
+Stable releases of the source code can be found on the [download page]({{< ref "downloads/projects.md" >}}) or on <a target="_blank" href="https://github.com/zecure/shadowd_php">Github</a>.
 
     wget https://shadowd.zecure.org/files/shadowd_php-{{< param shadowd_php-version >}}.tar.gz
 

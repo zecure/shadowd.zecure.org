@@ -1,5 +1,5 @@
 ---
-date: 2022-07-30
+date: 2022-11-26
 menu:
   main:
     parent: getting started
@@ -12,7 +12,7 @@ weight: 5
 
 ## What is Shadow Daemon?
 
-*Shadow Daemon* is a *web application firewall* that intercepts requests at application-level.
+*Shadow Daemon* is a *web application firewall* that intercepts requests at application level.
 It is <a target="_blank" href="https://www.gnu.org/philosophy/free-sw.html">free and open-source software</a>.
 
 ## What differentiates Shadow Daemon?
@@ -22,7 +22,7 @@ It is <a target="_blank" href="https://www.gnu.org/philosophy/free-sw.html">free
 Shadow Daemon is easy to install and can be managed with a clear and structured web interface that lets you examine attacks in great detail.
 
 {{% note title="Try out the demo!" type="info" %}}
-Shadow Daemon monitors and protects the Wordpress blog <a target="_blank" href="http://zecure.me/">zecure.me</a>.
+Shadow Daemon monitors and protects the WordPress blog <a target="_blank" href="http://zecure.me/">zecure.me</a>.
 You can try out its web interface at <a target="_blank" href="https://demo.shadowd.zecure.org/">demo.shadowd.zecure.org</a>.
 {{% /note %}}
 
@@ -44,9 +44,6 @@ At the moment the following programming languages, libs, and frameworks are supp
    * Werkzeug
    * Flask
 
-Additional connectors are planned and will be released at some point in the future.
-If you want to [contribute]({{< ref "development/contributing.md" >}}) why not develop a new [connector]({{< ref "documentation/connectors.md" >}})?
-
 ### Accurate detection
 
 Shadow Daemon combines [blacklisting]({{< ref "documentation/blacklist.md" >}}), [whitelisting]({{< ref "documentation/whitelist.md" >}}), and [integrity checking]({{< ref "documentation/integrity.md" >}}) to accurately detect malicious requests.
@@ -56,7 +53,7 @@ The integrity check compares cryptographically secure checksums of the executed 
 
 Together they can detect almost any attack on a web application and still have a very low false-positive rate.
 
-Shadow Daemon is able to detect common attacks like:
+Shadow Daemon can detect common attacks like:
 
  * SQL injections
  * XML injections
@@ -69,9 +66,9 @@ Shadow Daemon is able to detect common attacks like:
 
 ### Discreet protection
 
-Unlike many other web application firewalls Shadow Daemon does not completely block malicious requests if possible.
-Instead it only filters out the dangerous parts of a request and lets it proceed afterwards.
-This makes attacks impossible, but does not unnecessary frustrate visitors in the case of false-positives.
+Unlike many other web application firewalls, Shadow Daemon does not completely block malicious requests if possible.
+Instead, it only filters out the dangerous parts of a request and lets it proceed afterward.
+This makes attacks impossible but does not unnecessary frustrate visitors in the case of false-positives.
 
 ### Secure architecture
 
@@ -82,4 +79,3 @@ However, the most complex parts of Shadow Daemon are separated from the web appl
 ## How do I install Shadow Daemon?
 
 *Getting Started* contains everything you need to know. Start by reading [shadowd]({{< ref "overview/shadowd.md" >}}).
-Installing Shadow Daemon is easy and only takes some minutes, really.

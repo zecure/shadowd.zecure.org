@@ -1,5 +1,5 @@
 ---
-date: 2018-01-28
+date: 2022-11-26
 menu:
   main:
     parent: getting started
@@ -12,7 +12,7 @@ weight: 30
 ## Usage {#usage}
 
 Go to the web interface and log in with an admin user.
-By default you can reach the interface on port 8080, for example [http://127.0.0.1:8080](http://127.0.0.1:8080) if it is running on localhost.
+By default, you can reach the interface on port 8080, for example, [http://localhost:8080](http://localhost:8080).
 
 <img src="/img/overview/ui_add_profile1.png" title="Profiles" />
 
@@ -27,11 +27,11 @@ The only required values that are not added by default are the *name* and the *k
  * You have to add a secure and unique *key* to authorize requests from connectors.
    * The key has to be added to the configuration file of the connector later on.
  * You should set the mode to *passive* for now until you are sure that the system works correctly.
-   * In passive mode `shadowd` will never tell a connector to modify or stop a request.
+   * In passive mode, `shadowd` will never tell a connector to modify or stop a request.
  * You should disable the *whitelist* and *integrity* checks for now because they need well-fitting rules to work.
- * You can enable the *blacklist* and *flooding* checks, because they are instantly ready for use.
+ * You can enable the *blacklist* and *flooding* checks because they are instantly ready for use.
    * The [blacklist]({{< ref "documentation/blacklist.md" >}}) checks user input for malicious patterns and compares their total impact to the threshold.
-   * The flooding protection limits the amount of *attacks* that are stored and analyzed by Shadow Daemon. It does not count non-malicious requests.
+   * The flooding protection limits the number of *attacks* that are stored and analyzed by Shadow Daemon. It does not count non-malicious requests.
 
 <img src="/img/overview/ui_add_profile2.png" title="Profile" />
 
