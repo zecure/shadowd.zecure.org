@@ -6,7 +6,7 @@ menu:
     Identifier: DocumentationIntegrity
 title: Integrity
 longtitle: Integrity Algorithm of Shadow Daemon
-weight: 13
+weight: 14
 ---
 
 ## Description

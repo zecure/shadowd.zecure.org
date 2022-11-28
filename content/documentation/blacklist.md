@@ -6,7 +6,7 @@ menu:
     Identifier: DocumentationBlacklist
 title: Blacklist
 longtitle: Blacklist Algorithm and Filters of Shadow Daemon
-weight: 11
+weight: 12
 ---
 
 ## Description

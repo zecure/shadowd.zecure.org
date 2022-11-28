@@ -6,7 +6,7 @@ menu:
     Identifier: DocumentationWhitelist
 title: Whitelist
 longtitle: Whitelist Algorithm and Filters of Shadow Daemon
-weight: 12
+weight: 13
 ---
 
 ## Description
