@@ -1,5 +1,5 @@
 ---
-date: 2022-11-26
+date: 2022-11-28
 menu:
   main:
     parent: getting started
@@ -21,15 +21,15 @@ To begin with the installation you need [Docker](https://docs.docker.com/install
 
 ### Setup
 
-You install and control Shadow Daemon through `shadowdctl`, a simple [docker-compose](https://docs.docker.com/compose/) wrapper.
-You can modify the file `docker-compose.yml` for fine-grained control.
+You can install and control Shadow Daemon through `shadowdctl`, a simple [docker-compose](https://docs.docker.com/compose/) wrapper.
+Modify the file `docker-compose.yml` for fine-grained control.
 To start Shadow Daemon execute the following commands.
 
     git clone https://github.com/zecure/shadowdctl.git
     cd shadowdctl
     sudo ./shadowdctl up -d
 
-Wait until the `shadowd_ui` container is completely started.
+Wait until the `web` container is completely started.
 Once the initialization is done you have to add a user account for the web interface.
 
     sudo ./shadowdctl exec web ./app/console swd:register --admin --name=admin
