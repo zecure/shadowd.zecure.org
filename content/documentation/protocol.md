@@ -1,5 +1,5 @@
 ---
-date: 2022-11-28
+date: 2022-11-30
 menu:
   main:
     parent: documentation
@@ -11,19 +11,19 @@ weight: 11
 
 ## Description
 
-A TCP-based plain text protocol is used for the communication between the connectors and shadowd.
+A TCP-based plain text protocol is used for the communication between the connectors and the shadowd server.
 
 ### Request
 
-The server expects a numerical id, an alphanumerical hash and JSON encoded data.
+The server expects a numerical id, an alphanumerical hash, and JSON encoded data.
 Every value is separated by a single newline character and the server closes the connection after the third newline character.
-The server closes the connection prematurely though if the profile id is not numerical or if the hash is not alphanumerical.
+The server closes the connection prematurely if the profile id is not numerical or if the hash is not alphanumerical.
 
     profile_id
     sha256_hmac(json_data)
     json_data
 
-The following JSON structure is expected, but without the additional newlines that are added here for readability.
+The following JSON structure is expected but without the additional newlines that are added here for readability.
 
     {
         "version": "...",
@@ -39,11 +39,11 @@ The following JSON structure is expected, but without the additional newlines th
     }
 
 The dictionary *input* contains identifiers/pathes and the associated values of all user input.
-The dictionary *hashes* contains algorithms and the associated values of the executed script file.
+The dictionary *hashes* contains algorithms and the associated checksums of the executed script file if the connector supports it.
 
 ### Response
 
-The server sends the following response, but without the additional newlines that are added here for readability.
+The server sends the following response but without the additional newlines that are added here for readability.
 
     {
         "status": ...,
@@ -61,4 +61,4 @@ The integer *status* is one of the following values:
  * ATTACK: 5
  * CRITICAL_ATTACK: 6
 
-The array *threats* contains the identifiers/pathes of tagged user input.
+The array *threats* contains identifiers of dangerous user input.

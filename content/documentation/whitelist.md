@@ -22,7 +22,7 @@ The whitelist algorithm does multiple things.
 First it checks if the parameter has a rule.
 The term whitelist implies that every parameter without at least one matching rule is considered a threat.
 If there are rules the algorithm checks if they have length restrictions and if they are adhered to.
-Finally the algorithm tests the character set of the input with the help of regular expressions.
+Finally, the algorithm tests the character set of the input with the help of regular expressions.
 
 ## Filters
 
