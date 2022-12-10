@@ -1,5 +1,5 @@
 ---
-date: 2022-11-28
+date: 2022-12-10
 menu:
   main:
     parent: getting started
@@ -34,6 +34,8 @@ Once the initialization is done you have to add a user account for the web inter
 
     sudo ./shadowdctl exec web ./app/console swd:register --admin --name=admin
 
+By default, all services are bound to localhost only.
+This behavior can be changed in `docker-compose.yml` but it is recommended to make the services not publicly available.
 For more information about commands and configuration options check out the [Docker Compose manual](https://docs.docker.com/compose/).
 
 ## What's next?
